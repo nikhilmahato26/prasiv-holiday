@@ -65,7 +65,7 @@ export default function PackagesPage() {
               {REGIONS.map(r => (
                 <button
                   key={r.key}
-                  onClick={() => setRegion(r.key)}
+                  onClick={() => { setRegion(r.key); setActiveDest('all') }}
                   aria-pressed={region === r.key}
                   style={{
                     padding: '9px 26px', borderRadius: 999, fontSize: 13, fontWeight: 700, letterSpacing: '0.02em',
@@ -87,8 +87,8 @@ export default function PackagesPage() {
                 onClick={() => setActiveDest('all')}
                 style={{
                   padding: '8px 20px', borderRadius: 999, fontSize: 13, fontWeight: 600, border: 'none', cursor: 'pointer', transition: 'all 0.2s',
-                  background: activeDest === 'all' ? 'linear-gradient(135deg,#8A6E1C,#8A6E1C)' : '#F3EFE1',
-                  color: activeDest === 'all' ? '#fff' : '#555',
+                  background: activeDestination === 'all' ? 'linear-gradient(135deg,#8A6E1C,#8A6E1C)' : '#F3EFE1',
+                  color: activeDestination === 'all' ? '#fff' : '#555',
                 }}>
                 All Categories
               </button>
@@ -98,8 +98,8 @@ export default function PackagesPage() {
                   onClick={() => setActiveDest(d.name)}
                   style={{
                     padding: '8px 20px', borderRadius: 999, fontSize: 13, fontWeight: 600, border: 'none', cursor: 'pointer', transition: 'all 0.2s',
-                    background: activeDest === d.name ? 'linear-gradient(135deg,#8A6E1C,#8A6E1C)' : '#F3EFE1',
-                    color: activeDest === d.name ? '#fff' : '#555',
+                    background: activeDestination === d.name ? 'linear-gradient(135deg,#8A6E1C,#8A6E1C)' : '#F3EFE1',
+                    color: activeDestination === d.name ? '#fff' : '#555',
                   }}>
                   {d.name}
                 </button>
