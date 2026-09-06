@@ -1,7 +1,10 @@
 import { NextResponse } from 'next/server'
 import { getTeamMembers, addTeamMember } from '@/lib/db'
+import { isStaticMode } from '@/lib/static-data'
 
 export async function GET() {
+  if (isStaticMode()) return NextResponse.json([])
+
   try {
     const team = await getTeamMembers()
     return NextResponse.json(team)

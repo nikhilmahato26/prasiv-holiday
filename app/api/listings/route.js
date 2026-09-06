@@ -1,9 +1,12 @@
 import { getListings, createListing } from '@/lib/db'
 import { guardAdmin } from '@/lib/guardAdmin'
+import { isStaticMode } from '@/lib/static-data'
 
 const TYPES = ['homestay', 'houseboat']
 
 export async function GET(request) {
+  if (isStaticMode()) return Response.json([])
+
   try {
     const type = new URL(request.url).searchParams.get('type')
     const listings = await getListings(type || undefined)

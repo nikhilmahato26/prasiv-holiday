@@ -1,6 +1,9 @@
 import { getAllPackageOptions, addPackageOption } from '@/lib/db'
+import { isStaticMode } from '@/lib/static-data'
 
 export async function GET() {
+  if (isStaticMode()) return Response.json({})
+
   try {
     const rows = await getAllPackageOptions()
     const grouped = {}

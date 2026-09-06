@@ -15,6 +15,17 @@ OTP/enquiry mail over SMTP; rate-limit/session helpers on Upstash Redis.
 | `/agency` | Partner-agency login |
 | `/agency/dashboard` | Agency package submissions |
 
+## Demo mode
+With no `DATABASE_URL` set, the site runs entirely on the bundled seed data and
+the admin panel opens with **demo / demo** at `/admin`. Every screen renders, but
+the middleware refuses all non-GET API requests, so nothing can be saved,
+uploaded or deleted — a banner on the login page and the dashboard says so.
+
+The demo login is accepted *only* when `DATABASE_URL` is unset. Set it and
+`/api/auth/login` goes back to checking the `users` table, the write block turns
+off, and these credentials stop working. Always set `DATABASE_URL` and
+`JWT_SECRET` for a real deployment.
+
 ## Setup
 ```bash
 cp .env.example .env     # then fill in every value

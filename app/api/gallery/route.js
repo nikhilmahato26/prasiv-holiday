@@ -1,10 +1,13 @@
 import { getGalleryImages, addGalleryImage, deleteGalleryImage } from '@/lib/db'
 import { guardUser } from '@/lib/guardUser'
+import { isStaticMode } from '@/lib/static-data'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
 export async function GET() {
+  if (isStaticMode()) return Response.json([])
+
   try {
     const images = await getGalleryImages()
     return Response.json(images)

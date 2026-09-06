@@ -123,6 +123,11 @@ function enquiriesToCSV(rows, type) {
   return lines.join('\r\n')
 }
 
+// Set once from /api/settings. Module-scoped rather than state so the data
+// fetchers can read it without depending on render order.
+let _demoMode = false
+const isDemo = () => _demoMode
+
 const EMPTY_PKG = {
   id: '', destination: '', badge: '', badgeColor: '#16294D', region: 'domestic',
   duration: '3', title: '', subtitle: '', hotels: '',
@@ -206,6 +211,14 @@ export default function Dashboard() {
   const [editListingForm, setEditListingForm] = useState({ color: '#8A6E1C', image_url: '', description: '', location: '', price: '', emoji: '🏡', image_pos: '' })
   const [settingsForm, setSettingsForm] = useState({ phone: '', whatsapp: '', email: '', email2: '', facebook_url: '', instagram_url: '', banner_days: '30', admin_recovery_email: '', min_dest_packages: '1' })
   const [settingsSaving, setSettingsSaving] = useState(false)
+  // demo_mode is only reported while the site runs without a database.
+  const [demoMode, setDemoMode] = useState(false)
+  useEffect(() => {
+    fetch('/api/settings')
+      .then(r => (r.ok ? r.json() : {}))
+      .then(s => { _demoMode = s?.demo_mode === 'true'; setDemoMode(_demoMode) })
+      .catch(() => {})
+  }, [])
   const [adminUsername, setAdminUsername] = useState('')
   const [newUsername, setNewUsername] = useState('')
   const [usernameSaving, setUsernameSaving] = useState(false)
@@ -216,8 +229,9 @@ export default function Dashboard() {
       if (res.ok) {
         const pkgs = await res.json()
         setAllPackages(pkgs)
-        // Auto-rename any old-format IDs silently
-        if (pkgs.some(p => !CONFORMING_ID.test(p.id))) {
+        // Auto-rename any old-format IDs silently. Demo mode has no database to
+        // rename anything in, and the write would be refused, so skip it.
+        if (!isDemo() && pkgs.some(p => !CONFORMING_ID.test(p.id))) {
           fetch('/api/packages/migrate-ids', { method: 'POST' })
             .then(r => r.ok ? r.json() : null)
             .then(data => {
@@ -808,7 +822,7 @@ export default function Dashboard() {
               { key: 'settings',      label: 'Settings',     icon: Settings },
             ].map(({ key, label, icon: Icon, badge }) => (
               <button key={key} onClick={() => setSection(key)}
-                style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 20px', fontSize: 13, fontWeight: 600, border: 'none', background: section === key ? '#fef2f2' : 'transparent', width: '100%', textAlign: 'left', cursor: 'pointer', borderRight: `3px solid ${section === key ? '#16294D' : 'transparent'}`, color: section === key ? '#16294D' : '#6b7280', position: 'relative' }}>
+                style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 20px', fontSize: 13, fontWeight: 600, border: 'none', background: section === key ? '#EEF2F8' : 'transparent', width: '100%', textAlign: 'left', cursor: 'pointer', borderRight: `3px solid ${section === key ? '#16294D' : 'transparent'}`, color: section === key ? '#16294D' : '#6b7280', position: 'relative' }}>
                 <Icon size={16} /> {label}
                 {badge && (
                   <span style={{ marginLeft: 'auto', background: '#16294D', color: '#fff', borderRadius: 999, fontSize: 10, fontWeight: 700, padding: '1px 6px', minWidth: 18, textAlign: 'center' }}>
@@ -833,6 +847,14 @@ export default function Dashboard() {
               <ExternalLink size={13} /> View Site
             </Link>
           </div>
+          {demoMode && (
+            <div style={{ background: '#FBF6E7', borderBottom: '1px solid #EBD79A', padding: '10px 20px', display: 'flex', alignItems: 'center', gap: 10 }}>
+              <AlertTriangle size={15} style={{ color: '#8A6E1C', flexShrink: 0 }} />
+              <span style={{ fontSize: 13, color: '#6B5514' }}>
+                <strong>Demo mode</strong> — no database is connected. You can browse every screen, but saving, uploading and deleting are all turned off.
+              </span>
+            </div>
+          )}
           <div style={S.body}>
 
         {/* ── Packages ── */}

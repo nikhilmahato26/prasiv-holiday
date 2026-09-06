@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { Eye, EyeOff, LogIn } from 'lucide-react'
@@ -11,7 +11,16 @@ export default function AdminLogin() {
   const [show, setShow] = useState(false)
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
+  const [demo, setDemo] = useState(false)
   const router = useRouter()
+
+  // demo_mode is only ever reported while the site runs without a database.
+  useEffect(() => {
+    fetch('/api/settings')
+      .then(r => (r.ok ? r.json() : {}))
+      .then(s => setDemo(s.demo_mode === 'true'))
+      .catch(() => {})
+  }, [])
 
   const handleLogin = async (e) => {
     e.preventDefault()
@@ -51,6 +60,22 @@ export default function AdminLogin() {
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 22, color: '#fff', marginBottom: 4 }}>Prashiv Holiday</h1>
             <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.6)' }}>Admin Panel</p>
           </div>
+
+          {/* Demo mode notice */}
+          {demo && (
+            <div style={{ padding: '14px 32px', background: '#FBF6E7', borderBottom: '1px solid #EBD79A' }}>
+              <p style={{ fontSize: 12, fontWeight: 700, color: '#8A6E1C', margin: '0 0 4px', letterSpacing: '0.04em', textTransform: 'uppercase' }}>Demo mode</p>
+              <p style={{ fontSize: 13, color: '#6B5514', margin: 0, lineHeight: 1.5 }}>
+                No database connected. Sign in with <strong>demo</strong> / <strong>demo</strong> to look around — nothing you change will be saved.
+              </p>
+              <button
+                type="button"
+                onClick={() => { setUsername('demo'); setPassword('demo') }}
+                style={{ marginTop: 8, padding: '5px 12px', borderRadius: 8, border: '1px solid #EBD79A', background: '#fff', color: '#8A6E1C', fontSize: 12, fontWeight: 700, cursor: 'pointer' }}>
+                Fill demo login
+              </button>
+            </div>
+          )}
 
           {/* Form */}
           <form onSubmit={handleLogin} style={{ padding: '28px 32px 32px' }}>

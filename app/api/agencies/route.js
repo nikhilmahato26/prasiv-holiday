@@ -1,11 +1,14 @@
 import { getAllAgencies, createAgency } from '@/lib/db'
 import { hashPassword } from '@/lib/auth'
 import { guardAdmin } from '@/lib/guardAdmin'
+import { isStaticMode } from '@/lib/static-data'
 
 export async function GET() {
   if (!(await guardAdmin())) {
     return Response.json({ error: 'Unauthorized' }, { status: 401 })
   }
+  if (isStaticMode()) return Response.json([])
+
   try {
     const agencies = await getAllAgencies()
     return Response.json(agencies)
