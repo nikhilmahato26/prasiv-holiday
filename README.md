@@ -38,6 +38,22 @@ npm run dev              # → http://localhost:3000
 Admin accounts live in the `users` table — there are no hardcoded credentials.
 `ADMIN_USERNAME` / `ADMIN_PASSWORD` in `.env` are consumed by the seed script.
 
+## Scripts
+All of these read `DATABASE_URL` from `.env` and are run with plain `node`.
+
+| Script | What it does |
+|--------|--------------|
+| `init.mjs` | Creates and seeds every table. Run once on a fresh database. |
+| `scripts/seed-admin.mjs` | Creates the admin user from `ADMIN_USERNAME` / `ADMIN_PASSWORD`. |
+| `scripts/reseed-packages.mjs` | Wipes admin-owned packages and re-seeds from `lib/packages-data.js`. Agency submissions are kept. |
+| `reset-db.mjs` | Drops and recreates the schema. Destructive. |
+| `export_packages.mjs` | Dumps the packages table back out to `lib/packages-data.js`. |
+| `export_destinations.mjs` | Same for `lib/destinations-data.js`. |
+| `export_testimonials.mjs` | Same for `lib/testimonials-data.js`. |
+
+The export scripts are the round trip for the seed data: edit in the admin panel,
+export, commit, and the static demo mode picks up the new content.
+
 ## Environment
 See `.env.example` for the full list: Neon `DATABASE_URL`, `JWT_SECRET`,
 Upstash Redis, SMTP (`SMTP_HOST`/`PORT`/`USER`/`PASS`/`SECURE`, `ENQUIRY_EMAIL`),
