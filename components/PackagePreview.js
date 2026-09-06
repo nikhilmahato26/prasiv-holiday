@@ -34,7 +34,7 @@ export default function PackagePreview({ pkg }) {
           : <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#9ca3af', fontSize: 13 }}>No image added</div>}
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.35), transparent)' }} />
         {pkg.destination && (
-          <span style={{ position: 'absolute', top: 12, left: 12, display: 'inline-flex', alignItems: 'center', gap: 4, padding: '4px 10px', borderRadius: 999, background: (pkg.badgeColor || '#2e9e7a') + 'dd', color: '#fff', fontSize: 11, fontWeight: 600 }}>
+          <span style={{ position: 'absolute', top: 12, left: 12, display: 'inline-flex', alignItems: 'center', gap: 4, padding: '4px 10px', borderRadius: 999, background: (pkg.badgeColor || '#16294D') + 'dd', color: '#fff', fontSize: 11, fontWeight: 600 }}>
             <MapPin size={10} /> {pkg.destination}
           </span>
         )}

@@ -8,7 +8,7 @@ const FALLBACK_SLIDES = [
     tagline: 'God\'s Own Country Awaits',
     desc: 'From misty hill stations to tranquil backwaters — discover the magic of Kerala with handcrafted packages.',
     image: 'https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=1600&q=85',
-    accent: '#2e9e7a',
+    accent: '#16294D',
     tag: 'Kerala',
     badge: 'Discover',
   },

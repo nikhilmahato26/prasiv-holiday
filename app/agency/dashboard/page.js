@@ -34,7 +34,7 @@ const CATEGORIES = [
 ]
 
 const EMPTY_PKG = {
-  id: '', destination: '', badge: '', badgeColor: '#2e9e7a',
+  id: '', destination: '', badge: '', badgeColor: '#16294D',
   duration: '3', title: '', subtitle: '', hotels: '',
   adults: '', children: '', rooms: '',
   originalPrice: '', salePrice: '', childPrice: '', childAgeMin: '', childAgeMax: '', priceNote: 'Per Person',
@@ -162,7 +162,7 @@ export default function AgencyDashboard() {
   const openAdd = () => {
     const first = destinations[0]
     const pkgId = 'GKT-' + Math.random().toString(36).slice(2, 8).toUpperCase()
-    setForm({ ...EMPTY_PKG, id: pkgId, destination: first?.name ?? '', badgeColor: first?.color ?? '#2e9e7a' })
+    setForm({ ...EMPTY_PKG, id: pkgId, destination: first?.name ?? '', badgeColor: first?.color ?? '#16294D' })
     setEditId(null)
     setShowPreview(false)
     setTab('basic')

@@ -4,7 +4,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 const DOMESTIC_DESTINATIONS = [
   { name: 'Gujarat', image: 'https://images.unsplash.com/photo-1627894483216-2138af692e32?w=800&q=80', tag: 'Land of Legends' },
-  { name: 'Kashmir', image: 'https://images.unsplash.com/photo-1566837430227-b88af66e99c1?w=800&q=80', tag: 'Paradise on Earth' },
+  { name: 'Kashmir', image: 'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?w=800&q=80', tag: 'Paradise on Earth' },
   { name: 'Himachal Pradesh', image: 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=800&q=80', tag: 'Snowy Peaks' },
   { name: 'Uttarakhand', image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80', tag: 'Devbhoomi Valley' },
   { name: 'Goa', image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80', tag: 'Sun & Beaches' },
@@ -16,7 +16,7 @@ const DOMESTIC_DESTINATIONS = [
   { name: 'Darjeeling', image: 'https://images.unsplash.com/photo-1542856391-010fb87dcfed?w=800&q=80', tag: 'Queen of Hills' },
   { name: 'Meghalaya', image: 'https://images.unsplash.com/photo-1503756234508-e32369269deb?w=800&q=80', tag: 'Abode of Clouds' },
   { name: 'Andaman & Nicobar', image: 'https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=800&q=80', tag: 'Tropical Paradise' },
-  { name: 'Leh Ladakh', image: 'https://images.unsplash.com/photo-1594993876063-d082a41f6e8d?w=800&q=80', tag: 'High Mountain Passes' },
+  { name: 'Leh Ladakh', image: 'https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?w=800&q=80', tag: 'High Mountain Passes' },
 ];
 
 const INTERNATIONAL_DESTINATIONS = [
@@ -24,7 +24,7 @@ const INTERNATIONAL_DESTINATIONS = [
   { name: 'Bali', image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80', tag: 'Island of Gods' },
   { name: 'Vietnam', image: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80', tag: 'Scenic Halong Bay' },
   { name: 'Dubai', image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80', tag: 'Modern Oasis' },
-  { name: 'Bhutan', image: 'https://images.unsplash.com/photo-1578593139811-2921a28a30de?w=800&q=80', tag: 'Land of Thunder Dragon' },
+  { name: 'Bhutan', image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80', tag: 'Land of Thunder Dragon' },
 ];
 
 const Destinations = () => {

@@ -1,7 +1,10 @@
 import { getSettings, setSetting } from '@/lib/db'
 import { guardAdmin } from '@/lib/guardAdmin'
+import { isStaticMode, STATIC_SETTINGS } from '@/lib/static-data'
 
 export async function GET() {
+  if (isStaticMode()) return Response.json(STATIC_SETTINGS)
+
   try {
     const settings = await getSettings()
     return Response.json(settings)

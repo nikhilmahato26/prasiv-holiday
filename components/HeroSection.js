@@ -126,7 +126,7 @@ export default function HeroSection() {
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16, marginTop: -80 }}>
             <img 
-              src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80" 
+              src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=600&q=80" 
               alt="Mountain Tour"
               style={{ width: '100%', borderRadius: 24, height: 240, objectFit: 'cover' }}
             />

@@ -23,6 +23,11 @@ export default function PackagesPage() {
     return activeDest === 'all' || p.destination === activeDest
   })
 
+  // Only offer tabs for destinations that actually have live packages, so the
+  // seed's broader category list never produces an empty tab.
+  const pkgDestinations = new Set(packages.map(p => p.destination).filter(Boolean))
+  const shownDestinations = destinations.filter(d => pkgDestinations.has(d.name))
+
   return (
     <main style={{ minHeight: '100vh', background: '#fff', paddingTop: 80 }}>
       <Navbar />
@@ -52,7 +57,7 @@ export default function PackagesPage() {
                 }}>
                 All Categories
               </button>
-              {destinations.map(d => (
+              {shownDestinations.map(d => (
                 <button
                   key={d.id}
                   onClick={() => setActiveDest(d.name)}

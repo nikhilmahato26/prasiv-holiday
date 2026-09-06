@@ -26,7 +26,7 @@ const FALLBACK_SLIDES = [
     kind: 'video',
     id: 'fb-2',
     video: 'https://www.pexels.com/download/video/33333520/',
-    poster: 'https://images.unsplash.com/photo-1566837430227-b88af66e99c1?w=1400&q=85',
+    poster: 'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?w=1400&q=85',
     eyebrow: 'Explore Paradise on Earth',
     title: 'Majestic\nKashmir',
     description: 'Snow-Capped Peaks & Scenic Houseboats',

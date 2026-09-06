@@ -2,8 +2,11 @@ export const dynamic = 'force-dynamic'
 
 import { getDestinations, createDestination } from '@/lib/db'
 import { guardAdmin } from '@/lib/guardAdmin'
+import { isStaticMode, staticDestinations } from '@/lib/static-data'
 
 export async function GET() {
+  if (isStaticMode()) return Response.json(staticDestinations())
+
   try {
     const destinations = await getDestinations()
     return Response.json(destinations)

@@ -1,8 +1,11 @@
 import { NextResponse } from 'next/server'
 import { getTestimonials, addTestimonial, deleteTestimonial, updateTestimonial } from '@/lib/db'
 import { guardAdmin } from '@/lib/guardAdmin'
+import { isStaticMode, staticTestimonials } from '@/lib/static-data'
 
 export async function GET() {
+  if (isStaticMode()) return NextResponse.json(staticTestimonials())
+
   try {
     const data = await getTestimonials()
     return NextResponse.json(data)

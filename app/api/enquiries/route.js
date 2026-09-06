@@ -1,11 +1,14 @@
 import { createEnquiry, getEnquiries } from '@/lib/db'
 import { guardAdmin } from '@/lib/guardAdmin'
 import { sendEnquiryEmail } from '@/lib/email'
+import { isStaticMode } from '@/lib/static-data'
 
 export async function GET() {
   if (!(await guardAdmin())) {
     return Response.json({ error: 'Unauthorized' }, { status: 401 })
   }
+  if (isStaticMode()) return Response.json([])
+
   try {
     const enquiries = await getEnquiries()
     return Response.json(enquiries)
@@ -21,14 +24,21 @@ export async function POST(request) {
       return Response.json({ error: 'Name and phone are required' }, { status: 400 })
     }
     const enquiryType = ['package', 'flight', 'train'].includes(type) ? type : 'package'
-    const enquiry = await createEnquiry({
-      package_id, package_title,
-      destination: destination?.trim() || null,
-      type: enquiryType,
-      name: name.trim(), phone: phone.trim(),
-      email: email?.trim() || null,
-      message: message?.trim() || null,
-    })
+
+    // Static mode has no database to store enquiries in. Log it so it is not lost,
+    // then fall through to the email — SMTP can be configured independently.
+    const enquiry = isStaticMode()
+      ? (console.warn('[static mode] Enquiry not stored (no DATABASE_URL):',
+          JSON.stringify({ type: enquiryType, name, phone, email, destination, package_title, message })),
+        { id: null, type: enquiryType, name: name.trim(), phone: phone.trim(), stored: false })
+      : await createEnquiry({
+          package_id, package_title,
+          destination: destination?.trim() || null,
+          type: enquiryType,
+          name: name.trim(), phone: phone.trim(),
+          email: email?.trim() || null,
+          message: message?.trim() || null,
+        })
     // Await the email so it completes within the request lifecycle (a fire-and-forget
     // promise can be killed when the serverless function freezes after responding).
     // A mail failure must not fail the enquiry, so log it and continue.

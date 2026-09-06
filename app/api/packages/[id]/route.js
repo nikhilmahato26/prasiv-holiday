@@ -1,9 +1,17 @@
 import { getPackageById, updatePackage, deletePackage } from '@/lib/db'
 import { invalidatePackagesCache } from '@/lib/redis'
 import { guardAdmin } from '@/lib/guardAdmin'
+import { isStaticMode, staticPackageById } from '@/lib/static-data'
 
 export async function GET(request, { params }) {
   const { id } = await params
+
+  if (isStaticMode()) {
+    const pkg = staticPackageById(decodeURIComponent(id))
+    if (!pkg) return Response.json({ error: 'Not found' }, { status: 404 })
+    return Response.json(pkg)
+  }
+
   try {
     const pkg = await getPackageById(decodeURIComponent(id))
     if (!pkg) return Response.json({ error: 'Not found' }, { status: 404 })

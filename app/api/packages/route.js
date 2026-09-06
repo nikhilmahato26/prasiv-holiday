@@ -3,8 +3,11 @@ export const dynamic = 'force-dynamic'
 import { getAllPackages, insertPackage } from '@/lib/db'
 import { getCachedPackages, setCachedPackages, invalidatePackagesCache } from '@/lib/redis'
 import { guardAdmin } from '@/lib/guardAdmin'
+import { isStaticMode, staticPackages } from '@/lib/static-data'
 
 export async function GET() {
+  if (isStaticMode()) return Response.json(staticPackages())
+
   try {
     const cached = await getCachedPackages()
     if (cached) {
