@@ -1,0 +1,4162 @@
+[
+  {
+    "id": "GPKG-101",
+    "data": {
+      "id": "GPKG-101",
+      "badge": "Hills & Lakes",
+      "image": "https://images.unsplash.com/photo-1600100397990-24b3500c8b09?w=800&q=80",
+      "title": "Ooty – Coorg Package",
+      "hidden": false,
+      "hotels": "2N Ooty · 3N Coorg",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "6 Days & 5 Nights",
+      "featured": true,
+      "overview": "A beautiful mountain escape combining the Nilgiri pine ridges and tea fields of Ooty in Tamil Nadu with the mist-laden coffee estates and streams of Coorg in Karnataka.",
+      "subtitle": "Scenic Nilgiri Hills & Coorg Coffee Valley",
+      "heroImage": "https://images.unsplash.com/photo-1600100397990-24b3500c8b09?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arrival to Ooty Transfer + Sightseeing",
+          "activities": [
+            "Bandipur forest drive",
+            "Ooty Lake boating",
+            "Resort check-in"
+          ],
+          "description": "Arrival → Ooty transfer + sightseeing. Pick up from Bengaluru/Mysore, drive to Ooty (approx. 270 km / 6 hrs). Visit Ooty Lake."
+        },
+        {
+          "day": 2,
+          "title": "Ooty Full-day Sightseeing",
+          "activities": [
+            "Doddabetta view",
+            "Botanical Garden walk",
+            "Chocolates & tea shopping"
+          ],
+          "description": "Ooty full-day sightseeing. Visit Botanical Garden, Doddabetta Peak, and Rose Garden. Overnight stay in Ooty."
+        },
+        {
+          "day": 3,
+          "title": "Ooty to Coorg",
+          "activities": [
+            "Drive through Nilgiris",
+            "Coffee plantation arrival",
+            "Coorg stay"
+          ],
+          "description": "Ooty → Coorg. Drive to Coorg. Afternoon walk in coffee plantations. Overnight stay in Coorg."
+        },
+        {
+          "day": 4,
+          "title": "Coorg Sightseeing",
+          "activities": [
+            "Dubare Elephant interaction",
+            "Abbey Falls forest walk",
+            "Raja's seat sunset view"
+          ],
+          "description": "Coorg sightseeing. Visit Dubare Elephant Camp, Abbey Falls, and Raja's Seat."
+        },
+        {
+          "day": 5,
+          "title": "Coorg Local Sightseeing",
+          "activities": [
+            "Bylakuppe Golden Temple",
+            "Talakaveri temple climb"
+          ],
+          "description": "Coorg local sightseeing. Visit Bylakuppe Golden Temple and Talakaveri (origin of Kaveri river)."
+        },
+        {
+          "day": 6,
+          "title": "Coorg to Bengaluru/Mysore Departure",
+          "activities": [
+            "Breakfast & check-out",
+            "Drive to Bengaluru/Mysore",
+            "Departure drop"
+          ],
+          "description": "Coorg → Bengaluru/Mysore departure. Drive back to Bengaluru/Mysore and drop at airport/station."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 17499,
+      "agencyName": null,
+      "badgeColor": "#06b6d4",
+      "exclusions": [
+        "Ooty Toy Train tickets (needs booking)",
+        "Activity and entrance tickets",
+        "Lunch",
+        "Personal expenses"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Ooty Botanical Garden & Lake",
+        "Coorg Coffee Estate Tour",
+        "Dubare Elephant Camp",
+        "Bylakuppe Tibetan Golden Temple"
+      ],
+      "inclusions": [
+        "5 Nights hotel stay",
+        "Daily Breakfast & Dinner",
+        "AC Private Transport from Bengaluru",
+        "Driver & toll allowances"
+      ],
+      "destination": "Karnataka",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 22000
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:54.562Z",
+    "updated_at": "2026-08-12T19:28:21.932Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-102",
+    "data": {
+      "id": "GPKG-102",
+      "badge": "Ruins & Temples",
+      "image": "https://images.unsplash.com/photo-1600100397990-24b3500c8b09?w=800&q=80",
+      "title": "Karnataka Temple & Heritage Tour",
+      "hidden": false,
+      "hotels": "2N Hampi · 2N Badami · 1N Bengaluru",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "7 Days & 6 Nights",
+      "featured": true,
+      "overview": "Step back in time to see the remnants of the Vijayanagara Empire in Hampi and the early Chalukya rock-cut cave temples in Badami, Aihole, and Pattadakal.",
+      "subtitle": "Bengaluru – Hampi – Badami – Aihole – Pattadakal",
+      "heroImage": "https://images.unsplash.com/photo-1600100397990-24b3500c8b09?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Bengaluru Arrival to Hampi",
+          "activities": [
+            "Bengaluru pickup",
+            "Long highway drive",
+            "Hampi check-in"
+          ],
+          "description": "Bengaluru arrival → Hampi. Pick up from Bengaluru. Drive to Hampi. Overnight stay in Hampi."
+        },
+        {
+          "day": 2,
+          "title": "Hampi Sightseeing",
+          "activities": [
+            "Vijayanagara ruins tour",
+            "Stone Chariot photography",
+            "Tungabhadra river walk"
+          ],
+          "description": "Hampi sightseeing. Visit Virupaksha Temple, Stone Chariot, Vittala Temple, and Lotus Mahal. Overnight stay in Hampi."
+        },
+        {
+          "day": 3,
+          "title": "Hampi to Badami",
+          "activities": [
+            "Drive to Badami",
+            "Badami Fort walk",
+            "Agastya Lake sunset view"
+          ],
+          "description": "Hampi → Badami. Drive to Badami. Visit Badami Fort and Agastya Lake. Overnight stay in Badami."
+        },
+        {
+          "day": 4,
+          "title": "Badami – Aihole – Pattadakal",
+          "activities": [
+            "Badami Caves rock climbing",
+            "Pattadakal temple tour",
+            "Aihole Durga Temple"
+          ],
+          "description": "Badami – Aihole – Pattadakal. Visit Badami Cave Temples, Aihole, and Pattadakal. Overnight stay in Badami."
+        },
+        {
+          "day": 5,
+          "title": "Badami to Bengaluru",
+          "activities": [
+            "Long highway drive",
+            "Bengaluru check-in"
+          ],
+          "description": "Badami → Bengaluru. Drive back to Bengaluru. Overnight stay in Bengaluru."
+        },
+        {
+          "day": 6,
+          "title": "Bengaluru Sightseeing",
+          "activities": [
+            "Bangalore Palace tour",
+            "Tipu Sultan palace",
+            "Commercial street shopping"
+          ],
+          "description": "Bengaluru sightseeing. Visit Bangalore Palace and Tipu Sultan's Summer Palace. Overnight stay in Bengaluru."
+        },
+        {
+          "day": 7,
+          "title": "Departure",
+          "activities": [
+            "Breakfast",
+            "Check-out",
+            "Departure drop"
+          ],
+          "description": "Departure. Breakfast, check-out, and drop at airport."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 19999,
+      "agencyName": null,
+      "badgeColor": "#ea580c",
+      "exclusions": [
+        "Monument entrance fees",
+        "Coracle boat ride",
+        "Lunch and Dinner",
+        "Personal expenses"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Virupaksha Temple & Hampi Ruins",
+        "Badami Rock-cut Cave Temples",
+        "Pattadakal Temple Complex (UNESCO)",
+        "Aihole Temple Architecture"
+      ],
+      "inclusions": [
+        "6 Nights stay in comfortable hotels",
+        "Daily Breakfast",
+        "AC Private Transport for the entire heritage loop",
+        "Local guide in Hampi"
+      ],
+      "destination": "Karnataka",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 26000
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:54.192Z",
+    "updated_at": "2026-08-12T19:28:22.105Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-103",
+    "data": {
+      "id": "GPKG-103",
+      "badge": "Heritage & Palaces",
+      "image": "https://images.unsplash.com/photo-1600100397990-24b3500c8b09?w=800&q=80",
+      "title": "Karnataka Heritage Tour",
+      "hidden": false,
+      "hotels": "2N Mysore · 2N Coorg · 1N Bengaluru",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "6 Days & 5 Nights",
+      "featured": true,
+      "overview": "A delightful tour of Southern Karnataka. Witness the architectural wonder of Mysore Palace, walk through the misty coffee estates of Coorg, and explore the Silicon Valley, Bengaluru.",
+      "subtitle": "Bengaluru – Mysore – Coorg – Bangalore Heritage Trail",
+      "heroImage": "https://images.unsplash.com/photo-1600100397990-24b3500c8b09?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Bengaluru Arrival + Mysore Transfer",
+          "activities": [
+            "Bengaluru pickup",
+            "Drive to Mysore",
+            "Srirangapatna en route"
+          ],
+          "description": "Bengaluru arrival + Mysore transfer. Pick up from Bengaluru. Drive to Mysore (approx. 145 km / 3.5 hrs). Check-in and relax."
+        },
+        {
+          "day": 2,
+          "title": "Mysore Sightseeing",
+          "activities": [
+            "Mysore Palace walk",
+            "Zoo visit",
+            "Brindavan Garden music fountain"
+          ],
+          "description": "Mysore sightseeing. Visit Chamundi Hills, Mysore Palace, Zoo, and Brindavan Gardens (fountain show). Overnight stay in Mysore."
+        },
+        {
+          "day": 3,
+          "title": "Mysore to Coorg",
+          "activities": [
+            "Bylakuppe Tibetan monastery",
+            "Drive to Coorg",
+            "Coffee estate walk"
+          ],
+          "description": "Mysore → Coorg. Drive to Coorg (approx. 120 km / 3 hrs). Visit Bylakuppe Golden Temple en route. Overnight stay in Coorg."
+        },
+        {
+          "day": 4,
+          "title": "Coorg Sightseeing",
+          "activities": [
+            "Dubare Elephant bathing",
+            "Abbey Falls trekking",
+            "Raja's Seat sunset"
+          ],
+          "description": "Coorg sightseeing. Visit Dubare Elephant Camp, Abbey Falls, and Raja's Seat. Overnight stay in Coorg."
+        },
+        {
+          "day": 5,
+          "title": "Coorg to Bengaluru",
+          "activities": [
+            "Scenic valley drive",
+            "Bengaluru check-in",
+            "Local market shopping"
+          ],
+          "description": "Coorg → Bengaluru. Drive back to Bengaluru (approx. 250 km / 5.5 hrs). Check-in. Overnight stay in Bengaluru."
+        },
+        {
+          "day": 6,
+          "title": "Bengaluru Sightseeing & Departure",
+          "activities": [
+            "Lalbagh Botanical garden",
+            "Vidhana Soudha photo stop",
+            "Airport drop"
+          ],
+          "description": "Bengaluru sightseeing & departure. Visit Vidhana Soudha (outer view), Lalbagh, drop at airport."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 16999,
+      "agencyName": null,
+      "badgeColor": "#eab308",
+      "exclusions": [
+        "Elephant interaction / river rafting",
+        "Monument entry fees",
+        "Lunch",
+        "Personal expenses"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Mysore Palace Lighting",
+        "Dubare Elephant Camp (Coorg)",
+        "Bylakuppe Golden Temple (Tibetan)",
+        "Bengaluru Lalbagh Garden"
+      ],
+      "inclusions": [
+        "5 Nights accommodation",
+        "Daily Breakfast & Dinner",
+        "AC Private Transport Bengaluru to Bengaluru",
+        "Driver & toll charges"
+      ],
+      "destination": "Karnataka",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 21000
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:53.785Z",
+    "updated_at": "2026-08-12T19:28:22.186Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-104",
+    "data": {
+      "id": "GPKG-104",
+      "badge": "Spiritual & Scenic",
+      "image": "https://images.unsplash.com/photo-1562158074-a285d898516d?w=800&q=80",
+      "title": "Maharashtra Jyotirlinga + Lonavala Package",
+      "hidden": false,
+      "hotels": "1N Nashik · 1N Shirdi · 1N Aurangabad · 1N Lonavala · 1N Pune/Mumbai",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "6 Days & 5 Nights",
+      "featured": true,
+      "overview": "A sacred journey covering Maharashtra's key spiritual sites: Trimbakeshwar, Shirdi Sai Baba, Grishneshwar Jyotirlinga, Ellora Caves, Bhimashankar Jyotirlinga, and the hills of Lonavala.",
+      "subtitle": "Nashik – Trimbakeshwar – Grishneshwar – Shani Shingnapur – Bhimashankar – Lonavala",
+      "heroImage": "https://images.unsplash.com/photo-1562158074-a285d898516d?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Nashik Arrival + Trimbakeshwar Darshan",
+          "activities": [
+            "Nashik pickup",
+            "Trimbakeshwar Temple Darshan",
+            "Panchavati walk"
+          ],
+          "description": "Nashik arrival + Trimbakeshwar Darshan. Arrive in Nashik, check-in and visit Trimbakeshwar Temple."
+        },
+        {
+          "day": 2,
+          "title": "Nashik to Shirdi to Shani Shingnapur to Aurangabad",
+          "activities": [
+            "Shirdi Darshan",
+            "Shani Shingnapur temple",
+            "Drive to Aurangabad"
+          ],
+          "description": "Nashik → Shirdi → Shani Shingnapur → Aurangabad. Visit Shirdi Sai Baba temple, and Shani Shingnapur temple before driving to Aurangabad."
+        },
+        {
+          "day": 3,
+          "title": "Grishneshwar Jyotirlinga + Ellora Caves",
+          "activities": [
+            "Grishneshwar Darshan",
+            "Ellora Caves cave tour",
+            "Aurangabad city tour"
+          ],
+          "description": "Grishneshwar Jyotirlinga + Ellora Caves. Explore Grishneshwar Temple and the UNESCO Ellora Caves."
+        },
+        {
+          "day": 4,
+          "title": "Aurangabad to Bhimashankar Darshan to Lonavala",
+          "activities": [
+            "Bhimashankar Forest drive & Darshan",
+            "Drive to Lonavala"
+          ],
+          "description": "Aurangabad → Bhimashankar Darshan → Lonavala. Drive to Bhimashankar Temple for darshan, then continue to Lonavala."
+        },
+        {
+          "day": 5,
+          "title": "Lonavala Sightseeing",
+          "activities": [
+            "Lonavala viewpoint tour",
+            "Karla Caves rock-cut temple"
+          ],
+          "description": "Lonavala sightseeing. Explore Bhushi Dam, Tiger's Point, and wax museum."
+        },
+        {
+          "day": 6,
+          "title": "Lonavala to Pune/Mumbai Departure",
+          "activities": [
+            "Check-out",
+            "Drive to Airport/station",
+            "Departure drop"
+          ],
+          "description": "Lonavala → Pune/Mumbai departure. Breakfast and drive to Mumbai or Pune for departure."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 18499,
+      "agencyName": null,
+      "badgeColor": "#ea580c",
+      "exclusions": [
+        "Special Darshan entry tickets",
+        "Ellora guide fees",
+        "Lunch",
+        "Personal expenses"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Trimbakeshwar & Bhimashankar Jyotirlinga",
+        "Shirdi Sai Baba Temple",
+        "UNESCO Ellora Caves & Grishneshwar",
+        "Lonavala Hill Station"
+      ],
+      "inclusions": [
+        "5 Nights accommodation",
+        "Daily Breakfast & Dinner",
+        "AC private vehicle for the entire route",
+        "Toll, driver allowance, and parking"
+      ],
+      "destination": "Maharashtra",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 23000
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:53.498Z",
+    "updated_at": "2026-08-12T19:28:22.261Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-105",
+    "data": {
+      "id": "GPKG-105",
+      "badge": "Hill & Valley Escape",
+      "image": "https://images.unsplash.com/photo-1562158074-a285d898516d?w=800&q=80",
+      "title": "Maharashtra 4 Nights / 5 Days",
+      "hidden": false,
+      "hotels": "1N Mumbai · 1N Lonavala · 2N Mahabaleshwar",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "5 Days & 4 Nights",
+      "featured": true,
+      "overview": "A fantastic tour connecting Mumbai's iconic city sites with the misty climate of Lonavala and the strawberry fields, valleys, and points of Mahabaleshwar.",
+      "subtitle": "Mumbai – Lonavala – Mahabaleshwar Escape",
+      "heroImage": "https://images.unsplash.com/photo-1562158074-a285d898516d?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Mumbai Arrival + City Sightseeing",
+          "activities": [
+            "Gateway of India",
+            "Marine Drive sunset",
+            "Mumbai hotel check-in"
+          ],
+          "description": "Mumbai arrival + city sightseeing. Arrive in Mumbai, check-in, and tour local landmarks (Gateway of India, Marine Drive)."
+        },
+        {
+          "day": 2,
+          "title": "Mumbai to Lonavala Sightseeing",
+          "activities": [
+            "Lonavala hill climb",
+            "Bhushi Dam water stream",
+            "Tiger's Point panorama"
+          ],
+          "description": "Mumbai → Lonavala sightseeing. Drive to Lonavala (approx. 2 hrs). Visit Bhushi Dam, Tiger's Point, and wax museum."
+        },
+        {
+          "day": 3,
+          "title": "Lonavala to Mahabaleshwar",
+          "activities": [
+            "Drive to Mahabaleshwar",
+            "Panchgani Table Land horse ride",
+            "Mapro Garden strawberry tasting"
+          ],
+          "description": "Lonavala → Mahabaleshwar. Drive to Mahabaleshwar via Panchgani. Visit Table Land. Overnight in Mahabaleshwar."
+        },
+        {
+          "day": 4,
+          "title": "Mahabaleshwar Sightseeing",
+          "activities": [
+            "Arthur's Seat valley view",
+            "Elephant Head Rock",
+            "Venna Lake evening boating"
+          ],
+          "description": "Mahabaleshwar sightseeing. Explore Arthur's Seat, Kate's Point, Elephant's Head rock, and go boating on Venna Lake."
+        },
+        {
+          "day": 5,
+          "title": "Mahabaleshwar to Mumbai Departure",
+          "activities": [
+            "Breakfast & check-out",
+            "Drive to Mumbai",
+            "Departure drop"
+          ],
+          "description": "Mahabaleshwar → Mumbai departure. Drive back to Mumbai for departure."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 15499,
+      "agencyName": null,
+      "badgeColor": "#16a34a",
+      "exclusions": [
+        "Boating and amusement ride tickets",
+        "Entrance fees for points",
+        "Lunch and Dinner",
+        "Personal expenses"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Gateway of India (Mumbai)",
+        "Bhushi Dam & Tiger's Point (Lonavala)",
+        "Panchgani Table Land & Mapro Garden",
+        "Venna Lake Boating (Mahabaleshwar)"
+      ],
+      "inclusions": [
+        "4 Nights accommodation in standard hotels",
+        "Daily Breakfast",
+        "Private AC vehicle Mumbai to Mumbai",
+        "Toll, taxes, and driver allowance"
+      ],
+      "destination": "Maharashtra",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 19500
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:53.187Z",
+    "updated_at": "2026-08-12T19:28:22.345Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-106",
+    "data": {
+      "id": "GPKG-106",
+      "badge": "Complete Goa",
+      "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&q=80",
+      "title": "Goa 4 Nights / 5 Days",
+      "hidden": false,
+      "hotels": "4N Goa Beach Resort",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "5 Days & 4 Nights",
+      "featured": true,
+      "overview": "The ultimate Goa vacation. Combines North Goa beaches, South Goa heritage churches, a guided spice plantation lunch, and an excursion to the thundering Dudhsagar Waterfalls.",
+      "subtitle": "Complete Goa Experience & Dudhsagar",
+      "heroImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Goa Arrival + Leisure",
+          "activities": [
+            "Goa airport pickup",
+            "Hotel check-in",
+            "Calangute beach stroll"
+          ],
+          "description": "Goa arrival + leisure. Pick up from airport/station. Check-in. Evening at beach."
+        },
+        {
+          "day": 2,
+          "title": "North Goa Sightseeing",
+          "activities": [
+            "Chapora Fort climb",
+            "Vagator beach view",
+            "Baga water sports"
+          ],
+          "description": "North Goa sightseeing. Explore Fort Aguada, Chapora Fort (Dil Chahta Hai), Vagator, and Baga beaches."
+        },
+        {
+          "day": 3,
+          "title": "South Goa Sightseeing",
+          "activities": [
+            "UNESCO Old Goa walk",
+            "Miramar beach walk",
+            "Fontainhas Latin Quarter walk"
+          ],
+          "description": "South Goa sightseeing. Visit Basilica of Bom Jesus, Se Cathedral, Miramar beach, and Panaji Latin Quarter."
+        },
+        {
+          "day": 4,
+          "title": "Goa Leisure / Dudhsagar",
+          "activities": [
+            "Dudhsagar Falls trek",
+            "Jungle jeep safari",
+            "Forest swimming pool"
+          ],
+          "description": "Goa leisure / Dudhsagar. Excursion to Dudhsagar Waterfalls. Guided Jeep Safari through forest."
+        },
+        {
+          "day": 5,
+          "title": "Beach Time + Departure",
+          "activities": [
+            "Breakfast & check-out",
+            "Airport drop"
+          ],
+          "description": "Beach time + departure. Morning breakfast, check-out, transfer to airport/station."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 14499,
+      "agencyName": null,
+      "badgeColor": "#0284c7",
+      "exclusions": [
+        "Water sports activities",
+        "Lunch & Dinner not mentioned",
+        "Personal expenses"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Calangute & Baga Beaches",
+        "Dudhsagar Waterfalls Jeep Safari",
+        "Basilica of Bom Jesus Old Goa",
+        "Spice Plantation Tour with Buffet Lunch"
+      ],
+      "inclusions": [
+        "4 Nights beach resort stay",
+        "Daily Breakfast + 1 Spice Plantation Buffet Lunch",
+        "AC Private vehicle for sightseeing",
+        "Dudhsagar Jeep Safari tickets"
+      ],
+      "destination": "Goa",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 18000
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:52.827Z",
+    "updated_at": "2026-08-12T19:28:22.422Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-107",
+    "data": {
+      "id": "GPKG-107",
+      "badge": "Beach & Fun",
+      "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&q=80",
+      "title": "Goa 3 Nights / 4 Days",
+      "hidden": false,
+      "hotels": "3N Goa Beach Resort (Calangute/Candolim)",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "4 Days & 3 Nights",
+      "featured": true,
+      "overview": "A refreshing short break covering the best of Goa. Lounge on the sun-kissed beaches of North Goa, and visit the historic churches and spice plantations of South Goa.",
+      "subtitle": "North Goa + South Goa Explorer",
+      "heroImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Goa Arrival + Beach Leisure",
+          "activities": [
+            "Airport pickup",
+            "Resort check-in",
+            "Beach sunset walk"
+          ],
+          "description": "Goa arrival + beach leisure. Pick up from Goa airport/station. Check-in. Evening at leisure on the beach."
+        },
+        {
+          "day": 2,
+          "title": "North Goa Sightseeing",
+          "activities": [
+            "Fort Aguada photo stop",
+            "Anjuna beach rock walk",
+            "Baga beach nightlife"
+          ],
+          "description": "North Goa sightseeing. Visit Fort Aguada, Calangute, Baga, and Anjuna Beaches."
+        },
+        {
+          "day": 3,
+          "title": "South Goa Sightseeing",
+          "activities": [
+            "Old Goa heritage churches",
+            "South Goa spice farm tour",
+            "Mandovi River Sunset Cruise"
+          ],
+          "description": "South Goa sightseeing. Visit Basilica of Bom Jesus, Se Cathedral, Mangueshi Temple, and Mandovi River cruise."
+        },
+        {
+          "day": 4,
+          "title": "Leisure + Departure",
+          "activities": [
+            "Breakfast",
+            "Check-out",
+            "Airport drop"
+          ],
+          "description": "Leisure + departure. Breakfast, check-out, and airport transfer."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 10999,
+      "agencyName": null,
+      "badgeColor": "#0ea5e9",
+      "exclusions": [
+        "Water sports / adventure activities",
+        "Lunch and Dinner",
+        "Personal expenses and tips"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Baga & Calangute Beaches",
+        "Fort Aguada North Goa",
+        "Old Goa Churches (Basilica of Bom Jesus)",
+        "Mandovi River Cruise"
+      ],
+      "inclusions": [
+        "3 Nights resort accommodation",
+        "Daily Breakfast",
+        "AC Private vehicle for transfers and sightseeing",
+        "One Mandovi River Cruise ticket"
+      ],
+      "destination": "Goa",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 13500
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:52.547Z",
+    "updated_at": "2026-08-12T19:28:22.530Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-108",
+    "data": {
+      "id": "GPKG-108",
+      "badge": "Southern Circle",
+      "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800&q=80",
+      "title": "Complete Tamil Nadu — 9 Nights / 10 Days",
+      "hidden": false,
+      "hotels": "1N Chennai · 2N Pondicherry · 1N Thanjavur · 2N Rameswaram · 1N Madurai · 2N Kanyakumari",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "10 Days & 9 Nights",
+      "featured": true,
+      "overview": "The ultimate Tamil Nadu travel circle. Experience French cafes, UNESCO heritage stone architecture, sacred temples, ghost towns, and the beautiful sunrise/sunset of Kanyakumari.",
+      "subtitle": "Chennai – Mahabalipuram – Pondicherry – Thanjavur – Rameswaram – Madurai – Kanyakumari",
+      "heroImage": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Chennai Arrival + Sightseeing",
+          "activities": [
+            "Airport pickup",
+            "Chennai local tour"
+          ],
+          "description": "Chennai arrival + sightseeing. Arrive in Chennai, check-in and city tour. Overnight stay in Chennai."
+        },
+        {
+          "day": 2,
+          "title": "Chennai to Mahabalipuram to Pondicherry",
+          "activities": [
+            "Shore temple",
+            "ECR coastal road drive",
+            "Pondicherry promenade walk"
+          ],
+          "description": "Chennai → Mahabalipuram → Pondicherry. Drive to Mahabalipuram (Shore Temple) and continue to Pondicherry. Overnight stay in Pondicherry."
+        },
+        {
+          "day": 3,
+          "title": "Pondicherry Sightseeing",
+          "activities": [
+            "Auroville Matrimandir",
+            "French Quarter tour"
+          ],
+          "description": "Pondicherry sightseeing. Full day Pondicherry & Auroville. Overnight stay in Pondicherry."
+        },
+        {
+          "day": 4,
+          "title": "Pondicherry to Thanjavur",
+          "activities": [
+            "Drive to Thanjavur",
+            "Big Temple architecture walk"
+          ],
+          "description": "Pondicherry → Thanjavur. Drive to Thanjavur. Visit Brihadeeswarar Temple. Overnight stay in Thanjavur."
+        },
+        {
+          "day": 5,
+          "title": "Thanjavur to Rameswaram",
+          "activities": [
+            "Pamban Bridge views",
+            "Rameswaram check-in"
+          ],
+          "description": "Thanjavur → Rameswaram. Drive to Rameswaram crossing Pamban Bridge. Overnight stay in Rameswaram."
+        },
+        {
+          "day": 6,
+          "title": "Rameswaram + Dhanushkodi",
+          "activities": [
+            "Dhanushkodi ocean borders",
+            "Temple corridor walkthrough"
+          ],
+          "description": "Rameswaram + Dhanushkodi. Visit Dhanushkodi beach and Ramanathaswamy Temple. Overnight stay in Rameswaram."
+        },
+        {
+          "day": 7,
+          "title": "Rameswaram to Madurai",
+          "activities": [
+            "Drive to Madurai",
+            "Meenakshi Temple evening Aarti"
+          ],
+          "description": "Rameswaram → Madurai. Drive to Madurai. Visit Meenakshi Temple. Overnight stay in Madurai."
+        },
+        {
+          "day": 8,
+          "title": "Madurai to Kanyakumari",
+          "activities": [
+            "Drive to southernmost tip",
+            "Sunset beach walk"
+          ],
+          "description": "Madurai → Kanyakumari. Drive to Kanyakumari. Evening sunset view. Overnight stay in Kanyakumari."
+        },
+        {
+          "day": 9,
+          "title": "Kanyakumari Sightseeing to Chennai/Madurai",
+          "activities": [
+            "Vivekananda Rock Temple",
+            "Thiruvalluvar Statue",
+            "Transfer drive"
+          ],
+          "description": "Kanyakumari sightseeing → Chennai/Madurai. Visit Vivekananda Rock, Triveni Sangam. Transfer for departure."
+        },
+        {
+          "day": 10,
+          "title": "Departure",
+          "activities": [
+            "Breakfast",
+            "Departure drop"
+          ],
+          "description": "Departure. Morning check-out and drop for flight/train back home."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 29999,
+      "agencyName": null,
+      "badgeColor": "#059669",
+      "exclusions": [
+        "Entry tickets for monuments/palaces",
+        "Vivekananda rock ferry tickets",
+        "Lunch/Dinner",
+        "Tips and personal expense"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Pondicherry French Quarter",
+        "UNESCO Temples of Thanjavur",
+        "Rameswaram Island & Dhanushkodi",
+        "Madurai Meenakshi Temple",
+        "Kanyakumari Sunset & Vivekananda Rock"
+      ],
+      "inclusions": [
+        "9 Nights hotel accommodation",
+        "Daily Breakfast",
+        "Dedicated AC private vehicle for all transfers",
+        "All state tolls, driver allowance"
+      ],
+      "destination": "Tamil Nadu",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 37500
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:52.267Z",
+    "updated_at": "2026-08-12T19:28:22.613Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-109",
+    "data": {
+      "id": "GPKG-109",
+      "badge": "Temple Pilgrimage",
+      "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800&q=80",
+      "title": "Tamil Nadu Temple Tour — 6 Nights / 7 Days",
+      "hidden": false,
+      "hotels": "1N Tirupati · 1N Kanchipuram · 1N Thanjavur · 2N Rameswaram · 1N Madurai",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "7 Days & 6 Nights",
+      "featured": true,
+      "overview": "A deep pilgrimage tour covering South India's grandest temples, from Tirupati Balaji to the Brihadeeswarar Temple of Thanjavur, the holy island of Rameswaram, and Madurai Meenakshi Temple.",
+      "subtitle": "Chennai – Tirupati – Kanchipuram – Thanjavur – Rameswaram – Madurai",
+      "heroImage": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Chennai Arrival to Tirupati",
+          "activities": [
+            "Chennai pickup",
+            "Drive to Tirupati hills",
+            "Hotel check-in"
+          ],
+          "description": "Chennai arrival → Tirupati. Arrive in Chennai, drive to Tirupati (approx. 140 km / 4 hrs). Check-in and relax. Overnight stay in Tirupati."
+        },
+        {
+          "day": 2,
+          "title": "Tirupati Darshan to Kanchipuram",
+          "activities": [
+            "Tirupati Balaji Darshan",
+            "Drive to Kanchipuram",
+            "Kanchipuram temple visit"
+          ],
+          "description": "Tirupati Darshan → Kanchipuram. Early morning Tirupati Balaji Temple Darshan. Drive to Kanchipuram. Overnight stay in Kanchipuram."
+        },
+        {
+          "day": 3,
+          "title": "Kanchipuram to Thanjavur",
+          "activities": [
+            "Drive to Thanjavur",
+            "UNESCO Big Temple tour"
+          ],
+          "description": "Kanchipuram → Thanjavur. Drive to Thanjavur (approx. 270 km / 6 hrs). Visit Brihadeeswarar Temple. Overnight stay in Thanjavur."
+        },
+        {
+          "day": 4,
+          "title": "Thanjavur to Rameswaram",
+          "activities": [
+            "Pamban Bridge photo stop",
+            "Drive to Rameswaram",
+            "Ramanathaswamy temple evening stroll"
+          ],
+          "description": "Thanjavur → Rameswaram. Drive to Rameswaram island via Pamban Bridge. Overnight stay in Rameswaram."
+        },
+        {
+          "day": 5,
+          "title": "Rameswaram Sightseeing",
+          "activities": [
+            "22 Wells bath",
+            "Dhanushkodi border beach drive",
+            "Kalam memorial"
+          ],
+          "description": "Rameswaram sightseeing. Early morning holy bath in 22 Kunds (wells). Visit Dhanushkodi (Ghost Town) and APJ Abdul Kalam memorial. Overnight stay in Rameswaram."
+        },
+        {
+          "day": 6,
+          "title": "Rameswaram to Madurai",
+          "activities": [
+            "Drive to Madurai",
+            "Madurai Meenakshi Temple Darshan"
+          ],
+          "description": "Rameswaram → Madurai. Drive to Madurai (approx. 170 km / 3.5 hrs). Evening visit to Meenakshi Amman Temple. Overnight stay in Madurai."
+        },
+        {
+          "day": 7,
+          "title": "Madurai Sightseeing + Departure",
+          "activities": [
+            "Nayakkar Palace tour",
+            "Local market shopping",
+            "Departure drop"
+          ],
+          "description": "Madurai sightseeing + departure. Visit Thirumalai Nayakkar Palace, drop at Madurai Airport / station."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 19499,
+      "agencyName": null,
+      "badgeColor": "#ea580c",
+      "exclusions": [
+        "Tirupati special entry ticket",
+        "Rameswaram 22 Wells bath tickets",
+        "Lunch",
+        "Personal expenses"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Tirupati Balaji Darshan",
+        "Thanjavur Brihadeeswarar Temple (UNESCO)",
+        "Rameswaram Temple & Ramanathaswamy corridor",
+        "Madurai Meenakshi Amman Temple"
+      ],
+      "inclusions": [
+        "6 Nights hotel accommodation",
+        "Daily Breakfast & Dinner",
+        "AC private vehicle for the entire temple circuit",
+        "All state permit taxes"
+      ],
+      "destination": "Tamil Nadu",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 24500
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:52.002Z",
+    "updated_at": "2026-08-12T19:28:22.696Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-110",
+    "data": {
+      "id": "GPKG-110",
+      "badge": "French & Heritage",
+      "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800&q=80",
+      "title": "Tamil Nadu 4 Nights / 5 Days",
+      "hidden": false,
+      "hotels": "2N Chennai · 2N Pondicherry",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "5 Days & 4 Nights",
+      "featured": true,
+      "overview": "Explore the ancient Shore Temples of Mahabalipuram, the French colonial streets and cafes of Pondicherry, and the silk-weaving temple town of Kanchipuram.",
+      "subtitle": "Chennai – Mahabalipuram – Pondicherry – Kanchipuram",
+      "heroImage": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Chennai Arrival + Local Sightseeing",
+          "activities": [
+            "Airport pickup",
+            "Temple tour",
+            "Marina Beach walk"
+          ],
+          "description": "Chennai arrival + local sightseeing. Arrive in Chennai. Visit Kapaleeshwarar Temple and Marina Beach. Overnight stay in Chennai."
+        },
+        {
+          "day": 2,
+          "title": "Chennai to Mahabalipuram to Pondicherry",
+          "activities": [
+            "Mahabalipuram shore temple visit",
+            "Scenic ECR road drive",
+            "Pondicherry check-in"
+          ],
+          "description": "Chennai → Mahabalipuram → Pondicherry. Drive to Mahabalipuram. Visit Shore Temple and Pancha Rathas. Continue to Pondicherry. Overnight stay in Pondicherry."
+        },
+        {
+          "day": 3,
+          "title": "Pondicherry Sightseeing",
+          "activities": [
+            "Auroville Matrimandir walk",
+            "French Quarter street photography",
+            "Promenade beach stroll"
+          ],
+          "description": "Pondicherry sightseeing. Visit Auroville, Matrimandir (outer view), Promenade Beach, and French Colony. Overnight stay in Pondicherry."
+        },
+        {
+          "day": 4,
+          "title": "Pondicherry to Kanchipuram to Chennai",
+          "activities": [
+            "Kanchipuram Temple tour",
+            "Silk sari weaving demo",
+            "Drive to Chennai"
+          ],
+          "description": "Pondicherry → Kanchipuram → Chennai. Drive to Kanchipuram, visit Kamakshi Amman temple and silk weavers. Continue to Chennai. Overnight stay in Chennai."
+        },
+        {
+          "day": 5,
+          "title": "Chennai Sightseeing + Departure",
+          "activities": [
+            "Fort St. George museum",
+            "Airport drop"
+          ],
+          "description": "Chennai sightseeing + departure. Visit Fort St. George, drop at airport/station."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 12999,
+      "agencyName": null,
+      "badgeColor": "#8b5cf6",
+      "exclusions": [
+        "Monument entry tickets",
+        "Tour guide fees",
+        "Lunch and Dinner",
+        "Personal expenses"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Mahabalipuram Shore Temple",
+        "French Quarter Walk (Pondicherry)",
+        "Kanchipuram Silk & Temples",
+        "Marina Beach (Chennai)"
+      ],
+      "inclusions": [
+        "4 Nights hotel stay",
+        "Daily Breakfast",
+        "AC Private Transport Chennai to Chennai",
+        "Driver and parking charges"
+      ],
+      "destination": "Tamil Nadu",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 16500
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:51.722Z",
+    "updated_at": "2026-08-12T19:28:22.783Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-111",
+    "data": {
+      "id": "GPKG-111",
+      "badge": "Southern Circle",
+      "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800&q=80",
+      "title": "Kerala 7 Nights / 8 Days",
+      "hidden": false,
+      "hotels": "2N Munnar · 1N Thekkady · 1N Alleppey (Houseboat) · 2N Kovalam · 1N Trivandrum",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "8 Days & 7 Nights",
+      "featured": true,
+      "overview": "A grand tour spanning the entirety of Southern Kerala and crossing borders to Kanyakumari, India's southernmost tip, where three oceans meet.",
+      "subtitle": "Kochi – Munnar – Thekkady – Alleppey – Kovalam – Kanyakumari",
+      "heroImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Kochi to Munnar",
+          "activities": [
+            "Drive from Kochi",
+            "Resort check-in"
+          ],
+          "description": "Kochi → Munnar. Drive to Munnar. Overnight stay in Munnar."
+        },
+        {
+          "day": 2,
+          "title": "Munnar Sightseeing",
+          "activities": [
+            "Ghat walking tour",
+            "Tea tasting"
+          ],
+          "description": "Munnar sightseeing. Explore Eravikulam, Mattupetty, and tea factories. Overnight stay in Munnar."
+        },
+        {
+          "day": 3,
+          "title": "Munnar to Thekkady",
+          "activities": [
+            "Western Ghats drive",
+            "Spice garden tour"
+          ],
+          "description": "Munnar → Thekkady. Drive to Thekkady. Spice farms walk. Overnight stay in Thekkady."
+        },
+        {
+          "day": 4,
+          "title": "Thekkady to Alleppey + Houseboat",
+          "activities": [
+            "Backwater cruise",
+            "Traditional Kerala meals"
+          ],
+          "description": "Thekkady → Alleppey + Houseboat. Drive to Alleppey. Board private houseboat. Overnight stay on houseboat."
+        },
+        {
+          "day": 5,
+          "title": "Alleppey to Kovalam",
+          "activities": [
+            "Drive to Kovalam",
+            "Hawa Beach walk"
+          ],
+          "description": "Alleppey → Kovalam. Drive to Kovalam beach. Overnight stay in Kovalam."
+        },
+        {
+          "day": 6,
+          "title": "Kovalam + Trivandrum",
+          "activities": [
+            "Temple tour",
+            "Napier Museum",
+            "Lighthouse beach"
+          ],
+          "description": "Kovalam + Trivandrum. Visit Padmanabhaswamy Temple, Zoo, and Art Gallery in Trivandrum. Overnight stay in Kovalam."
+        },
+        {
+          "day": 7,
+          "title": "Kovalam to Kanyakumari to Trivandrum",
+          "activities": [
+            "Drive to Kanyakumari",
+            "Vivekananda Rock ferry",
+            "Sunset Viewpoint",
+            "Drive to Trivandrum"
+          ],
+          "description": "Kovalam → Kanyakumari → Trivandrum. Drive to Kanyakumari. Visit Vivekananda Rock, Sunset view. Drive back to Trivandrum. Overnight stay in Trivandrum."
+        },
+        {
+          "day": 8,
+          "title": "Trivandrum Departure",
+          "activities": [
+            "Check-out",
+            "Trivandrum Airport/station drop"
+          ],
+          "description": "Trivandrum departure. Breakfast and departure drop."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 24999,
+      "agencyName": null,
+      "badgeColor": "#ea580c",
+      "exclusions": [
+        "Ferry tickets in Kanyakumari",
+        "Water sports",
+        "Lunch/Dinner in hotels",
+        "Personal expenses"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Munnar Tea Hills",
+        "Alleppey Houseboat Backwaters",
+        "Kovalam Beach Resort",
+        "Kanyakumari Vivekananda Rock Memorial",
+        "Trivandrum City Tour"
+      ],
+      "inclusions": [
+        "6 Nights hotel stay + 1 Night private AC houseboat",
+        "Daily Breakfast, plus all meals on houseboat",
+        "AC Private Transport Kochi to Trivandrum",
+        "Driver and toll taxes"
+      ],
+      "destination": "Kerala",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 31000
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:51.451Z",
+    "updated_at": "2026-08-12T19:28:22.866Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-112",
+    "data": {
+      "id": "GPKG-112",
+      "badge": "Complete Kerala",
+      "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800&q=80",
+      "title": "Kerala 6 Nights / 7 Days",
+      "hidden": false,
+      "hotels": "2N Munnar · 1N Thekkady · 1N Alleppey (Houseboat) · 2N Kovalam",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "7 Days & 6 Nights",
+      "featured": true,
+      "overview": "Extend your Kerala escape with the golden sands of Kovalam beach and a cultural sightseeing tour of Trivandrum, creating the ultimate Kerala itinerary.",
+      "subtitle": "Kochi – Munnar – Thekkady – Alleppey – Kovalam",
+      "heroImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Kochi to Munnar",
+          "activities": [
+            "Drive from Kochi",
+            "Cheeyappara waterfalls en route",
+            "Resort check-in"
+          ],
+          "description": "Kochi → Munnar. Drive to Munnar (approx. 130 km / 4 hrs). Evening at leisure. Overnight stay in Munnar."
+        },
+        {
+          "day": 2,
+          "title": "Munnar Sightseeing",
+          "activities": [
+            "Nilgiri Tahr spotting",
+            "Eco Point shouting",
+            "Tea estate tour"
+          ],
+          "description": "Munnar sightseeing. Visit Eravikulam National Park, Mattupetty Dam, Kundala Lake, and Echo Point. Overnight stay in Munnar."
+        },
+        {
+          "day": 3,
+          "title": "Munnar to Thekkady",
+          "activities": [
+            "Scenic drive through Western Ghats",
+            "Spice farm walking tour"
+          ],
+          "description": "Munnar → Thekkady. Drive to Thekkady (approx. 90 km / 3 hrs). Visit spice plantations. Overnight stay in Thekkady."
+        },
+        {
+          "day": 4,
+          "title": "Thekkady to Alleppey + Houseboat",
+          "activities": [
+            "Houseboat cruise",
+            "Freshly cooked Kerala lunch & dinner"
+          ],
+          "description": "Thekkady → Alleppey + Houseboat. Drive to Alleppey. Board private houseboat. Overnight stay on houseboat."
+        },
+        {
+          "day": 5,
+          "title": "Alleppey to Kovalam",
+          "activities": [
+            "Drive to South Coast",
+            "Lighthouse beach sunset"
+          ],
+          "description": "Alleppey → Kovalam. Drive to Kovalam beach (approx. 160 km / 4.5 hrs). Evening at Kovalam beach. Overnight stay in Kovalam."
+        },
+        {
+          "day": 6,
+          "title": "Kovalam + Trivandrum Sightseeing",
+          "activities": [
+            "Padmanabhaswamy Temple",
+            "Museum tour",
+            "Beach leisure"
+          ],
+          "description": "Kovalam + Trivandrum sightseeing. Visit Padmanabhaswamy Temple and Napier Museum in Trivandrum. Overnight stay in Kovalam."
+        },
+        {
+          "day": 7,
+          "title": "Kovalam to Trivandrum Departure",
+          "activities": [
+            "Breakfast & check-out",
+            "Airport drop"
+          ],
+          "description": "Kovalam → Trivandrum departure. Drive to Trivandrum Airport/station. Check-out and drop."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 19999,
+      "agencyName": null,
+      "badgeColor": "#059669",
+      "exclusions": [
+        "Activity fees & camera tickets",
+        "Temple entrance / special queues",
+        "Lunch on all days",
+        "Personal tips"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Munnar Hill Station",
+        "Periyar Boating & Spice Garden",
+        "Private AC Houseboat Alleppey",
+        "Kovalam Beach & Lighthouse",
+        "Trivandrum Padmanabhaswamy Temple"
+      ],
+      "inclusions": [
+        "5 Nights hotel stay + 1 Night private AC houseboat",
+        "Daily Breakfast, plus all meals on houseboat",
+        "Private AC transport Kochi to Trivandrum",
+        "Driver and toll allowance"
+      ],
+      "destination": "Kerala",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 25000
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:51.177Z",
+    "updated_at": "2026-08-12T19:28:22.953Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-113",
+    "data": {
+      "id": "GPKG-113",
+      "badge": "Hills & Backwaters",
+      "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800&q=80",
+      "title": "Kerala 4 Nights / 5 Days",
+      "hidden": false,
+      "hotels": "2N Munnar · 1N Thekkady · 1N Alleppey (Houseboat)",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "5 Days & 4 Nights",
+      "featured": true,
+      "overview": "A classic Kerala tour bringing together the breathtaking tea hills of Munnar, wildlife spice trails in Thekkady, and a private houseboat cruise through Alleppey backwaters.",
+      "subtitle": "Kochi – Munnar – Thekkady – Alleppey Classic",
+      "heroImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Kochi to Munnar + Sightseeing",
+          "activities": [
+            "Drive through ghats",
+            "Waterfalls photo stops",
+            "Tea resort check-in"
+          ],
+          "description": "Kochi → Munnar + sightseeing. Pick up and drive to Munnar. En route visit Valara and Cheeyappara waterfalls. Overnight stay in Munnar."
+        },
+        {
+          "day": 2,
+          "title": "Munnar Sightseeing",
+          "activities": [
+            "Tea estate walk",
+            "Eravikulam Nilgiri Tahr",
+            "Mattupetty Dam boat ride"
+          ],
+          "description": "Munnar sightseeing. Visit Mattupetty Dam, Echo Point, Tea Museum, and Eravikulam National Park. Overnight stay in Munnar."
+        },
+        {
+          "day": 3,
+          "title": "Munnar to Thekkady",
+          "activities": [
+            "Drive to Periyar",
+            "Spice trail tour",
+            "Periyar lake boating"
+          ],
+          "description": "Munnar → Thekkady. Drive to Thekkady. Visit spice plantations and enjoy boating in Periyar Lake. Overnight stay in Thekkady."
+        },
+        {
+          "day": 4,
+          "title": "Thekkady to Alleppey + Houseboat",
+          "activities": [
+            "Houseboat boarding",
+            "Backwater cruise",
+            "Kerala meals on board"
+          ],
+          "description": "Thekkady → Alleppey + Houseboat. Drive to Alleppey. Board private houseboat. Cruise through backwaters. Overnight stay on houseboat."
+        },
+        {
+          "day": 5,
+          "title": "Alleppey to Kochi Departure",
+          "activities": [
+            "Fort Kochi walk",
+            "Chinese Fishing Nets",
+            "Airport drop"
+          ],
+          "description": "Alleppey → Kochi departure. Cruise back to jetty. Drive to Kochi, visit Fort Kochi and drop at airport/station."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 14999,
+      "agencyName": null,
+      "badgeColor": "#16a34a",
+      "exclusions": [
+        "Boating fees in Periyar",
+        "Spice garden entry tickets",
+        "Lunch/Dinner in hotels",
+        "Personal expenses"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Munnar Tea Estates & Eravikulam",
+        "Periyar Wildlife Sanctuary (Thekkady)",
+        "Private AC Houseboat Alleppey",
+        "Kochi Fort & Chinese Fishing Nets"
+      ],
+      "inclusions": [
+        "3 Nights hotel stay + 1 Night private AC houseboat",
+        "Daily Breakfast, plus all meals on houseboat",
+        "Private AC transport Kochi to Kochi",
+        "Driver and toll fees"
+      ],
+      "destination": "Kerala",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 19000
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:50.897Z",
+    "updated_at": "2026-08-12T19:28:23.037Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-114",
+    "data": {
+      "id": "GPKG-114",
+      "badge": "Coastal Pilgrimage",
+      "image": "https://images.unsplash.com/photo-1590050752117-238cb0612b1b?w=800&q=80",
+      "title": "Bhubaneswar – Puri Package",
+      "hidden": false,
+      "hotels": "1N Bhubaneswar · 2N Puri",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "4 Days & 3 Nights",
+      "featured": true,
+      "overview": "A brief yet comprehensive pilgrimage tour of coastal Odisha. Visit Bhubaneswar's ancient temples, Jagannath temple at Puri, and the monumental Sun Temple at Konark.",
+      "subtitle": "Bhubaneswar – Puri – Konark Temple Tour",
+      "heroImage": "https://images.unsplash.com/photo-1590050752117-238cb0612b1b?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arrival in Bhubaneswar + Local Sightseeing",
+          "activities": [
+            "Caves walk",
+            "Bhubaneswar temple tour"
+          ],
+          "description": "Arrival in Bhubaneswar + local sightseeing. Arrive and check-in. Visit Lingaraj, Mukteshwar, and Rajarani temples. Explore Khandagiri and Udayagiri rock-cut caves. Overnight stay in Bhubaneswar."
+        },
+        {
+          "day": 2,
+          "title": "Bhubaneswar to Puri + Jagannath Darshan",
+          "activities": [
+            "Drive to Puri",
+            "Pipili village applique crafts",
+            "Jagannath Darshan"
+          ],
+          "description": "Bhubaneswar → Puri + Jagannath Darshan. Drive to Puri. En route visit Dhauli Stupa and Pipili village. Evening Jagannath Temple Darshan. Overnight stay in Puri."
+        },
+        {
+          "day": 3,
+          "title": "Puri to Konark to Puri Sightseeing",
+          "activities": [
+            "Scenic Marine Drive ride",
+            "Sun Temple architecture",
+            "Puri beach shopping"
+          ],
+          "description": "Puri → Konark → Puri sightseeing. Morning drive along Marine Drive to Konark. Explore Konark Sun Temple and Chandrabhaga Beach. Evening at Puri Beach. Overnight stay in Puri."
+        },
+        {
+          "day": 4,
+          "title": "Puri to Bhubaneswar Departure",
+          "activities": [
+            "Check-out & breakfast",
+            "Drive to Bhubaneswar",
+            "Departure drop"
+          ],
+          "description": "Puri → Bhubaneswar departure. Breakfast and drive back to Bhubaneswar. Drop at railway station / airport."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 9999,
+      "agencyName": null,
+      "badgeColor": "#0ea5e9",
+      "exclusions": [
+        "Meals not mentioned (Lunch/Dinner)",
+        "Monument entrance fees",
+        "Puja and priest charges",
+        "Personal tips"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Jagannath Temple Puri",
+        "Konark Sun Temple & Marine Drive",
+        "Khandagiri Caves Bhubaneswar",
+        "Dhauli Shanti Stupa"
+      ],
+      "inclusions": [
+        "3 Nights stay in selected hotels",
+        "Daily Breakfast",
+        "AC Private vehicle for transfers and sightseeing",
+        "All taxes and toll fees"
+      ],
+      "destination": "Bengal & Odisha",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 12500
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:50.627Z",
+    "updated_at": "2026-08-12T19:28:23.120Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-115",
+    "data": {
+      "id": "GPKG-115",
+      "badge": "Culture & Delta",
+      "image": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=800&q=80",
+      "title": "Bhubaneswar – Puri – Kolkata – Gangasagar",
+      "hidden": false,
+      "hotels": "1N Bhubaneswar · 2N Puri · 1N Train · 1N Kolkata",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "6 Days & 5 Nights",
+      "featured": true,
+      "overview": "A unique cross-state package connecting the magnificent temples of Odisha with the cultural landmarks of Kolkata and the sacred Gangasagar island.",
+      "subtitle": "Odisha Temples & Bengal Delta Pilgrimage",
+      "heroImage": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Bhubaneswar Arrival + Local Sightseeing",
+          "activities": [
+            "Temple tour",
+            "Khandagiri caves exploration",
+            "Bhubaneswar check-in"
+          ],
+          "description": "Bhubaneswar arrival + local sightseeing. Visit Lingaraj Temple, Udayagiri & Khandagiri caves. Overnight stay in Bhubaneswar."
+        },
+        {
+          "day": 2,
+          "title": "Bhubaneswar to Puri + Sightseeing",
+          "activities": [
+            "Drive to Puri",
+            "Dhauli stupa",
+            "Puri Beach sunset walk"
+          ],
+          "description": "Bhubaneswar → Puri + sightseeing. Drive to Puri. En route visit Dhauli Peace Pagoda and Pipili applique village. Overnight stay in Puri."
+        },
+        {
+          "day": 3,
+          "title": "Puri + Jagannath Darshan + Konark",
+          "activities": [
+            "Jagannath Temple Darshan",
+            "Konark Sun Temple guided walk",
+            "Chandrabhaga Beach"
+          ],
+          "description": "Puri + Jagannath Darshan + Konark. Early morning Jagannath Temple Darshan. Afternoon visit to Konark Sun Temple and Chandrabhaga beach. Overnight stay in Puri."
+        },
+        {
+          "day": 4,
+          "title": "Puri to Kolkata by Overnight Train",
+          "activities": [
+            "Beach leisure",
+            "Local Odia craft shopping",
+            "Overnight train boarding"
+          ],
+          "description": "Puri → Kolkata by overnight train. Visit local markets, Golden Beach. Transfer to Puri station for overnight train to Kolkata."
+        },
+        {
+          "day": 5,
+          "title": "Kolkata to Gangasagar to Kolkata",
+          "activities": [
+            "Drive to Delta",
+            "Gangasagar Ferry & Temple Darshan",
+            "Kolkata check-in"
+          ],
+          "description": "Kolkata → Gangasagar → Kolkata. Arrive Kolkata. Drive to Harwood Point, take ferry to Gangasagar (Kapil Muni Temple). Drive back to Kolkata."
+        },
+        {
+          "day": 6,
+          "title": "Kolkata Sightseeing + Departure",
+          "activities": [
+            "Victoria Memorial walk",
+            "Dakshineswar Temple",
+            "Departure drop"
+          ],
+          "description": "Kolkata sightseeing + departure. Visit Victoria Memorial, Dakshineswar Kali Temple, and drop at Kolkata airport/Howrah station."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 16499,
+      "agencyName": null,
+      "badgeColor": "#14b8a6",
+      "exclusions": [
+        "Train ticket cost (if booking separately)",
+        "Ferry boat to Gangasagar",
+        "Lunch and Dinner",
+        "Personal expenses"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Jagannath Temple Puri Darshan",
+        "UNESCO Konark Sun Temple",
+        "Kolkata Victoria Memorial",
+        "Gangasagar Holy Sangam Boat Ride"
+      ],
+      "inclusions": [
+        "4 Nights hotel accommodation + 1 Night Train AC Tier",
+        "Daily Breakfast",
+        "All private road transfers in AC vehicle",
+        "Driver and toll fees"
+      ],
+      "destination": "Bengal & Odisha",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 21500
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:50.357Z",
+    "updated_at": "2026-08-12T19:28:23.200Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-116",
+    "data": {
+      "id": "GPKG-116",
+      "badge": "Valleys & Culture",
+      "image": "https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80",
+      "title": "Nagaland Package",
+      "hidden": false,
+      "hotels": "5N Kohima Homestays",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "6 Days & 5 Nights",
+      "featured": true,
+      "overview": "Immerse yourself in Naga culture. Explore the historical hills of Kohima, the green valleys of Khonoma eco-village, trek through the stunning Dzükou Valley, and visit Kisama Heritage Village.",
+      "subtitle": "Dimapur – Kohima – Khonoma – Dzükou Valley – Kisama",
+      "heroImage": "https://images.unsplash.com/photo-1548013146-72479768bada?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Dimapur to Kohima + Local Sightseeing",
+          "activities": [
+            "Dimapur pickup",
+            "Kohima War Cemetery",
+            "Local Naga market walk"
+          ],
+          "description": "Dimapur → Kohima + local sightseeing. Pick up from Dimapur, drive to Kohima. Visit WWII War Cemetery. Overnight stay in Kohima."
+        },
+        {
+          "day": 2,
+          "title": "Kohima Full-day Sightseeing",
+          "activities": [
+            "Naga heritage museum",
+            "Bara Basti traditional village tour"
+          ],
+          "description": "Kohima full-day sightseeing. Visit State Museum and Kohima village (Bara Bastil). Overnight stay in Kohima."
+        },
+        {
+          "day": 3,
+          "title": "Kohima to Khonoma to Kohima",
+          "activities": [
+            "Khonoma walking tour",
+            "Traditional farming demo",
+            "Naga organic lunch"
+          ],
+          "description": "Kohima → Khonoma → Kohima. Day trip to Khonoma Green Village (first green village in India). Overnight stay in Kohima."
+        },
+        {
+          "day": 4,
+          "title": "Kohima to Dzükou Valley Excursion",
+          "activities": [
+            "Dzükou Valley mountain trek",
+            "Flower valley photography"
+          ],
+          "description": "Kohima → Dzükou Valley excursion. Early morning drive to Viswema, trek to Dzükou Valley (approx. 5 hrs trek). Return back. Overnight stay in Kohima."
+        },
+        {
+          "day": 5,
+          "title": "Kohima to Kisama + Local Villages",
+          "activities": [
+            "Kisama Morungs exploration",
+            "Kigwema heritage walk"
+          ],
+          "description": "Kohima → Kisama + local villages. Visit Kisama Heritage Village (home of Hornbill Festival) and family houses in local villages."
+        },
+        {
+          "day": 6,
+          "title": "Kohima to Dimapur Departure",
+          "activities": [
+            "Breakfast & check-out",
+            "Drive to Dimapur",
+            "Airport drop"
+          ],
+          "description": "Kohima → Dimapur departure. Drive back to Dimapur for departure."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 16999,
+      "agencyName": null,
+      "badgeColor": "#eab308",
+      "exclusions": [
+        "Entry permits (ILP)",
+        "Porter services",
+        "Lunch",
+        "Personal expenses"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Khonoma Green Eco-Village",
+        "Dzükou Valley Day Trek",
+        "Kisama Naga Heritage Village",
+        "Kohima WWII War Cemetery"
+      ],
+      "inclusions": [
+        "5 Nights accommodation in standard hotels/homestays",
+        "Daily Breakfast & Dinner",
+        "Private vehicle Dimapur to Dimapur",
+        "Dzükou Valley trekking guide"
+      ],
+      "destination": "North East",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 19500
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:49.997Z",
+    "updated_at": "2026-08-12T19:28:23.279Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-117",
+    "data": {
+      "id": "GPKG-117",
+      "badge": "Monasteries & Passes",
+      "image": "https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80",
+      "title": "Arunachal Pradesh Package",
+      "hidden": false,
+      "hotels": "1N Bhalukpong · 1N Dirang · 2N Tawang · 1N Bomdila · 1N Guwahati",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "7 Days & 6 Nights",
+      "featured": true,
+      "overview": "A high-mountain trip through the wilderness of Bhalukpong, the scenic Dirang Valley, the magnificent monasteries of Tawang, and the tribal crafts of Bomdila.",
+      "subtitle": "Tawang Valley & High Mountain Passes",
+      "heroImage": "https://images.unsplash.com/photo-1548013146-72479768bada?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Guwahati to Bhalukpong",
+          "activities": [
+            "Assam to Arunachal drive",
+            "Kameng river walk"
+          ],
+          "description": "Guwahati → Bhalukpong. Pick up from Guwahati, drive to Bhalukpong border. Overnight stay in Bhalukpong."
+        },
+        {
+          "day": 2,
+          "title": "Bhalukpong to Dirang",
+          "activities": [
+            "Orchid Research Centre",
+            "Dirang Dzong fort",
+            "Hot water springs"
+          ],
+          "description": "Bhalukpong → Dirang. Drive to Dirang valley. Visit Dirang Dzong. Overnight stay in Dirang."
+        },
+        {
+          "day": 3,
+          "title": "Dirang to Tawang",
+          "activities": [
+            "Sela Pass snow view",
+            "Sela Lake",
+            "Jaswant Garh memorial"
+          ],
+          "description": "Dirang → Tawang. Drive to Tawang crossing Sela Pass (4170m). Visit Jaswant Garh War Memorial. Overnight stay in Tawang."
+        },
+        {
+          "day": 4,
+          "title": "Tawang Local Sightseeing",
+          "activities": [
+            "Tawang Monastery tour",
+            "Urgelling birthplace of 6th Dalai Lama",
+            "Tawang war memorial show"
+          ],
+          "description": "Tawang local sightseeing. Visit Tawang Monastery, Giant Buddha statue, and craft centre. Overnight stay in Tawang."
+        },
+        {
+          "day": 5,
+          "title": "Tawang to Bomdila",
+          "activities": [
+            "Nuranang Falls en route",
+            "Bomdila Monastery",
+            "Bomdila Viewpoint"
+          ],
+          "description": "Tawang → Bomdila. Drive to Bomdila. Visit Bomdila Monastery. Overnight stay in Bomdila."
+        },
+        {
+          "day": 6,
+          "title": "Bomdila to Guwahati",
+          "activities": [
+            "Long downhill drive to plains",
+            "Guwahati check-in"
+          ],
+          "description": "Bomdila → Guwahati. Drive back to Guwahati. Overnight stay in Guwahati."
+        },
+        {
+          "day": 7,
+          "title": "Guwahati Sightseeing + Departure",
+          "activities": [
+            "Kamakhya Temple Darshan",
+            "Guwahati airport drop"
+          ],
+          "description": "Guwahati sightseeing + departure. Visit Kamakhya Temple, drop at airport."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 19999,
+      "agencyName": null,
+      "badgeColor": "#8b5cf6",
+      "exclusions": [
+        "Bumla Pass local vehicle charges",
+        "Monastery donations",
+        "Lunch",
+        "Personal expenses"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Sela Pass & Sela Lake (4,170m)",
+        "Tawang Monastery (Largest in India)",
+        "Nuranang Waterfalls (Jung Falls)",
+        "Kameng River Valley views"
+      ],
+      "inclusions": [
+        "6 Nights accommodation",
+        "Breakfast and Dinner",
+        "AC Private SUV for hills",
+        "Inner Line Permit (ILP) assistance"
+      ],
+      "destination": "North East",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 24500
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:49.712Z",
+    "updated_at": "2026-08-12T19:28:23.359Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-118",
+    "data": {
+      "id": "GPKG-118",
+      "badge": "Rain Hills & Lakes",
+      "image": "https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80",
+      "title": "Meghalaya – Shillong – Cherrapunji Package",
+      "hidden": false,
+      "hotels": "2N Shillong · 2N Cherrapunji",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "5 Days & 4 Nights",
+      "featured": true,
+      "overview": "Discover Meghalaya's wet pine valleys, crystal-clear rivers, living root bridges, and high waterfalls. Stay in Shillong and the rain capital, Cherrapunji.",
+      "subtitle": "Abode of Clouds & Living Root Bridges",
+      "heroImage": "https://images.unsplash.com/photo-1548013146-72479768bada?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Guwahati to Shillong + Sightseeing",
+          "activities": [
+            "Guwahati pickup",
+            "Umiam Lake boating",
+            "Shillong peak sunset"
+          ],
+          "description": "Guwahati → Shillong + sightseeing. Drive from Guwahati (approx. 100 km / 3 hrs). Visit Umiam Lake and Shillong Peak. Overnight stay in Shillong."
+        },
+        {
+          "day": 2,
+          "title": "Shillong to Cherrapunji Sightseeing",
+          "activities": [
+            "Elephant Falls",
+            "Mawsmai cave exploration",
+            "Nohkalikai Falls view"
+          ],
+          "description": "Shillong → Cherrapunji sightseeing. Drive to Cherrapunji (approx. 55 km / 2 hrs). Visit Elephant Falls and Mawsmai Caves. Overnight stay in Cherrapunji."
+        },
+        {
+          "day": 3,
+          "title": "Cherrapunji Full-day Sightseeing",
+          "activities": [
+            "Nongriat bridge forest trek",
+            "Rainbow Falls visit",
+            "Village walk"
+          ],
+          "description": "Cherrapunji full-day sightseeing. Trek to Double Decker Living Root Bridge at Nongriat. Overnight stay in Cherrapunji."
+        },
+        {
+          "day": 4,
+          "title": "Cherrapunji to Shillong + Local Sightseeing",
+          "activities": [
+            "Dawki crystal water boating",
+            "Mawlynnong cleanest village",
+            "Shillong check-in"
+          ],
+          "description": "Cherrapunji → Shillong + local sightseeing. Visit Mawlynnong (Cleanest Village in Asia) and Dawki (Umngot river). Drive back to Shillong. Overnight stay in Shillong."
+        },
+        {
+          "day": 5,
+          "title": "Shillong to Guwahati Departure",
+          "activities": [
+            "Don Bosco Museum",
+            "Drive to Guwahati",
+            "Departure drop"
+          ],
+          "description": "Shillong → Guwahati departure. Breakfast, check-out, drive to Guwahati airport/station."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 14999,
+      "agencyName": null,
+      "badgeColor": "#06b6d4",
+      "exclusions": [
+        "Boating fees at Dawki",
+        "Bridge entry fee",
+        "Lunch",
+        "Personal expenses"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Double Decker Living Root Bridge",
+        "Umngot River Crystal Boating (Dawki)",
+        "Nohkalikai Waterfalls Cherrapunji",
+        "Umiam Lake Shillong"
+      ],
+      "inclusions": [
+        "4 Nights hotel stay",
+        "Breakfast and Dinner daily",
+        "Private vehicle Guwahati to Guwahati",
+        "Local sightseeing guide for root bridge"
+      ],
+      "destination": "North East",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 17500
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:49.441Z",
+    "updated_at": "2026-08-12T19:28:23.432Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-119",
+    "data": {
+      "id": "GPKG-119",
+      "badge": "Himalayan Serenity",
+      "image": "https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80",
+      "title": "Gangtok – Darjeeling – Lachung – Pelling Package",
+      "hidden": false,
+      "hotels": "2N Darjeeling · 2N Gangtok · 1N Lachung · 1N Pelling",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "7 Days & 6 Nights",
+      "featured": true,
+      "overview": "A majestic tour of Sikkim and North Bengal. Witness the sunrise at Tiger Hill in Darjeeling, explore Gangtok, travel to high-altitude Lachung, and view the Kanchenjunga from Pelling.",
+      "subtitle": "Sikkim & West Bengal Explorer",
+      "heroImage": "https://images.unsplash.com/photo-1548013146-72479768bada?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Bagdogra/NJP to Darjeeling",
+          "activities": [
+            "Bagdogra/NJP pickup",
+            "Tea garden scenic drive",
+            "Darjeeling stay"
+          ],
+          "description": "Bagdogra/NJP → Darjeeling. Pick up at airport/station. Scenic drive through tea gardens. Overnight stay in Darjeeling."
+        },
+        {
+          "day": 2,
+          "title": "Darjeeling Sightseeing",
+          "activities": [
+            "Tiger Hill sunrise (4 AM)",
+            "Batasia Loop",
+            "Happy Valley Tea Estate"
+          ],
+          "description": "Darjeeling sightseeing. Early morning sunrise at Tiger Hill. Later visit Ghoom Monastery, Batasia Loop, and tea gardens."
+        },
+        {
+          "day": 3,
+          "title": "Darjeeling to Gangtok",
+          "activities": [
+            "Teesta river scenic drive",
+            "Gangtok check-in",
+            "MG Marg walk"
+          ],
+          "description": "Darjeeling → Gangtok. Drive to Gangtok (approx. 4 hrs). Evening walk on MG Marg."
+        },
+        {
+          "day": 4,
+          "title": "Gangtok to Lachung",
+          "activities": [
+            "North Sikkim drive",
+            "Seven Sisters waterfall",
+            "Lachung river lodge"
+          ],
+          "description": "Gangtok → Lachung. Drive to North Sikkim's Lachung. En route waterfalls and valleys. Night in Lachung."
+        },
+        {
+          "day": 5,
+          "title": "Lachung to Yumthang to Gangtok",
+          "activities": [
+            "Yumthang Valley excursion",
+            "Hot Springs",
+            "Drive to Gangtok"
+          ],
+          "description": "Lachung → Yumthang → Gangtok. Excursion to Yumthang Valley of Flowers and hot springs. Later drive back to Gangtok."
+        },
+        {
+          "day": 6,
+          "title": "Gangtok to Pelling",
+          "activities": [
+            "Drive to Pelling",
+            "Rabdentse Ruins",
+            "Pelling Sky Walk"
+          ],
+          "description": "Gangtok → Pelling. Drive to Pelling. Visit the Pelling Sky Walk and enjoy panoramic views of Mt. Kanchenjunga."
+        },
+        {
+          "day": 7,
+          "title": "Pelling to Bagdogra/NJP Departure",
+          "activities": [
+            "Breakfast",
+            "Drive to Bagdogra/NJP",
+            "Departure drop"
+          ],
+          "description": "Pelling → Bagdogra/NJP departure. Breakfast and check-out. Drive back to airport/station."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 22999,
+      "agencyName": null,
+      "badgeColor": "#059669",
+      "exclusions": [
+        "Nathula Pass permit & vehicle (optional)",
+        "Yumesamdong (Zero Point) trip",
+        "Lunch",
+        "Personal expenses"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Tiger Hill Sunrise (Darjeeling)",
+        "Tsomgo Lake & Baba Mandir (Gangtok)",
+        "Yumthang Valley of Flowers (Lachung)",
+        "Sky Walk & Kanchenjunga Views (Pelling)"
+      ],
+      "inclusions": [
+        "6 Nights accommodation",
+        "Daily Breakfast & Dinner",
+        "Dedicated private vehicle (4WD for North Sikkim)",
+        "Sikkim permits"
+      ],
+      "destination": "North East",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 28000
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:49.166Z",
+    "updated_at": "2026-08-12T19:28:23.508Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-120",
+    "data": {
+      "id": "GPKG-120",
+      "badge": "High Altitude Adventure",
+      "image": "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?w=800&q=80",
+      "title": "Leh Ladakh Package",
+      "hidden": false,
+      "hotels": "4N Leh · 1N Nubra Valley · 1N Pangong Lake",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "7 Days & 6 Nights",
+      "featured": true,
+      "overview": "Witness the unmatched beauty of the Land of High Passes. Discover Leh, magnetic hills, drive through the legendary Khardung La, ride camels in Nubra, and camp by the blue waters of Pangong.",
+      "subtitle": "Leh – Sham Valley – Nubra Valley – Pangong Lake",
+      "heroImage": "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arrival in Leh + Rest & Acclimatization",
+          "activities": [
+            "Leh airport pickup",
+            "Hotel rest for altitude adaptation",
+            "Evening local market stroll"
+          ],
+          "description": "Arrival in Leh + rest & acclimatization. Pick up from Leh airport. Full day rest to adapt to high altitude."
+        },
+        {
+          "day": 2,
+          "title": "Leh Local Sightseeing",
+          "activities": [
+            "Shanti Stupa sunset",
+            "Hall of Fame museum",
+            "Leh Palace"
+          ],
+          "description": "Leh local sightseeing. Visit Shanti Stupa, Hall of Fame, and Leh Palace. Overnight stay in Leh."
+        },
+        {
+          "day": 3,
+          "title": "Leh to Sham Valley to Leh",
+          "activities": [
+            "Magnetic Hill experience",
+            "Confluence photo stop",
+            "Gurudwara Darshan"
+          ],
+          "description": "Leh → Sham Valley → Leh. Explore Magnetic Hill, Gurudwara Pathar Sahib, and Indus-Zanskar confluence."
+        },
+        {
+          "day": 4,
+          "title": "Leh to Khardung La to Nubra Valley",
+          "activities": [
+            "Khardung La pass photo",
+            "Nubra sand dunes",
+            "Double humped camel ride"
+          ],
+          "description": "Leh → Khardung La → Nubra Valley. Cross Khardung La Pass (5,359m) and descend into Nubra Valley. Double-humped camel riding in Hunder Sand Dunes. Night in Nubra."
+        },
+        {
+          "day": 5,
+          "title": "Nubra to Pangong Lake",
+          "activities": [
+            "Scenic Shyok drive",
+            "Pangong Lake sunset walk",
+            "Bonfire at camp"
+          ],
+          "description": "Nubra → Pangong Lake. Scenic drive to Pangong Lake via Shyok river route. Sunset walk at the lake."
+        },
+        {
+          "day": 6,
+          "title": "Pangong to Chang La to Leh",
+          "activities": [
+            "Pangong sunrise",
+            "Chang La pass crossing",
+            "Leh check-in"
+          ],
+          "description": "Pangong → Chang La → Leh. Witness the sunrise, then drive back to Leh crossing Chang La Pass. Overnight stay in Leh."
+        },
+        {
+          "day": 7,
+          "title": "Leh Departure",
+          "activities": [
+            "Breakfast & Check-out",
+            "Airport drop"
+          ],
+          "description": "Leh departure. Breakfast and check-out. Drop at Leh airport."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 24999,
+      "agencyName": null,
+      "badgeColor": "#ea580c",
+      "exclusions": [
+        "Camel ride charges",
+        "Oxygen cylinder charges (optional)",
+        "Lunch",
+        "Personal expenses"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Khardung La Pass (5,359m)",
+        "Pangong Lake Border Camp",
+        "Nubra Hunder Double-humped Camel Ride",
+        "Magnetic Hill & Hall of Fame"
+      ],
+      "inclusions": [
+        "6 Nights accommodation (hotels & camps)",
+        "Daily Breakfast & Dinner",
+        "Dedicated private SUV",
+        "Inner Line Permits"
+      ],
+      "destination": "Jammu Kashmir",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 29000
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:48.882Z",
+    "updated_at": "2026-08-12T19:28:23.583Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-121",
+    "data": {
+      "id": "GPKG-121",
+      "badge": "Devotional & Scenic",
+      "image": "https://images.unsplash.com/photo-1590050752117-238cb0612b1b?w=800&q=80",
+      "title": "Vaishno Devi – Patnitop Package",
+      "hidden": false,
+      "hotels": "2N Katra · 1N Patnitop",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "4 Days & 3 Nights",
+      "featured": true,
+      "overview": "A highly spiritual and scenic tour taking you to the holy cave shrine of Mata Vaishno Devi in Katra, followed by relaxation amidst the pine forests and parks of Patnitop.",
+      "subtitle": "Holy Darshan & Pine Hill Getaway",
+      "heroImage": "https://images.unsplash.com/photo-1590050752117-238cb0612b1b?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Jammu to Katra + Local Sightseeing",
+          "activities": [
+            "Jammu pickup",
+            "Drive to Katra",
+            "Katra local market walk"
+          ],
+          "description": "Jammu → Katra + local sightseeing. Pick up from Jammu. Drive to Katra (approx. 50 km / 1.5 hrs). Check-in and relax."
+        },
+        {
+          "day": 2,
+          "title": "Vaishno Devi Darshan",
+          "activities": [
+            "14 km Holy Trek / Helicopter ride",
+            "Vaishno Devi Cave Darshan"
+          ],
+          "description": "Vaishno Devi Darshan. Start the 14 km holy trek (or helicopter ride) to Mata Vaishno Devi Bhawan. Return to Katra for overnight stay."
+        },
+        {
+          "day": 3,
+          "title": "Katra to Patnitop + Sightseeing",
+          "activities": [
+            "Drive to Patnitop",
+            "Naag Temple visit",
+            "Pine park walk"
+          ],
+          "description": "Katra → Patnitop + sightseeing. Breakfast and drive to Patnitop (approx. 85 km / 2.5 hrs). Visit Pine parks, Naag Temple. Overnight stay in Patnitop."
+        },
+        {
+          "day": 4,
+          "title": "Patnitop to Jammu Departure",
+          "activities": [
+            "Natha Top panoramic view",
+            "Drive to Jammu",
+            "Departure drop"
+          ],
+          "description": "Patnitop → Jammu departure. Enjoy morning views at Natha Top. Drive back to Jammu for drop at station/airport."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 9999,
+      "agencyName": null,
+      "badgeColor": "#f59e0b",
+      "exclusions": [
+        "Helicopter / Pony tickets at Katra",
+        "Palki charges",
+        "Lunch",
+        "Personal expenses"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Mata Vaishno Devi Bhawan Darshan",
+        "Katra Local Sightseeing",
+        "Patnitop Pine forests & gardens",
+        "Natha Top views"
+      ],
+      "inclusions": [
+        "3 Nights stay in comfortable hotels",
+        "Daily Breakfast & Dinner",
+        "Private vehicle transfers Jammu to Jammu",
+        "Driver allowance"
+      ],
+      "destination": "Jammu Kashmir",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 12000
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:48.612Z",
+    "updated_at": "2026-08-12T19:28:23.658Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-122",
+    "data": {
+      "id": "GPKG-122",
+      "badge": "Paradise Explorer",
+      "image": "https://images.unsplash.com/photo-1566228015668-4c45dbc4e2f5?w=800&q=80",
+      "title": "Srinagar – Pahalgam – Gulmarg Package",
+      "hidden": false,
+      "hotels": "3N Srinagar (inc. 1N Houseboat) · 1N Pahalgam · 1N Gulmarg",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "6 Days & 5 Nights",
+      "featured": true,
+      "overview": "A luxurious experience of Kashmir: Mughal Gardens & Dal Lake Shikara ride in Srinagar, pine-forested valleys of Pahalgam, and snow-filled Gondola rides in Gulmarg.",
+      "subtitle": "Classic Valley & Shikara Experience",
+      "heroImage": "https://images.unsplash.com/photo-1566228015668-4c45dbc4e2f5?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Srinagar Arrival + Local Sightseeing",
+          "activities": [
+            "Airport pickup",
+            "Houseboat check-in",
+            "Shikara ride"
+          ],
+          "description": "Srinagar arrival + local sightseeing. Pick up and check-in at hotel. Evening Shikara ride on Dal Lake. Overnight stay in Srinagar."
+        },
+        {
+          "day": 2,
+          "title": "Srinagar to Pahalgam",
+          "activities": [
+            "Scenic drive via saffron fields",
+            "Betaab Valley excursion"
+          ],
+          "description": "Srinagar → Pahalgam. Drive to Pahalgam (approx. 95 km / 3 hrs). Visit Betaab Valley and Chandanwari. Overnight stay in Pahalgam."
+        },
+        {
+          "day": 3,
+          "title": "Pahalgam Sightseeing to Srinagar",
+          "activities": [
+            "Aru Valley walk",
+            "Drive to Srinagar",
+            "Mughal Gardens visit"
+          ],
+          "description": "Pahalgam sightseeing → Srinagar. Visit Aru Valley, then drive back to Srinagar. Stroll in Mughal Gardens (Shalimar & Nishat)."
+        },
+        {
+          "day": 4,
+          "title": "Srinagar to Gulmarg + Sightseeing",
+          "activities": [
+            "Drive to Gulmarg",
+            "Gondola boarding",
+            "Snow views"
+          ],
+          "description": "Srinagar → Gulmarg + sightseeing. Drive to Gulmarg. Explore the meadow of flowers and take the Gondola ride. Overnight stay in Gulmarg."
+        },
+        {
+          "day": 5,
+          "title": "Gulmarg Full-day Sightseeing to Srinagar",
+          "activities": [
+            "Gulmarg valley exploration",
+            "Drive to Srinagar"
+          ],
+          "description": "Gulmarg full-day sightseeing → Srinagar. Free day for skiing/snow activities in Gulmarg, then drive back to Srinagar for overnight stay."
+        },
+        {
+          "day": 6,
+          "title": "Srinagar Sightseeing + Departure",
+          "activities": [
+            "Lal Chowk shopping",
+            "Airport drop"
+          ],
+          "description": "Srinagar sightseeing + departure. Visit local handicraft markets. Drop at Srinagar airport."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 21999,
+      "agencyName": null,
+      "badgeColor": "#3b82f6",
+      "exclusions": [
+        "Gondola ride tickets",
+        "Pony ride charges",
+        "Lunch",
+        "Personal expenses"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Dal Lake Houseboat & Shikara Ride",
+        "Aru Valley & Betaab Valley Pahalgam",
+        "Gulmarg Gondola Ride (Phase 1 & 2)",
+        "Mughal Gardens Srinagar"
+      ],
+      "inclusions": [
+        "5 Nights stay in premium rooms/houseboat",
+        "Breakfast and Dinner daily",
+        "Dedicated AC private vehicle",
+        "Shikara Ride (1 hour)"
+      ],
+      "destination": "Jammu Kashmir",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 26000
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:48.331Z",
+    "updated_at": "2026-08-12T19:28:23.732Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-123",
+    "data": {
+      "id": "GPKG-123",
+      "badge": "Adventure & Desert",
+      "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80",
+      "title": "Spiti Valley Circuit",
+      "hidden": false,
+      "hotels": "1N Shimla · 1N Sarahan · 1N Kalpa · 2N Kaza · 1N Chandratal · 1N Manali",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "8 Days & 7 Nights",
+      "featured": true,
+      "overview": "Embark on an offbeat high-altitude road trip of a lifetime. Travel through Shimla, Sarahan, Kalpa, Key Monastery in Kaza, and camp under the stars at Chandratal Lake.",
+      "subtitle": "Chandigarh – Shimla – Kalpa – Kaza – Chandratal – Manali",
+      "heroImage": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Chandigarh to Shimla",
+          "activities": [
+            "Chandigarh pickup",
+            "Himalayan expressway drive",
+            "Shimla stay"
+          ],
+          "description": "Chandigarh → Shimla. Drive to Shimla. Check-in. Overnight stay in Shimla."
+        },
+        {
+          "day": 2,
+          "title": "Shimla to Sarahan",
+          "activities": [
+            "Drive to Sarahan",
+            "Bhimakali Temple visit"
+          ],
+          "description": "Shimla → Sarahan. Drive to Sarahan. Visit Bhimakali Temple. Overnight stay in Sarahan."
+        },
+        {
+          "day": 3,
+          "title": "Sarahan to Kalpa",
+          "activities": [
+            "Drive to Kalpa",
+            "Kinnaur Kailash views"
+          ],
+          "description": "Sarahan → Kalpa. Drive to Kalpa. Panoramic views of Kinnaur Kailash peaks. Overnight stay in Kalpa."
+        },
+        {
+          "day": 4,
+          "title": "Kalpa to Nako to Tabo to Kaza",
+          "activities": [
+            "Tabo Monastery",
+            "Nako Lake walk",
+            "High altitude drive"
+          ],
+          "description": "Kalpa → Nako → Tabo → Kaza. Drive to Kaza. En route visit Nako Lake and 1000-year-old Tabo Monastery. Overnight stay in Kaza."
+        },
+        {
+          "day": 5,
+          "title": "Kaza Local Sightseeing",
+          "activities": [
+            "Key Monastery",
+            "Kibber village",
+            "Komic post office"
+          ],
+          "description": "Kaza local sightseeing. Visit Key Monastery, Kibber village, and Komic (highest post office). Overnight stay in Kaza."
+        },
+        {
+          "day": 6,
+          "title": "Kaza to Chandratal",
+          "activities": [
+            "Kunzum Pass crossing",
+            "Chandratal Lake walk",
+            "Stargazing at camp"
+          ],
+          "description": "Kaza → Chandratal. Drive to Chandratal Lake via Kunzum Pass. Overnight stay in tents at Chandratal."
+        },
+        {
+          "day": 7,
+          "title": "Chandratal to Atal Tunnel to Manali",
+          "activities": [
+            "Chandra river drive",
+            "Atal Tunnel crossing",
+            "Manali stay"
+          ],
+          "description": "Chandratal → Atal Tunnel → Manali. Drive to Manali via Atal Tunnel. Overnight stay in Manali."
+        },
+        {
+          "day": 8,
+          "title": "Manali to Chandigarh",
+          "activities": [
+            "Drive to Chandigarh",
+            "Departure drop"
+          ],
+          "description": "Manali → Chandigarh. Breakfast and drive back to Chandigarh. Trip ends."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 21999,
+      "agencyName": null,
+      "badgeColor": "#ea580c",
+      "exclusions": [
+        "Adventure gear / sleeping bags",
+        "Lunch",
+        "Water sports",
+        "Tips and personal expenses"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Bhimakali Temple Sarahan",
+        "Kinnaur Kailash View Kalpa",
+        "Key Monastery Kaza",
+        "Chandratal Lake Camping",
+        "Atal Tunnel crossing"
+      ],
+      "inclusions": [
+        "7 Nights stay in hotels/camps",
+        "Daily Breakfast & Dinner",
+        "High-clearance SUV for mountainous route",
+        "Inner Line permits for Spiti"
+      ],
+      "destination": "Himachal",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 26000
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:48.061Z",
+    "updated_at": "2026-08-12T19:28:23.819Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-124",
+    "data": {
+      "id": "GPKG-124",
+      "badge": "Himalayan Grandeur",
+      "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80",
+      "title": "Chandigarh to Amritsar Grand Tour",
+      "hidden": false,
+      "hotels": "2N Shimla · 2N Manali · 1N Dharamshala · 1N Dalhousie · 2N Amritsar",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "9 Days & 8 Nights",
+      "featured": true,
+      "overview": "A spectacular cross-state journey through Himachal Pradesh's finest hill stations, ending in the cultural and historical capital of Punjab, Amritsar.",
+      "subtitle": "Shimla – Manali – Dharamshala – Dalhousie – Amritsar",
+      "heroImage": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Chandigarh to Shimla",
+          "activities": [
+            "Drive to Shimla",
+            "Mall Road",
+            "Ridge & Christ Church"
+          ],
+          "description": "Chandigarh → Shimla. Drive to Shimla. Check-in and relax. Evening walk at Mall Road, Ridge, and Christ Church."
+        },
+        {
+          "day": 2,
+          "title": "Shimla",
+          "activities": [
+            "Kufri sightseeing",
+            "Jakhoo Temple",
+            "Mall Road shopping"
+          ],
+          "description": "Shimla. Visit Kufri, Green Valley, Jakhoo Temple, and Mall Road. Night stay in Shimla."
+        },
+        {
+          "day": 3,
+          "title": "Shimla to Manali",
+          "activities": [
+            "Scenic drive via Kullu",
+            "River rafting view",
+            "Manali check-in"
+          ],
+          "description": "Shimla → Manali. Morning departure for Manali. Scenic mountain drive via Mandi/Kullu. Evening free. Night in Manali."
+        },
+        {
+          "day": 4,
+          "title": "Manali",
+          "activities": [
+            "Solang Valley adventure",
+            "Atal Tunnel / Sissu drive",
+            "Old Manali cafes"
+          ],
+          "description": "Manali. Explore Solang Valley, Atal Tunnel/Sissu if accessible, Old Manali, and Mall Road. Night in Manali."
+        },
+        {
+          "day": 5,
+          "title": "Manali to Dharamshala",
+          "activities": [
+            "Drive to Dharamshala",
+            "Dalai Lama Temple",
+            "Bhagsu Falls"
+          ],
+          "description": "Manali → Dharamshala. Drive to Dharamshala/McLeod Ganj. Evening: McLeod Ganj, Dalai Lama Temple, Bhagsu area. Night in Dharamshala."
+        },
+        {
+          "day": 6,
+          "title": "Dharamshala to Dalhousie",
+          "activities": [
+            "Dharamshala sightseeing",
+            "Drive to Dalhousie",
+            "Mall road stroll"
+          ],
+          "description": "Dharamshala → Dalhousie. Morning sightseeing: Dharamshala/McLeod Ganj. Then drive to Dalhousie. Evening at leisure. Night in Dalhousie."
+        },
+        {
+          "day": 7,
+          "title": "Dalhousie to Amritsar",
+          "activities": [
+            "Khajjiar (Mini Switzerland)",
+            "Drive to Amritsar",
+            "Wagah Border Ceremony"
+          ],
+          "description": "Dalhousie → Amritsar. Morning Khajjiar excursion (Mini Switzerland), then drive to Amritsar. Evening: Wagah/Attari Border ceremony if timing permits. Night in Amritsar."
+        },
+        {
+          "day": 8,
+          "title": "Amritsar",
+          "activities": [
+            "Golden Temple Darshan",
+            "Jallianwala Bagh",
+            "Partition Museum",
+            "Local Amritsari Food"
+          ],
+          "description": "Amritsar. Golden Temple early morning, Jallianwala Bagh, Partition Museum, local market. Evening at Golden Temple. Night in Amritsar."
+        },
+        {
+          "day": 9,
+          "title": "Amritsar",
+          "activities": [
+            "Breakfast",
+            "Transfer to airport/railway station"
+          ],
+          "description": "Amritsar. Breakfast and departure. Trip ends."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 25999,
+      "agencyName": null,
+      "badgeColor": "#0284c7",
+      "exclusions": [
+        "Monument/temple guide fees",
+        "Khajjiar horse rides & activities",
+        "Lunch",
+        "Personal expenses"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Kufri & Mall Road Shimla",
+        "Solang Valley & Atal Tunnel",
+        "McLeod Ganj Dalai Lama Temple",
+        "Mini Switzerland Khajjiar",
+        "Wagah Border & Golden Temple"
+      ],
+      "inclusions": [
+        "8 Nights stay in standard hotels",
+        "Daily Breakfast & Dinner",
+        "Dedicated AC Private vehicle for 9 days",
+        "All state tolls and driver permits"
+      ],
+      "destination": "Himachal",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 32000
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:47.787Z",
+    "updated_at": "2026-08-12T19:28:23.927Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-125",
+    "data": {
+      "id": "GPKG-125",
+      "badge": "Scenic Mountains",
+      "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80",
+      "title": "Shimla + Manali + Kasol Escape",
+      "hidden": false,
+      "hotels": "2N Shimla · 2N Manali · 1N Kasol",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "6 Days & 5 Nights",
+      "featured": true,
+      "overview": "Immerse yourself in Himachal's absolute favorites: the colonial grandeur of Shimla, the adventure slopes of Manali, and the serene riverside pine forests of Kasol in Parvati Valley.",
+      "subtitle": "Hill Stations & Parvati Valley Trail",
+      "heroImage": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Chandigarh to Shimla + Local Sightseeing",
+          "activities": [
+            "Drive to Shimla",
+            "Mall Road Walk",
+            "Ridge & Christ Church"
+          ],
+          "description": "Chandigarh → Shimla + local sightseeing. Pick up and drive to Shimla. Check-in and relax. Evening walk at Mall Road, Ridge, and Christ Church."
+        },
+        {
+          "day": 2,
+          "title": "Shimla + Kufri Sightseeing",
+          "activities": [
+            "Kufri excursion",
+            "Jakhoo Temple hike",
+            "Green Valley photo stop"
+          ],
+          "description": "Shimla + Kufri sightseeing. Visit the snow viewpoints of Kufri, Green Valley, Jakhoo Temple, and Mall Road. Overnight in Shimla."
+        },
+        {
+          "day": 3,
+          "title": "Shimla to Manali",
+          "activities": [
+            "Scenic mountain drive",
+            "Kullu valley en-route",
+            "Manali check-in"
+          ],
+          "description": "Shimla → Manali. Morning departure for Manali. Scenic mountain drive via Mandi and Kullu Valley. Evening free for leisure."
+        },
+        {
+          "day": 4,
+          "title": "Manali Local + Solang Valley",
+          "activities": [
+            "Solang Valley activities",
+            "Atal Tunnel drive",
+            "Hadimba Temple visit"
+          ],
+          "description": "Manali local + Solang Valley. Visit Hadimba Temple, Solang Valley (for adventure activities), and drive through the Atal Tunnel if accessible."
+        },
+        {
+          "day": 5,
+          "title": "Manali to Kasol to Manikaran",
+          "activities": [
+            "Drive to Kasol",
+            "Manikaran Sahib Gurudwara",
+            "Riverside walk"
+          ],
+          "description": "Manali → Kasol → Manikaran. Drive to Kasol (Parvati Valley). Visit the sacred hot springs of Manikaran and stroll by the Parvati River."
+        },
+        {
+          "day": 6,
+          "title": "Kasol to Chandigarh",
+          "activities": [
+            "Kasol cafe stroll",
+            "Drive to Chandigarh",
+            "Departure drop"
+          ],
+          "description": "Kasol → Chandigarh. Breakfast and check-out. Drive back to Chandigarh railway station/airport for departure."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 14999,
+      "agencyName": null,
+      "badgeColor": "#06b6d4",
+      "exclusions": [
+        "Adventure sports & permits",
+        "Atal Tunnel local cab (if needed)",
+        "Lunch",
+        "Personal expenses"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Shimla Mall Road & Kufri",
+        "Solang Valley Snow Sports",
+        "Atal Tunnel Sightseeing",
+        "Kasol Pine Forests & Manikaran Hot Springs"
+      ],
+      "inclusions": [
+        "5 Nights accommodation",
+        "Daily Breakfast & Dinner",
+        "AC Private Transport from Chandigarh",
+        "Driver and toll taxes"
+      ],
+      "destination": "Himachal",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 18500
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:47.502Z",
+    "updated_at": "2026-08-12T19:28:24.008Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-126",
+    "data": {
+      "id": "GPKG-126",
+      "badge": "Sacred Pilgrimage",
+      "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800&q=80",
+      "title": "Char Dham Yatra",
+      "hidden": false,
+      "hotels": "2N Barkot · 2N Uttarkashi · 2N Guptkashi · 1N Kedarnath · 1N Joshimath · 1N Rudraprayag · 1N Haridwar",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "12 Days & 11 Nights",
+      "featured": true,
+      "overview": "A complete, traditional Uttarakhand Char Dham Yatra covering Yamunotri, Gangotri, Kedarnath, and Badrinath. Ideal for spiritual seekers looking for a structured, safe, and devout pilgrimage.",
+      "subtitle": "Traditional Yamunotri-Gangotri-Kedarnath-Badrinath Yatra",
+      "heroImage": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Haridwar to Barkot",
+          "activities": [
+            "Hills drive",
+            "Relaxation",
+            "Barkot check-in"
+          ],
+          "description": "Haridwar → Barkot. Drive to Barkot (approx. 220 km / 7 hrs) via Mussoorie and Kempty Falls. Overnight stay in Barkot."
+        },
+        {
+          "day": 2,
+          "title": "Barkot to Janki Chatti to Yamunotri to Barkot",
+          "activities": [
+            "Drive to Janki Chatti",
+            "Trek to Yamunotri Temple",
+            "Holy bath in Jamunabai Kund"
+          ],
+          "description": "Barkot → Janki Chatti → Yamunotri → Barkot. Drive to Janki Chatti, then trek 6 km to Yamunotri Temple. Take a holy dip in Jamunabai Kund and seek blessings. Return to Barkot."
+        },
+        {
+          "day": 3,
+          "title": "Barkot to Uttarkashi",
+          "activities": [
+            "Scenic drive",
+            "Kashi Vishwanath Temple visit"
+          ],
+          "description": "Barkot → Uttarkashi. Drive to Uttarkashi (approx. 100 km / 4 hrs). Visit the historic Vishwanath Temple and Bhagirathi River banks."
+        },
+        {
+          "day": 4,
+          "title": "Uttarkashi to Gangotri to Uttarkashi",
+          "activities": [
+            "Drive to Gangotri",
+            "Holy dip in Bhagirathi",
+            "Gangotri Temple Darshan"
+          ],
+          "description": "Uttarkashi → Gangotri → Uttarkashi. Early morning excursion to Gangotri Temple. Take a holy dip in the Ganges (Bhagirathi) and perform puja. Return to Uttarkashi."
+        },
+        {
+          "day": 5,
+          "title": "Uttarkashi to Guptkashi",
+          "activities": [
+            "Long scenic drive",
+            "Mandakini river view"
+          ],
+          "description": "Uttarkashi → Guptkashi. Drive to Guptkashi (approx. 220 km / 8 hrs). Check-in at hotel and prepare for the Kedarnath trek."
+        },
+        {
+          "day": 6,
+          "title": "Guptkashi to Sonprayag to Kedarnath",
+          "activities": [
+            "Drive to Sonprayag/Gaurikund",
+            "Trek to Kedarnath Temple",
+            "Evening Darshan"
+          ],
+          "description": "Guptkashi → Sonprayag → Kedarnath. Drive to Sonprayag/Gaurikund, then start the 16 km trek to Kedarnath Temple. Attend the evening temple Aarti. Overnight stay in Kedarnath."
+        },
+        {
+          "day": 7,
+          "title": "Kedarnath to Sonprayag to Guptkashi",
+          "activities": [
+            "Morning Temple visit",
+            "Trek down to Gaurikund",
+            "Drive to Guptkashi"
+          ],
+          "description": "Kedarnath → Sonprayag → Guptkashi. Wake up early for morning darshan. Perform return trek back to Gaurikund, and drive back to Guptkashi."
+        },
+        {
+          "day": 8,
+          "title": "Guptkashi to Badrinath",
+          "activities": [
+            "Drive to Badrinath",
+            "Tapt Kund bath",
+            "Badrinath Aarti"
+          ],
+          "description": "Guptkashi → Badrinath. Drive to Badrinath (approx. 190 km / 7 hrs) via Joshimath. Take a bath in Tapt Kund and attend Badrinath Temple evening Aarti."
+        },
+        {
+          "day": 9,
+          "title": "Badrinath Darshan + Mana Village to Joshimath",
+          "activities": [
+            "Mana Village sightseeing",
+            "Vyas Gufa",
+            "Drive to Joshimath"
+          ],
+          "description": "Badrinath Darshan + Mana Village → Joshimath. Perform morning darshan. Later visit Mana Village (the last Indian village). Drive to Joshimath."
+        },
+        {
+          "day": 10,
+          "title": "Joshimath to Rudraprayag",
+          "activities": [
+            "Joshimath local walk",
+            "Drive to Rudraprayag"
+          ],
+          "description": "Joshimath → Rudraprayag. Visit Narsingh Temple in Joshimath. Drive to Rudraprayag (approx. 115 km / 4.5 hrs) along the Alaknanda River."
+        },
+        {
+          "day": 11,
+          "title": "Rudraprayag to Rishikesh/Haridwar",
+          "activities": [
+            "Drive via Devprayag",
+            "Rishikesh Laxman Jhula",
+            "Haridwar check-in"
+          ],
+          "description": "Rudraprayag → Rishikesh/Haridwar. Drive to Haridwar via Devprayag (confluence of Alaknanda and Bhagirathi) and Rishikesh (Laxman Jhula)."
+        },
+        {
+          "day": 12,
+          "title": "Haridwar Departure",
+          "activities": [
+            "Breakfast",
+            "Departure drop"
+          ],
+          "description": "Haridwar departure. Breakfast and check-out. Drop at Haridwar railway station or Dehradun airport."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 34999,
+      "agencyName": null,
+      "badgeColor": "#ea580c",
+      "exclusions": [
+        "Helicopter/Pony charges at Kedarnath",
+        "Local guide / priest fees",
+        "Lunch",
+        "Personal expenditures"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Yamunotri & Gangotri Darshan",
+        "Kedarnath Jyotirlinga Trek",
+        "Badrinath Temple & Mana Village",
+        "Triveni Sangam Rishikesh"
+      ],
+      "inclusions": [
+        "11 Nights accommodation",
+        "Breakfast and Dinner daily",
+        "Transport in dedicated vehicle for hills",
+        "Driver and toll taxes"
+      ],
+      "destination": "Uttarakhand",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 45000
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:47.211Z",
+    "updated_at": "2026-08-12T19:28:24.086Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-127",
+    "data": {
+      "id": "GPKG-127",
+      "badge": "Nature & Wildlife",
+      "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800&q=80",
+      "title": "Nainital + Jim Corbett Itinerary",
+      "hidden": false,
+      "hotels": "2N Nainital · 1N Jim Corbett",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "4 Days & 3 Nights",
+      "featured": true,
+      "overview": "A perfect blend of natural tranquility and wild adventure, taking you from the serene mountain lakes of Nainital to the dense tiger-inhabited forests of Jim Corbett National Park.",
+      "subtitle": "Scenic Lakes & Wilderness Safari",
+      "heroImage": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Delhi to Nainital + Local Sightseeing",
+          "activities": [
+            "Drive to Nainital",
+            "Naini Lake evening walk",
+            "Mall Road"
+          ],
+          "description": "Delhi → Nainital + local sightseeing. Pick up from Delhi. Drive to Nainital, check-in. Evening walk along Naini Lake and shopping at Mall Road."
+        },
+        {
+          "day": 2,
+          "title": "Nainital Full Day Sightseeing",
+          "activities": [
+            "Lake tour (Bhimtal, Sattal)",
+            "Snow View cable car",
+            "Hanuman Garhi"
+          ],
+          "description": "Nainital full-day sightseeing. Visit lake district (Bhimtal, Sattal, Naukuchiatal), take cable car to Snow View, and visit Hanuman Garhi temple."
+        },
+        {
+          "day": 3,
+          "title": "Nainital to Jim Corbett + Local Sightseeing",
+          "activities": [
+            "Drive to Corbett",
+            "Corbett Falls",
+            "Garjiya Devi Temple"
+          ],
+          "description": "Nainital → Jim Corbett + local sightseeing. Drive to Jim Corbett. Visit Corbett Waterfalls en route, and visit Garjiya Devi Temple."
+        },
+        {
+          "day": 4,
+          "title": "Corbett Safari to Delhi",
+          "activities": [
+            "Morning Jeep Safari",
+            "Breakfast & Check-out",
+            "Drive to Delhi"
+          ],
+          "description": "Corbett Safari → Delhi. Early morning open jeep safari in Corbett National Park. Return for breakfast, check-out, and drive back to Delhi."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 11499,
+      "agencyName": null,
+      "badgeColor": "#0284c7",
+      "exclusions": [
+        "Jungle Safari permit & Jeep",
+        "Boating & activities",
+        "Lunch",
+        "Personal expenses"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Naini Lake Boating",
+        "Snow View Point & Bhimtal",
+        "Jim Corbett Jungle Safari",
+        "Corbett Waterfalls"
+      ],
+      "inclusions": [
+        "3 Nights accommodation",
+        "Breakfast and Dinner",
+        "AC private vehicle for transfers",
+        "Driver allowance"
+      ],
+      "destination": "Uttarakhand",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 15500
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:46.941Z",
+    "updated_at": "2026-08-12T19:28:24.163Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-128",
+    "data": {
+      "id": "GPKG-128",
+      "badge": "Wildlife & Hills",
+      "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800&q=80",
+      "title": "Uttarakhand Tour Package",
+      "hidden": false,
+      "hotels": "2N Mussoorie · 1N Haridwar · 1N Corbett · 1N Nainital",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "6 Days & 5 Nights",
+      "featured": true,
+      "overview": "A grand circular tour of Devbhoomi Uttarakhand covering Mussoorie's mountain peaks, Haridwar's holy riverbanks, Jim Corbett's tiger reserve, and the lake district of Nainital.",
+      "subtitle": "Delhi – Mussoorie – Haridwar – Jim Corbett – Nainital",
+      "heroImage": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Delhi to Mussoorie + Local Sightseeing",
+          "activities": [
+            "Scenic drive",
+            "Lal Tibba walk",
+            "Mall Road shopping"
+          ],
+          "description": "Delhi → Mussoorie + local sightseeing. Morning departure from Delhi. Drive to Mussoorie, check-in, and stroll on the famous Mall Road."
+        },
+        {
+          "day": 2,
+          "title": "Mussoorie Full Day Sightseeing",
+          "activities": [
+            "Kempty Falls visit",
+            "Company Garden",
+            "Gun Hill cable car"
+          ],
+          "description": "Mussoorie full-day sightseeing. Visit Kempty Falls, Lake Mist, Company Garden, and enjoy the sunset from Gun Hill."
+        },
+        {
+          "day": 3,
+          "title": "Mussoorie to Haridwar + Sightseeing",
+          "activities": [
+            "Drive to Haridwar",
+            "Mansa Devi temple",
+            "Evening Ganga Aarti"
+          ],
+          "description": "Mussoorie → Haridwar + sightseeing. Drive to Haridwar. Visit local temples and experience the magical evening Ganga Aarti at Har Ki Pauri."
+        },
+        {
+          "day": 4,
+          "title": "Haridwar to Jim Corbett + Sightseeing",
+          "activities": [
+            "Drive to Corbett",
+            "Corbett Museum",
+            "Resort campfire"
+          ],
+          "description": "Haridwar → Jim Corbett + sightseeing. Drive to Jim Corbett National Park. Explore the Corbett Museum and enjoy a resort stay near the forest."
+        },
+        {
+          "day": 5,
+          "title": "Corbett Safari to Nainital",
+          "activities": [
+            "Early morning safari",
+            "Drive to Nainital",
+            "Naini Lake evening boat ride"
+          ],
+          "description": "Corbett Safari → Nainital. Enjoy an early morning jungle jeep safari. Later drive to Nainital and enjoy a sunset boat ride on Naini Lake."
+        },
+        {
+          "day": 6,
+          "title": "Nainital Sightseeing to Delhi",
+          "activities": [
+            "Nainital local sightseeing",
+            "Drive back to Delhi"
+          ],
+          "description": "Nainital sightseeing → Delhi. Visit Bhimtal, Sattal, and local view points before driving back to Delhi for departure."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 19499,
+      "agencyName": null,
+      "badgeColor": "#059669",
+      "exclusions": [
+        "Jungle Safari permits & jeep",
+        "Adventure activities and boating",
+        "Lunch on all days",
+        "Personal expenses"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Mussoorie & Kempty Falls",
+        "Har Ki Pauri Ganga Aarti",
+        "Corbett Jungle Safari",
+        "Nainital Lake Boating"
+      ],
+      "inclusions": [
+        "5 Nights accommodation",
+        "Breakfast and Dinner daily",
+        "AC private vehicle for transfers",
+        "Driver and state permit charges"
+      ],
+      "destination": "Uttarakhand",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 24000
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:46.667Z",
+    "updated_at": "2026-08-12T19:28:24.242Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-129",
+    "data": {
+      "id": "GPKG-129",
+      "badge": "Hills & Ganges spirituality",
+      "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80",
+      "title": "Mussoorie – Rishikesh – Haridwar Package",
+      "hidden": false,
+      "hotels": "2N Mussoorie · 1N Rishikesh · 1N Haridwar",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "5 Days & 4 Nights",
+      "featured": true,
+      "overview": "Experience the misty climate of Mussoorie, followed by the yoga and adventure capital Rishikesh, and the sacred Ganga Aarti in Haridwar.",
+      "subtitle": "Queen of Hills & Holy Ganges Tour",
+      "heroImage": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Delhi to Mussoorie + Local Sightseeing",
+          "activities": [
+            "Hilly Drive",
+            "Mall Road stroll",
+            "Gun Hill views"
+          ],
+          "description": "Delhi → Mussoorie + local sightseeing. Drive from Delhi (approx. 270 km / 7 hrs). Check-in. Stroll on Mall Road, visit Gun Hill. Overnight in Mussoorie."
+        },
+        {
+          "day": 2,
+          "title": "Mussoorie Full Day Sightseeing",
+          "activities": [
+            "Kempty Falls bath",
+            "Lake Mist boating",
+            "Lal Tibba view"
+          ],
+          "description": "Mussoorie full-day sightseeing. Visit Kempty Falls, Lake Mist, Company Garden, and Lal Tibba. Overnight in Mussoorie."
+        },
+        {
+          "day": 3,
+          "title": "Mussoorie to Rishikesh + Sightseeing",
+          "activities": [
+            "Drive to Rishikesh",
+            "Jhula suspension bridges",
+            "Triveni Ghat"
+          ],
+          "description": "Mussoorie → Rishikesh + sightseeing. Drive to Rishikesh (approx. 80 km / 2.5 hrs). Visit Laxman Jhula, Ram Jhula, Swarg Ashram, and Triveni Ghat. Overnight in Rishikesh."
+        },
+        {
+          "day": 4,
+          "title": "Rishikesh to Haridwar",
+          "activities": [
+            "Haridwar temples",
+            "Har Ki Pauri Ganga Aarti"
+          ],
+          "description": "Rishikesh sightseeing → Haridwar. Transfer to Haridwar. Visit Mansa Devi and Chandi Devi temples. Attend Evening Ganga Aarti at Har Ki Pauri. Overnight in Haridwar."
+        },
+        {
+          "day": 5,
+          "title": "Haridwar to Delhi",
+          "activities": [
+            "Breakfast",
+            "Drive to Delhi"
+          ],
+          "description": "Haridwar sightseeing → Delhi. Breakfast and check-out. Drive back to Delhi. Drop at Delhi airport/station."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 12499,
+      "agencyName": null,
+      "badgeColor": "#10b981",
+      "exclusions": [
+        "Rafting charges",
+        "Cable car tickets",
+        "Lunch",
+        "Personal expenses"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Kempty Falls Mussoorie",
+        "Laxman Jhula Rishikesh",
+        "Ganga Aarti Har Ki Pauri",
+        "Haridwar Temples"
+      ],
+      "inclusions": [
+        "4 Nights stay in Selected Hotels",
+        "Breakfast and Dinner",
+        "AC Private Transport Delhi to Delhi",
+        "All Toll & taxes"
+      ],
+      "destination": "Uttarakhand",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 16000
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:46.316Z",
+    "updated_at": "2026-08-12T19:28:24.328Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-130",
+    "data": {
+      "id": "GPKG-130",
+      "badge": "Braj Bhoomi Special",
+      "image": "https://images.unsplash.com/photo-1541123437800-1bb1317badc2?w=800&q=80",
+      "title": "Agra – Mathura – Vrindavan – Gokul – Barsana",
+      "hidden": false,
+      "hotels": "2N Vrindavan",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "3 Days & 2 Nights",
+      "featured": true,
+      "overview": "Dive into the mystical childhood land of Lord Krishna. Cover Vrindavan, Mathura, Gokul, and Barsana while enjoying the beautiful historic sights of Agra.",
+      "subtitle": "Krishna Heritage Tour ex. Agra",
+      "heroImage": "https://images.unsplash.com/photo-1541123437800-1bb1317badc2?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Agra to Mathura & Vrindavan",
+          "activities": [
+            "Mathura Temples",
+            "Vrindavan transfer",
+            "Prem Mandir"
+          ],
+          "description": "Agra → Mathura → Vrindavan. Pick up from Agra, drive to Mathura. Visit Krishna Janmabhoomi, Dwarkadhish temple. Proceed to Vrindavan, visit Prem Mandir. Overnight in Vrindavan."
+        },
+        {
+          "day": 2,
+          "title": "Vrindavan, Gokul & Mathura tour",
+          "activities": [
+            "Gokul sightseeing",
+            "Banke Bihari Darshan",
+            "Nidhivan explore"
+          ],
+          "description": "Vrindavan → Gokul → Mathura → Vrindavan. Visit Gokul (Raman Reti, Brahmand Ghat). Return to Vrindavan to visit Banke Bihari temple, ISKCON temple, and Nidhivan. Overnight in Vrindavan."
+        },
+        {
+          "day": 3,
+          "title": "Vrindavan to Barsana to Agra",
+          "activities": [
+            "Barsana temple climbing",
+            "Keep in mind the Taj Mahal",
+            "Agra Drop"
+          ],
+          "description": "Vrindavan → Barsana → Agra. Drive to Barsana (Radha Rani Temple). Return to Agra. Optional visit to Taj Mahal. Drop at Agra station/airport."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 7999,
+      "agencyName": null,
+      "badgeColor": "#ea580c",
+      "exclusions": [
+        "Taj Mahal entry ticket",
+        "E-rickshaw inside Vrindavan",
+        "Meals not mentioned"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Taj Mahal visit in Agra",
+        "Krishna Birthplace Mathura",
+        "Banke Bihari Vrindavan",
+        "Radha Rani Temple Barsana"
+      ],
+      "inclusions": [
+        "2 Nights stay in Vrindavan",
+        "Daily Breakfast",
+        "AC Private vehicle for 3 days",
+        "Toll, taxes, and driver allowance"
+      ],
+      "destination": "Uttar Pradesh",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 10000
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:46.031Z",
+    "updated_at": "2026-08-12T19:28:24.431Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-131",
+    "data": {
+      "id": "GPKG-131",
+      "badge": "Spiritual UP Yatra",
+      "image": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=800&q=80",
+      "title": "Ayodhya – Prayagraj – Varanasi Package",
+      "hidden": false,
+      "hotels": "1N Ayodhya · 1N Prayagraj · 1N Varanasi",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "4 Days & 3 Nights",
+      "featured": true,
+      "overview": "A deep pilgrimage connecting the newly constructed Ram Mandir in Ayodhya, the sacred Sangam in Prayagraj, and the spiritual ghats and temples of Kashi (Varanasi).",
+      "subtitle": "Holy Ganga & Ram Janmabhoomi Tour",
+      "heroImage": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Ayodhya Arrival & Local Sightseeing",
+          "activities": [
+            "Ram Mandir Darshan",
+            "Hanuman Garhi",
+            "Saryu River walk"
+          ],
+          "description": "Ayodhya arrival + local sightseeing. Visit Ram Janmabhoomi Temple, Hanuman Garhi, Kanak Bhawan, and Saryu River Aarti. Overnight in Ayodhya."
+        },
+        {
+          "day": 2,
+          "title": "Ayodhya to Prayagraj + Sightseeing",
+          "activities": [
+            "Triveni Sangam holy bath",
+            "Anand Bhawan museum",
+            "Drive to Prayagraj"
+          ],
+          "description": "Ayodhya → Prayagraj + sightseeing. Drive to Prayagraj (approx. 170 km / 4 hrs). Visit Triveni Sangam, Anand Bhawan, and Akbar Fort. Overnight in Prayagraj."
+        },
+        {
+          "day": 3,
+          "title": "Prayagraj to Varanasi + Sightseeing",
+          "activities": [
+            "Drive to Varanasi",
+            "Ganga Aarti boat view",
+            "Ghat walk"
+          ],
+          "description": "Prayagraj → Varanasi + sightseeing. Drive to Varanasi (approx. 120 km / 3 hrs). Visit Dashashwamedh Ghat for Ganga Aarti. Overnight in Varanasi."
+        },
+        {
+          "day": 4,
+          "title": "Varanasi Sightseeing & Departure",
+          "activities": [
+            "Morning boat ride",
+            "Kashi Vishwanath Darshan",
+            "Sarnath visit",
+            "Departure"
+          ],
+          "description": "Varanasi sightseeing + departure. Early morning boat ride on Ganges, visit Kashi Vishwanath temple, Sarnath stupa, and drop at Varanasi airport/station."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 12999,
+      "agencyName": null,
+      "badgeColor": "#f97316",
+      "exclusions": [
+        "Boat ride fees",
+        "Special puja charges",
+        "Lunch and Dinner",
+        "Air/Train tickets"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Ram Janmabhoomi Ayodhya",
+        "Triveni Sangam Bath Prayagraj",
+        "Varanasi Ganga Aarti & Boat Ride",
+        "Sarnath Buddhist Sites"
+      ],
+      "inclusions": [
+        "3 Nights stay in hotels",
+        "Daily Breakfast",
+        "AC Private transport for entire circuit",
+        "All toll, taxes, and parking"
+      ],
+      "destination": "Uttar Pradesh",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 16500
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:45.757Z",
+    "updated_at": "2026-08-12T19:28:24.509Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-132",
+    "data": {
+      "id": "GPKG-132",
+      "badge": "Historic & Devotional Loop",
+      "image": "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800&q=80",
+      "title": "Golden Triangle + Mathura & Vrindavan",
+      "hidden": false,
+      "hotels": "1N Agra · 1N Vrindavan · 2N Jaipur · 1N Delhi",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "6 Days & 5 Nights",
+      "featured": true,
+      "overview": "Experience the Golden Triangle of Delhi, Agra, and Jaipur combined with the spiritual shrines of Mathura and Vrindavan where Lord Krishna was born and raised.",
+      "subtitle": "Delhi – Agra – Mathura – Vrindavan – Jaipur",
+      "heroImage": "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Delhi to Agra + Sightseeing",
+          "activities": [
+            "Taj Mahal",
+            "Agra Fort",
+            "Agra stay"
+          ],
+          "description": "Delhi → Agra + Agra sightseeing. Check-in at hotel. Visit Taj Mahal and Agra Fort. Overnight in Agra."
+        },
+        {
+          "day": 2,
+          "title": "Agra to Mathura to Vrindavan",
+          "activities": [
+            "Birthplace Temple",
+            "Banke Bihari Darshan",
+            "Prem Mandir lights"
+          ],
+          "description": "Agra → Mathura → Vrindavan. Visit Krishna Janmabhoomi, Dwarkadhish Temple, Prem Mandir and Banke Bihari Temple. Overnight in Vrindavan."
+        },
+        {
+          "day": 3,
+          "title": "Vrindavan to Jaipur",
+          "activities": [
+            "Drive to Jaipur",
+            "Pink City markets"
+          ],
+          "description": "Vrindavan → Jaipur. Drive to Jaipur. Check-in. Evening free for local markets or optional visit to Chokhi Dhani. Overnight in Jaipur."
+        },
+        {
+          "day": 4,
+          "title": "Jaipur Full Day Sightseeing",
+          "activities": [
+            "Amer Fort ride",
+            "Hawa Mahal photography",
+            "Palace tour"
+          ],
+          "description": "Jaipur full-day sightseeing. Visit Amer Fort, Hawa Mahal, City Palace, and Jantar Mantar. Overnight in Jaipur."
+        },
+        {
+          "day": 5,
+          "title": "Jaipur to Delhi + Sightseeing",
+          "activities": [
+            "Drive to Delhi",
+            "Delhi city highlights"
+          ],
+          "description": "Jaipur → Delhi + Delhi sightseeing. Drive back to Delhi. Visit India Gate, Qutub Minar, and Lotus Temple. Overnight in Delhi."
+        },
+        {
+          "day": 6,
+          "title": "Delhi Sightseeing & Departure",
+          "activities": [
+            "Local shopping",
+            "Departure drop"
+          ],
+          "description": "Delhi sightseeing + departure. Morning shopping at Connaught Place/Janpath. Transfer to railway station/airport."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 16999,
+      "agencyName": null,
+      "badgeColor": "#8b5cf6",
+      "exclusions": [
+        "Monument entry fees",
+        "Guide charges",
+        "Meals not mentioned"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Taj Mahal & Agra Fort",
+        "Krishna Janmabhoomi Mathura",
+        "Jaipur Palace & Amer Fort",
+        "Qutub Minar Delhi"
+      ],
+      "inclusions": [
+        "5 Nights accommodation",
+        "Daily Breakfast",
+        "AC Private vehicle for all transfers",
+        "Driver, fuel, and toll taxes"
+      ],
+      "destination": "Uttar Pradesh",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 22000
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:45.480Z",
+    "updated_at": "2026-08-12T19:28:24.586Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-133",
+    "data": {
+      "id": "GPKG-133",
+      "badge": "Cultural Desert Festival",
+      "image": "https://images.unsplash.com/photo-1627894483216-2138af692e32?w=800&q=80",
+      "title": "Kutch Rann Utsav Package",
+      "hidden": false,
+      "hotels": "2N Tent City Dhordo",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "3 Days & 2 Nights",
+      "featured": true,
+      "overview": "Witness the magnificent white salt desert during the Rann Utsav. Live in premium tents, experience traditional music & dance, and visit the Black Hills and handicraft villages.",
+      "subtitle": "Experience the White Desert Festival",
+      "heroImage": "https://images.unsplash.com/photo-1627894483216-2138af692e32?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arrival at Dhordo – Rann Utsav",
+          "activities": [
+            "Welcome ceremony",
+            "White Rann Sunset",
+            "Cultural Show"
+          ],
+          "description": "Check-in at Tent City, Dhordo. Welcome ceremony with traditional music & dance. Evening visit to White Rann for sunset view. Enjoy Rann Utsav cultural programs (folk dance, music, handicrafts). Overnight stay at Tent City."
+        },
+        {
+          "day": 2,
+          "title": "Excursion & Festival Activities",
+          "activities": [
+            "White Rann Sunrise",
+            "Kala Dungar panorama",
+            "Handicraft villages tour"
+          ],
+          "description": "Early morning White Rann sunrise view. Breakfast at Tent City. Excursion to Kala Dungar (Black Hill) – panoramic view of the Rann. Visit nearby handicraft villages (Bhujodi, Hodka, Nirona – Rogan art, embroidery, bell making). Evening leisure at Tent City with cultural shows, camel rides, and shopping. Overnight stay at Tent City."
+        },
+        {
+          "day": 3,
+          "title": "Departure from Dhordo",
+          "activities": [
+            "Bhuj city tour",
+            "Check-out",
+            "Departure drop"
+          ],
+          "description": "Breakfast and check-out. Optional visit to Bhuj city (Aina Mahal, Prag Mahal, Kutch Museum) if time permits. Departure from Dhordo."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 10999,
+      "agencyName": null,
+      "badgeColor": "#ec4899",
+      "exclusions": [
+        "Adventure activities",
+        "Tips & personal expenses",
+        "Flight/Train tickets"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "White Rann Sunset & Sunrise",
+        "Stay in Tent City Dhordo",
+        "Kala Dungar (Black Hill)",
+        "Traditional Handicraft Villages"
+      ],
+      "inclusions": [
+        "2 Nights stay in Tent City",
+        "All Meals (Breakfast, Lunch, High Tea, Dinner)",
+        "Cultural shows & camel rides",
+        "Bhuj transfers"
+      ],
+      "destination": "Gujarat",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 14000
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:45.197Z",
+    "updated_at": "2026-08-12T19:28:24.665Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-134",
+    "data": {
+      "id": "GPKG-134",
+      "badge": "Modern & Historic Heritage",
+      "image": "https://images.unsplash.com/photo-1590050752117-238cb0612b1b?w=800&q=80",
+      "title": "Statue of Unity & Pavagadh",
+      "hidden": false,
+      "hotels": "1N Statue of Unity · 1N Pavagadh/Vadodara",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "3 Days & 2 Nights",
+      "featured": true,
+      "overview": "Visit the grand 182m Statue of Unity, Sardar Sarovar Dam, and the UNESCO heritage city of Champaner alongside a ropeway pilgrimage to the hilltop temple of Pavagadh.",
+      "subtitle": "Ex-Ahmedabad Monument & Hill Temple Tour",
+      "heroImage": "https://images.unsplash.com/photo-1590050752117-238cb0612b1b?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Ahmedabad to Statue of Unity",
+          "activities": [
+            "Drive from Ahmedabad",
+            "Viewing Gallery",
+            "Glow Garden show"
+          ],
+          "description": "Morning departure from Ahmedabad (approx. 200 km / 4 hrs). Check-in at hotel near Statue of Unity. Visit Statue of Unity (Sardar Vallabhbhai Patel) – viewing gallery, museum, and exhibition. Explore Valley of Flowers, Sardar Sarovar Dam, and Glow Garden (evening). Overnight stay near Statue of Unity."
+        },
+        {
+          "day": 2,
+          "title": "Statue of Unity to Pavagadh",
+          "activities": [
+            "Drive to Pavagadh",
+            "Hilltop Temple visit",
+            "UNESCO site explore"
+          ],
+          "description": "Breakfast and drive to Pavagadh (approx. 150 km / 3.5 hrs). Visit Maa Mahakalika Temple (ropeway ride available). Explore Champaner-Pavagadh Archaeological Park (UNESCO World Heritage Site). Evening leisure in Pavagadh. Overnight stay in Pavagadh/Vadodara."
+        },
+        {
+          "day": 3,
+          "title": "Pavagadh to Ahmedabad",
+          "activities": [
+            "Vadodara highlights",
+            "Drive to Ahmedabad",
+            "Departure drop"
+          ],
+          "description": "Breakfast and check-out. Drive back to Ahmedabad (approx. 150 km / 3.5 hrs). En route visit Vadodara city highlights (Laxmi Vilas Palace, Sayaji Garden – optional). Drop at Ahmedabad railway station/airport."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 8999,
+      "agencyName": null,
+      "badgeColor": "#8b5cf6",
+      "exclusions": [
+        "SOU tickets",
+        "Ropeway tickets",
+        "Laxmi Vilas Palace entry fee",
+        "Lunch/Dinner"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Statue of Unity & Viewing Gallery",
+        "Valley of Flowers & Dam",
+        "Glow Garden laser show",
+        "Maa Mahakalika Temple ropeway"
+      ],
+      "inclusions": [
+        "2 Nights stay in hotels",
+        "Daily Breakfast",
+        "AC Private vehicle for transfers & sightseeing",
+        "Driver & toll charges"
+      ],
+      "destination": "Gujarat",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 12000
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:44.911Z",
+    "updated_at": "2026-08-12T19:28:24.742Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-135",
+    "data": {
+      "id": "GPKG-135",
+      "badge": "Temples, Beach & Lions",
+      "image": "https://images.unsplash.com/photo-1590050752117-238cb0612b1b?w=800&q=80",
+      "title": "Dwarka – Somnath – Diu – Sasan Gir",
+      "hidden": false,
+      "hotels": "2N Dwarka · 1N Somnath · 1N Diu · 1N Sasan Gir",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "6 Days & 5 Nights",
+      "featured": true,
+      "overview": "A complete experience of Gujarat bringing together the holy shrines of Dwarka and Somnath, the serene tropical beaches of Diu, and the thrilling Asiatic Lion safari of Sasan Gir.",
+      "subtitle": "Spiritual, Wildlife & Beach Gateway",
+      "heroImage": "https://images.unsplash.com/photo-1590050752117-238cb0612b1b?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arrival at Dwarka",
+          "activities": [
+            "Arrive Dwarka",
+            "Temple Aarti",
+            "Leisure"
+          ],
+          "description": "Check-in at hotel. Evening Dwarkadhish Temple Aarti. Overnight stay in Dwarka."
+        },
+        {
+          "day": 2,
+          "title": "Dwarka Sightseeing",
+          "activities": [
+            "Island excursion",
+            "Temples",
+            "Dwarka beach"
+          ],
+          "description": "Morning visit to Dwarkadhish Temple. Excursion to Bet Dwarka Island (by ferry). Visit Nageshwar Jyotirlinga, Rukmini Temple, and Gopi Talav. Evening leisure at Dwarka Beach. Overnight stay in Dwarka."
+        },
+        {
+          "day": 3,
+          "title": "Dwarka to Somnath",
+          "activities": [
+            "Scenic coastal drive",
+            "Somnath Temple visit",
+            "Light & Sound show"
+          ],
+          "description": "Breakfast and drive to Somnath (approx. 230 km / 5 hrs). Visit Somnath Jyotirlinga Temple, Bhalka Tirth, and Triveni Sangam. Evening Sound & Light Show at Somnath Temple. Overnight stay in Somnath."
+        },
+        {
+          "day": 4,
+          "title": "Somnath to Diu",
+          "activities": [
+            "Explore Diu Fort",
+            "Naida Caves",
+            "Nagoa Beach"
+          ],
+          "description": "Morning departure to Diu (approx. 90 km / 2 hrs). Explore Diu Fort, St. Paul’s Church, Naida Caves. Relax at Nagoa Beach. Overnight stay in Diu."
+        },
+        {
+          "day": 5,
+          "title": "Diu to Sasan Gir",
+          "activities": [
+            "Jungle Safari",
+            "Devaliya wildlife park",
+            "Resort stay"
+          ],
+          "description": "Breakfast and drive to Gir National Park (approx. 65 km / 1.5 hrs). Afternoon Gir Jungle Safari (permit required). Visit Devaliya Safari Park for a shorter wildlife experience. Overnight stay near Sasan Gir."
+        },
+        {
+          "day": 6,
+          "title": "Sasan Gir to Dwarka (Departure)",
+          "activities": [
+            "Breakfast",
+            "Check-out",
+            "Transfer"
+          ],
+          "description": "Breakfast and check-out. Drive back to Dwarka/departure point."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 17999,
+      "agencyName": null,
+      "badgeColor": "#10b981",
+      "exclusions": [
+        "Gir Safari permits",
+        "Camera fees",
+        "Ferry rides",
+        "Meals not mentioned"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Dwarkadhish Temple & Bet Dwarka",
+        "Somnath Jyotirlinga",
+        "Nagoa Beach & Diu Fort",
+        "Gir Wildlife Safari"
+      ],
+      "inclusions": [
+        "5 Nights accommodation",
+        "Breakfast daily",
+        "All private transfers in AC vehicle",
+        "Driver and toll allowance"
+      ],
+      "destination": "Gujarat",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 23000
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:44.636Z",
+    "updated_at": "2026-08-12T19:28:24.824Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  },
+  {
+    "id": "GPKG-136",
+    "data": {
+      "id": "GPKG-136",
+      "badge": "Spiritual Coast",
+      "image": "https://images.unsplash.com/photo-1590050752117-238cb0612b1b?w=800&q=80",
+      "title": "Somnath – Dwarka – Porbandar Package",
+      "hidden": false,
+      "hotels": "1N Somnath · 2N Dwarka",
+      "status": "approved",
+      "agencyId": null,
+      "category": "group",
+      "duration": "4 Days & 3 Nights",
+      "featured": true,
+      "overview": "Embark on a sacred journey through Dwarka, Somnath, and Porbandar. Visit the highly revered Dwarkadhish temple, Somnath Jyotirlinga, and the birthplace of Mahatma Gandhi at Porbandar.",
+      "subtitle": "Ex-Rajkot Pilgrimage & Coastal Tour",
+      "heroImage": "https://images.unsplash.com/photo-1590050752117-238cb0612b1b?w=1400&q=85",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Rajkot to Somnath",
+          "activities": [
+            "Drive to Somnath",
+            "Temple Visit",
+            "Sound & Light Show"
+          ],
+          "description": "Morning departure from Rajkot (approx. 200 km / 4.5 hrs). Check-in at hotel in Somnath. Visit Somnath Jyotirlinga Temple, Bhalka Tirth, and Triveni Sangam. Evening Sound & Light Show at Somnath Temple. Overnight stay in Somnath."
+        },
+        {
+          "day": 2,
+          "title": "Somnath to Porbandar to Dwarka",
+          "activities": [
+            "Kirti Mandir visit",
+            "Drive to Dwarka",
+            "Evening Aarti"
+          ],
+          "description": "Early breakfast, drive to Porbandar (approx. 130 km / 3 hrs). Visit Kirti Mandir (Mahatma Gandhi’s birthplace) and Sudama Temple. Continue to Dwarka (approx. 100 km / 2 hrs). Evening Dwarkadhish Temple Aarti. Overnight stay in Dwarka."
+        },
+        {
+          "day": 3,
+          "title": "Dwarka Sightseeing",
+          "activities": [
+            "Bet Dwarka ferry",
+            "Nageshwar Temple",
+            "Rukmini Temple",
+            "Dwarka Beach"
+          ],
+          "description": "Morning visit to Dwarkadhish Temple. Excursion to Bet Dwarka Island (by ferry). Visit Nageshwar Jyotirlinga, Rukmini Temple, and Gopi Talav. Evening leisure at Dwarka Beach. Overnight stay in Dwarka."
+        },
+        {
+          "day": 4,
+          "title": "Dwarka to Rajkot",
+          "activities": [
+            "Bala Hanuman Temple",
+            "Drive to Rajkot",
+            "Departure Drop"
+          ],
+          "description": "Breakfast and check-out. Drive back to Rajkot (approx. 230 km / 5 hrs). En route visit Jamnagar Bala Hanuman Temple (famous for continuous Ram Dhun chanting). Drop at Rajkot railway station/airport."
+        }
+      ],
+      "priceNote": "Per Person",
+      "salePrice": 11999,
+      "agencyName": null,
+      "badgeColor": "#f59e0b",
+      "exclusions": [
+        "Ferry tickets",
+        "Meals not mentioned",
+        "Guide charges",
+        "Monument entry fees"
+      ],
+      "featuredAt": null,
+      "highlights": [
+        "Somnath Jyotirlinga Temple",
+        "Dwarkadhish Temple Aarti",
+        "Bet Dwarka Island & Nageshwar",
+        "Kirti Mandir Porbandar"
+      ],
+      "inclusions": [
+        "3 Nights stay in selected hotels",
+        "Daily Breakfast",
+        "AC Private vehicle for sightseeing",
+        "All taxes and driver charges"
+      ],
+      "destination": "Gujarat",
+      "featuredDays": 30,
+      "featuredOrder": 0,
+      "originalPrice": 15000
+    },
+    "category": "group",
+    "status": "approved",
+    "agency_id": null,
+    "featured": true,
+    "featured_order": 0,
+    "created_at": "2026-08-12T18:08:44.341Z",
+    "updated_at": "2026-08-12T19:28:24.909Z",
+    "featured_at": null,
+    "featured_days": 30,
+    "hidden": false
+  }
+]

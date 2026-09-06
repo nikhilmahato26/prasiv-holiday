@@ -1,0 +1,473 @@
+diff --git a/app/admin/dashboard/page.js b/app/admin/dashboard/page.js
+index 62a268c..0349cff 100644
+--- a/app/admin/dashboard/page.js
++++ b/app/admin/dashboard/page.js
+@@ -101,21 +101,21 @@ export default function Dashboard() {
+   const [agencyDropdownSearch, setAgencyDropdownSearch] = useState('')
+   const [pkgOptions, setPkgOptions] = useState({ inclusion: [], exclusion: [], highlight: [] })
+ 
+-  const [newDest, setNewDest] = useState({ name: '', color: '#e8520a', image_url: '', description: '', emoji: '📍', image_pos: '' })
++  const [newDest, setNewDest] = useState({ name: '', color: '#7e5233', image_url: '', description: '', emoji: '📍', image_pos: '' })
+   const [destVisLoading, setDestVisLoading] = useState(null)
+   const [destSaving, setDestSaving] = useState(false)
+   const [editDestId, setEditDestId] = useState(null)
+-  const [editDestForm, setEditDestForm] = useState({ color: '#e8520a', image_url: '', description: '', emoji: '📍', image_pos: '' })
++  const [editDestForm, setEditDestForm] = useState({ color: '#7e5233', image_url: '', description: '', emoji: '📍', image_pos: '' })
+ 
+   // Listings (homestays & houseboats)
+   const [homestays, setHomestays] = useState([])
+   const [houseboats, setHouseboats] = useState([])
+   const [listingModalType, setListingModalType] = useState(null) // 'homestay' | 'houseboat'
+-  const [newListing, setNewListing] = useState({ name: '', color: '#e8520a', image_url: '', description: '', location: '', price: '', emoji: '🏡', image_pos: '' })
++  const [newListing, setNewListing] = useState({ name: '', color: '#7e5233', image_url: '', description: '', location: '', price: '', emoji: '🏡', image_pos: '' })
+   const [listingSaving, setListingSaving] = useState(false)
+   const [listingVisLoading, setListingVisLoading] = useState(null)
+   const [editListingId, setEditListingId] = useState(null)
+-  const [editListingForm, setEditListingForm] = useState({ color: '#e8520a', image_url: '', description: '', location: '', price: '', emoji: '🏡', image_pos: '' })
++  const [editListingForm, setEditListingForm] = useState({ color: '#7e5233', image_url: '', description: '', location: '', price: '', emoji: '🏡', image_pos: '' })
+   const [settingsForm, setSettingsForm] = useState({ phone: '', whatsapp: '', email: '', email2: '', banner_days: '30', admin_recovery_email: '', min_dest_packages: '1' })
+   const [settingsSaving, setSettingsSaving] = useState(false)
+   const [adminUsername, setAdminUsername] = useState('')
+@@ -379,7 +379,7 @@ export default function Dashboard() {
+       const res = await fetch('/api/destinations', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(newDest) })
+       if (!res.ok) { const { error } = await res.json(); toast.error(error || 'Failed'); return }
+       await fetchDestinations()
+-      setNewDest({ name: '', color: '#e8520a', image_url: '', description: '', emoji: '📍', image_pos: '' })
++      setNewDest({ name: '', color: '#7e5233', image_url: '', description: '', emoji: '📍', image_pos: '' })
+       toast.success('Destination added!')
+     } catch { toast.error('Failed to add destination.') }
+     finally { setDestSaving(false) }
+@@ -429,7 +429,7 @@ export default function Dashboard() {
+       const res = await fetch('/api/listings', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...newListing, type }) })
+       if (!res.ok) { const { error } = await res.json(); toast.error(error || 'Failed'); return }
+       await fetchListings()
+-      setNewListing({ name: '', color: '#e8520a', image_url: '', description: '', location: '', price: '', emoji: type === 'houseboat' ? '🛶' : '🏡', image_pos: '' })
++      setNewListing({ name: '', color: '#7e5233', image_url: '', description: '', location: '', price: '', emoji: type === 'houseboat' ? '🛶' : '🏡', image_pos: '' })
+       toast.success(`${LISTING_LABEL[type]} added!`)
+     } catch { toast.error('Failed to add.') }
+     finally { setListingSaving(false) }
+@@ -557,10 +557,10 @@ export default function Dashboard() {
+     topbarInner: { maxWidth: 1280, margin: '0 auto', padding: '0 20px', height: 60, display: 'flex', alignItems: 'center', justifyContent: 'space-between' },
+     body:        { maxWidth: 1280, margin: '0 auto', padding: '28px 20px' },
+     card:        { background: '#fff', borderRadius: 16, boxShadow: '0 2px 8px rgba(0,0,0,0.06)', border: '1px solid #f3f4f6', overflow: 'hidden' },
+-    btn:         (bg = '#e8520a', col = '#fff') => ({ padding: '8px 16px', borderRadius: 10, background: bg, color: col, border: 'none', fontWeight: 600, fontSize: 13, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6 }),
++    btn:         (bg = '#7e5233', col = '#fff') => ({ padding: '8px 16px', borderRadius: 10, background: bg, color: col, border: 'none', fontWeight: 600, fontSize: 13, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6 }),
+     input:       { width: '100%', padding: '10px 12px', borderRadius: 10, border: '1.5px solid #e5e7eb', fontSize: 13, color: '#111', background: '#f9fafb', outline: 'none', boxSizing: 'border-box' },
+     label:       { fontSize: 11, fontWeight: 700, color: '#6b7280', letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: 5, display: 'block' },
+-    tag:         (active, color = '#e8520a') => ({
++    tag:         (active, color = '#7e5233') => ({
+                    padding: '6px 14px', borderRadius: 999, fontSize: 12, fontWeight: 600, border: 'none', cursor: 'pointer',
+                    background: active ? color : '#fff', color: active ? '#fff' : '#555',
+                    boxShadow: active ? 'none' : '0 1px 4px rgba(0,0,0,0.07)',
+@@ -575,7 +575,7 @@ export default function Dashboard() {
+   }
+ 
+   const openListingModal = (type) => {
+-    setNewListing({ name: '', color: '#e8520a', image_url: '', description: '', location: '', price: '', emoji: LISTING_META[type].emoji, image_pos: '' })
++    setNewListing({ name: '', color: '#7e5233', image_url: '', description: '', location: '', price: '', emoji: LISTING_META[type].emoji, image_pos: '' })
+     setEditListingId(null)
+     setListingModalType(type)
+     setModal('listing')
+@@ -654,7 +654,7 @@ export default function Dashboard() {
+     return (
+       <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f5f1eb' }}>
+         <div style={{ textAlign: 'center' }}>
+-          <div style={{ width: 40, height: 40, border: '3px solid #f0ebe1', borderTop: '3px solid #e8520a', borderRadius: '50%', animation: 'spin 1s linear infinite', margin: '0 auto 12px' }} />
++          <div style={{ width: 40, height: 40, border: '3px solid #fbf8f1', borderTop: '3px solid #7e5233', borderRadius: '50%', animation: 'spin 1s linear infinite', margin: '0 auto 12px' }} />
+           <p style={{ color: '#9ca3af', fontSize: 14 }}>Loading dashboard...</p>
+         </div>
+       </div>
+@@ -665,55 +665,52 @@ export default function Dashboard() {
+     <div style={S.page}>
+       <style>{`@keyframes spin { to { transform: rotate(360deg) } } @keyframes slideUp { from { opacity:0; transform:translateY(20px) } to { opacity:1; transform:translateY(0) } }`}</style>
+ 
+-      {/* Topbar */}
+-      <div style={S.topbar}>
+-        <div style={S.topbarInner}>
+-          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
++      {/* Sidebar Layout */}
++      <div style={{ display: 'flex', minHeight: '100vh' }}>
++        {/* Sidebar */}
++        <div style={{ width: 250, background: '#fff', borderRight: '1px solid #f3f4f6', height: '100vh', position: 'sticky', top: 0, display: 'flex', flexDirection: 'column', flexShrink: 0 }}>
++          <div style={{ padding: '20px', display: 'flex', alignItems: 'center', gap: 10, borderBottom: '1px solid #f3f4f6' }}>
+             <div style={{ width: 40, height: 40, overflow: 'hidden', flexShrink: 0 }}>
+-              <Image src="https://res.cloudinary.com/dynbpb9u0/image/upload/v1779855779/WhatsApp_Image_2026-05-22_at_15.06.01-removebg-preview_mr6pdc.png" alt="Green Kerala Trips" width={40} height={40} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
++              <Image src="/logo.png" alt="Triphoga" width={40} height={40} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+             </div>
+             <div>
+-              <div style={{ fontWeight: 700, fontSize: 14, color: '#111', lineHeight: 1 }}>Admin Dashboard</div>
+-              <div style={{ fontSize: 11, color: '#9ca3af' }}>Green Kerala Trips</div>
++              <div style={{ fontWeight: 700, fontSize: 14, color: '#111', lineHeight: 1 }}>Triphoga Admin</div>
+             </div>
+           </div>
+-          <div style={{ display: 'flex', gap: 8 }}>
+-            <Link href="/" target="_blank" style={{ ...S.btn('#f3f4f6', '#555'), textDecoration: 'none' }}>
+-              <ExternalLink size={13} /> View Site
+-            </Link>
+-            <button onClick={logout} style={S.btn('#fef2f2', '#dc2626')}>
++          <div style={{ flex: 1, padding: '20px 0', overflowY: 'auto' }}>
++            {[
++              { key: 'packages',      label: 'Packages',     icon: Package,   badge: pendingCount > 0 ? pendingCount : null },
++              { key: 'destinations',  label: 'Categories',   icon: MapPin },
++              { key: 'enquiries',     label: 'Enquiries',    icon: Inbox,     badge: enquiries.length > 0 && section !== 'enquiries' ? enquiries.length : null },
++              { key: 'settings',      label: 'Settings',     icon: Settings },
++            ].map(({ key, label, icon: Icon, badge }) => (
++              <button key={key} onClick={() => setSection(key)}
++                style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 20px', fontSize: 13, fontWeight: 600, border: 'none', background: section === key ? '#fbf8f1' : 'transparent', width: '100%', textAlign: 'left', cursor: 'pointer', borderRight: `3px solid ${section === key ? '#7e5233' : 'transparent'}`, color: section === key ? '#7e5233' : '#6b7280', position: 'relative' }}>
++                <Icon size={16} /> {label}
++                {badge && (
++                  <span style={{ marginLeft: 'auto', background: '#7e5233', color: '#fff', borderRadius: 999, fontSize: 10, fontWeight: 700, padding: '1px 6px', minWidth: 18, textAlign: 'center' }}>
++                    {badge}
++                  </span>
++                )}
++              </button>
++            ))}
++          </div>
++          <div style={{ padding: '20px', borderTop: '1px solid #f3f4f6' }}>
++            <button onClick={logout} style={{ ...S.btn('#fef2f2', '#dc2626'), width: '100%', justifyContent: 'center' }}>
+               <LogOut size={13} /> Logout
+             </button>
+           </div>
+         </div>
+-      </div>
+-
+-      {/* Section nav */}
+-      <div style={{ background: '#fff', borderBottom: '1px solid #f3f4f6' }}>
+-        <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 20px', display: 'flex', gap: 0, overflowX: 'auto' }}>
+-          {[
+-            { key: 'packages',      label: 'Packages',     icon: Package,   badge: pendingCount > 0 ? pendingCount : null },
+-            { key: 'destinations',  label: 'Destinations', icon: MapPin },
+-            { key: 'homestays',     label: 'Homestays',    icon: Home },
+-            { key: 'houseboats',    label: 'Houseboats',   icon: Ship },
+-            { key: 'agencies',      label: 'Agencies',     icon: Building2, badge: pendingAgencies > 0 ? pendingAgencies : null },
+-            { key: 'enquiries',     label: 'Enquiries',    icon: Inbox,     badge: enquiries.length > 0 && section !== 'enquiries' ? enquiries.length : null },
+-            { key: 'settings',      label: 'Settings',     icon: Settings },
+-          ].map(({ key, label, icon: Icon, badge }) => (
+-            <button key={key} onClick={() => setSection(key)}
+-              style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '12px 18px', fontSize: 13, fontWeight: 600, border: 'none', background: 'none', cursor: 'pointer', borderBottom: `2px solid ${section === key ? '#e8520a' : 'transparent'}`, color: section === key ? '#e8520a' : '#6b7280', whiteSpace: 'nowrap', position: 'relative' }}>
+-              <Icon size={14} /> {label}
+-              {badge && (
+-                <span style={{ marginLeft: 2, background: '#e8520a', color: '#fff', borderRadius: 999, fontSize: 10, fontWeight: 700, padding: '1px 6px', minWidth: 18, textAlign: 'center' }}>
+-                  {badge}
+-                </span>
+-              )}
+-            </button>
+-          ))}
+-        </div>
+-      </div>
+ 
+-      <div style={S.body}>
++        {/* Main Content */}
++        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minWidth: 0 }}>
++          <div style={{ background: '#fff', borderBottom: '1px solid #f3f4f6', height: 60, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 20px', position: 'sticky', top: 0, zIndex: 40 }}>
++            <h1 style={{ fontSize: 16, fontWeight: 700, textTransform: 'capitalize' }}>{section === 'destinations' ? 'Categories' : section}</h1>
++            <Link href="/" target="_blank" style={{ ...S.btn('#f3f4f6', '#555'), textDecoration: 'none' }}>
++              <ExternalLink size={13} /> View Site
++            </Link>
++          </div>
++          <div style={S.body}>
+ 
+         {/* ── Packages ── */}
+         {section === 'packages' && (
+@@ -724,7 +721,7 @@ export default function Dashboard() {
+                 { label: 'Total', value: allPackages.length, color: '#111' },
+                 { label: 'Approved', value: allPackages.filter(p => p.status === 'approved').length, color: '#22c55e' },
+                 { label: 'Pending', value: pendingCount, color: '#f59e0b' },
+-                { label: 'Featured', value: featuredPackages.length, color: '#e8520a' },
++                { label: 'Featured', value: featuredPackages.length, color: '#7e5233' },
+               ].map(({ label, value, color }) => (
+                 <div key={label} style={{ background: '#fff', borderRadius: 14, padding: '16px 18px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)', border: '1px solid #f3f4f6' }}>
+                   <div style={{ fontSize: 30, fontWeight: 800, color, lineHeight: 1 }}>{value}</div>
+@@ -745,7 +742,7 @@ export default function Dashboard() {
+                 <div style={{ position: 'relative' }}>
+                   <button
+                     onClick={() => setAgencyDropdownOpen(o => !o)}
+-                    style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '9px 14px', borderRadius: 10, border: `1.5px solid ${pkgAgencyFilter !== 'all' ? '#e8520a' : '#e5e7eb'}`, background: pkgAgencyFilter !== 'all' ? '#fff5ef' : '#fff', fontSize: 13, color: pkgAgencyFilter !== 'all' ? '#e8520a' : '#374151', cursor: 'pointer', fontWeight: pkgAgencyFilter !== 'all' ? 700 : 400, minWidth: 180, justifyContent: 'space-between' }}
++                    style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '9px 14px', borderRadius: 10, border: `1.5px solid ${pkgAgencyFilter !== 'all' ? '#7e5233' : '#e5e7eb'}`, background: pkgAgencyFilter !== 'all' ? '#fff5ef' : '#fff', fontSize: 13, color: pkgAgencyFilter !== 'all' ? '#7e5233' : '#374151', cursor: 'pointer', fontWeight: pkgAgencyFilter !== 'all' ? 700 : 400, minWidth: 180, justifyContent: 'space-between' }}
+                   >
+                     <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                       <Building2 size={13} />
+@@ -769,7 +766,7 @@ export default function Dashboard() {
+                       <div style={{ maxHeight: 220, overflowY: 'auto' }}>
+                         {[{ value: 'all', label: 'All Agencies' }, ...uniquePkgAgencies.filter(a => a.toLowerCase().includes(agencyDropdownSearch.toLowerCase())).map(a => ({ value: a, label: a }))].map(opt => (
+                           <button key={opt.value} onClick={() => { setPkgAgencyFilter(opt.value); setAgencyDropdownOpen(false); setAgencyDropdownSearch('') }}
+-                            style={{ width: '100%', padding: '9px 14px', textAlign: 'left', border: 'none', background: pkgAgencyFilter === opt.value ? '#fff5ef' : 'none', color: pkgAgencyFilter === opt.value ? '#e8520a' : '#374151', fontSize: 13, fontWeight: pkgAgencyFilter === opt.value ? 700 : 400, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 8 }}>
++                            style={{ width: '100%', padding: '9px 14px', textAlign: 'left', border: 'none', background: pkgAgencyFilter === opt.value ? '#fff5ef' : 'none', color: pkgAgencyFilter === opt.value ? '#7e5233' : '#374151', fontSize: 13, fontWeight: pkgAgencyFilter === opt.value ? 700 : 400, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 8 }}>
+                             {opt.value !== 'all' && <Building2 size={12} style={{ color: '#9ca3af', flexShrink: 0 }} />}
+                             {opt.label}
+                           </button>
+@@ -808,10 +805,10 @@ export default function Dashboard() {
+                 </div>
+               </div>
+               <div style={{ display: 'flex', gap: 8 }}>
+-                <button onClick={() => { setNewDest({ name: '', color: '#e8520a', image_url: '', description: '', emoji: '📍', image_pos: '' }); setEditDestId(null); setModal('destination') }} style={S.btn('#f3f4f6', '#555')}>
++                <button onClick={() => { setNewDest({ name: '', color: '#7e5233', image_url: '', description: '', emoji: '📍', image_pos: '' }); setEditDestId(null); setModal('destination') }} style={S.btn('#f3f4f6', '#555')}>
+                   <MapPin size={13} /> Destinations
+                 </button>
+-<button onClick={openAdd} style={{ padding: '10px 20px', borderRadius: 10, border: 'none', cursor: 'pointer', background: 'linear-gradient(135deg,#e8520a,#c93d00)', color: '#fff', fontWeight: 700, fontSize: 14, display: 'flex', alignItems: 'center', gap: 6 }}>
++<button onClick={openAdd} style={{ padding: '10px 20px', borderRadius: 10, border: 'none', cursor: 'pointer', background: 'linear-gradient(135deg,#7e5233,#c93d00)', color: '#fff', fontWeight: 700, fontSize: 14, display: 'flex', alignItems: 'center', gap: 6 }}>
+                   <Plus size={16} /> Add Package
+                 </button>
+               </div>
+@@ -870,7 +867,7 @@ export default function Dashboard() {
+                             onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
+                           >
+                             <td style={{ padding: '12px 16px' }}>
+-                              <span style={{ fontSize: 11, fontWeight: 700, color: '#e8520a', background: '#fff5ef', padding: '3px 8px', borderRadius: 6, fontFamily: 'monospace', letterSpacing: '0.03em', whiteSpace: 'nowrap' }}>{pkg.id}</span>
++                              <span style={{ fontSize: 11, fontWeight: 700, color: '#7e5233', background: '#fff5ef', padding: '3px 8px', borderRadius: 6, fontFamily: 'monospace', letterSpacing: '0.03em', whiteSpace: 'nowrap' }}>{pkg.id}</span>
+                             </td>
+                             <td style={{ padding: '12px 16px' }}>
+                               <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+@@ -879,7 +876,7 @@ export default function Dashboard() {
+                                 </div>
+                                 <div>
+                                   <div style={{ fontWeight: 600, color: '#111', fontSize: 13 }}>{pkg.title}</div>
+-                                  {pkg.agencyName && <div style={{ fontSize: 10, color: '#e8520a', marginTop: 1, fontWeight: 600 }}>🏢 {pkg.agencyName}</div>}
++                                  {pkg.agencyName && <div style={{ fontSize: 10, color: '#7e5233', marginTop: 1, fontWeight: 600 }}>🏢 {pkg.agencyName}</div>}
+                                 </div>
+                               </div>
+                             </td>
+@@ -987,7 +984,7 @@ export default function Dashboard() {
+                 <h2 style={{ fontWeight: 700, fontSize: 18, color: '#111', margin: 0 }}>Destinations</h2>
+                 <p style={{ fontSize: 13, color: '#9ca3af', margin: '4px 0 0' }}>{destinations.length} total · {destinations.filter(d => d.featured !== false).length} shown on website</p>
+               </div>
+-              <button onClick={() => { setNewDest({ name: '', color: '#e8520a', image_url: '', description: '', emoji: '📍', image_pos: '' }); setEditDestId(null); setModal('destination') }} style={S.btn()}>
++              <button onClick={() => { setNewDest({ name: '', color: '#7e5233', image_url: '', description: '', emoji: '📍', image_pos: '' }); setEditDestId(null); setModal('destination') }} style={S.btn()}>
+                 <Plus size={13} /> Add Destination
+               </button>
+             </div>
+@@ -1103,14 +1100,14 @@ export default function Dashboard() {
+                               <Mail size={13} style={{ color: '#6b7280' }} /> {agency.email}
+                             </a>
+                             <a href={`tel:${agency.phone}`} style={{ display: 'flex', alignItems: 'center', gap: 5, fontSize: 13, color: '#374151', textDecoration: 'none' }}>
+-                              <Phone size={13} style={{ color: '#e8520a' }} /> {agency.phone}
++                              <Phone size={13} style={{ color: '#7e5233' }} /> {agency.phone}
+                             </a>
+                             <a href={`https://wa.me/${agency.phone.replace(/\D/g,'')}`} target="_blank" rel="noopener noreferrer"
+                               style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: 12, fontWeight: 600, color: '#25d366', textDecoration: 'none', padding: '4px 12px', borderRadius: 999, background: '#f0fdf4', border: '1px solid #bbf7d0' }}>
+                               <MessageCircle size={12} /> WhatsApp
+                             </a>
+                             {agency.website && (
+-                              <a href={agency.website} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: 5, fontSize: 13, color: '#2e3da8', textDecoration: 'none' }}>
++                              <a href={agency.website} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: 5, fontSize: 13, color: '#153e2d', textDecoration: 'none' }}>
+                                 <ExternalLink size={13} /> {agency.website}
+                               </a>
+                             )}
+@@ -1169,11 +1166,11 @@ export default function Dashboard() {
+                       <div style={{ flex: 1, minWidth: 0 }}>
+                         <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap', marginBottom: 8 }}>
+                           <span style={{ fontWeight: 700, fontSize: 15, color: '#111' }}>{enq.name}</span>
+-                          {enq.package_title && <span style={{ fontSize: 11, background: '#fff5ef', color: '#e8520a', padding: '2px 10px', borderRadius: 999, fontWeight: 600 }}>{enq.package_title}</span>}
++                          {enq.package_title && <span style={{ fontSize: 11, background: '#fff5ef', color: '#7e5233', padding: '2px 10px', borderRadius: 999, fontWeight: 600 }}>{enq.package_title}</span>}
+                           <span style={{ fontSize: 11, color: '#9ca3af', display: 'flex', alignItems: 'center', gap: 3 }}><Calendar size={10} /> {fmtDate(enq.created_at)}</span>
+                         </div>
+                         <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', marginBottom: enq.message ? 10 : 0 }}>
+-                          <a href={`tel:+${enq.phone}`} style={{ display: 'flex', alignItems: 'center', gap: 5, fontSize: 13, color: '#374151', textDecoration: 'none' }}><Phone size={13} style={{ color: '#e8520a' }} /> {enq.phone}</a>
++                          <a href={`tel:+${enq.phone}`} style={{ display: 'flex', alignItems: 'center', gap: 5, fontSize: 13, color: '#374151', textDecoration: 'none' }}><Phone size={13} style={{ color: '#7e5233' }} /> {enq.phone}</a>
+                           <a href={`https://wa.me/${enq.phone.replace(/\D/g,'')}`} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: 5, fontSize: 13, color: '#25d366', textDecoration: 'none' }}><MessageCircle size={13} /> WhatsApp</a>
+                           {enq.email && <a href={`mailto:${enq.email}`} style={{ display: 'flex', alignItems: 'center', gap: 5, fontSize: 13, color: '#374151', textDecoration: 'none' }}><Mail size={13} style={{ color: '#6b7280' }} /> {enq.email}</a>}
+                         </div>
+@@ -1203,7 +1200,7 @@ export default function Dashboard() {
+               <div style={{ ...S.card, padding: '22px 24px' }}>
+                 <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 14 }}>
+                   <div style={{ width: 34, height: 34, borderRadius: 10, background: '#fff5ef', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+-                    <Phone size={15} style={{ color: '#e8520a' }} />
++                    <Phone size={15} style={{ color: '#7e5233' }} />
+                   </div>
+                   <div>
+                     <div style={{ fontWeight: 700, fontSize: 14, color: '#111' }}>Phone Number</div>
+@@ -1214,7 +1211,7 @@ export default function Dashboard() {
+                 <input value={settingsForm.phone} onChange={e => setSettingsForm(s => ({ ...s, phone: e.target.value }))} style={{ ...S.input, marginBottom: 6 }} placeholder="e.g. 918062179246" />
+                 <p style={{ fontSize: 11, color: '#9ca3af', margin: '0 0 12px' }}>Format: 91 + 10-digit mobile (e.g. 919876543210)</p>
+                 {settingsForm.phone.replace(/\D/g,'') && (
+-                  <a href={`tel:+${settingsForm.phone.replace(/\D/g,'')}`} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, color: '#e8520a', textDecoration: 'none', padding: '5px 12px', borderRadius: 999, border: '1px solid #fbd0b5', background: '#fff5ef' }}>
++                  <a href={`tel:+${settingsForm.phone.replace(/\D/g,'')}`} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, color: '#7e5233', textDecoration: 'none', padding: '5px 12px', borderRadius: 999, border: '1px solid #fbd0b5', background: '#fff5ef' }}>
+                     <Phone size={12} /> Preview call link
+                   </a>
+                 )}
+@@ -1245,7 +1242,7 @@ export default function Dashboard() {
+               <div style={{ ...S.card, padding: '22px 24px' }}>
+                 <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 14 }}>
+                   <div style={{ width: 34, height: 34, borderRadius: 10, background: '#eff1ff', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+-                    <Mail size={15} style={{ color: '#2e3da8' }} />
++                    <Mail size={15} style={{ color: '#153e2d' }} />
+                   </div>
+                   <div>
+                     <div style={{ fontWeight: 700, fontSize: 14, color: '#111' }}>Business Email</div>
+@@ -1255,7 +1252,7 @@ export default function Dashboard() {
+                 <label style={S.label}>Email Address</label>
+                 <input type="email" value={settingsForm.email} onChange={e => setSettingsForm(s => ({ ...s, email: e.target.value }))} style={{ ...S.input, marginBottom: 6 }} placeholder="e.g. hello@greenkeralatrips.com" />
+                 {settingsForm.email.trim() && (
+-                  <a href={`mailto:${settingsForm.email.trim()}`} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, color: '#2e3da8', textDecoration: 'none', padding: '5px 12px', borderRadius: 999, border: '1px solid #c7d0ff', background: '#eff1ff', marginTop: 6 }}>
++                  <a href={`mailto:${settingsForm.email.trim()}`} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, color: '#153e2d', textDecoration: 'none', padding: '5px 12px', borderRadius: 999, border: '1px solid #c7d0ff', background: '#eff1ff', marginTop: 6 }}>
+                     <Mail size={12} /> Preview email link
+                   </a>
+                 )}
+@@ -1285,8 +1282,8 @@ export default function Dashboard() {
+               {/* Destination Visibility */}
+               <div style={{ ...S.card, padding: '22px 24px' }}>
+                 <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 14 }}>
+-                  <div style={{ width: 34, height: 34, borderRadius: 10, background: '#f0ebe1', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+-                    <MapPin size={15} style={{ color: '#e8520a' }} />
++                  <div style={{ width: 34, height: 34, borderRadius: 10, background: '#fbf8f1', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
++                    <MapPin size={15} style={{ color: '#7e5233' }} />
+                   </div>
+                   <div>
+                     <div style={{ fontWeight: 700, fontSize: 14, color: '#111' }}>Destination Visibility</div>
+@@ -1355,7 +1352,7 @@ export default function Dashboard() {
+               </div>
+ 
+               <button onClick={handleSaveSettings} disabled={settingsSaving}
+-                style={{ alignSelf: 'flex-start', padding: '11px 28px', borderRadius: 10, border: 'none', cursor: settingsSaving ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#e8520a,#c93d00)', color: '#fff', fontWeight: 700, fontSize: 14, display: 'flex', alignItems: 'center', gap: 7, opacity: settingsSaving ? 0.7 : 1 }}>
++                style={{ alignSelf: 'flex-start', padding: '11px 28px', borderRadius: 10, border: 'none', cursor: settingsSaving ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#7e5233,#c93d00)', color: '#fff', fontWeight: 700, fontSize: 14, display: 'flex', alignItems: 'center', gap: 7, opacity: settingsSaving ? 0.7 : 1 }}>
+                 {settingsSaving ? <><span style={{ width: 14, height: 14, border: '2px solid rgba(255,255,255,0.3)', borderTop: '2px solid #fff', borderRadius: '50%', animation: 'spin 1s linear infinite', display: 'inline-block' }} /> Saving...</> : <><Check size={15} /> Save All Settings</>}
+               </button>
+             </div>
+@@ -1367,14 +1364,14 @@ export default function Dashboard() {
+       {modal === 'form' && (
+         <div style={S.overlay}>
+           <div style={S.modal}>
+-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 20px', background: 'linear-gradient(135deg,#e8520a,#c93d00)' }}>
++            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 20px', background: 'linear-gradient(135deg,#7e5233,#c93d00)' }}>
+               <h2 style={{ fontWeight: 700, fontSize: 16, color: '#fff' }}>{showPreview ? 'Package Preview' : editId ? 'Edit Package' : 'Add Package'}</h2>
+               <button onClick={() => setModal(null)} style={{ width: 30, height: 30, borderRadius: '50%', background: 'rgba(255,255,255,0.2)', border: 'none', cursor: 'pointer', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><X size={15} /></button>
+             </div>
+             {!showPreview && (
+             <div style={{ display: 'flex', borderBottom: '1px solid #f3f4f6', padding: '0 20px' }}>
+               {[['basic','Basic'], ...(['homestay','houseboat'].includes(form.category) ? [['stay','Stay Details']] : []), ['itinerary','Itinerary'],['media','Media & Lists']].map(([k, l]) => (
+-                <button key={k} onClick={() => setTab(k)} style={{ padding: '12px 14px', fontSize: 13, fontWeight: 600, border: 'none', background: 'none', cursor: 'pointer', borderBottom: `2px solid ${tab === k ? '#e8520a' : 'transparent'}`, color: tab === k ? '#e8520a' : '#9ca3af' }}>{l}</button>
++                <button key={k} onClick={() => setTab(k)} style={{ padding: '12px 14px', fontSize: 13, fontWeight: 600, border: 'none', background: 'none', cursor: 'pointer', borderBottom: `2px solid ${tab === k ? '#7e5233' : 'transparent'}`, color: tab === k ? '#7e5233' : '#9ca3af' }}>{l}</button>
+               ))}
+             </div>
+             )}
+@@ -1476,7 +1473,7 @@ export default function Dashboard() {
+                     <div style={{ gridColumn: '1/-1' }}>
+                       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10, marginTop: 4 }}>
+                         <label style={S.label}>Available Dates</label>
+-                        <button onClick={addDateGroup} style={{ fontSize: 12, fontWeight: 600, color: '#e8520a', background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
++                        <button onClick={addDateGroup} style={{ fontSize: 12, fontWeight: 600, color: '#7e5233', background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
+                           <Plus size={12} /> Add Batch
+                         </button>
+                       </div>
+@@ -1514,7 +1511,7 @@ export default function Dashboard() {
+                                 </div>
+                               )
+                             })}
+-                            <button onClick={() => addDateRange(gi)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#e8520a', fontSize: 12, fontWeight: 600, padding: '2px 0' }}>+ Add date range</button>
++                            <button onClick={() => addDateRange(gi)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#7e5233', fontSize: 12, fontWeight: 600, padding: '2px 0' }}>+ Add date range</button>
+                           </div>
+                         )
+                       })}
+@@ -1528,7 +1525,7 @@ export default function Dashboard() {
+                     <div key={di} style={{ border: '1px solid #f3f4f6', borderRadius: 12, padding: 14, marginBottom: 10, background: '#fafafa' }}>
+                       {/* Day header */}
+                       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
+-                        <div style={{ width: 28, height: 28, borderRadius: '50%', background: 'linear-gradient(135deg,#e8520a,#c93d00)', color: '#fff', fontSize: 12, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{day.day}</div>
++                        <div style={{ width: 28, height: 28, borderRadius: '50%', background: 'linear-gradient(135deg,#7e5233,#c93d00)', color: '#fff', fontSize: 12, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{day.day}</div>
+                         {(form.itinerary || []).length > 1 && <button onClick={() => removeDay(di)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#f87171', display: 'flex' }}><Trash2 size={14} /></button>}
+                       </div>
+                       <input value={day.title} onChange={e => itinChange(di, 'title', e.target.value)} style={{ ...S.input, marginBottom: 8 }} placeholder={`Day ${day.day} title (e.g. Arrival & Sightseeing)`} />
+@@ -1588,7 +1585,7 @@ export default function Dashboard() {
+                       <button onClick={() => addActivity(di)} style={{ width: '100%', padding: '8px 0', borderRadius: 8, border: '1.5px dashed #e5e7eb', background: 'none', cursor: 'pointer', color: '#6b7280', fontSize: 12, fontWeight: 600 }}>+ Add Activity</button>
+                     </div>
+                   ))}
+-                  <button onClick={addDay} style={{ width: '100%', padding: '10px 0', borderRadius: 12, border: '2px dashed #fbd0b5', background: 'none', cursor: 'pointer', color: '#e8520a', fontSize: 13, fontWeight: 600 }}>+ Add Day</button>
++                  <button onClick={addDay} style={{ width: '100%', padding: '10px 0', borderRadius: 12, border: '2px dashed #fbd0b5', background: 'none', cursor: 'pointer', color: '#7e5233', fontSize: 13, fontWeight: 600 }}>+ Add Day</button>
+                 </div>
+               )}
+               {!showPreview && tab === 'stay' && (
+@@ -1605,7 +1602,7 @@ export default function Dashboard() {
+                   ))}
+ 
+                   {[
+-                    { l: 'Highlights', f: 'highlights', type: 'highlight', color: '#e8520a' },
++                    { l: 'Highlights', f: 'highlights', type: 'highlight', color: '#7e5233' },
+                     { l: 'Inclusions', f: 'inclusions', type: 'inclusion', color: '#22c55e' },
+                     { l: 'Exclusions', f: 'exclusions', type: 'exclusion', color: '#ef4444' },
+                   ].map(({ l, f, type, color }) => (
+@@ -1631,11 +1628,11 @@ export default function Dashboard() {
+                 <button onClick={() => setModal(null)} style={{ padding: '9px 18px', borderRadius: 10, border: '1px solid #e5e7eb', background: '#fff', color: '#6b7280', fontWeight: 600, fontSize: 13, cursor: 'pointer' }}>Cancel</button>
+               )}
+               {!showPreview && (
+-                <button onClick={() => setShowPreview(true)} style={{ padding: '9px 18px', borderRadius: 10, border: '1.5px solid #e8520a', background: '#fff', color: '#e8520a', fontWeight: 700, fontSize: 13, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6 }}>
++                <button onClick={() => setShowPreview(true)} style={{ padding: '9px 18px', borderRadius: 10, border: '1.5px solid #7e5233', background: '#fff', color: '#7e5233', fontWeight: 700, fontSize: 13, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6 }}>
+                   <Eye size={14} /> Preview
+                 </button>
+               )}
+-              <button onClick={handleSave} disabled={saving} style={{ padding: '9px 20px', borderRadius: 10, border: 'none', cursor: saving ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#e8520a,#c93d00)', color: '#fff', fontWeight: 700, fontSize: 13, display: 'flex', alignItems: 'center', gap: 6, opacity: saving ? 0.7 : 1 }}>
++              <button onClick={handleSave} disabled={saving} style={{ padding: '9px 20px', borderRadius: 10, border: 'none', cursor: saving ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#7e5233,#c93d00)', color: '#fff', fontWeight: 700, fontSize: 13, display: 'flex', alignItems: 'center', gap: 6, opacity: saving ? 0.7 : 1 }}>
+                 {saving ? <><span style={{ width: 13, height: 13, border: '2px solid rgba(255,255,255,0.3)', borderTop: '2px solid #fff', borderRadius: '50%', animation: 'spin 1s linear infinite', display: 'inline-block' }} /> Saving...</> : <><Check size={14} /> {editId ? 'Save Changes' : 'Add Package'}</>}
+               </button>
+             </div>
+@@ -1647,7 +1644,7 @@ export default function Dashboard() {
+       {modal === 'destination' && (
+         <div style={{ ...S.overlay, alignItems: 'center' }} onClick={e => e.target === e.currentTarget && setModal(null)}>
+           <div style={{ background: '#fff', borderRadius: 20, width: '100%', maxWidth: 500, boxShadow: '0 20px 60px rgba(0,0,0,0.2)', overflow: 'hidden', maxHeight: '90vh', display: 'flex', flexDirection: 'column' }}>
+-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 20px', background: 'linear-gradient(135deg,#2e3da8,#1c2575)', flexShrink: 0 }}>
++            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 20px', background: 'linear-gradient(135deg,#153e2d,#1c2575)', flexShrink: 0 }}>
+               <h2 style={{ fontWeight: 700, fontSize: 16, color: '#fff', display: 'flex', alignItems: 'center', gap: 8 }}><MapPin size={16} /> Manage Destinations</h2>
+               <button onClick={() => setModal(null)} style={{ width: 30, height: 30, borderRadius: '50%', background: 'rgba(255,255,255,0.2)', border: 'none', cursor: 'pointer', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><X size={15} /></button>
+             </div>
+@@ -1674,7 +1671,7 @@ export default function Dashboard() {
+                                 ? <span style={{ width: 11, height: 11, border: `2px solid ${d.featured !== false ? '#bbf7d0' : '#e5e7eb'}`, borderTop: `2px solid ${d.featured !== false ? '#22c55e' : '#9ca3af'}`, borderRadius: '50%', animation: 'spin 1s linear infinite', display: 'inline-block' }} />
+                                 : <Eye size={12} />}
+                             </button>
+-                            <button onClick={() => { if (editDestId === d.id) { setEditDestId(null); return }; setEditDestId(d.id); setEditDestForm({ color: d.color, image_url: d.image_url || '', description: d.description || '', emoji: d.emoji || '📍', image_pos: d.image_pos || '' }) }} style={{ width: 28, height: 28, borderRadius: 7, border: '1px solid #e5e7eb', background: editDestId === d.id ? '#fff5ef' : 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: editDestId === d.id ? '#e8520a' : '#9ca3af' }}><Pencil size={12} /></button>
++                            <button onClick={() => { if (editDestId === d.id) { setEditDestId(null); return }; setEditDestId(d.id); setEditDestForm({ color: d.color, image_url: d.image_url || '', description: d.description || '', emoji: d.emoji || '📍', image_pos: d.image_pos || '' }) }} style={{ width: 28, height: 28, borderRadius: 7, border: '1px solid #e5e7eb', background: editDestId === d.id ? '#fff5ef' : 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: editDestId === d.id ? '#7e5233' : '#9ca3af' }}><Pencil size={12} /></button>
+                             <button onClick={() => handleDeleteDestination(d.id, d.name)} style={{ width: 28, height: 28, borderRadius: 7, border: '1px solid #fee2e2', background: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#f87171' }}><Trash2 size={12} /></button>
+                           </div>
+                         </div>
+@@ -1688,7 +1685,7 @@ export default function Dashboard() {
+                             <div style={{ marginBottom: 10 }}><label style={{ ...S.label, marginBottom: 4 }}>Description</label><input value={editDestForm.description} onChange={e => setEditDestForm(f => ({ ...f, description: e.target.value }))} style={S.input} /></div>
+                             <div style={{ display: 'flex', gap: 8 }}>
+                               <button onClick={() => setEditDestId(null)} style={{ flex: 1, padding: '8px 0', borderRadius: 8, border: '1px solid #e5e7eb', background: '#fff', color: '#6b7280', fontWeight: 600, fontSize: 12, cursor: 'pointer' }}>Cancel</button>
+-                              <button onClick={() => handleUpdateDestination(d.id)} style={{ flex: 1, padding: '8px 0', borderRadius: 8, border: 'none', background: 'linear-gradient(135deg,#2e3da8,#1c2575)', color: '#fff', fontWeight: 700, fontSize: 12, cursor: 'pointer' }}>Save</button>
++                              <button onClick={() => handleUpdateDestination(d.id)} style={{ flex: 1, padding: '8px 0', borderRadius: 8, border: 'none', background: 'linear-gradient(135deg,#153e2d,#1c2575)', color: '#fff', fontWeight: 700, fontSize: 12, cursor: 'pointer' }}>Save</button>
+                             </div>
+                           </div>
+                         )}
+@@ -1710,7 +1707,7 @@ export default function Dashboard() {
+             </div>
+             <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 10, padding: '14px 20px', borderTop: '1px solid #f3f4f6', background: '#fafafa', flexShrink: 0 }}>
+               <button onClick={() => setModal(null)} style={{ padding: '9px 18px', borderRadius: 10, border: '1px solid #e5e7eb', background: '#fff', color: '#6b7280', fontWeight: 600, fontSize: 13, cursor: 'pointer' }}>Close</button>
+-              <button onClick={handleAddDestination} disabled={destSaving} style={{ padding: '9px 20px', borderRadius: 10, border: 'none', cursor: destSaving ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#2e3da8,#1c2575)', color: '#fff', fontWeight: 700, fontSize: 13, display: 'flex', alignItems: 'center', gap: 6, opacity: destSaving ? 0.7 : 1 }}>
++              <button onClick={handleAddDestination} disabled={destSaving} style={{ padding: '9px 20px', borderRadius: 10, border: 'none', cursor: destSaving ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#153e2d,#1c2575)', color: '#fff', fontWeight: 700, fontSize: 13, display: 'flex', alignItems: 'center', gap: 6, opacity: destSaving ? 0.7 : 1 }}>
+                 {destSaving ? <><span style={{ width: 13, height: 13, border: '2px solid rgba(255,255,255,0.3)', borderTop: '2px solid #fff', borderRadius: '50%', animation: 'spin 1s linear infinite', display: 'inline-block' }} /> Adding...</> : <><Plus size={14} /> Add</>}
+               </button>
+             </div>
+@@ -1726,7 +1723,7 @@ export default function Dashboard() {
+         return (
+           <div style={{ ...S.overlay, alignItems: 'center' }} onClick={e => e.target === e.currentTarget && setModal(null)}>
+             <div style={{ background: '#fff', borderRadius: 20, width: '100%', maxWidth: 500, boxShadow: '0 20px 60px rgba(0,0,0,0.2)', overflow: 'hidden', maxHeight: '90vh', display: 'flex', flexDirection: 'column' }}>
+-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 20px', background: 'linear-gradient(135deg,#2e3da8,#1c2575)', flexShrink: 0 }}>
++              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 20px', background: 'linear-gradient(135deg,#153e2d,#1c2575)', flexShrink: 0 }}>
+                 <h2 style={{ fontWeight: 700, fontSize: 16, color: '#fff', display: 'flex', alignItems: 'center', gap: 8 }}><Icon size={16} /> Manage {meta.plural}</h2>
+                 <button onClick={() => setModal(null)} style={{ width: 30, height: 30, borderRadius: '50%', background: 'rgba(255,255,255,0.2)', border: 'none', cursor: 'pointer', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><X size={15} /></button>
+               </div>
+@@ -1752,7 +1749,7 @@ export default function Dashboard() {
+                                   ? <span style={{ width: 11, height: 11, border: `2px solid ${d.featured !== false ? '#bbf7d0' : '#e5e7eb'}`, borderTop: `2px solid ${d.featured !== false ? '#22c55e' : '#9ca3af'}`, borderRadius: '50%', animation: 'spin 1s linear infinite', display: 'inline-block' }} />
+                                   : <Eye size={12} />}
+                               </button>
+-                              <button onClick={() => { if (editListingId === d.id) { setEditListingId(null); return }; setEditListingId(d.id); setEditListingForm({ color: d.color, image_url: d.image_url || '', description: d.description || '', location: d.location || '', price: d.price || '', emoji: d.emoji || meta.emoji, image_pos: d.image_pos || '' }) }} style={{ width: 28, height: 28, borderRadius: 7, border: '1px solid #e5e7eb', background: editListingId === d.id ? '#fff5ef' : 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: editListingId === d.id ? '#e8520a' : '#9ca3af' }}><Pencil size={12} /></button>
++                              <button onClick={() => { if (editListingId === d.id) { setEditListingId(null); return }; setEditListingId(d.id); setEditListingForm({ color: d.color, image_url: d.image_url || '', description: d.description || '', location: d.location || '', price: d.price || '', emoji: d.emoji || meta.emoji, image_pos: d.image_pos || '' }) }} style={{ width: 28, height: 28, borderRadius: 7, border: '1px solid #e5e7eb', background: editListingId === d.id ? '#fff5ef' : 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: editListingId === d.id ? '#7e5233' : '#9ca3af' }}><Pencil size={12} /></button>
+                               <button onClick={() => handleDeleteListing(d.id, d.name)} style={{ width: 28, height: 28, borderRadius: 7, border: '1px solid #fee2e2', background: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#f87171' }}><Trash2 size={12} /></button>
+                             </div>
+                           </div>
+@@ -1766,7 +1763,7 @@ export default function Dashboard() {
+                               <div style={{ marginBottom: 10 }}><label style={{ ...S.label, marginBottom: 4 }}>Description</label><input value={editListingForm.description} onChange={e => setEditListingForm(f => ({ ...f, description: e.target.value }))} style={S.input} /></div>
+                               <div style={{ display: 'flex', gap: 8 }}>
+                                 <button onClick={() => setEditListingId(null)} style={{ flex: 1, padding: '8px 0', borderRadius: 8, border: '1px solid #e5e7eb', background: '#fff', color: '#6b7280', fontWeight: 600, fontSize: 12, cursor: 'pointer' }}>Cancel</button>
+-                                <button onClick={() => handleUpdateListing(d.id)} style={{ flex: 1, padding: '8px 0', borderRadius: 8, border: 'none', background: 'linear-gradient(135deg,#2e3da8,#1c2575)', color: '#fff', fontWeight: 700, fontSize: 12, cursor: 'pointer' }}>Save</button>
++                                <button onClick={() => handleUpdateListing(d.id)} style={{ flex: 1, padding: '8px 0', borderRadius: 8, border: 'none', background: 'linear-gradient(135deg,#153e2d,#1c2575)', color: '#fff', fontWeight: 700, fontSize: 12, cursor: 'pointer' }}>Save</button>
+                               </div>
+                             </div>
+                           )}
+@@ -1788,7 +1785,7 @@ export default function Dashboard() {
+               </div>
+               <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 10, padding: '14px 20px', borderTop: '1px solid #f3f4f6', background: '#fafafa', flexShrink: 0 }}>
+                 <button onClick={() => setModal(null)} style={{ padding: '9px 18px', borderRadius: 10, border: '1px solid #e5e7eb', background: '#fff', color: '#6b7280', fontWeight: 600, fontSize: 13, cursor: 'pointer' }}>Close</button>
+-                <button onClick={() => handleAddListing(listingModalType)} disabled={listingSaving} style={{ padding: '9px 20px', borderRadius: 10, border: 'none', cursor: listingSaving ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#2e3da8,#1c2575)', color: '#fff', fontWeight: 700, fontSize: 13, display: 'flex', alignItems: 'center', gap: 6, opacity: listingSaving ? 0.7 : 1 }}>
++                <button onClick={() => handleAddListing(listingModalType)} disabled={listingSaving} style={{ padding: '9px 20px', borderRadius: 10, border: 'none', cursor: listingSaving ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#153e2d,#1c2575)', color: '#fff', fontWeight: 700, fontSize: 13, display: 'flex', alignItems: 'center', gap: 6, opacity: listingSaving ? 0.7 : 1 }}>
+                   {listingSaving ? <><span style={{ width: 13, height: 13, border: '2px solid rgba(255,255,255,0.3)', borderTop: '2px solid #fff', borderRadius: '50%', animation: 'spin 1s linear infinite', display: 'inline-block' }} /> Adding...</> : <><Plus size={14} /> Add</>}
+                 </button>
+               </div>

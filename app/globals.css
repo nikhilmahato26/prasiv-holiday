@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/* ── Prashiv Holiday brand theme: deep navy blue + gold ───────────────────── */
+@theme {
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-display: 'Playfair Display', serif;
+
+  /* Primary — navy blue (from the logo mark) */
+  --color-navy-50:  #EEF2F8;
+  --color-navy-100: #DDE5F0;
+  --color-navy-200: #C3D0E4;
+  --color-navy-400: #4A6FA8;
+  --color-navy-500: #2F5490;
+  --color-navy-600: #1F3B66;
+  --color-navy-700: #16294D;
+  --color-navy-800: #132441;
+  --color-navy-900: #0E1B33;
+  --color-navy-950: #08111F;
+  --color-navy: #16294D;
+
+  /* Accent — gold (from the logo mark) */
+  --color-gold-50:  #FBF6E7;
+  --color-gold-100: #F5E9C6;
+  --color-gold-200: #EBD79A;
+  --color-gold-300: #E0C264;
+  --color-gold-400: #D9B44A;
+  --color-gold-500: #C9A227;
+  --color-gold-600: #B08D1F;
+  --color-gold-700: #8A6E1C;
+  --color-gold-800: #6B5514;
+  --color-gold: #C9A227;
+
+  /* Warm neutrals */
+  --color-cream-50:  #FAF8F0;
+  --color-cream-100: #F3EFE1;
+  --color-cream-200: #EFE6CE;
+  --color-cream-DEFAULT: #F3EFE1;
+
+  --animate-fade-in: fadeIn 0.6s ease-out;
+  --animate-slide-up: slideUp 0.5s ease-out;
+}
+
+/* Brand tokens for plain CSS / inline styles */
+:root {
+  --brand-navy: #16294D;
+  --brand-navy-dark: #0E1B33;
+  --brand-navy-light: #2F5490;
+  --brand-gold: #C9A227;
+  --brand-gold-dark: #8A6E1C;
+  --brand-gold-soft: #FBF6E7;
+}
+
+@keyframes fadeIn { from{opacity:0} to{opacity:1} }
+@keyframes slideUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+@keyframes spin { to{transform:rotate(360deg)} }
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: #fff; color: #1a1a1a; font-family: 'Plus Jakarta Sans', sans-serif; }
+
+::selection { background: rgba(201,162,39,0.28); color: #16294D; }
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #EEF2F8; }
+::-webkit-scrollbar-thumb { background: #16294D; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #C9A227; }
+
+.line-clamp-2 { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+.animate-fade-in { animation: fadeIn 0.6s ease-out; }
+.animate-slide-up { animation: slideUp 0.5s ease-out; }
+.animate-spin { animation: spin 1s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration:0.01ms !important; transition-duration:0.01ms !important; }
+}

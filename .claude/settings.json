@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx eslint *)",
+      "Bash(grep -v \"no-img-element\\\\|set-state-in-effect\\\\|Using \\\\`<img>\\\\`\\\\|Effects are intended\\\\|^\\\\* \\\\|cascading renders\\\\|Subscribe for\\\\|Update external\\\\|react.dev\\\\|^$\\\\|^\\\\s*[0-9]* |^\\\\s*>\")",
+      "Bash(node -e \"require\\('cloudinary'\\); console.log\\('cloudinary OK', require\\('cloudinary/package.json'\\).version\\)\")",
+      "Bash(grep -rn \"Image URL\\\\|Image \\\\${idx\\\\|image_url: e.target\\\\|'image', e.target\\\\|heroImage.*e.target.value\\\\|placeholder=\\\\\"https\" app/admin/dashboard/page.js app/agency/dashboard/page.js components/HomestayFields.js)"
+    ]
+  }
+}

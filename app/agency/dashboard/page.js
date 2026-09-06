@@ -1,0 +1,721 @@
+'use client'
+import { useState, useEffect, useCallback } from 'react'
+import { useRouter } from 'next/navigation'
+import Link from 'next/link'
+import {
+  Plus, Package, LogOut, X, Check, Trash2, Clock, CheckCircle, XCircle, ExternalLink, Eye, Pencil, Copy,
+} from 'lucide-react'
+import { toast } from 'sonner'
+import TagSelector from '@/components/TagSelector'
+import PackagePreview from '@/components/PackagePreview'
+import HomestayFields from '@/components/HomestayFields'
+import ImageUploader from '@/components/ImageUploader'
+
+function fmtRange(start, end) {
+  if (!start && !end) return ''
+  const M = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+  const f = d => { const dt = new Date(d + 'T00:00:00'); return `${dt.getDate()} ${M[dt.getMonth()]}, ${dt.getFullYear()}` }
+  const s = start ? f(start) : '', e = end ? f(end) : ''
+  return s && e ? `${s} – ${e}` : s || e
+}
+function autoMonth(dateStr) {
+  if (!dateStr) return ''
+  const dt = new Date(dateStr + 'T00:00:00')
+  return dt.toLocaleDateString('en-IN', { month: 'long', year: 'numeric' })
+}
+function getDR(dr) { return (dr && typeof dr === 'object') ? dr : { start: '', end: dr || '' } }
+
+const CATEGORIES = [
+  { value: 'package',  label: 'Package' },
+  { value: 'group',    label: 'Group Package' },
+  { value: 'homestay', label: 'Home Stay' },
+  { value: 'houseboat', label: 'Houseboat' },
+  { value: 'other',    label: 'Other' },
+]
+
+const EMPTY_PKG = {
+  id: '', destination: '', badge: '', badgeColor: '#2e9e7a',
+  duration: '3', title: '', subtitle: '', hotels: '',
+  adults: '', children: '', rooms: '',
+  originalPrice: '', salePrice: '', childPrice: '', childAgeMin: '', childAgeMax: '', priceNote: 'Per Person',
+  image: '', heroImage: '', imagePos: '', heroImagePos: '', overview: '', note: '', category: 'package',
+  highlights: [], inclusions: [], exclusions: [],
+  itinerary: [{ day: 1, title: '', description: '', activities: [{ time: '', emoji: '', title: '', details: [''], tags: [] }], image: '', hotel: '' }],
+  availableDates: [],
+  // Homestay-specific
+  address: '', mapUrl: '', starRating: '', rating: '', ratingLabel: '',
+  amenities: [], roomTypes: [], nearby: [],
+  checkIn: '', checkOut: '', frontDesk: '', childPolicy: '', cribsExtraBeds: '', finePrint: '',
+}
+
+function fmt(n) { return '₹' + Number(n).toLocaleString('en-IN') }
+
+const STATUS_CONFIG = {
+  pending:  { label: 'Under Review', color: '#f59e0b', bg: '#fffbeb', icon: Clock },
+  approved: { label: 'Live',         color: '#22c55e', bg: '#f0fdf4', icon: CheckCircle },
+  rejected: { label: 'Rejected',     color: '#ef4444', bg: '#fef2f2', icon: XCircle },
+}
+
+export default function AgencyDashboard() {
+  const router = useRouter()
+  const [packages, setPackages] = useState([])
+  const [destinations, setDestinations] = useState([])
+  const [loaded, setLoaded] = useState(false)
+  const [modal, setModal] = useState(null)
+  const [form, setForm] = useState(EMPTY_PKG)
+  const [editId, setEditId] = useState(null)
+  const [showPreview, setShowPreview] = useState(false)
+  const [tab, setTab] = useState('basic')
+  const [saving, setSaving] = useState(false)
+  const [pkgVisLoading, setPkgVisLoading] = useState(null)
+  const [agencyName, setAgencyName] = useState('')
+  const [agencyPhone, setAgencyPhone] = useState('')
+  const [phoneInput, setPhoneInput] = useState('')
+  const [savingPhone, setSavingPhone] = useState(false)
+  const [pkgOptions, setPkgOptions] = useState({ inclusion: [], exclusion: [], highlight: [] })
+
+  const fetchPackages = useCallback(async () => {
+    try {
+      const res = await fetch('/api/agency/packages')
+      if (res.status === 401) { router.push('/agency'); return }
+      if (res.ok) setPackages(await res.json())
+    } catch {}
+    setLoaded(true)
+  }, [router])
+
+  useEffect(() => {
+    fetchPackages()
+    fetch('/api/destinations').then(r => r.ok ? r.json() : []).then(setDestinations).catch(() => {})
+    fetch('/api/agency/profile').then(r => r.ok ? r.json() : null).then(d => { if (d) { setAgencyName(d.name); setAgencyPhone(d.phone); setPhoneInput(d.phone) } }).catch(() => {})
+    fetch('/api/package-options').then(r => r.ok ? r.json() : null).then(d => { if (d) setPkgOptions(d) }).catch(() => {})
+    fetch('/api/agency/packages').then(r => { if (r.status === 401) router.push('/agency') })
+  }, [fetchPackages, router])
+
+  const S = {
+    page:        { minHeight: '100vh', background: '#f0ece4' },
+    topbar:      { position: 'sticky', top: 0, zIndex: 40, background: '#fff', borderBottom: '1px solid #f3f4f6', boxShadow: '0 1px 8px rgba(0,0,0,0.05)' },
+    topbarInner: { maxWidth: 1100, margin: '0 auto', padding: '0 20px', height: 60, display: 'flex', alignItems: 'center', justifyContent: 'space-between' },
+    body:        { maxWidth: 1100, margin: '0 auto', padding: '28px 20px' },
+    card:        { background: '#fff', borderRadius: 16, boxShadow: '0 2px 8px rgba(0,0,0,0.06)', border: '1px solid #f3f4f6', overflow: 'hidden' },
+    btn:         (bg = '#8A6E1C', col = '#fff') => ({ padding: '8px 16px', borderRadius: 10, background: bg, color: col, border: 'none', fontWeight: 600, fontSize: 13, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6 }),
+    input:       { width: '100%', padding: '10px 12px', borderRadius: 10, border: '1.5px solid #e5e7eb', fontSize: 13, color: '#111', background: '#f9fafb', outline: 'none', boxSizing: 'border-box' },
+    label:       { fontSize: 11, fontWeight: 700, color: '#6b7280', letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: 5, display: 'block' },
+    overlay:     { position: 'fixed', inset: 0, zIndex: 50, background: 'rgba(0,0,0,0.45)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: '32px 16px', overflowY: 'auto' },
+    modal:       { background: '#fff', borderRadius: 20, width: '100%', maxWidth: 860, boxShadow: '0 20px 60px rgba(0,0,0,0.2)', overflow: 'hidden', marginBottom: 32 },
+  }
+
+  const savePhone = async () => {
+    if (!phoneInput.trim()) { toast.error('Phone number is required'); return }
+    setSavingPhone(true)
+    try {
+      const res = await fetch('/api/agency/profile', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ phone: phoneInput.trim() }),
+      })
+      if (!res.ok) { const d = await res.json(); throw new Error(d.error) }
+      setAgencyPhone(phoneInput.trim())
+      toast.success('Phone number updated!')
+    } catch (err) {
+      toast.error(err.message || 'Failed to update phone')
+    } finally {
+      setSavingPhone(false)
+    }
+  }
+
+  const logout = async () => {
+    await fetch('/api/auth/agency-logout', { method: 'POST' })
+    router.push('/agency')
+  }
+
+  const itinChange = (di, field, val) => setForm(f => ({ ...f, itinerary: (f.itinerary || []).map((d, i) => i === di ? { ...d, [field]: val } : d) }))
+  const addDay = () => setForm(f => ({ ...f, itinerary: [...(f.itinerary || []), { day: (f.itinerary || []).length + 1, title: '', description: '', activities: [{ time: '', emoji: '', title: '', details: [''], tags: [] }], image: '', hotel: '' }] }))
+  const removeDay = (idx) => setForm(f => ({ ...f, itinerary: (f.itinerary || []).filter((_, i) => i !== idx) }))
+  const addActivity = (di) => setForm(f => ({ ...f, itinerary: (f.itinerary || []).map((d, i) => i !== di ? d : { ...d, activities: [...(d.activities || []), { time: '', emoji: '', title: '', details: [''], tags: [] }] }) }))
+  const removeActivity = (di, ai) => setForm(f => ({ ...f, itinerary: (f.itinerary || []).map((d, i) => i !== di ? d : { ...d, activities: (d.activities || []).filter((_, j) => j !== ai) }) }))
+  const actFieldChange = (di, ai, field, val) => setForm(f => ({ ...f, itinerary: (f.itinerary || []).map((d, i) => { if (i !== di) return d; const acts = [...(d.activities || [])]; acts[ai] = { ...acts[ai], [field]: val }; return { ...d, activities: acts } }) }))
+  const actDetailChange = (di, ai, ki, val) => setForm(f => ({ ...f, itinerary: (f.itinerary || []).map((d, i) => { if (i !== di) return d; const acts = [...(d.activities || [])]; const det = [...(acts[ai].details || [])]; det[ki] = val; acts[ai] = { ...acts[ai], details: det }; return { ...d, activities: acts } }) }))
+  const addActDetail = (di, ai) => setForm(f => ({ ...f, itinerary: (f.itinerary || []).map((d, i) => { if (i !== di) return d; const acts = [...(d.activities || [])]; acts[ai] = { ...acts[ai], details: [...(acts[ai].details || []), ''] }; return { ...d, activities: acts } }) }))
+  const removeActDetail = (di, ai, ki) => setForm(f => ({ ...f, itinerary: (f.itinerary || []).map((d, i) => { if (i !== di) return d; const acts = [...(d.activities || [])]; acts[ai] = { ...acts[ai], details: (acts[ai].details || []).filter((_, j) => j !== ki) }; return { ...d, activities: acts } }) }))
+
+  const addDateGroup = () => setForm(f => ({ ...f, availableDates: [...(f.availableDates || []), { month: '', dates: [{ start: '', end: '' }] }] }))
+  const removeDateGroup = (gi) => setForm(f => ({ ...f, availableDates: (f.availableDates || []).filter((_, i) => i !== gi) }))
+  const dateGroupChange = (gi, field, val) => setForm(f => ({ ...f, availableDates: (f.availableDates || []).map((g, i) => i === gi ? { ...g, [field]: val } : g) }))
+  const addDateRange = (gi) => setForm(f => ({ ...f, availableDates: (f.availableDates || []).map((g, i) => i === gi ? { ...g, dates: [...(g.dates || []), { start: '', end: '' }] } : g) }))
+  const removeDateRange = (gi, di) => setForm(f => ({ ...f, availableDates: (f.availableDates || []).map((g, i) => i !== gi ? g : { ...g, dates: (g.dates || []).filter((_, j) => j !== di) }) }))
+  const setDateField = (gi, di, field, val) => setForm(f => ({ ...f, availableDates: (f.availableDates || []).map((g, i) => i !== gi ? g : { ...g, dates: (g.dates || []).map((d, j) => j !== di ? d : { ...getDR(d), [field]: val }) }) }))
+
+  const handleToggleHidden = async (id, hidden) => {
+    setPkgVisLoading(id)
+    try {
+      const res = await fetch(`/api/agency/packages/${id}/hide`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ hidden }) })
+      if (!res.ok) throw new Error()
+      await fetchPackages()
+      toast.success(hidden ? 'Package hidden from website' : 'Package is now visible')
+    } catch {
+      toast.error('Failed to update visibility')
+    } finally {
+      setPkgVisLoading(null)
+    }
+  }
+
+  const openAdd = () => {
+    const first = destinations[0]
+    const pkgId = 'GKT-' + Math.random().toString(36).slice(2, 8).toUpperCase()
+    setForm({ ...EMPTY_PKG, id: pkgId, destination: first?.name ?? '', badgeColor: first?.color ?? '#2e9e7a' })
+    setEditId(null)
+    setShowPreview(false)
+    setTab('basic')
+    setModal('form')
+  }
+
+  const openEdit = (pkg) => {
+    const migrateAct = a => typeof a === 'string'
+      ? { time: '', emoji: '', title: a, details: [''], tags: [] }
+      : { time: a.time || '', emoji: a.emoji || '', title: a.title || '', details: a.details?.length ? a.details : [''], tags: a.tags || [] }
+    setForm({
+      ...EMPTY_PKG,
+      ...pkg,
+      highlights: pkg.highlights || [],
+      inclusions: pkg.inclusions || [],
+      exclusions: pkg.exclusions || [],
+      itinerary: pkg.itinerary?.length ? pkg.itinerary.map(d => ({ ...d, hotel: d.hotel || '', activities: d.activities?.length ? d.activities.map(migrateAct) : [{ time: '', emoji: '', title: '', details: [''], tags: [] }], image: d.image || '' })) : [{ day: 1, title: '', description: '', activities: [{ time: '', emoji: '', title: '', details: [''], tags: [] }], image: '', hotel: '' }],
+      availableDates: pkg.availableDates || [],
+    })
+    setEditId(pkg.id)
+    setShowPreview(false)
+    setTab('basic')
+    setModal('form')
+  }
+
+  const openDuplicate = (pkg) => {
+    const migrateAct = a => typeof a === 'string'
+      ? { time: '', emoji: '', title: a, details: [''], tags: [] }
+      : { time: a.time || '', emoji: a.emoji || '', title: a.title || '', details: a.details?.length ? a.details : [''], tags: a.tags || [] }
+    const pkgId = 'GKT-' + Math.random().toString(36).slice(2, 8).toUpperCase()
+    setForm({
+      ...EMPTY_PKG,
+      ...pkg,
+      id: pkgId,
+      title: pkg.title ? `${pkg.title} (Copy)` : '',
+      hidden: false,
+      highlights: pkg.highlights || [],
+      inclusions: pkg.inclusions || [],
+      exclusions: pkg.exclusions || [],
+      itinerary: pkg.itinerary?.length ? pkg.itinerary.map(d => ({ ...d, hotel: d.hotel || '', activities: d.activities?.length ? d.activities.map(migrateAct) : [{ time: '', emoji: '', title: '', details: [''], tags: [] }], image: d.image || '' })) : [{ day: 1, title: '', description: '', activities: [{ time: '', emoji: '', title: '', details: [''], tags: [] }], image: '', hotel: '' }],
+      availableDates: pkg.availableDates || [],
+    })
+    setEditId(null)
+    setShowPreview(false)
+    setTab('basic')
+    setModal('form')
+    toast.success('Duplicated — adjust and submit as a new package')
+  }
+
+  const handleSave = async () => {
+    if (!form.title?.trim()) { toast.error('Package title is required'); setShowPreview(false); setTab('basic'); return }
+    if (!form.salePrice) { toast.error('Sale price is required'); setShowPreview(false); setTab('basic'); return }
+    const pkg = {
+      ...form,
+      originalPrice: Number(form.originalPrice) || 0,
+      salePrice: Number(form.salePrice) || 0,
+      childPrice: Number(form.childPrice) || 0,
+      adults: Number(form.adults) || 0,
+      children: Number(form.children) || 0,
+      rooms: Number(form.rooms) || 0,
+      highlights: (form.highlights || []).filter(Boolean),
+      inclusions: (form.inclusions || []).filter(Boolean),
+      exclusions: (form.exclusions || []).filter(Boolean),
+      itinerary: (form.itinerary || []).map(d => ({ ...d, activities: (d.activities || []).map(a => typeof a === 'string' ? { time: '', emoji: '', title: a, details: [], tags: [] } : { ...a, details: (a.details || []).filter(Boolean) }).filter(a => a.title || a.details?.length) })),
+    }
+    setSaving(true)
+    try {
+      const res = editId
+        ? await fetch(`/api/agency/packages/${editId}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(pkg),
+          })
+        : await fetch('/api/agency/packages', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(pkg),
+          })
+      if (!res.ok) { const d = await res.json(); throw new Error(d.error) }
+      await fetchPackages()
+      setModal(null)
+      toast.success(editId ? 'Package updated and resubmitted for approval!' : 'Package submitted for approval!')
+    } catch (err) {
+      toast.error(err.message || 'Failed to submit package')
+    } finally {
+      setSaving(false)
+    }
+  }
+
+  const stats = {
+    total: packages.length,
+    pending: packages.filter(p => p.status === 'pending').length,
+    approved: packages.filter(p => p.status === 'approved').length,
+    rejected: packages.filter(p => p.status === 'rejected').length,
+  }
+
+  if (!loaded) {
+    return (
+      <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f0ece4' }}>
+        <div style={{ textAlign: 'center' }}>
+          <div style={{ width: 40, height: 40, border: '3px solid #FAF7EC', borderTop: '3px solid #16294D', borderRadius: '50%', animation: 'spin 1s linear infinite', margin: '0 auto 12px' }} />
+          <p style={{ color: '#9ca3af', fontSize: 14 }}>Loading...</p>
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <div style={S.page}>
+      <style>{`@keyframes spin { to { transform: rotate(360deg) } }`}</style>
+
+      {/* Topbar */}
+      <div style={S.topbar}>
+        <div style={S.topbarInner}>
+          <div>
+            <div style={{ fontWeight: 700, fontSize: 15, color: '#111' }}>Agency Dashboard</div>
+            <div style={{ fontSize: 11, color: '#9ca3af' }}>Triphoga</div>
+          </div>
+          <div style={{ display: 'flex', gap: 8 }}>
+            <Link href="/" target="_blank" style={{ ...S.btn('#f3f4f6', '#555'), textDecoration: 'none' }}>
+              <ExternalLink size={13} /> View Site
+            </Link>
+            <button onClick={logout} style={S.btn('#fef2f2', '#dc2626')}>
+              <LogOut size={13} /> Logout
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div style={S.body}>
+        {/* Stats */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 12, marginBottom: 24 }}>
+          {[
+            { label: 'Total', value: stats.total, color: '#16294D' },
+            { label: 'Under Review', value: stats.pending, color: '#f59e0b' },
+            { label: 'Live', value: stats.approved, color: '#22c55e' },
+            { label: 'Rejected', value: stats.rejected, color: '#ef4444' },
+          ].map(({ label, value, color }) => (
+            <div key={label} style={{ background: '#fff', borderRadius: 14, padding: '16px 18px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)', border: '1px solid #f3f4f6' }}>
+              <div style={{ fontSize: 32, fontWeight: 800, color, lineHeight: 1 }}>{value}</div>
+              <div style={{ fontSize: 12, color: '#9ca3af', marginTop: 4 }}>{label}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Info banner */}
+        <div style={{ background: '#fffbeb', border: '1px solid #fde68a', borderRadius: 12, padding: '12px 16px', marginBottom: 20, display: 'flex', gap: 10, alignItems: 'flex-start', fontSize: 13, color: '#92400e' }}>
+          <Clock size={15} style={{ flexShrink: 0, marginTop: 1, color: '#f59e0b' }} />
+          <span>Packages you submit go to admin for review before appearing live on the website.</span>
+        </div>
+
+        {/* Toolbar */}
+        <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 16 }}>
+          <button onClick={openAdd} style={{ padding: '10px 20px', borderRadius: 10, border: 'none', cursor: 'pointer', background: 'linear-gradient(135deg,#16294D,#0f172a)', color: '#fff', fontWeight: 700, fontSize: 14, display: 'flex', alignItems: 'center', gap: 6 }}>
+            <Plus size={16} /> Add Package
+          </button>
+        </div>
+
+        {/* Table */}
+        <div style={S.card}>
+          {packages.length === 0 ? (
+            <div style={{ padding: '60px 24px', textAlign: 'center', color: '#9ca3af' }}>
+              <Package size={48} style={{ margin: '0 auto 16px', opacity: 0.3 }} />
+              <p style={{ fontWeight: 600, fontSize: 15 }}>No packages yet</p>
+              <p style={{ fontSize: 13, marginTop: 4 }}>Submit your first package to get started.</p>
+            </div>
+          ) : (
+            <div style={{ overflowX: 'auto' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
+                <thead>
+                  <tr style={{ background: '#f9fafb', borderBottom: '1px solid #f3f4f6' }}>
+                    {['Package', 'Category', 'Destination', 'Price', 'Status', 'Visibility', 'Actions'].map((h, i) => (
+                      <th key={h} style={{ padding: '10px 16px', textAlign: i >= 4 ? 'center' : 'left', fontWeight: 700, color: '#6b7280', fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.06em', whiteSpace: 'nowrap' }}>{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {packages.map((pkg, idx) => {
+                    const sc = STATUS_CONFIG[pkg.status] || STATUS_CONFIG.pending
+                    const SI = sc.icon
+                    const cat = CATEGORIES.find(c => c.value === pkg.category)
+                    return (
+                      <tr key={pkg.id} style={{ borderBottom: idx < packages.length - 1 ? '1px solid #f9fafb' : 'none', opacity: pkg.hidden ? 0.55 : 1 }}
+                        onMouseEnter={e => e.currentTarget.style.background = '#fafafa'}
+                        onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
+                      >
+                        <td style={{ padding: '14px 16px' }}>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                            {pkg.image && <div style={{ width: 48, height: 38, borderRadius: 8, overflow: 'hidden', background: '#f3f4f6', flexShrink: 0 }}>
+                              <img src={pkg.image} alt={pkg.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={e => e.target.style.display = 'none'} />
+                            </div>}
+                            <div>
+                              <div style={{ fontWeight: 600, color: '#111' }}>{pkg.title}</div>
+                              <div style={{ fontSize: 11, color: '#9ca3af' }}>{pkg.subtitle}</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td style={{ padding: '14px 16px' }}>
+                          <span style={{ fontSize: 12, color: '#6b7280', fontWeight: 600 }}>{cat?.label || pkg.category}</span>
+                        </td>
+                        <td style={{ padding: '14px 16px', color: '#6b7280' }}>{pkg.destination}</td>
+                        <td style={{ padding: '14px 16px' }}>
+                          <div style={{ fontWeight: 700 }}>{fmt(pkg.salePrice)}</div>
+                        </td>
+                        <td style={{ padding: '14px 16px', textAlign: 'center' }}>
+                          <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5, padding: '4px 12px', borderRadius: 999, fontSize: 11, fontWeight: 700, color: sc.color, background: sc.bg }}>
+                            <SI size={11} /> {sc.label}
+                          </span>
+                        </td>
+                        <td style={{ padding: '14px 16px', textAlign: 'center' }}>
+                          {pkg.status === 'approved' ? (
+                            <button
+                              onClick={() => handleToggleHidden(pkg.id, !pkg.hidden)}
+                              disabled={pkgVisLoading === pkg.id}
+                              title={pkg.hidden ? 'Hidden from website — click to show' : 'Visible on website — click to hide'}
+                              style={{ display: 'inline-flex', alignItems: 'center', gap: 5, padding: '5px 12px', borderRadius: 999, border: `1.5px solid ${pkg.hidden ? '#e5e7eb' : '#22c55e'}`, background: pkg.hidden ? '#f9fafb' : '#f0fdf4', cursor: pkgVisLoading === pkg.id ? 'not-allowed' : 'pointer', fontWeight: 600, fontSize: 11, color: pkg.hidden ? '#9ca3af' : '#22c55e', opacity: pkgVisLoading === pkg.id ? 0.6 : 1, whiteSpace: 'nowrap' }}>
+                              {pkgVisLoading === pkg.id
+                                ? <span style={{ width: 10, height: 10, border: `2px solid ${pkg.hidden ? '#e5e7eb' : '#bbf7d0'}`, borderTop: `2px solid ${pkg.hidden ? '#9ca3af' : '#22c55e'}`, borderRadius: '50%', animation: 'spin 1s linear infinite', display: 'inline-block' }} />
+                                : <Eye size={11} />}
+                              {pkg.hidden ? 'Hidden' : 'Visible'}
+                            </button>
+                          ) : (
+                            <span style={{ fontSize: 11, color: '#d1d5db' }}>—</span>
+                          )}
+                        </td>
+                        <td style={{ padding: '14px 16px', textAlign: 'center' }}>
+                          <div style={{ display: 'inline-flex', gap: 6 }}>
+                            <button
+                              onClick={() => openEdit(pkg)}
+                              title="Edit package"
+                              style={{ display: 'inline-flex', alignItems: 'center', gap: 5, padding: '5px 12px', borderRadius: 999, border: '1.5px solid #e5e7eb', background: '#fff', cursor: 'pointer', fontWeight: 600, fontSize: 11, color: '#16294D' }}>
+                              <Pencil size={11} /> Edit
+                            </button>
+                            <button
+                              onClick={() => openDuplicate(pkg)}
+                              title="Duplicate package"
+                              style={{ display: 'inline-flex', alignItems: 'center', gap: 5, padding: '5px 12px', borderRadius: 999, border: '1.5px solid #e5e7eb', background: '#fff', cursor: 'pointer', fontWeight: 600, fontSize: 11, color: '#16294D' }}>
+                              <Copy size={11} /> Duplicate
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    )
+                  })}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+        {/* Settings */}
+        <div style={{ marginTop: 28 }}>
+          <div style={{ fontSize: 13, fontWeight: 700, color: '#6b7280', letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: 12 }}>Settings</div>
+          <div style={{ ...S.card, padding: 20, maxWidth: 420 }}>
+            <div style={{ fontWeight: 700, fontSize: 14, color: '#111', marginBottom: 4 }}>Contact Phone Number</div>
+            <div style={{ fontSize: 12, color: '#9ca3af', marginBottom: 14 }}>This number is visible to admin and shown on your enquiries.</div>
+            <div style={{ display: 'flex', gap: 8 }}>
+              <input
+                value={phoneInput}
+                onChange={e => setPhoneInput(e.target.value)}
+                placeholder="Phone number"
+                style={{ ...S.input, flex: 1 }}
+              />
+              <button
+                onClick={savePhone}
+                disabled={savingPhone || phoneInput === agencyPhone}
+                style={{ ...S.btn(), opacity: (savingPhone || phoneInput === agencyPhone) ? 0.5 : 1, whiteSpace: 'nowrap' }}
+              >
+                {savingPhone ? 'Saving…' : 'Save'}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Add Package Modal */}
+      {modal === 'form' && (
+        <div style={S.overlay}>
+          <div style={S.modal}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 20px', background: 'linear-gradient(135deg,#16294D,#0f172a)' }}>
+              <h2 style={{ fontWeight: 700, fontSize: 16, color: '#fff' }}>{showPreview ? 'Package Preview' : editId ? 'Edit Package' : 'Submit New Package'}</h2>
+              <button onClick={() => setModal(null)} style={{ width: 30, height: 30, borderRadius: '50%', background: 'rgba(255,255,255,0.2)', border: 'none', cursor: 'pointer', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <X size={15} />
+              </button>
+            </div>
+            <div style={{ background: '#fffbeb', padding: '8px 20px', fontSize: 12, color: '#92400e', display: 'flex', gap: 6, alignItems: 'center' }}>
+              <Clock size={12} /> {editId ? 'Editing resubmits this package for admin review.' : 'Your package will be reviewed by admin before going live.'}
+            </div>
+
+            {!showPreview && (
+            <div style={{ display: 'flex', borderBottom: '1px solid #f3f4f6', padding: '0 20px' }}>
+              {[['basic', 'Basic'], ...(['homestay','houseboat'].includes(form.category) ? [['stay', 'Stay Details']] : []), ['itinerary', 'Itinerary'], ['media', 'Media & Lists']].map(([k, l]) => (
+                <button key={k} onClick={() => setTab(k)}
+                  style={{ padding: '12px 14px', fontSize: 13, fontWeight: 600, border: 'none', background: 'none', cursor: 'pointer', borderBottom: `2px solid ${tab === k ? '#16294D' : 'transparent'}`, color: tab === k ? '#16294D' : '#9ca3af' }}>
+                  {l}
+                </button>
+              ))}
+            </div>
+            )}
+
+            <div style={{ padding: 20, maxHeight: '70vh', overflowY: 'auto' }}>
+              {showPreview && <PackagePreview pkg={form} />}
+              {!showPreview && tab === 'basic' && (
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                  <div style={{ gridColumn: '1/-1' }}>
+                    <label style={S.label}>Title *</label>
+                    <input value={form.title} onChange={e => setForm(f => ({ ...f, title: e.target.value }))} style={S.input} placeholder="e.g. Munnar Tea Estate Trek" />
+                  </div>
+                  <div>
+                    <label style={S.label}>Subtitle</label>
+                    <input value={form.subtitle} onChange={e => setForm(f => ({ ...f, subtitle: e.target.value }))} style={S.input} placeholder="e.g. Misty mornings in the hills" />
+                  </div>
+                  <div>
+                    <label style={S.label}>Category *</label>
+                    <select value={form.category} onChange={e => { const cat = e.target.value; setForm(f => ({ ...f, category: cat })); if (!['homestay','houseboat'].includes(cat)) setTab(t => t === 'stay' ? 'basic' : t) }} style={{ ...S.input, cursor: 'pointer' }}>
+                      {CATEGORIES.map(c => <option key={c.value} value={c.value}>{c.label}</option>)}
+                    </select>
+                  </div>
+                  <div>
+                    <label style={S.label}>Destination</label>
+                    <select value={form.destination} onChange={e => { const d = destinations.find(d => d.name === e.target.value); setForm(f => ({ ...f, destination: e.target.value, badgeColor: d?.color ?? f.badgeColor })) }} style={{ ...S.input, cursor: 'pointer' }}>
+                      <option value="">Select destination</option>
+                      {destinations.map(d => <option key={d.id} value={d.name}>{d.name}</option>)}
+                    </select>
+                  </div>
+                  <div>
+                    <label style={S.label}>Duration</label>
+                    <input type="number" value={form.duration} onChange={e => setForm(f => ({ ...f, duration: e.target.value }))} style={S.input} placeholder="e.g. 3" min="1" />
+                  </div>
+                  <div>
+                    <label style={S.label}>Stay / Hotels</label>
+                    <input value={form.hotels} onChange={e => setForm(f => ({ ...f, hotels: e.target.value }))} style={S.input} placeholder="e.g. 2N Munnar · 1N Thekkady" />
+                  </div>
+                  <div>
+                    <label style={S.label}>Original Price (₹) *</label>
+                    <input type="number" value={form.originalPrice} onChange={e => setForm(f => ({ ...f, originalPrice: e.target.value }))} style={S.input} placeholder="15000" />
+                  </div>
+                  <div>
+                    <label style={S.label}>Sale Price (₹) * <span style={{ textTransform: 'none', fontWeight: 600, color: '#9ca3af' }}>· per adult</span></label>
+                    <input type="number" value={form.salePrice} onChange={e => setForm(f => ({ ...f, salePrice: e.target.value }))} style={S.input} placeholder="12000" />
+                  </div>
+                  <div>
+                    <label style={S.label}>Price per Child (₹)</label>
+                    <input type="number" value={form.childPrice} onChange={e => setForm(f => ({ ...f, childPrice: e.target.value }))} style={S.input} placeholder="6000" />
+                  </div>
+                  <div>
+                    <label style={S.label}>Child Age Range</label>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <input type="number" min="0" value={form.childAgeMin} onChange={e => setForm(f => ({ ...f, childAgeMin: e.target.value }))} style={S.input} placeholder="2" />
+                      <span style={{ color: '#9ca3af', fontSize: 13 }}>to</span>
+                      <input type="number" min="0" value={form.childAgeMax} onChange={e => setForm(f => ({ ...f, childAgeMax: e.target.value }))} style={S.input} placeholder="11" />
+                      <span style={{ color: '#9ca3af', fontSize: 13 }}>yrs</span>
+                    </div>
+                  </div>
+                  <div style={{ gridColumn: '1/-1', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 12 }}>
+                    <div>
+                      <label style={S.label}>Adults</label>
+                      <input type="number" min="0" value={form.adults} onChange={e => setForm(f => ({ ...f, adults: e.target.value }))} style={S.input} placeholder="2" />
+                    </div>
+                    <div>
+                      <label style={S.label}>Children</label>
+                      <input type="number" min="0" value={form.children} onChange={e => setForm(f => ({ ...f, children: e.target.value }))} style={S.input} placeholder="0" />
+                    </div>
+                    <div>
+                      <label style={S.label}>Rooms</label>
+                      <input type="number" min="0" value={form.rooms} onChange={e => setForm(f => ({ ...f, rooms: e.target.value }))} style={S.input} placeholder="1" />
+                    </div>
+                  </div>
+                  <div style={{ gridColumn: '1/-1' }}>
+                    <label style={S.label}>Overview</label>
+                    <textarea rows={3} value={form.overview} onChange={e => setForm(f => ({ ...f, overview: e.target.value }))} style={{ ...S.input, resize: 'vertical', lineHeight: 1.6 }} placeholder="Describe the package..." />
+                  </div>
+                  <div style={{ gridColumn: '1/-1' }}>
+                    <label style={S.label}>Note (optional)</label>
+                    <textarea rows={2} value={form.note} onChange={e => setForm(f => ({ ...f, note: e.target.value }))} style={{ ...S.input, resize: 'vertical', lineHeight: 1.6 }} placeholder="e.g. Rates vary on customization, special terms, important info..." />
+                  </div>
+                  {form.category === 'group' && (
+                    <div style={{ gridColumn: '1/-1' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10, marginTop: 4 }}>
+                        <label style={S.label}>Available Dates</label>
+                        <button onClick={addDateGroup} style={{ fontSize: 12, fontWeight: 600, color: '#16294D', background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
+                          <Plus size={12} /> Add Batch
+                        </button>
+                      </div>
+                      {(form.availableDates || []).length === 0 && (
+                        <p style={{ fontSize: 12, color: '#9ca3af', background: '#f9fafb', borderRadius: 10, padding: '10px 14px', margin: 0 }}>No departure dates yet. Click &ldquo;Add Batch&rdquo; to add a group of dates.</p>
+                      )}
+                      {(form.availableDates || []).map((group, gi) => {
+                        const firstStart = getDR(group.dates?.[0]).start
+                        return (
+                          <div key={gi} style={{ border: '1px solid #e5e7eb', borderRadius: 12, padding: 12, marginBottom: 8, background: '#fafafa' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
+                              <input
+                                value={group.month}
+                                onChange={e => dateGroupChange(gi, 'month', e.target.value)}
+                                style={{ ...S.input, fontSize: 12, flex: 1 }}
+                                placeholder={autoMonth(firstStart) || 'Month label (auto-fills from dates)'}
+                              />
+                              <button onClick={() => removeDateGroup(gi)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#f87171', flexShrink: 0 }}><X size={14} /></button>
+                            </div>
+                            {(group.dates || []).map((dr, di) => {
+                              const d = getDR(dr)
+                              return (
+                                <div key={di} style={{ marginBottom: 8 }}>
+                                  <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
+                                    <input type="date" value={d.start} onChange={e => setDateField(gi, di, 'start', e.target.value)} style={{ ...S.input, fontSize: 12, flex: 1 }} />
+                                    <span style={{ color: '#9ca3af', fontSize: 13, flexShrink: 0 }}>→</span>
+                                    <input type="date" value={d.end} onChange={e => setDateField(gi, di, 'end', e.target.value)} style={{ ...S.input, fontSize: 12, flex: 1 }} />
+                                    {(group.dates || []).length > 1 && (
+                                      <button onClick={() => removeDateRange(gi, di)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#d1d5db', flexShrink: 0 }}><X size={13} /></button>
+                                    )}
+                                  </div>
+                                  {(d.start || d.end) && (
+                                    <div style={{ fontSize: 11, color: '#9ca3af', marginTop: 3, paddingLeft: 2 }}>{fmtRange(d.start, d.end)}</div>
+                                  )}
+                                </div>
+                              )
+                            })}
+                            <button onClick={() => addDateRange(gi)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#16294D', fontSize: 12, fontWeight: 600, padding: '2px 0' }}>+ Add date range</button>
+                          </div>
+                        )
+                      })}
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {!showPreview && tab === 'itinerary' && (
+                <div>
+                  {(form.itinerary || []).map((day, di) => (
+                    <div key={di} style={{ border: '1px solid #f3f4f6', borderRadius: 12, padding: 14, marginBottom: 10, background: '#fafafa' }}>
+                      {/* Day header */}
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
+                        <div style={{ width: 28, height: 28, borderRadius: '50%', background: 'linear-gradient(135deg,#16294D,#0f172a)', color: '#fff', fontSize: 12, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{day.day}</div>
+                        {(form.itinerary || []).length > 1 && <button onClick={() => removeDay(di)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#f87171', display: 'flex' }}><Trash2 size={14} /></button>}
+                      </div>
+                      <input value={day.title} onChange={e => itinChange(di, 'title', e.target.value)} style={{ ...S.input, marginBottom: 8 }} placeholder={`Day ${day.day} title (e.g. Arrival & Sightseeing)`} />
+                      <textarea rows={2} value={day.description} onChange={e => itinChange(di, 'description', e.target.value)} style={{ ...S.input, resize: 'none', marginBottom: 8, lineHeight: 1.5 }} placeholder="Brief day description..." />
+                      {/* Hotel / overnight */}
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 10 }}>
+                        <span style={{ fontSize: 14 }}>🛏</span>
+                        <input value={day.hotel || ''} onChange={e => itinChange(di, 'hotel', e.target.value)} style={{ ...S.input, fontSize: 12 }} placeholder="Overnight stay at... (e.g. The ONE Legian)" />
+                      </div>
+                      {/* Day image */}
+                      <div style={{ marginBottom: 12 }}>
+                        <div style={{ fontSize: 11, fontWeight: 700, color: '#9ca3af', textTransform: 'uppercase', marginBottom: 5 }}>Day Image (optional)</div>
+                        <ImageUploader url={day.image || ''} onUrlChange={v => itinChange(di, 'image', v)} pos={day.imagePos} onPosChange={v => itinChange(di, 'imagePos', v)} height={180} rounded={7} />
+                      </div>
+                      {/* Activities */}
+                      <div style={{ fontSize: 11, fontWeight: 700, color: '#9ca3af', textTransform: 'uppercase', marginBottom: 8 }}>Activities / Schedule</div>
+                      {(day.activities || []).map((act, ai) => {
+                        const a = typeof act === 'string' ? { time: '', emoji: '', title: act, details: [''], tags: [] } : act
+                        return (
+                          <div key={ai} style={{ border: '1px solid #e5e7eb', borderRadius: 10, padding: 10, marginBottom: 8, background: '#fff' }}>
+                            {/* Time + Emoji + Title */}
+                            <div style={{ display: 'flex', gap: 6, marginBottom: 7 }}>
+                              <input value={a.time} onChange={e => actFieldChange(di, ai, 'time', e.target.value)} style={{ ...S.input, width: 80, flexShrink: 0, fontFamily: 'monospace', textAlign: 'center' }} placeholder="09:00" />
+                              <input value={a.emoji} onChange={e => actFieldChange(di, ai, 'emoji', e.target.value)} style={{ ...S.input, width: 52, flexShrink: 0, textAlign: 'center', fontSize: 16 }} placeholder="🏄" />
+                              <input value={a.title} onChange={e => actFieldChange(di, ai, 'title', e.target.value)} style={{ ...S.input, flex: 1 }} placeholder="Activity title..." />
+                              {(day.activities || []).length > 1 && (
+                                <button onClick={() => removeActivity(di, ai)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#f87171', flexShrink: 0 }}><Trash2 size={13} /></button>
+                              )}
+                            </div>
+                            {/* Detail checkpoints */}
+                            <div style={{ marginBottom: 6 }}>
+                              <div style={{ fontSize: 10, fontWeight: 700, color: '#9ca3af', textTransform: 'uppercase', marginBottom: 4 }}>✓ Details / Checkpoints</div>
+                              {(a.details || []).map((det, ki) => (
+                                <div key={ki} style={{ display: 'flex', gap: 5, marginBottom: 4 }}>
+                                  <span style={{ color: '#22c55e', fontSize: 12, paddingTop: 10, flexShrink: 0 }}>✓</span>
+                                  <input value={det} onChange={e => actDetailChange(di, ai, ki, e.target.value)} style={{ ...S.input, fontSize: 12, flex: 1 }} placeholder="e.g. Pick up time 09:00 am, Start from hotel" />
+                                  {(a.details || []).length > 1 && <button onClick={() => removeActDetail(di, ai, ki)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#d1d5db', flexShrink: 0 }}><X size={12} /></button>}
+                                </div>
+                              ))}
+                              <button onClick={() => addActDetail(di, ai)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#6b7280', fontSize: 11, fontWeight: 600, padding: '2px 0' }}>+ Add detail</button>
+                            </div>
+                            {/* Tags */}
+                            <div>
+                              <div style={{ fontSize: 10, fontWeight: 700, color: '#9ca3af', textTransform: 'uppercase', marginBottom: 4 }}>Tags (comma-separated)</div>
+                              <input value={(a.tags || []).join(', ')} onChange={e => actFieldChange(di, ai, 'tags', e.target.value.split(',').map(t => t.trim()).filter(Boolean))} style={{ ...S.input, fontSize: 12 }} placeholder="e.g. Private Transfers, Meal Included" />
+                              {(a.tags || []).length > 0 && (
+                                <div style={{ display: 'flex', gap: 5, flexWrap: 'wrap', marginTop: 5 }}>
+                                  {(a.tags || []).map((tag, ti) => (
+                                    <span key={ti} style={{ padding: '2px 10px', borderRadius: 999, fontSize: 11, fontWeight: 600, background: '#e0f2fe', color: '#0369a1' }}>{tag}</span>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        )
+                      })}
+                      <button onClick={() => addActivity(di)} style={{ width: '100%', padding: '8px 0', borderRadius: 8, border: '1.5px dashed #e5e7eb', background: 'none', cursor: 'pointer', color: '#6b7280', fontSize: 12, fontWeight: 600 }}>+ Add Activity</button>
+                    </div>
+                  ))}
+                  <button onClick={addDay} style={{ width: '100%', padding: '10px 0', borderRadius: 12, border: '2px dashed #c7d2e0', background: 'none', cursor: 'pointer', color: '#16294D', fontSize: 13, fontWeight: 600 }}>+ Add Day</button>
+                </div>
+              )}
+
+              {!showPreview && tab === 'stay' && (
+                <HomestayFields form={form} setForm={setForm} S={S} pkgOptions={pkgOptions} onOptionsUpdate={setPkgOptions} />
+              )}
+
+              {!showPreview && tab === 'media' && (
+                <div>
+                  {[{ l: 'Card Image', f: 'image', h: 260 }, { l: 'Hero Image', f: 'heroImage', h: 380 }].map(({ l, f, h }) => (
+                    <div key={f} style={{ marginBottom: 14 }}>
+                      <label style={S.label}>{l}</label>
+                      <ImageUploader url={form[f] || ''} onUrlChange={v => setForm(p => ({ ...p, [f]: v }))} pos={form[`${f}Pos`]} onPosChange={v => setForm(p => ({ ...p, [`${f}Pos`]: v }))} height={h} />
+                    </div>
+                  ))}
+
+                  {[
+                    { l: 'Highlights', f: 'highlights', type: 'highlight', color: '#16294D' },
+                    { l: 'Inclusions', f: 'inclusions', type: 'inclusion', color: '#22c55e' },
+                    { l: 'Exclusions', f: 'exclusions', type: 'exclusion', color: '#ef4444' },
+                  ].map(({ l, f, type, color }) => (
+                    <div key={f} style={{ marginBottom: 18 }}>
+                      <label style={S.label}>{l}</label>
+                      <TagSelector
+                        type={type}
+                        selected={form[f] || []}
+                        onChange={val => setForm(p => ({ ...p, [f]: val }))}
+                        options={pkgOptions[type] || []}
+                        onOptionsUpdate={setPkgOptions}
+                        color={color}
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 10, padding: '14px 20px', borderTop: '1px solid #f3f4f6', background: '#fafafa' }}>
+              {showPreview ? (
+                <button onClick={() => setShowPreview(false)} style={{ padding: '9px 18px', borderRadius: 10, border: '1px solid #e5e7eb', background: '#fff', color: '#6b7280', fontWeight: 600, fontSize: 13, cursor: 'pointer', marginRight: 'auto' }}>← Back to Edit</button>
+              ) : (
+                <button onClick={() => setModal(null)} style={{ padding: '9px 18px', borderRadius: 10, border: '1px solid #e5e7eb', background: '#fff', color: '#6b7280', fontWeight: 600, fontSize: 13, cursor: 'pointer' }}>Cancel</button>
+              )}
+              {!showPreview && (
+                <button onClick={() => setShowPreview(true)}
+                  style={{ padding: '9px 18px', borderRadius: 10, border: '1.5px solid #16294D', background: '#fff', color: '#16294D', fontWeight: 700, fontSize: 13, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6 }}>
+                  <Eye size={14} /> Preview
+                </button>
+              )}
+              <button onClick={handleSave} disabled={saving}
+                style={{ padding: '9px 20px', borderRadius: 10, border: 'none', cursor: saving ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#16294D,#0f172a)', color: '#fff', fontWeight: 700, fontSize: 13, display: 'flex', alignItems: 'center', gap: 6, opacity: saving ? 0.7 : 1 }}>
+                {saving
+                  ? <><span style={{ width: 13, height: 13, border: '2px solid rgba(255,255,255,0.3)', borderTop: '2px solid #fff', borderRadius: '50%', animation: 'spin 1s linear infinite', display: 'inline-block' }} /> Submitting...</>
+                  : <><Check size={14} /> {editId ? 'Update & Resubmit' : 'Submit for Approval'}</>
+                }
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
