@@ -11,6 +11,7 @@ function fmt(n) {
 }
 
 export default function Packages() {
+  const [region, setRegion] = useState('domestic')
   const [activeCategory, setActiveCategory] = useState('')
   const [destOrder, setDestOrder] = useState([])
   const { packages, loaded } = usePackages()
@@ -26,18 +27,29 @@ export default function Packages() {
       .catch(() => setDestOrder([]))
   }, [])
 
-  const pkgDestinations = Array.from(new Set(packages.map(p => p.destination).filter(Boolean)))
+  // Packages written before the domestic/international split have no region.
+  const regionOf = pkg => pkg.region || 'domestic'
+  const domesticCount = packages.filter(p => regionOf(p) === 'domestic').length
+  const internationalCount = packages.filter(p => regionOf(p) === 'international').length
+
+  const regionPackages = packages.filter(p => regionOf(p) === region)
+  const pkgDestinations = Array.from(new Set(regionPackages.map(p => p.destination).filter(Boolean)))
   const categories = [
     ...destOrder.filter(name => pkgDestinations.includes(name)),
     ...pkgDestinations.filter(name => !destOrder.includes(name)).sort(),
   ]
 
-  // Default the active tab to the first category once data is in.
-  useEffect(() => {
-    if (!activeCategory && categories.length > 0) setActiveCategory(categories[0])
-  }, [activeCategory, categories])
+  // Resolve the tab during render rather than in an effect: before the packages
+  // load, and right after a region switch, the stored tab is not in this
+  // region's list, so fall back to its first destination.
+  const activeCat = categories.includes(activeCategory) ? activeCategory : (categories[0] || '')
 
-  const filteredPackages = packages.filter(pkg => pkg.destination === activeCategory)
+  const filteredPackages = regionPackages.filter(pkg => pkg.destination === activeCat)
+
+  const REGIONS = [
+    { key: 'domestic', label: 'Domestic', count: domesticCount },
+    { key: 'international', label: 'International', count: internationalCount },
+  ]
 
   return (
     <section id="packages" className="py-24 bg-gray-50 font-body">
@@ -52,8 +64,33 @@ export default function Packages() {
             Curated Experiences
           </h2>
           <p className="text-gray-600 max-w-xl mx-auto text-base">
-            Explore carefully crafted domestic tours across India's most stunning regions. Pick a destination below to see detailed day-wise itineraries.
+            Handcrafted tours across India and beyond. Choose domestic or international, then pick a destination to see detailed day-wise itineraries.
           </p>
+        </div>
+
+        {/* Domestic / International switch */}
+        <div className="flex justify-center mb-8">
+          <div className="inline-flex items-center gap-1 p-1.5 rounded-full bg-white border border-gray-200/80 shadow-sm">
+            {REGIONS.map(r => (
+              <button
+                key={r.key}
+                onClick={() => { setRegion(r.key); setActiveCategory('') }}
+                aria-pressed={region === r.key}
+                className={`px-7 py-2.5 rounded-full text-sm font-bold tracking-wide transition-all duration-300 cursor-pointer ${
+                  region === r.key
+                    ? 'bg-[#16294D] text-white shadow-md'
+                    : 'text-gray-500 hover:text-[#16294D]'
+                }`}
+              >
+                {r.label}
+                {r.count > 0 && (
+                  <span className={`ml-2 text-xs font-semibold ${region === r.key ? 'text-[#C9A227]' : 'text-gray-400'}`}>
+                    {r.count}
+                  </span>
+                )}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Category Tabs Selection */}
@@ -63,7 +100,7 @@ export default function Packages() {
               key={cat}
               onClick={() => setActiveCategory(cat)}
               className={`snap-align-start px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 whitespace-nowrap cursor-pointer ${
-                activeCategory === cat
+                activeCat === cat
                   ? 'bg-gradient-to-r from-[#16294D] to-[#2F5490] text-white shadow-lg shadow-[#2F5490]/20 transform -translate-y-0.5'
                   : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200/80 shadow-sm'
               }`}

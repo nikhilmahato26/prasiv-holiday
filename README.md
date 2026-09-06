@@ -32,6 +32,15 @@ See `.env.example` for the full list: Neon `DATABASE_URL`, `JWT_SECRET`,
 Upstash Redis, SMTP (`SMTP_HOST`/`PORT`/`USER`/`PASS`/`SECURE`, `ENQUIRY_EMAIL`),
 Cloudinary, and `NEXT_PUBLIC_SITE_URL` for links inside emails.
 
+## Catalogue
+Packages carry a `region` of `domestic` or `international`, and the packages
+section switches between the two before showing destination tabs. Destinations
+carry the same field, so picking one in the admin form sets the package's region
+for you. Seed catalogue: 36 domestic packages across 12 states, 25 international
+across Thailand, Dubai, Bali, Singapore and Vietnam (5 each).
+
+Packages saved before the split have no `region` and are treated as domestic.
+
 ## Branding
 - **Logo:** `public/logo.png` (also copied to `app/icon.png` and `app/apple-icon.png` for the favicon)
 - **Contact number:** currently hardcoded to `7796950505` (`+91 77969 50505`). It is

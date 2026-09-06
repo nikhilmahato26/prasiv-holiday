@@ -7,6 +7,7 @@ import { usePackages } from '@/hooks/usePackages'
 import { usePhone } from '@/hooks/useSettings'
 
 export default function PackagesPage() {
+  const [region, setRegion] = useState('domestic')
   const [activeDest, setActiveDest] = useState('all')
   const [destinations, setDestinations] = useState([])
   const { packages, loaded: pkgsLoaded } = usePackages()
@@ -19,14 +20,27 @@ export default function PackagesPage() {
       .catch(() => setDestinations([]))
   }, [])
 
-  const shown = packages.filter(p => {
-    return activeDest === 'all' || p.destination === activeDest
+  // Packages written before the domestic/international split have no region.
+  const regionOf = p => p.region || 'domestic'
+  const regionPackages = packages.filter(p => regionOf(p) === region)
+
+  // Only offer tabs for destinations that actually have live packages in this
+  // region, so the seed's broader category list never produces an empty tab.
+  const pkgDestinations = new Set(regionPackages.map(p => p.destination).filter(Boolean))
+  const shownDestinations = destinations.filter(d => pkgDestinations.has(d.name))
+
+  // A destination held over from the other region has no tab here, so resolve
+  // it back to "all" during render rather than in an effect.
+  const activeDestination = pkgDestinations.has(activeDest) ? activeDest : 'all'
+
+  const shown = regionPackages.filter(p => {
+    return activeDestination === 'all' || p.destination === activeDestination
   })
 
-  // Only offer tabs for destinations that actually have live packages, so the
-  // seed's broader category list never produces an empty tab.
-  const pkgDestinations = new Set(packages.map(p => p.destination).filter(Boolean))
-  const shownDestinations = destinations.filter(d => pkgDestinations.has(d.name))
+  const REGIONS = [
+    { key: 'domestic', label: 'Domestic', count: packages.filter(p => regionOf(p) === 'domestic').length },
+    { key: 'international', label: 'International', count: packages.filter(p => regionOf(p) === 'international').length },
+  ]
 
   return (
     <main style={{ minHeight: '100vh', background: '#fff', paddingTop: 80 }}>
@@ -45,6 +59,27 @@ export default function PackagesPage() {
             <p style={{ color: '#9ca3af', maxWidth: 480, margin: '0 auto 28px', lineHeight: 1.6 }}>
               Every package includes a day-wise itinerary, accommodation & transfers.
             </p>
+
+            {/* Domestic / International switch */}
+            <div style={{ display: 'inline-flex', gap: 6, padding: 6, borderRadius: 999, background: '#fff', border: '1px solid #e5e7eb', boxShadow: '0 1px 3px rgba(0,0,0,0.05)', marginBottom: 22 }}>
+              {REGIONS.map(r => (
+                <button
+                  key={r.key}
+                  onClick={() => setRegion(r.key)}
+                  aria-pressed={region === r.key}
+                  style={{
+                    padding: '9px 26px', borderRadius: 999, fontSize: 13, fontWeight: 700, letterSpacing: '0.02em',
+                    border: 'none', cursor: 'pointer', transition: 'all 0.2s',
+                    background: region === r.key ? '#16294D' : 'transparent',
+                    color: region === r.key ? '#fff' : '#6b7280',
+                  }}>
+                  {r.label}
+                  {r.count > 0 && (
+                    <span style={{ marginLeft: 8, fontSize: 11, fontWeight: 700, color: region === r.key ? '#C9A227' : '#9ca3af' }}>{r.count}</span>
+                  )}
+                </button>
+              ))}
+            </div>
 
             {/* Category tabs */}
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 8, marginBottom: 16 }}>

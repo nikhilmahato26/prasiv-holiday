@@ -34,7 +34,7 @@ const CATEGORIES = [
 ]
 
 const EMPTY_PKG = {
-  id: '', destination: '', badge: '', badgeColor: '#16294D',
+  id: '', destination: '', badge: '', badgeColor: '#16294D', region: 'domestic',
   duration: '3', title: '', subtitle: '', hotels: '',
   adults: '', children: '', rooms: '',
   originalPrice: '', salePrice: '', childPrice: '', childAgeMin: '', childAgeMax: '', priceNote: 'Per Person',
@@ -162,7 +162,7 @@ export default function AgencyDashboard() {
   const openAdd = () => {
     const first = destinations[0]
     const pkgId = 'GKT-' + Math.random().toString(36).slice(2, 8).toUpperCase()
-    setForm({ ...EMPTY_PKG, id: pkgId, destination: first?.name ?? '', badgeColor: first?.color ?? '#16294D' })
+    setForm({ ...EMPTY_PKG, id: pkgId, destination: first?.name ?? '', badgeColor: first?.color ?? '#16294D', region: first?.region ?? 'domestic' })
     setEditId(null)
     setShowPreview(false)
     setTab('basic')
@@ -482,9 +482,16 @@ export default function AgencyDashboard() {
                   </div>
                   <div>
                     <label style={S.label}>Destination</label>
-                    <select value={form.destination} onChange={e => { const d = destinations.find(d => d.name === e.target.value); setForm(f => ({ ...f, destination: e.target.value, badgeColor: d?.color ?? f.badgeColor })) }} style={{ ...S.input, cursor: 'pointer' }}>
+                    <select value={form.destination} onChange={e => { const d = destinations.find(d => d.name === e.target.value); setForm(f => ({ ...f, destination: e.target.value, badgeColor: d?.color ?? f.badgeColor, region: d?.region ?? f.region })) }} style={{ ...S.input, cursor: 'pointer' }}>
                       <option value="">Select destination</option>
                       {destinations.map(d => <option key={d.id} value={d.name}>{d.name}</option>)}
+                    </select>
+                  </div>
+                  <div>
+                    <label style={S.label}>Region</label>
+                    <select value={form.region || 'domestic'} onChange={e => setForm(f => ({ ...f, region: e.target.value }))} style={{ ...S.input, cursor: 'pointer' }}>
+                      <option value="domestic">Domestic</option>
+                      <option value="international">International</option>
                     </select>
                   </div>
                   <div>
