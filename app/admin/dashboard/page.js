@@ -220,6 +220,17 @@ export default function Dashboard() {
       .then(s => { _demoMode = s?.demo_mode === 'true'; setDemoMode(_demoMode) })
       .catch(() => {})
   }, [])
+
+  useEffect(() => {
+    const isAnyModalOpen = !!modal || !!enqModal || !!testimonialModal;
+    if (isAnyModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; }
+  }, [modal, enqModal, testimonialModal])
+
   const [adminUsername, setAdminUsername] = useState('')
   const [newUsername, setNewUsername] = useState('')
   const [usernameSaving, setUsernameSaving] = useState(false)
@@ -810,7 +821,7 @@ export default function Dashboard() {
         {/* Sidebar */}
         <div style={{ width: 250, background: '#fff', borderRight: '1px solid #f3f4f6', height: '100vh', position: 'sticky', top: 0, display: 'flex', flexDirection: 'column', flexShrink: 0 }}>
           <div style={{ padding: '20px', display: 'flex', alignItems: 'center', gap: 10, borderBottom: '1px solid #f3f4f6' }}>
-            <Image src="/logo-new.jpeg" alt="Prashiv Holiday" width={96} height={96} style={{ objectFit: 'contain' }} />
+            <Image src="/logo-new.png" alt="Prashiv Holiday" width={96} height={96} style={{ objectFit: 'contain' }} />
           </div>
           <div style={{ flex: 1, padding: '20px 0', overflowY: 'auto' }}>
             {[

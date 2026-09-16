@@ -11,6 +11,15 @@ export default function FleetAdmin() {
   const [form, setForm] = useState({ id: null, name: '', category: '', tag: '', tagColor: '#3b82f6', tagBg: '#eff6ff', desc: '', img: '', features: '', capacity: '', orderIdx: 0 })
   const [saving, setSaving] = useState(false)
 
+  useEffect(() => {
+    if (modal) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => { document.body.style.overflow = '' }
+  }, [modal])
+
   const fetchFleet = async () => {
     try {
       const res = await fetch('/api/fleet')

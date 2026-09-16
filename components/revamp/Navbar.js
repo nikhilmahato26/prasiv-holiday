@@ -43,7 +43,7 @@ const Navbar = () => {
             <Link href="/" className="flex items-center group">
               <div className="relative w-16 h-16 md:w-20 md:h-20 group-hover:opacity-90 transition-transform origin-left">
                 <Image
-                  src="/logo-new.jpeg"
+                  src="/logo-new.png"
                   alt="Prashiv Holiday"
                   fill
                   sizes="(max-width: 768px) 64px, 80px"

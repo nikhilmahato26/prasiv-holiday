@@ -11,6 +11,15 @@ export default function TeamAdmin() {
   const [form, setForm] = useState({ id: null, name: '', role: '', image_url: '' })
   const [saving, setSaving] = useState(false)
 
+  useEffect(() => {
+    if (modal) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => { document.body.style.overflow = '' }
+  }, [modal])
+
   const fetchTeam = async () => {
     try {
       const res = await fetch('/api/team')

@@ -55,7 +55,7 @@ export default function AdminLogin() {
           {/* Header */}
           <div style={{ padding: '32px 32px 24px', textAlign: 'center', background: 'linear-gradient(135deg,#013893,#0252D8)' }}>
             <div style={{ padding: '8px 16px', borderRadius: '12px', overflow: 'hidden', border: '2px solid rgba(255,255,255,0.3)', margin: '0 auto 16px' , background:'#ffffff', width: 'fit-content'}}>
-              <Image src="/logo-new.jpeg" alt="Prashiv Holiday" width={96} height={96} style={{ objectFit: 'contain' }} />
+              <Image src="/logo-new.png" alt="Prashiv Holiday" width={96} height={96} style={{ objectFit: 'contain' }} />
             </div>
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 22, color: '#fff', marginBottom: 4 }}>Prashiv Holiday</h1>
             <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.6)' }}>Admin Panel</p>

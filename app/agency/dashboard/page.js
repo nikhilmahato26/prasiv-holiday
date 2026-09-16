@@ -84,6 +84,15 @@ export default function AgencyDashboard() {
   }, [router])
 
   useEffect(() => {
+    if (modal) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; }
+  }, [modal])
+
+  useEffect(() => {
     fetchPackages()
     fetch('/api/destinations').then(r => r.ok ? r.json() : []).then(setDestinations).catch(() => {})
     fetch('/api/agency/profile').then(r => r.ok ? r.json() : null).then(d => { if (d) { setAgencyName(d.name); setAgencyPhone(d.phone); setPhoneInput(d.phone) } }).catch(() => {})

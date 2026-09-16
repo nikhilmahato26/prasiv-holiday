@@ -13,7 +13,7 @@ const Footer = () => {
             <Link href="/" className="flex items-center group w-fit">
               <div className="relative w-28 h-28 bg-white p-2 rounded-2xl shadow-md group-hover:opacity-90 transition-opacity">
                 <Image
-                  src="/logo-new.jpeg"
+                  src="/logo-new.png"
                   alt="Prashiv Holiday"
                   fill
                   sizes="112px"

@@ -42,7 +42,7 @@ export default function Navbar({ big = false }) {
           <Link href="/" className="flex items-center justify-center group">
             <div className="w-14 h-14 md:w-16 md:h-16 relative shrink-0">
               <Image
-                src="/logo-new.jpeg"
+                src="/logo-new.png"
                 alt="Prashiv Holiday"
                 fill
                 sizes="(max-width: 768px) 56px, 64px"

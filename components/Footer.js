@@ -34,7 +34,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-28 h-28 shrink-0 relative">
-                <Image src="/logo-new.jpeg" alt="Prashiv Holiday" fill className="object-contain object-left" />
+                <Image src="/logo-new.png" alt="Prashiv Holiday" fill className="object-contain object-left" />
               </div>
             </div>
             <p className="text-sm leading-relaxed mb-4" style={{ color:'#4b5563' }}>15+ years of trusted expertise in customized Indian holidays and travel planning.</p>

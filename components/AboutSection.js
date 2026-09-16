@@ -79,7 +79,7 @@ export default function AboutSection() {
             {/* Brand promise */}
             <div style={{ display: 'flex', gap: 20, alignItems: 'center', background: '#fff', padding: 24, borderRadius: 24, boxShadow: '0 4px 20px rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.02)' }}>
               <div style={{ width: 80, height: 80, borderRadius: 16, overflow: 'hidden', flexShrink: 0, background: '#fff', boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }}>
-                <img src="/logo-new.jpeg" alt="Prashiv Holiday" style={{ width: '100%', height: '100%', objectFit: 'contain', padding: 6 }} />
+                <img src="/logo-new.png" alt="Prashiv Holiday" style={{ width: '100%', height: '100%', objectFit: 'contain', padding: 6 }} />
               </div>
               <div>
                 <h4 style={{ fontWeight: 800, fontSize: '1.15rem', color: '#111', margin: 0 }}>Prashiv Holiday</h4>
