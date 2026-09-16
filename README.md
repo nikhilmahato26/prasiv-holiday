@@ -1,7 +1,7 @@
 # Prashiv Holiday — Travel Website + Admin Panel
 
 Next.js 16 travel website with an admin panel for tour packages, destinations,
-enquiries and site settings. Data lives in Postgres (Neon); images in Cloudinary;
+enquiries and site settings. Data lives in Postgres (Supabase); images in Cloudinary;
 OTP/enquiry mail over SMTP; rate-limit/session helpers on Upstash Redis.
 
 ## Routes
@@ -43,8 +43,8 @@ All of these read `DATABASE_URL` from `.env` and are run with plain `node`.
 
 | Script | What it does |
 |--------|--------------|
-| `init.mjs` | Creates and seeds every table. Run once on a fresh database. |
-| `scripts/seed-admin.mjs` | Creates the admin user from `ADMIN_USERNAME` / `ADMIN_PASSWORD`. |
+| `init.mjs` | Creates and seeds every table, including the 61 packages. Run once on a fresh database. |
+| `scripts/seed-admin.mjs` | Creates the admin user from `ADMIN_USERNAME` / `ADMIN_PASSWORD`. Re-run to reset a forgotten password. |
 | `scripts/reseed-packages.mjs` | Wipes admin-owned packages and re-seeds from `lib/packages-data.js`. Agency submissions are kept. |
 | `reset-db.mjs` | Drops and recreates the schema. Destructive. |
 | `export_packages.mjs` | Dumps the packages table back out to `lib/packages-data.js`. |
@@ -55,7 +55,7 @@ The export scripts are the round trip for the seed data: edit in the admin panel
 export, commit, and the static demo mode picks up the new content.
 
 ## Environment
-See `.env.example` for the full list: Neon `DATABASE_URL`, `JWT_SECRET`,
+See `.env.example` for the full list: Supabase `DATABASE_URL`, `JWT_SECRET`,
 Upstash Redis, SMTP (`SMTP_HOST`/`PORT`/`USER`/`PASS`/`SECURE`, `ENQUIRY_EMAIL`),
 Cloudinary, and `NEXT_PUBLIC_SITE_URL` for links inside emails.
 

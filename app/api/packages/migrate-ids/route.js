@@ -4,8 +4,18 @@ import { guardAdmin } from '@/lib/guardAdmin'
 
 const PKG_PREFIX = { package: 'PKG', group: 'GPKG', homestay: 'HS', other: 'OTH' }
 
+// Group packages carry one of two prefixes depending on region: GPKG for
+// domestic, IPKG for international. Both are valid, so neither should be
+// migrated onto the other — doing so collides with IDs already in use.
+function prefixFor(pkg) {
+  const base = PKG_PREFIX[pkg.category] ?? PKG_PREFIX.group
+  if (base === 'GPKG' && pkg.region === 'international') return 'IPKG'
+  return base
+}
+
 function isConforming(id, prefix) {
-  return new RegExp(`^${prefix}-\\d+$`).test(id)
+  const alternatives = prefix === 'GPKG' ? ['GPKG', 'IPKG'] : [prefix]
+  return alternatives.some(p => new RegExp(`^${p}-\\d+$`).test(id))
 }
 
 export async function POST() {
@@ -24,14 +34,16 @@ export async function POST() {
 
       if (nonConforming.length === 0) continue
 
+      // Numbers are shared across every prefix in this category, so a rename can
+      // never land on an ID another package already holds.
       const usedNums = new Set(
-        conforming.map(p => parseInt(p.id.match(/(\d+)$/)[1], 10))
+        catPkgs.map(p => p.id.match(/(\d+)$/)).filter(Boolean).map(m => parseInt(m[1], 10))
       )
 
       let nextNum = 101
       for (const pkg of nonConforming) {
         while (usedNums.has(nextNum)) nextNum++
-        renames.push({ oldId: pkg.id, newId: `${prefix}-${nextNum}`, pkg })
+        renames.push({ oldId: pkg.id, newId: `${prefixFor(pkg)}-${nextNum}`, pkg })
         usedNums.add(nextNum)
         nextNum++
       }

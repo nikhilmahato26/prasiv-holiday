@@ -19,7 +19,8 @@ import { toast } from 'sonner'
 function fmt(n) { return '₹' + Number(n).toLocaleString('en-IN') }
 
 const PKG_PREFIX = { package: 'PKG', group: 'GPKG', homestay: 'HS', houseboat: 'HB', other: 'OTH' }
-const CONFORMING_ID = /^(PKG|GPKG|HS|HB|OTH)-\d+$/
+// International group packages use the IPKG prefix, domestic ones GPKG.
+const CONFORMING_ID = /^(PKG|GPKG|IPKG|HS|HB|OTH)-\d+$/
 function generatePkgId(category, existingPackages) {
   const prefix = PKG_PREFIX[category] || 'PKG'
   const nums = existingPackages

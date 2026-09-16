@@ -18,7 +18,11 @@ async function run() {
   await db.initGalleryTable();
   await db.initTestimonialsTable();
   await db.initClientsTable();
-  console.log('DB initialized and seeded.');
+  // initDB() only creates the packages table; the seed rows are inserted by
+  // ensureSeeded(), which otherwise waits for the first public request.
+  await db.ensureSeeded();
+  const pkgs = await db.getAllPackages();
+  console.log(`DB initialized. ${pkgs.length} packages seeded.`);
   process.exit(0);
 }
 run();

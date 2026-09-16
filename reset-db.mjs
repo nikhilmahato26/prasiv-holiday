@@ -1,16 +1,15 @@
-import { Pool, neonConfig } from '@neondatabase/serverless';
-import ws from 'ws';
+import pg from 'pg';
+import { sslFor } from './lib/pg-ssl.js';
+
+const { Pool } = pg;
 import fs from 'fs';
 import path from 'path';
-
-neonConfig.webSocketConstructor = ws;
-neonConfig.poolQueryViaFetch = true;
 
 const envFile = fs.readFileSync('.env', 'utf8');
 const dbUrlMatch = envFile.match(/DATABASE_URL="?([^"\n]+)"?/);
 const dbUrl = dbUrlMatch ? dbUrlMatch[1] : undefined;
 
-const pool = new Pool({ connectionString: dbUrl });
+const pool = new Pool({ connectionString: dbUrl, ssl: sslFor(dbUrl) });
 
 // We need to import SEED_PACKAGES, but since it's just an exported array in a file,
 // we can import it dynamically (or import from './lib/packages.js')

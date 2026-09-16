@@ -1,6 +1,8 @@
 import { readFileSync } from 'fs'
-import { Pool, neonConfig } from '@neondatabase/serverless'
-import ws from 'ws'
+import pg from 'pg'
+import { sslFor } from '../lib/pg-ssl.js'
+
+const { Pool } = pg
 
 // Load .env manually
 const env = readFileSync(new URL('../.env', import.meta.url), 'utf8')
@@ -9,8 +11,7 @@ for (const line of env.split('\n')) {
   if (k?.trim() && !k.startsWith('#')) process.env[k.trim()] = v.join('=').trim()
 }
 
-neonConfig.webSocketConstructor = ws
-const pool = new Pool({ connectionString: process.env.DATABASE_URL })
+const pool = new Pool({ connectionString: process.env.DATABASE_URL, ssl: sslFor(process.env.DATABASE_URL) })
 
 async function hashPassword(password) {
   const salt = crypto.getRandomValues(new Uint8Array(16))
@@ -42,20 +43,26 @@ async function run() {
   // 3. Backfill username from email for any existing rows
   await pool.query(`UPDATE users SET username = split_part(email, '@', 1) WHERE username IS NULL`)
 
-  const { rows: existing } = await pool.query('SELECT id, email, username FROM users')
-  console.log('Existing users after backfill:', existing)
+  // 4. Register the admin named in .env. Re-running resets the password, which
+  //    is how you recover a locked-out admin.
+  const username = process.env.ADMIN_USERNAME?.trim()
+  const password = process.env.ADMIN_PASSWORD?.trim()
+  if (!username || !password) {
+    console.error('✗ ADMIN_USERNAME and ADMIN_PASSWORD must be set in .env')
+    process.exit(1)
+  }
 
-  // 4. Register NomadsAdmin if not already there
-  const { rows: check } = await pool.query(`SELECT id FROM users WHERE username = 'NomadsAdmin'`)
+  const hashed = await hashPassword(password)
+  const { rows: check } = await pool.query('SELECT id FROM users WHERE username = $1', [username])
   if (check.length > 0) {
-    console.log('✓ NomadsAdmin already exists — skipping')
+    await pool.query('UPDATE users SET password = $1, role = $2 WHERE username = $3', [hashed, 'admin', username])
+    console.log(`✓ Password reset for existing admin "${username}"`)
   } else {
-    const hashed = await hashPassword('namaste123')
     await pool.query(
-      `INSERT INTO users (email, username, password, role) VALUES ('NomadsAdmin', 'NomadsAdmin', $1, 'admin')`,
-      [hashed]
+      `INSERT INTO users (email, username, password, role) VALUES ($1, $1, $2, 'admin')`,
+      [username, hashed]
     )
-    console.log('✅ NomadsAdmin registered with password: namaste123')
+    console.log(`✅ Admin "${username}" created`)
   }
 
   // 5. Show final state
