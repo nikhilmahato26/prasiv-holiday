@@ -12,7 +12,7 @@ export default function AgencyLoginPage() {
   const [error, setError] = useState('')
 
   const S = {
-    page: { minHeight: '100vh', background: 'linear-gradient(135deg, #0f172a 0%, #16294D 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px 20px' },
+    page: { minHeight: '100vh', background: 'linear-gradient(135deg, #0f172a 0%, #013893 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px 20px' },
     card: { background: '#fff', borderRadius: 24, width: '100%', maxWidth: 420, boxShadow: '0 25px 60px rgba(0,0,0,0.3)', overflow: 'hidden' },
     input: { width: '100%', padding: '11px 14px 11px 40px', borderRadius: 10, border: '1.5px solid #e5e7eb', fontSize: 14, color: '#111', background: '#f9fafb', outline: 'none', boxSizing: 'border-box' },
     label: { fontSize: 11, fontWeight: 700, color: '#6b7280', letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: 6, display: 'block' },
@@ -43,7 +43,7 @@ export default function AgencyLoginPage() {
   return (
     <div style={S.page}>
       <div style={S.card}>
-        <div style={{ padding: '28px 32px', background: 'linear-gradient(135deg,#16294D,#0f172a)' }}>
+        <div style={{ padding: '28px 32px', background: 'linear-gradient(135deg,#013893,#0f172a)' }}>
           <Link href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, color: 'rgba(255,255,255,0.6)', fontSize: 13, fontWeight: 600, textDecoration: 'none', marginBottom: 16 }}>
             <ArrowLeft size={14} /> Back to Home
           </Link>
@@ -89,7 +89,7 @@ export default function AgencyLoginPage() {
           </div>
 
           <button type="submit" disabled={loading}
-            style={{ width: '100%', padding: '13px 0', borderRadius: 12, border: 'none', cursor: loading ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#16294D,#0f172a)', color: '#fff', fontWeight: 700, fontSize: 15, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, opacity: loading ? 0.7 : 1, marginBottom: 16 }}>
+            style={{ width: '100%', padding: '13px 0', borderRadius: 12, border: 'none', cursor: loading ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#013893,#0f172a)', color: '#fff', fontWeight: 700, fontSize: 15, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, opacity: loading ? 0.7 : 1, marginBottom: 16 }}>
             {loading
               ? <><span style={{ width: 16, height: 16, border: '2px solid rgba(255,255,255,0.3)', borderTop: '2px solid #fff', borderRadius: '50%', animation: 'spin 1s linear infinite', display: 'inline-block' }} /> Signing in...</>
               : 'Sign In'
@@ -99,7 +99,7 @@ export default function AgencyLoginPage() {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 6 }}>
             <p style={{ margin: 0, fontSize: 13, color: '#9ca3af' }}>
               Not a partner yet?{' '}
-              <Link href="/agency/register" style={{ color: '#8A6E1C', fontWeight: 600, textDecoration: 'none' }}>Apply to join</Link>
+              <Link href="/agency/register" style={{ color: '#C14B00', fontWeight: 600, textDecoration: 'none' }}>Apply to join</Link>
             </p>
             <Link href="/agency/forgot-password" style={{ fontSize: 13, color: '#6b7280', fontWeight: 600, textDecoration: 'none' }}>
               Forgot password?

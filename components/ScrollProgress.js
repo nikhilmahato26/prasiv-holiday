@@ -29,7 +29,7 @@ export default function ScrollProgress() {
       <div style={{
         height: '100%',
         width: `${progress}%`,
-        backgroundColor: '#8A6E1C',
+        backgroundColor: '#C14B00',
         transition: 'width 0.1s ease-out'
       }} />
     </div>

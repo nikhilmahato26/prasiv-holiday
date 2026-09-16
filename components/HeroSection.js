@@ -44,8 +44,8 @@ export default function HeroSection() {
             lineHeight: 1.1,
             marginBottom: 24
           }}>
-            Travel with <span style={{ color: '#C9A227' }}>Confidence.</span><br />
-            Experience the <span style={{ color: '#8A6E1C' }}>Difference.</span>
+            Travel with <span style={{ color: '#FB6D01' }}>Confidence.</span><br />
+            Experience the <span style={{ color: '#C14B00' }}>Difference.</span>
           </h1>
           <p style={{
             fontSize: 'clamp(1rem, 2vw, 1.25rem)',
@@ -62,7 +62,7 @@ export default function HeroSection() {
               <a href="#destinations" style={{
                 display: 'inline-flex', alignItems: 'center', gap: 8,
                 padding: '14px 28px', borderRadius: 999,
-                background: '#C9A227', color: '#fff',
+                background: '#FB6D01', color: '#fff',
                 fontWeight: 600, textDecoration: 'none',
                 boxShadow: '0 10px 30px rgba(217,119,87,0.3)'
               }}>
@@ -75,7 +75,7 @@ export default function HeroSection() {
                 padding: '14px 28px', borderRadius: 999,
                 background: '#fff', color: '#111',
                 fontWeight: 600, textDecoration: 'none',
-                border: '1.5px solid #C9A227'
+                border: '1.5px solid #FB6D01'
               }}>
                 Plan My Holiday <Calendar size={18} />
               </a>

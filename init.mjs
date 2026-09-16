@@ -18,6 +18,8 @@ async function run() {
   await db.initGalleryTable();
   await db.initTestimonialsTable();
   await db.initClientsTable();
+  await db.initTeamTable();
+  await db.initFleetTable();
   // initDB() only creates the packages table; the seed rows are inserted by
   // ensureSeeded(), which otherwise waits for the first public request.
   await db.ensureSeeded();

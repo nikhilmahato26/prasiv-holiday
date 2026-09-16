@@ -50,11 +50,11 @@ export default function PackagesPage() {
       <section id="packages" style={{ padding: '80px 24px', background: '#fff' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 40 }}>
-            <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.3em', textTransform: 'uppercase', color: '#8A6E1C', marginBottom: 10 }}>
+            <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.3em', textTransform: 'uppercase', color: '#C14B00', marginBottom: 10 }}>
               Curated Experiences
             </p>
             <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(2rem, 5vw, 3rem)', color: '#111', marginBottom: 12 }}>
-              Our <span style={{ color: '#8A6E1C' }}>Packages</span>
+              Our <span style={{ color: '#C14B00' }}>Packages</span>
             </h2>
             <p style={{ color: '#9ca3af', maxWidth: 480, margin: '0 auto 28px', lineHeight: 1.6 }}>
               Every package includes a day-wise itinerary, accommodation & transfers.
@@ -70,12 +70,12 @@ export default function PackagesPage() {
                   style={{
                     padding: '9px 26px', borderRadius: 999, fontSize: 13, fontWeight: 700, letterSpacing: '0.02em',
                     border: 'none', cursor: 'pointer', transition: 'all 0.2s',
-                    background: region === r.key ? '#16294D' : 'transparent',
+                    background: region === r.key ? '#013893' : 'transparent',
                     color: region === r.key ? '#fff' : '#6b7280',
                   }}>
                   {r.label}
                   {r.count > 0 && (
-                    <span style={{ marginLeft: 8, fontSize: 11, fontWeight: 700, color: region === r.key ? '#C9A227' : '#9ca3af' }}>{r.count}</span>
+                    <span style={{ marginLeft: 8, fontSize: 11, fontWeight: 700, color: region === r.key ? '#FB6D01' : '#9ca3af' }}>{r.count}</span>
                   )}
                 </button>
               ))}
@@ -87,7 +87,7 @@ export default function PackagesPage() {
                 onClick={() => setActiveDest('all')}
                 style={{
                   padding: '8px 20px', borderRadius: 999, fontSize: 13, fontWeight: 600, border: 'none', cursor: 'pointer', transition: 'all 0.2s',
-                  background: activeDestination === 'all' ? 'linear-gradient(135deg,#8A6E1C,#8A6E1C)' : '#F3EFE1',
+                  background: activeDestination === 'all' ? 'linear-gradient(135deg,#C14B00,#C14B00)' : '#F3EFE1',
                   color: activeDestination === 'all' ? '#fff' : '#555',
                 }}>
                 All Categories
@@ -98,7 +98,7 @@ export default function PackagesPage() {
                   onClick={() => setActiveDest(d.name)}
                   style={{
                     padding: '8px 20px', borderRadius: 999, fontSize: 13, fontWeight: 600, border: 'none', cursor: 'pointer', transition: 'all 0.2s',
-                    background: activeDestination === d.name ? 'linear-gradient(135deg,#8A6E1C,#8A6E1C)' : '#F3EFE1',
+                    background: activeDestination === d.name ? 'linear-gradient(135deg,#C14B00,#C14B00)' : '#F3EFE1',
                     color: activeDestination === d.name ? '#fff' : '#555',
                   }}>
                   {d.name}
@@ -109,7 +109,7 @@ export default function PackagesPage() {
 
           {!pkgsLoaded ? (
             <div style={{ textAlign: 'center', padding: '60px 0', color: '#9ca3af' }}>
-              <div style={{ width: 36, height: 36, border: '3px solid #FAF7EC', borderTop: '3px solid #8A6E1C', borderRadius: '50%', animation: 'spin 1s linear infinite', margin: '0 auto 12px' }} />
+              <div style={{ width: 36, height: 36, border: '3px solid #FAF7EC', borderTop: '3px solid #C14B00', borderRadius: '50%', animation: 'spin 1s linear infinite', margin: '0 auto 12px' }} />
               <style>{`@keyframes spin { to { transform: rotate(360deg) } }`}</style>
               <p style={{ fontSize: 14 }}>Loading packages...</p>
             </div>

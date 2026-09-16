@@ -6,7 +6,7 @@ export default function BookingFormsSection() {
 
   const tabStyle = (isActive) => ({
     padding: '12px 24px',
-    background: isActive ? '#C9A227' : '#f3f4f6',
+    background: isActive ? '#FB6D01' : '#f3f4f6',
     color: isActive ? '#fff' : '#111',
     fontWeight: 600,
     border: 'none',
@@ -29,7 +29,7 @@ export default function BookingFormsSection() {
   const btnStyle = {
     width: '100%',
     padding: '16px',
-    background: '#8A6E1C',
+    background: '#C14B00',
     color: '#fff',
     fontWeight: 700,
     border: 'none',
@@ -49,7 +49,7 @@ export default function BookingFormsSection() {
             color: '#111',
             marginBottom: 12
           }}>
-            Plan Your <span style={{ color: '#C9A227' }}>Journey</span>
+            Plan Your <span style={{ color: '#FB6D01' }}>Journey</span>
           </h2>
           <p style={{ color: '#666' }}>Select the service you need and let us handle the rest.</p>
         </div>

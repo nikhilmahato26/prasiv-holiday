@@ -69,7 +69,7 @@ export default function KeyStatistics() {
                 width: 48,
                 height: 48,
                 borderRadius: '50%',
-                background: '#C9A227',
+                background: '#FB6D01',
                 color: '#fff',
                 display: 'flex',
                 alignItems: 'center',

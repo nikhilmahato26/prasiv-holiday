@@ -185,14 +185,14 @@ const Hero = () => {
                     {slide.kind === 'package' ? (
                       <Link
                         href={slide.href}
-                        className="bg-[#C9A227] text-[#0E1B33] px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-[#D9B44A] transition-colors shadow-lg"
+                        className="bg-[#FB6D01] text-[#012560] px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-[#FF8224] transition-colors shadow-lg"
                       >
                         View Package
                       </Link>
                     ) : (
                       <a
                         href="#packages"
-                        className="bg-[#C9A227] text-[#0E1B33] px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-[#D9B44A] transition-colors shadow-lg"
+                        className="bg-[#FB6D01] text-[#012560] px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-[#FF8224] transition-colors shadow-lg"
                       >
                         Explore Tours
                       </a>
@@ -214,13 +214,13 @@ const Hero = () => {
       {/* Custom Navigation Buttons */}
       <button
         ref={prevRef}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-white/10 bg-black/20 hover:bg-[#C9A227] text-white hover:text-[#0E1B33] hover:border-[#C9A227] flex items-center justify-center transition-all duration-300 shadow-md group"
+        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-white/10 bg-black/20 hover:bg-[#FB6D01] text-white hover:text-[#012560] hover:border-[#FB6D01] flex items-center justify-center transition-all duration-300 shadow-md group"
       >
         <ChevronLeft size={24} className="group-hover:scale-110 transition-transform" />
       </button>
       <button
         ref={nextRef}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-white/10 bg-black/20 hover:bg-[#C9A227] text-white hover:text-[#0E1B33] hover:border-[#C9A227] flex items-center justify-center transition-all duration-300 shadow-md group"
+        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-white/10 bg-black/20 hover:bg-[#FB6D01] text-white hover:text-[#012560] hover:border-[#FB6D01] flex items-center justify-center transition-all duration-300 shadow-md group"
       >
         <ChevronRight size={24} className="group-hover:scale-110 transition-transform" />
       </button>
@@ -247,7 +247,7 @@ const Hero = () => {
         }
         .hero-swiper .swiper-pagination-bullet-active {
           opacity: 1;
-          background: #C9A227;
+          background: #FB6D01;
           width: 24px;
           border-radius: 5px;
           transition: all 0.3s ease;

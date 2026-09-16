@@ -8,7 +8,13 @@ const { Pool } = pg
 const env = readFileSync(new URL('../.env', import.meta.url), 'utf8')
 for (const line of env.split('\n')) {
   const [k, ...v] = line.split('=')
-  if (k?.trim() && !k.startsWith('#')) process.env[k.trim()] = v.join('=').trim()
+  if (k?.trim() && !k.startsWith('#')) {
+    let val = v.join('=').trim()
+    if (val.startsWith('"') && val.endsWith('"')) {
+      val = val.slice(1, -1)
+    }
+    process.env[k.trim()] = val
+  }
 }
 
 const pool = new Pool({ connectionString: process.env.DATABASE_URL, ssl: sslFor(process.env.DATABASE_URL) })

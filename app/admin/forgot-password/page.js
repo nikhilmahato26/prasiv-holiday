@@ -86,7 +86,7 @@ export default function AdminForgotPasswordPage() {
           <p style={{ color: '#6b7280', lineHeight: 1.7, marginBottom: 28, fontSize: 15 }}>
             Your admin password has been updated. You can now sign in with your new password.
           </p>
-          <Link href="/admin" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '12px 28px', borderRadius: 999, background: 'linear-gradient(135deg,#16294D,#2F5490)', color: '#fff', fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
+          <Link href="/admin" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '12px 28px', borderRadius: 999, background: 'linear-gradient(135deg,#013893,#0252D8)', color: '#fff', fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
             Go to Login
           </Link>
         </div>
@@ -98,7 +98,7 @@ export default function AdminForgotPasswordPage() {
     <div style={S.page}>
       <style>{`@keyframes spin { to { transform: rotate(360deg) } }`}</style>
       <div style={S.card}>
-        <div style={{ padding: '28px 32px 20px', background: 'linear-gradient(135deg,#16294D,#2F5490)', textAlign: 'center' }}>
+        <div style={{ padding: '28px 32px 20px', background: 'linear-gradient(135deg,#013893,#0252D8)', textAlign: 'center' }}>
           <Link href="/admin" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, color: 'rgba(255,255,255,0.6)', fontSize: 13, fontWeight: 600, textDecoration: 'none', marginBottom: 16, float: 'left' }}>
             <ArrowLeft size={14} /> Back
           </Link>
@@ -116,12 +116,12 @@ export default function AdminForgotPasswordPage() {
             const active = (n === 1 && step === 'username') || (n === 2 && step === 'reset')
             const done = n === 1 && step === 'reset'
             return (
-              <div key={n} style={{ flex: 1, padding: '10px 0', textAlign: 'center', borderBottom: active ? '2px solid #16294D' : '2px solid transparent' }}>
+              <div key={n} style={{ flex: 1, padding: '10px 0', textAlign: 'center', borderBottom: active ? '2px solid #013893' : '2px solid transparent' }}>
                 <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
-                  <div style={{ width: 20, height: 20, borderRadius: '50%', background: done ? '#22c55e' : active ? '#16294D' : '#e5e7eb', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 700, color: done || active ? '#fff' : '#9ca3af' }}>
+                  <div style={{ width: 20, height: 20, borderRadius: '50%', background: done ? '#22c55e' : active ? '#013893' : '#e5e7eb', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 700, color: done || active ? '#fff' : '#9ca3af' }}>
                     {done ? <Check size={11} /> : n}
                   </div>
-                  <span style={{ fontSize: 12, fontWeight: 600, color: active ? '#16294D' : done ? '#22c55e' : '#9ca3af' }}>{label}</span>
+                  <span style={{ fontSize: 12, fontWeight: 600, color: active ? '#013893' : done ? '#22c55e' : '#9ca3af' }}>{label}</span>
                 </div>
               </div>
             )
@@ -150,7 +150,7 @@ export default function AdminForgotPasswordPage() {
               />
             </div>
             <button onClick={sendOtp} disabled={loading || !username.trim()}
-              style={{ width: '100%', padding: '13px 0', borderRadius: 12, border: 'none', cursor: (loading || !username.trim()) ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#16294D,#2F5490)', color: '#fff', fontWeight: 700, fontSize: 15, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, opacity: (loading || !username.trim()) ? 0.65 : 1 }}>
+              style={{ width: '100%', padding: '13px 0', borderRadius: 12, border: 'none', cursor: (loading || !username.trim()) ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#013893,#0252D8)', color: '#fff', fontWeight: 700, fontSize: 15, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, opacity: (loading || !username.trim()) ? 0.65 : 1 }}>
               {loading
                 ? <><span style={{ width: 16, height: 16, border: '2px solid rgba(255,255,255,0.3)', borderTop: '2px solid #fff', borderRadius: '50%', animation: 'spin 1s linear infinite', display: 'inline-block' }} /> Sending...</>
                 : 'Send Verification Code'
@@ -204,7 +204,7 @@ export default function AdminForgotPasswordPage() {
             </div>
 
             <button type="submit" disabled={loading || otp.length !== 6 || !newPassword || newPassword !== confirm}
-              style={{ width: '100%', padding: '13px 0', borderRadius: 12, border: 'none', cursor: (loading || otp.length !== 6 || !newPassword || newPassword !== confirm) ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#16294D,#2F5490)', color: '#fff', fontWeight: 700, fontSize: 15, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, opacity: (loading || otp.length !== 6 || !newPassword || newPassword !== confirm) ? 0.65 : 1, marginBottom: 14 }}>
+              style={{ width: '100%', padding: '13px 0', borderRadius: 12, border: 'none', cursor: (loading || otp.length !== 6 || !newPassword || newPassword !== confirm) ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#013893,#0252D8)', color: '#fff', fontWeight: 700, fontSize: 15, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, opacity: (loading || otp.length !== 6 || !newPassword || newPassword !== confirm) ? 0.65 : 1, marginBottom: 14 }}>
               {loading
                 ? <><span style={{ width: 16, height: 16, border: '2px solid rgba(255,255,255,0.3)', borderTop: '2px solid #fff', borderRadius: '50%', animation: 'spin 1s linear infinite', display: 'inline-block' }} /> Resetting...</>
                 : <><KeyRound size={16} /> Reset Password</>
@@ -218,7 +218,7 @@ export default function AdminForgotPasswordPage() {
               </button>
               <span style={{ color: '#e5e7eb' }}>·</span>
               <button type="button" onClick={() => { setError(''); setOtp(''); sendOtp() }} disabled={resendCooldown > 0 || loading}
-                style={{ background: 'none', border: 'none', cursor: resendCooldown > 0 ? 'not-allowed' : 'pointer', fontSize: 13, color: resendCooldown > 0 ? '#9ca3af' : '#16294D', fontWeight: 600 }}>
+                style={{ background: 'none', border: 'none', cursor: resendCooldown > 0 ? 'not-allowed' : 'pointer', fontSize: 13, color: resendCooldown > 0 ? '#9ca3af' : '#013893', fontWeight: 600 }}>
                 {resendCooldown > 0 ? `Resend in ${resendCooldown}s` : 'Resend Code'}
               </button>
             </div>

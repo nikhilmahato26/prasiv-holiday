@@ -39,7 +39,7 @@ const Destinations = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-12">
           <div>
-            <p className="text-[#8A6E1C] font-semibold tracking-wider text-xs uppercase mb-3">
+            <p className="text-[#C14B00] font-semibold tracking-wider text-xs uppercase mb-3">
               Where We Take You
             </p>
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-gray-900">
@@ -53,7 +53,7 @@ const Destinations = () => {
               onClick={() => setActiveTab('india')}
               className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer ${
                 activeTab === 'india'
-                  ? 'bg-[#16294D] text-white shadow-sm'
+                  ? 'bg-[#013893] text-white shadow-sm'
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
@@ -63,7 +63,7 @@ const Destinations = () => {
               onClick={() => setActiveTab('intl')}
               className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer ${
                 activeTab === 'intl'
-                  ? 'bg-[#16294D] text-white shadow-sm'
+                  ? 'bg-[#013893] text-white shadow-sm'
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
@@ -105,7 +105,7 @@ const Destinations = () => {
 
                 <a 
                   href="#contact"
-                  className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md text-white border border-white/20 flex items-center justify-center transform translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-hover:bg-[#16294D] group-hover:border-[#16294D] transition-all duration-300 hover:scale-105"
+                  className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md text-white border border-white/20 flex items-center justify-center transform translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-hover:bg-[#013893] group-hover:border-[#013893] transition-all duration-300 hover:scale-105"
                 >
                   <ArrowUpRight size={14} />
                 </a>

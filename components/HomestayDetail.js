@@ -76,7 +76,7 @@ export default function HomestayDetail({ pkg, phone, whatsapp, isMobile }) {
         <div style={{ maxWidth: 1100, margin: '0 auto', display: 'flex', gap: 8, overflowX: 'auto', padding: '12px 14px' }}>
           {gallery.map((g, i) => (
             <img key={i} src={g} alt="" onClick={() => setMainImg(g)} onError={e => { e.target.style.display = 'none' }}
-              style={{ width: 84, height: 60, objectFit: 'cover', borderRadius: 8, flexShrink: 0, cursor: 'pointer', border: g === mainImg ? '2px solid #8A6E1C' : '2px solid transparent' }} />
+              style={{ width: 84, height: 60, objectFit: 'cover', borderRadius: 8, flexShrink: 0, cursor: 'pointer', border: g === mainImg ? '2px solid #C14B00' : '2px solid transparent' }} />
           ))}
         </div>
       )}
@@ -295,14 +295,14 @@ export default function HomestayDetail({ pkg, phone, whatsapp, isMobile }) {
           <div>
             {fromPrice > 0 && <>
               <div style={{ fontSize: 11, color: '#9ca3af' }}>From</div>
-              <div style={{ fontSize: 22, fontWeight: 800, color: '#8A6E1C', lineHeight: 1 }}>{fmt(fromPrice)}</div>
+              <div style={{ fontSize: 22, fontWeight: 800, color: '#C14B00', lineHeight: 1 }}>{fmt(fromPrice)}</div>
             </>}
           </div>
           <div style={{ display: 'flex', gap: 10 }}>
             <a href={`tel:+${phone}`} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, padding: '12px 18px', borderRadius: 999, border: '1.5px solid #e5e7eb', color: '#111', fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
               <Phone size={16} /> Call
             </a>
-            <a href={rooms.length ? '#rooms' : '#enquiry'} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, padding: '12px 24px', borderRadius: 999, background: 'linear-gradient(135deg,#8A6E1C,#8A6E1C)', color: '#fff', fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
+            <a href={rooms.length ? '#rooms' : '#enquiry'} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, padding: '12px 24px', borderRadius: 999, background: 'linear-gradient(135deg,#C14B00,#C14B00)', color: '#fff', fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
               {rooms.length ? 'Select Room' : 'Enquire'}
             </a>
           </div>

@@ -13,18 +13,18 @@ module.exports = {
       colors: {
         // Primary — navy blue (Prashiv Holiday logo)
         primary: {
-          DEFAULT: '#16294D',
+          DEFAULT: '#013893',
         },
         navy: {
-          50:'#EEF2F8', 100:'#DDE5F0', 200:'#C3D0E4', 400:'#4A6FA8', 500:'#2F5490',
-          600:'#1F3B66', 700:'#16294D', 800:'#132441', 900:'#0E1B33', 950:'#08111F',
-          DEFAULT: '#16294D',
+          50:'#E6F0FF', 100:'#CCE0FF', 200:'#B3D4FF', 400:'#1A75FF', 500:'#0252D8',
+          600:'#012E7A', 700:'#013893', 800:'#011A45', 900:'#012560', 950:'#000B1F',
+          DEFAULT: '#013893',
         },
         // Accent — gold (Prashiv Holiday logo)
         gold: {
-          50:'#FBF6E7', 100:'#F5E9C6', 200:'#EBD79A', 300:'#E0C264', 400:'#D9B44A',
-          500:'#C9A227', 600:'#B08D1F', 700:'#8A6E1C', 800:'#6B5514',
-          DEFAULT: '#C9A227',
+          50:'#FFF0E5', 100:'#FFE4CC', 200:'#FFCA99', 300:'#FFB166', 400:'#D9B44A',
+          500:'#FB6D01', 600:'#B08D1F', 700:'#8A6E1C', 800:'#8A3300',
+          DEFAULT: '#FB6D01',
         },
         cream: { DEFAULT:'#F3EFE1', 50:'#FAF8F0', 100:'#F3EFE1', 200:'#EFE6CE', 300:'#E6D7B0' },
       },

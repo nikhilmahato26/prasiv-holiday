@@ -67,7 +67,7 @@ export default function HomestayFields({ form, setForm, S, pkgOptions = {}, onOp
       {/* Rooms */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
         <div style={sectionTitle}>Rooms</div>
-        <button type="button" onClick={addRoom} style={{ fontSize: 12, fontWeight: 600, color: '#8A6E1C', background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
+        <button type="button" onClick={addRoom} style={{ fontSize: 12, fontWeight: 600, color: '#C14B00', background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
           <Plus size={12} /> Add Room
         </button>
       </div>
@@ -131,7 +131,7 @@ export default function HomestayFields({ form, setForm, S, pkgOptions = {}, onOp
       {/* Nearby */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10, marginTop: 8 }}>
         <div style={sectionTitle}>Nearby Places</div>
-        <button type="button" onClick={addNearby} style={{ fontSize: 12, fontWeight: 600, color: '#8A6E1C', background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
+        <button type="button" onClick={addNearby} style={{ fontSize: 12, fontWeight: 600, color: '#C14B00', background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
           <Plus size={12} /> Add Place
         </button>
       </div>

@@ -38,7 +38,7 @@ export default function PremiumTrustSection() {
             fontWeight: 700,
             letterSpacing: '0.2em',
             textTransform: 'uppercase',
-            color: '#C9A227',
+            color: '#FB6D01',
             marginBottom: 12
           }}>
             Trusted by Thousands
@@ -49,7 +49,7 @@ export default function PremiumTrustSection() {
             fontWeight: 800,
             lineHeight: 1.2
           }}>
-            Real <span style={{ color: '#C9A227' }}>Experiences</span>
+            Real <span style={{ color: '#FB6D01' }}>Experiences</span>
           </h2>
         </div>
 
@@ -96,10 +96,10 @@ export default function PremiumTrustSection() {
             alignItems: 'center',
             justifyContent: 'center'
           }}>
-            <MessageSquare size={48} color="#C9A227" style={{ marginBottom: 20 }} />
+            <MessageSquare size={48} color="#FB6D01" style={{ marginBottom: 20 }} />
             <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 8, fontFamily: 'Poppins, sans-serif' }}>Testimonials</h3>
             <p style={{ color: 'rgba(255,255,255,0.7)', marginBottom: 24 }}>Hear what our happy travellers have to say.</p>
-            <a href="#" style={{ color: '#C9A227', fontWeight: 600, textDecoration: 'underline' }}>View All</a>
+            <a href="#" style={{ color: '#FB6D01', fontWeight: 600, textDecoration: 'underline' }}>View All</a>
           </div>
 
           {/* Photo Gallery */}

@@ -62,7 +62,7 @@ export default function PopularDestinations() {
             fontWeight: 700,
             letterSpacing: '0.2em',
             textTransform: 'uppercase',
-            color: '#C9A227',
+            color: '#FB6D01',
             marginBottom: 12
           }}>
             Explore The World
@@ -74,7 +74,7 @@ export default function PopularDestinations() {
             color: '#111',
             lineHeight: 1.2
           }}>
-            Popular <span style={{ color: '#8A6E1C' }}>Destinations</span>
+            Popular <span style={{ color: '#C14B00' }}>Destinations</span>
           </h2>
         </div>
 
@@ -84,7 +84,7 @@ export default function PopularDestinations() {
             style={{
               padding: '12px 32px',
               borderRadius: 999,
-              background: activeTab === 'india' ? '#8A6E1C' : '#f3f4f6',
+              background: activeTab === 'india' ? '#C14B00' : '#f3f4f6',
               color: activeTab === 'india' ? '#fff' : '#111',
               fontWeight: 600,
               border: 'none',
@@ -98,7 +98,7 @@ export default function PopularDestinations() {
             style={{
               padding: '12px 32px',
               borderRadius: 999,
-              background: activeTab === 'international' ? '#8A6E1C' : '#f3f4f6',
+              background: activeTab === 'international' ? '#C14B00' : '#f3f4f6',
               color: activeTab === 'international' ? '#fff' : '#111',
               fontWeight: 600,
               border: 'none',
@@ -154,7 +154,7 @@ export default function PopularDestinations() {
                 alignItems: 'center',
                 gap: 8
               }}>
-                <MapPin size={18} color="#C9A227" />
+                <MapPin size={18} color="#FB6D01" />
                 <h3 style={{
                   fontFamily: 'Poppins, sans-serif',
                   fontSize: '1.2rem',

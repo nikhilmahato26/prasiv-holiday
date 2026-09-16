@@ -57,7 +57,7 @@ export default function Packages() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-[#16294D] font-semibold tracking-widest text-xs uppercase mb-3">
+          <p className="text-[#013893] font-semibold tracking-widest text-xs uppercase mb-3">
             Our Signature Packages
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-gray-900 mb-6">
@@ -78,13 +78,13 @@ export default function Packages() {
                 aria-pressed={region === r.key}
                 className={`px-7 py-2.5 rounded-full text-sm font-bold tracking-wide transition-all duration-300 cursor-pointer ${
                   region === r.key
-                    ? 'bg-[#16294D] text-white shadow-md'
-                    : 'text-gray-500 hover:text-[#16294D]'
+                    ? 'bg-[#013893] text-white shadow-md'
+                    : 'text-gray-500 hover:text-[#013893]'
                 }`}
               >
                 {r.label}
                 {r.count > 0 && (
-                  <span className={`ml-2 text-xs font-semibold ${region === r.key ? 'text-[#C9A227]' : 'text-gray-400'}`}>
+                  <span className={`ml-2 text-xs font-semibold ${region === r.key ? 'text-[#FB6D01]' : 'text-gray-400'}`}>
                     {r.count}
                   </span>
                 )}
@@ -101,7 +101,7 @@ export default function Packages() {
               onClick={() => setActiveCategory(cat)}
               className={`snap-align-start px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 whitespace-nowrap cursor-pointer ${
                 activeCat === cat
-                  ? 'bg-gradient-to-r from-[#16294D] to-[#2F5490] text-white shadow-lg shadow-[#2F5490]/20 transform -translate-y-0.5'
+                  ? 'bg-gradient-to-r from-[#013893] to-[#0252D8] text-white shadow-lg shadow-[#0252D8]/20 transform -translate-y-0.5'
                   : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200/80 shadow-sm'
               }`}
             >
@@ -156,7 +156,7 @@ export default function Packages() {
                     {pkg.badge && (
                       <div 
                         className="absolute bottom-4 left-4 text-white text-[12px] font-bold px-3 py-1.5 rounded-full shadow-sm"
-                        style={{ backgroundColor: pkg.badgeColor || '#16294D' }}
+                        style={{ backgroundColor: pkg.badgeColor || '#013893' }}
                       >
                         {pkg.badge}
                       </div>
@@ -175,12 +175,12 @@ export default function Packages() {
                       {/* Hotels/Stays info */}
                       {pkg.hotels && (
                         <div className="flex items-center gap-1.5 text-gray-500 text-xs font-semibold mb-2.5">
-                          <MapPin size={13} className="text-[#16294D]" />
+                          <MapPin size={13} className="text-[#013893]" />
                           <span className="truncate">{pkg.hotels}</span>
                         </div>
                       )}
 
-                      <h3 className="text-xl font-heading font-bold text-gray-900 leading-snug tracking-tight mb-2.5 group-hover:text-[#16294D] transition-colors line-clamp-2">
+                      <h3 className="text-xl font-heading font-bold text-gray-900 leading-snug tracking-tight mb-2.5 group-hover:text-[#013893] transition-colors line-clamp-2">
                         {pkg.title}
                       </h3>
 
@@ -246,7 +246,7 @@ export default function Packages() {
                         </a>
                         <Link
                           href={detailUrl}
-                          className="flex-grow flex items-center justify-center gap-1 bg-[#16294D] text-white hover:bg-[#0E1B33] font-bold py-3 px-4 rounded-full text-sm text-center transition-all duration-300 shadow-md shadow-[#2F5490]/10 hover:shadow-[#2F5490]/20 cursor-pointer"
+                          className="flex-grow flex items-center justify-center gap-1 bg-[#013893] text-white hover:bg-[#012560] font-bold py-3 px-4 rounded-full text-sm text-center transition-all duration-300 shadow-md shadow-[#0252D8]/10 hover:shadow-[#0252D8]/20 cursor-pointer"
                         >
                           <span>View Itinerary</span>
                           <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />

@@ -19,11 +19,11 @@ export default function ClientsMarquee() {
   return (
     <section style={{ padding: '60px 24px', background: '#fafafa', overflow: 'hidden', borderTop: '1px solid #eaeaea' }}>
       <div style={{ maxWidth: 1280, margin: '0 auto', textAlign: 'center', marginBottom: 32 }}>
-        <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.3em', textTransform: 'uppercase', color: '#8A6E1C', marginBottom: 10 }}>
+        <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.3em', textTransform: 'uppercase', color: '#C14B00', marginBottom: 10 }}>
           Our Trusted Partners
         </p>
         <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(2rem, 5vw, 3rem)', color: '#111' }}>
-          Our Hospitality <span style={{ color: '#8A6E1C' }}>Partners</span>
+          Our Hospitality <span style={{ color: '#C14B00' }}>Partners</span>
         </h2>
       </div>
 

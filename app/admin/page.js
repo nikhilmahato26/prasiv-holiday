@@ -53,9 +53,9 @@ export default function AdminLogin() {
         <div style={{ background: '#fff', borderRadius: 24, overflow: 'hidden', boxShadow: '0 20px 60px rgba(0,0,0,0.12)' }}>
 
           {/* Header */}
-          <div style={{ padding: '32px 32px 24px', textAlign: 'center', background: 'linear-gradient(135deg,#16294D,#2F5490)' }}>
+          <div style={{ padding: '32px 32px 24px', textAlign: 'center', background: 'linear-gradient(135deg,#013893,#0252D8)' }}>
             <div style={{ padding: '8px 16px', borderRadius: '12px', overflow: 'hidden', border: '2px solid rgba(255,255,255,0.3)', margin: '0 auto 16px' , background:'#ffffff', width: 'fit-content'}}>
-              <Image src="/logo.png" alt="Prashiv Holiday" width={96} height={96} style={{ objectFit: 'contain' }} />
+              <Image src="/logo-new.jpeg" alt="Prashiv Holiday" width={96} height={96} style={{ objectFit: 'contain' }} />
             </div>
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 22, color: '#fff', marginBottom: 4 }}>Prashiv Holiday</h1>
             <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.6)' }}>Admin Panel</p>
@@ -63,15 +63,15 @@ export default function AdminLogin() {
 
           {/* Demo mode notice */}
           {demo && (
-            <div style={{ padding: '14px 32px', background: '#FBF6E7', borderBottom: '1px solid #EBD79A' }}>
-              <p style={{ fontSize: 12, fontWeight: 700, color: '#8A6E1C', margin: '0 0 4px', letterSpacing: '0.04em', textTransform: 'uppercase' }}>Demo mode</p>
-              <p style={{ fontSize: 13, color: '#6B5514', margin: 0, lineHeight: 1.5 }}>
+            <div style={{ padding: '14px 32px', background: '#FFF0E5', borderBottom: '1px solid #FFCA99' }}>
+              <p style={{ fontSize: 12, fontWeight: 700, color: '#C14B00', margin: '0 0 4px', letterSpacing: '0.04em', textTransform: 'uppercase' }}>Demo mode</p>
+              <p style={{ fontSize: 13, color: '#8A3300', margin: 0, lineHeight: 1.5 }}>
                 No database connected. Sign in with <strong>demo</strong> / <strong>demo</strong> to look around — nothing you change will be saved.
               </p>
               <button
                 type="button"
                 onClick={() => { setUsername('demo'); setPassword('demo') }}
-                style={{ marginTop: 8, padding: '5px 12px', borderRadius: 8, border: '1px solid #EBD79A', background: '#fff', color: '#8A6E1C', fontSize: 12, fontWeight: 700, cursor: 'pointer' }}>
+                style={{ marginTop: 8, padding: '5px 12px', borderRadius: 8, border: '1px solid #FFCA99', background: '#fff', color: '#C14B00', fontSize: 12, fontWeight: 700, cursor: 'pointer' }}>
                 Fill demo login
               </button>
             </div>
@@ -123,7 +123,7 @@ export default function AdminLogin() {
               type="submit" disabled={loading}
               style={{
                 width: '100%', padding: '13px 0', borderRadius: 12, border: 'none', cursor: loading ? 'not-allowed' : 'pointer',
-                background: 'linear-gradient(135deg,#16294D,#2F5490)', color: '#fff',
+                background: 'linear-gradient(135deg,#013893,#0252D8)', color: '#fff',
                 fontWeight: 700, fontSize: 15, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
                 opacity: loading ? 0.7 : 1,
               }}

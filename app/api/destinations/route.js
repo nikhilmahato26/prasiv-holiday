@@ -22,7 +22,7 @@ export async function POST(request) {
   try {
     const { name, color, image_url, description, emoji, image_pos } = await request.json()
     if (!name?.trim()) return Response.json({ error: 'Name is required' }, { status: 400 })
-    const dest = await createDestination(name.trim(), color || '#8A6E1C', { image_url, description, emoji, image_pos })
+    const dest = await createDestination(name.trim(), color || '#C14B00', { image_url, description, emoji, image_pos })
     return Response.json(dest, { status: 201 })
   } catch (err) {
     if (err.message?.includes('unique')) {

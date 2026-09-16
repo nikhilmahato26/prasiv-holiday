@@ -51,7 +51,7 @@ export default function WhyChooseUsSection() {
             fontWeight: 700,
             letterSpacing: '0.2em',
             textTransform: 'uppercase',
-            color: '#C9A227',
+            color: '#FB6D01',
             marginBottom: 12
           }}>
             The Prashiv Holiday Advantage
@@ -63,7 +63,7 @@ export default function WhyChooseUsSection() {
             color: '#111',
             lineHeight: 1.2
           }}>
-            Why Choose <span style={{ color: '#8A6E1C' }}>Us?</span>
+            Why Choose <span style={{ color: '#C14B00' }}>Us?</span>
           </h2>
         </div>
 
@@ -87,7 +87,7 @@ export default function WhyChooseUsSection() {
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-8px)'
                 e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.08)'
-                e.currentTarget.style.borderColor = '#C9A227'
+                e.currentTarget.style.borderColor = '#FB6D01'
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)'
@@ -104,7 +104,7 @@ export default function WhyChooseUsSection() {
                   alignItems: 'center',
                   justifyContent: 'center',
                   marginBottom: 20,
-                  color: '#C9A227',
+                  color: '#FB6D01',
                   boxShadow: '0 4px 12px rgba(0,0,0,0.05)'
                 }}>
                   <Icon size={28} strokeWidth={1.5} />

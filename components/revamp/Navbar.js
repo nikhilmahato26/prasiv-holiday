@@ -43,7 +43,7 @@ const Navbar = () => {
             <Link href="/" className="flex items-center group">
               <div className="relative w-16 h-16 md:w-20 md:h-20 group-hover:opacity-90 transition-transform origin-left">
                 <Image
-                  src="/logo.png"
+                  src="/logo-new.jpeg"
                   alt="Prashiv Holiday"
                   fill
                   sizes="(max-width: 768px) 64px, 80px"
@@ -61,7 +61,7 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-[15px] font-medium transition-colors text-gray-800 hover:text-[#16294D]"
+                  className="text-[15px] font-medium transition-colors text-gray-800 hover:text-[#013893]"
                 >
                   {link.name}
                 </Link>
@@ -69,12 +69,12 @@ const Navbar = () => {
             </div>
             
             <div className="flex items-center space-x-6">
-              <a href="tel:+917796950505" className="flex items-center text-[15px] font-semibold transition-colors text-gray-800 hover:text-[#16294D]">
+              <a href="tel:+917796950505" className="flex items-center text-[15px] font-semibold transition-colors text-gray-800 hover:text-[#013893]">
                 +91 77969 50505
               </a>
               <Link
                 href="/#contact"
-                className="bg-[#C9A227] text-[#0E1B33] px-6 py-2.5 rounded-full text-[15px] font-semibold hover:bg-[#B08D1F] transition-colors"
+                className="bg-[#FB6D01] text-[#012560] px-6 py-2.5 rounded-full text-[15px] font-semibold hover:bg-[#E05A00] transition-colors"
               >
                 Talk to us
               </Link>
@@ -104,7 +104,7 @@ const Navbar = () => {
             <Link
               key={link.name}
               href={link.href}
-              className="block text-gray-800 font-medium hover:text-[#16294D] text-lg"
+              className="block text-gray-800 font-medium hover:text-[#013893] text-lg"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}
@@ -116,7 +116,7 @@ const Navbar = () => {
              </a>
             <Link
               href="/#contact"
-              className="bg-[#C9A227] text-[#0E1B33] px-6 py-3 rounded-full font-semibold hover:bg-[#B08D1F] transition-colors text-center block text-sm"
+              className="bg-[#FB6D01] text-[#012560] px-6 py-3 rounded-full font-semibold hover:bg-[#E05A00] transition-colors text-center block text-sm"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Talk to us

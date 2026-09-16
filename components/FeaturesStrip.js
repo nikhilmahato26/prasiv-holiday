@@ -44,7 +44,7 @@ export default function FeaturesStrip() {
                 background: 'rgba(201, 61, 0, 0.1)', 
                 display: 'flex', alignItems: 'center', justifyContent: 'center' 
               }}>
-                <item.icon size={20} style={{ color: '#8A6E1C' }} strokeWidth={1.5} />
+                <item.icon size={20} style={{ color: '#C14B00' }} strokeWidth={1.5} />
               </div>
               <div>
                 <h3 style={{ fontSize: 13, fontWeight: 800, color: '#111', marginBottom: 6 }}>{item.title}</h3>

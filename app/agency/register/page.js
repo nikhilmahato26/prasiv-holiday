@@ -13,7 +13,7 @@ export default function AgencyRegisterPage() {
   const [resendCooldown, setResendCooldown] = useState(0)
 
   const S = {
-    page: { minHeight: '100vh', background: 'linear-gradient(135deg, #0f172a 0%, #16294D 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px 20px' },
+    page: { minHeight: '100vh', background: 'linear-gradient(135deg, #0f172a 0%, #013893 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px 20px' },
     card: { background: '#fff', borderRadius: 24, width: '100%', maxWidth: 520, boxShadow: '0 25px 60px rgba(0,0,0,0.3)', overflow: 'hidden' },
     input: { width: '100%', padding: '11px 14px 11px 40px', borderRadius: 10, border: '1.5px solid #e5e7eb', fontSize: 14, color: '#111', background: '#f9fafb', outline: 'none', boxSizing: 'border-box' },
     label: { fontSize: 11, fontWeight: 700, color: '#6b7280', letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: 6, display: 'block' },
@@ -95,7 +95,7 @@ export default function AgencyRegisterPage() {
           <p style={{ color: '#6b7280', lineHeight: 1.7, marginBottom: 28, fontSize: 15 }}>
             Your agency registration is under review. Our admin team will get back to you soon. You&apos;ll receive an email once approved.
           </p>
-          <Link href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '12px 28px', borderRadius: 999, background: 'linear-gradient(135deg,#8A6E1C,#8A6E1C)', color: '#fff', fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
+          <Link href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '12px 28px', borderRadius: 999, background: 'linear-gradient(135deg,#C14B00,#C14B00)', color: '#fff', fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
             Back to Home
           </Link>
         </div>
@@ -107,7 +107,7 @@ export default function AgencyRegisterPage() {
     <div style={S.page}>
       <style>{`@keyframes spin { to { transform: rotate(360deg) } }`}</style>
       <div style={S.card}>
-        <div style={{ padding: '28px 32px', background: 'linear-gradient(135deg,#8A6E1C,#8A6E1C)' }}>
+        <div style={{ padding: '28px 32px', background: 'linear-gradient(135deg,#C14B00,#C14B00)' }}>
           <Link href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, color: 'rgba(255,255,255,0.7)', fontSize: 13, fontWeight: 600, textDecoration: 'none', marginBottom: 16 }}>
             <ArrowLeft size={14} /> Back to Home
           </Link>
@@ -128,12 +128,12 @@ export default function AgencyRegisterPage() {
             const active = (n === 1 && step === 'form') || (n === 2 && step === 'otp')
             const done = (n === 1 && step === 'otp')
             return (
-              <div key={n} style={{ flex: 1, padding: '10px 0', textAlign: 'center', borderBottom: active ? '2px solid #8A6E1C' : '2px solid transparent' }}>
+              <div key={n} style={{ flex: 1, padding: '10px 0', textAlign: 'center', borderBottom: active ? '2px solid #C14B00' : '2px solid transparent' }}>
                 <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
-                  <div style={{ width: 20, height: 20, borderRadius: '50%', background: done ? '#22c55e' : active ? '#8A6E1C' : '#e5e7eb', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 700, color: done || active ? '#fff' : '#9ca3af' }}>
+                  <div style={{ width: 20, height: 20, borderRadius: '50%', background: done ? '#22c55e' : active ? '#C14B00' : '#e5e7eb', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 700, color: done || active ? '#fff' : '#9ca3af' }}>
                     {done ? <Check size={11} /> : n}
                   </div>
-                  <span style={{ fontSize: 12, fontWeight: 600, color: active ? '#8A6E1C' : done ? '#22c55e' : '#9ca3af' }}>{label}</span>
+                  <span style={{ fontSize: 12, fontWeight: 600, color: active ? '#C14B00' : done ? '#22c55e' : '#9ca3af' }}>{label}</span>
                 </div>
               </div>
             )
@@ -204,7 +204,7 @@ export default function AgencyRegisterPage() {
             </div>
 
             <button type="button" onClick={sendOtp} disabled={sending || !form.name.trim() || !form.email.trim() || !form.phone.trim() || !form.password.trim() || form.password !== form.confirm || form.password.length < 8}
-              style={{ width: '100%', padding: '13px 0', borderRadius: 12, border: 'none', cursor: (sending || !form.name.trim() || !form.email.trim() || !form.phone.trim() || !form.password || form.password !== form.confirm || form.password.length < 8) ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#8A6E1C,#8A6E1C)', color: '#fff', fontWeight: 700, fontSize: 15, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, opacity: (sending || !form.name.trim() || !form.email.trim()) ? 0.7 : 1 }}>
+              style={{ width: '100%', padding: '13px 0', borderRadius: 12, border: 'none', cursor: (sending || !form.name.trim() || !form.email.trim() || !form.phone.trim() || !form.password || form.password !== form.confirm || form.password.length < 8) ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#C14B00,#C14B00)', color: '#fff', fontWeight: 700, fontSize: 15, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, opacity: (sending || !form.name.trim() || !form.email.trim()) ? 0.7 : 1 }}>
               {sending
                 ? <><span style={{ width: 16, height: 16, border: '2px solid rgba(255,255,255,0.3)', borderTop: '2px solid #fff', borderRadius: '50%', animation: 'spin 1s linear infinite', display: 'inline-block' }} /> Sending OTP...</>
                 : <><Mail size={16} /> Send Verification Code</>
@@ -213,7 +213,7 @@ export default function AgencyRegisterPage() {
 
             <p style={{ textAlign: 'center', marginTop: 16, fontSize: 13, color: '#9ca3af' }}>
               Already approved?{' '}
-              <Link href="/agency" style={{ color: '#8A6E1C', fontWeight: 600, textDecoration: 'none' }}>Sign in to your dashboard</Link>
+              <Link href="/agency" style={{ color: '#C14B00', fontWeight: 600, textDecoration: 'none' }}>Sign in to your dashboard</Link>
             </p>
           </div>
         )}
@@ -222,8 +222,8 @@ export default function AgencyRegisterPage() {
         {step === 'otp' && (
           <form onSubmit={submit} style={{ padding: '24px 32px 28px' }}>
             <div style={{ textAlign: 'center', marginBottom: 24 }}>
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: '#FBF6E7', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 12px' }}>
-                <ShieldCheck size={26} style={{ color: '#8A6E1C' }} />
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: '#FFF0E5', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 12px' }}>
+                <ShieldCheck size={26} style={{ color: '#C14B00' }} />
               </div>
               <h3 style={{ fontWeight: 700, fontSize: 17, color: '#111', margin: '0 0 6px' }}>Check your inbox</h3>
               <p style={{ color: '#6b7280', fontSize: 13, margin: 0, lineHeight: 1.6 }}>
@@ -242,7 +242,7 @@ export default function AgencyRegisterPage() {
             />
 
             <button type="submit" disabled={loading || otp.length !== 6}
-              style={{ width: '100%', padding: '13px 0', borderRadius: 12, border: 'none', cursor: (loading || otp.length !== 6) ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#8A6E1C,#8A6E1C)', color: '#fff', fontWeight: 700, fontSize: 15, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, opacity: (loading || otp.length !== 6) ? 0.7 : 1, marginBottom: 14 }}>
+              style={{ width: '100%', padding: '13px 0', borderRadius: 12, border: 'none', cursor: (loading || otp.length !== 6) ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#C14B00,#C14B00)', color: '#fff', fontWeight: 700, fontSize: 15, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, opacity: (loading || otp.length !== 6) ? 0.7 : 1, marginBottom: 14 }}>
               {loading
                 ? <><span style={{ width: 16, height: 16, border: '2px solid rgba(255,255,255,0.3)', borderTop: '2px solid #fff', borderRadius: '50%', animation: 'spin 1s linear infinite', display: 'inline-block' }} /> Verifying...</>
                 : <><ShieldCheck size={16} /> Verify & Submit Application</>
@@ -256,7 +256,7 @@ export default function AgencyRegisterPage() {
               </button>
               <span style={{ color: '#e5e7eb' }}>·</span>
               <button type="button" onClick={() => { setError(''); sendOtp() }} disabled={resendCooldown > 0 || sending}
-                style={{ background: 'none', border: 'none', cursor: resendCooldown > 0 ? 'not-allowed' : 'pointer', fontSize: 13, color: resendCooldown > 0 ? '#9ca3af' : '#8A6E1C', fontWeight: 600 }}>
+                style={{ background: 'none', border: 'none', cursor: resendCooldown > 0 ? 'not-allowed' : 'pointer', fontSize: 13, color: resendCooldown > 0 ? '#9ca3af' : '#C14B00', fontWeight: 600 }}>
                 {resendCooldown > 0 ? `Resend in ${resendCooldown}s` : 'Resend Code'}
               </button>
             </div>

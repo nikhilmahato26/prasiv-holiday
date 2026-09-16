@@ -8,7 +8,7 @@ export default function TagSelector({
   onChange,
   options = [],
   onOptionsUpdate,
-  color = '#8A6E1C',
+  color = '#C14B00',
   placeholder,
 }) {
   const [newVal, setNewVal] = useState('')

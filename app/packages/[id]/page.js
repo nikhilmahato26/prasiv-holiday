@@ -85,7 +85,7 @@ export default function PackagePage({ params }) {
   if (loading) return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="text-center">
-        <div className="w-10 h-10 border-4 border-gray-100 border-t-[#16294D] rounded-full animate-spin mx-auto mb-3" />
+        <div className="w-10 h-10 border-4 border-gray-100 border-t-[#013893] rounded-full animate-spin mx-auto mb-3" />
         <p className="text-gray-400">Loading package...</p>
       </div>
     </div>
@@ -96,7 +96,7 @@ export default function PackagePage({ params }) {
       <div className="text-center">
         <div className="text-6xl mb-4">🗺️</div>
         <h2 className="text-2xl font-bold text-gray-700 mb-2">Package not found</h2>
-        <Link href="/" className="text-[#16294D] font-semibold underline hover:text-[#0E1B33]">← Back to home</Link>
+        <Link href="/" className="text-[#013893] font-semibold underline hover:text-[#012560]">← Back to home</Link>
       </div>
     </main>
   )
@@ -144,7 +144,7 @@ export default function PackagePage({ params }) {
               <ArrowLeft size={16} /> Back to packages
             </Link>
             <div className="flex flex-wrap gap-2.5 mb-4">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-white shadow-sm" style={{ backgroundColor: pkg.badgeColor || '#16294D' }}>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-white shadow-sm" style={{ backgroundColor: pkg.badgeColor || '#013893' }}>
                 <MapPin size={12} /> {pkg.destination}
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-white text-xs font-bold shadow-sm">
@@ -179,8 +179,8 @@ export default function PackagePage({ params }) {
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {pkg.highlights.map((h, i) => (
                     <li key={i} className="flex items-start gap-3 text-gray-700">
-                      <span className="w-6 h-6 rounded-full bg-[#EEF2F8] flex items-center justify-center shrink-0 mt-0.5">
-                        <Check size={14} className="text-[#16294D] stroke-[3]" />
+                      <span className="w-6 h-6 rounded-full bg-[#E6F0FF] flex items-center justify-center shrink-0 mt-0.5">
+                        <Check size={14} className="text-[#013893] stroke-[3]" />
                       </span>
                       <span className="leading-relaxed font-medium">{h}</span>
                     </li>
@@ -192,9 +192,9 @@ export default function PackagePage({ params }) {
             {/* Note */}
             {pkg.note?.trim() && (
               <section>
-                <div className="bg-[#FBF6E7] border border-[#EBD79A] rounded-2xl p-4 flex gap-3 items-start">
-                  <Info size={20} className="text-[#C9A227] shrink-0 mt-0.5" />
-                  <p className="text-[#6B5514] text-sm leading-relaxed whitespace-pre-wrap m-0">
+                <div className="bg-[#FFF0E5] border border-[#FFCA99] rounded-2xl p-4 flex gap-3 items-start">
+                  <Info size={20} className="text-[#FB6D01] shrink-0 mt-0.5" />
+                  <p className="text-[#8A3300] text-sm leading-relaxed whitespace-pre-wrap m-0">
                     <strong className="font-bold">Note: </strong>{pkg.note}
                   </p>
                 </div>
@@ -237,7 +237,7 @@ export default function PackagePage({ params }) {
                             <a
                               href={`https://wa.me/${whatsapp}?text=${encodeURIComponent(`Hi! I want to reserve the following package:\n\nPackage: ${pkg.title}\nPackage ID: ${pkg.id}\nDate: ${fmtRange(dr)}`)}`}
                               target="_blank" rel="noopener noreferrer"
-                              className="px-5 py-2.5 rounded-full bg-gradient-to-r from-[#16294D] to-[#2F5490] text-white font-semibold text-xs shadow-md hover:shadow-lg transition-shadow shrink-0"
+                              className="px-5 py-2.5 rounded-full bg-gradient-to-r from-[#013893] to-[#0252D8] text-white font-semibold text-xs shadow-md hover:shadow-lg transition-shadow shrink-0"
                             >
                               Reserve
                             </a>
@@ -262,13 +262,13 @@ export default function PackagePage({ params }) {
                     const isOpen = openDay === i;
                     
                     return (
-                      <div key={i} className={`border rounded-2xl overflow-hidden transition-all duration-300 ${isOpen ? 'border-[#16294D]/30 shadow-md bg-white' : 'border-gray-200 bg-white shadow-sm hover:border-gray-300'}`}>
+                      <div key={i} className={`border rounded-2xl overflow-hidden transition-all duration-300 ${isOpen ? 'border-[#013893]/30 shadow-md bg-white' : 'border-gray-200 bg-white shadow-sm hover:border-gray-300'}`}>
                         <button
                           onClick={() => setOpenDay(isOpen ? -1 : i)}
-                          className={`w-full flex items-center justify-between p-5 text-left transition-colors cursor-pointer ${isOpen ? 'bg-[#EEF2F8]/30' : ''}`}
+                          className={`w-full flex items-center justify-between p-5 text-left transition-colors cursor-pointer ${isOpen ? 'bg-[#E6F0FF]/30' : ''}`}
                         >
                           <div className="flex items-center gap-4">
-                            <div className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0 transition-colors ${isOpen ? 'bg-[#16294D]' : 'bg-gray-800'}`}>
+                            <div className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0 transition-colors ${isOpen ? 'bg-[#013893]' : 'bg-gray-800'}`}>
                               {day.day}
                             </div>
                             <div>
@@ -306,7 +306,7 @@ export default function PackagePage({ params }) {
                                           {act.time}
                                         </div>
                                       ) : (
-                                        <div className="w-3 h-3 rounded-full bg-[#16294D] border-2 border-white shadow-[0_0_0_2px_rgba(22,41,77,0.2)] mt-1.5" />
+                                        <div className="w-3 h-3 rounded-full bg-[#013893] border-2 border-white shadow-[0_0_0_2px_rgba(22,41,77,0.2)] mt-1.5" />
                                       )}
                                     </div>
                                     
@@ -364,7 +364,7 @@ export default function PackagePage({ params }) {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                 {[
                   { label: 'Inclusions', items: pkg.inclusions, icon: Check, color: 'text-green-600', bg: 'bg-green-100' },
-                  { label: 'Exclusions', items: pkg.exclusions, icon: X,     color: 'text-[#1F3B66]', bg: 'bg-[#DDE5F0]' },
+                  { label: 'Exclusions', items: pkg.exclusions, icon: X,     color: 'text-[#012E7A]', bg: 'bg-[#CCE0FF]' },
                 ].map(({ label, items, icon: Icon, color, bg }) => (
                   <div key={label} className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
                     <h3 className="font-bold text-lg text-gray-900 mb-4 flex items-center gap-3">
@@ -389,8 +389,8 @@ export default function PackagePage({ params }) {
             {/* Enquiry Form */}
             <section className="bg-white rounded-[32px] p-6 lg:p-10 border border-gray-100 shadow-xl shadow-gray-200/40">
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-12 h-12 rounded-xl bg-[#EEF2F8] flex items-center justify-center shrink-0">
-                  <Send size={24} className="text-[#16294D]" />
+                <div className="w-12 h-12 rounded-xl bg-[#E6F0FF] flex items-center justify-center shrink-0">
+                  <Send size={24} className="text-[#013893]" />
                 </div>
                 <div>
                   <h2 className="font-heading font-bold text-2xl text-gray-900 mb-1">Send an Enquiry</h2>
@@ -420,7 +420,7 @@ export default function PackagePage({ params }) {
                         value={enquiry.name}
                         onChange={e => setEnquiry(q => ({ ...q, name: e.target.value }))}
                         placeholder="e.g. Rahul Sharma"
-                        className="w-full bg-gray-50 border border-gray-200 text-gray-900 font-medium rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#16294D]/20 focus:border-[#16294D] transition-all"
+                        className="w-full bg-gray-50 border border-gray-200 text-gray-900 font-medium rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#013893]/20 focus:border-[#013893] transition-all"
                       />
                     </div>
                     <div>
@@ -431,7 +431,7 @@ export default function PackagePage({ params }) {
                         value={enquiry.phone}
                         onChange={e => setEnquiry(q => ({ ...q, phone: e.target.value }))}
                         placeholder="e.g. 9876543210"
-                        className="w-full bg-gray-50 border border-gray-200 text-gray-900 font-medium rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#16294D]/20 focus:border-[#16294D] transition-all"
+                        className="w-full bg-gray-50 border border-gray-200 text-gray-900 font-medium rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#013893]/20 focus:border-[#013893] transition-all"
                       />
                     </div>
                   </div>
@@ -442,7 +442,7 @@ export default function PackagePage({ params }) {
                       value={enquiry.email}
                       onChange={e => setEnquiry(q => ({ ...q, email: e.target.value }))}
                       placeholder="e.g. rahul@email.com"
-                      className="w-full bg-gray-50 border border-gray-200 text-gray-900 font-medium rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#16294D]/20 focus:border-[#16294D] transition-all"
+                      className="w-full bg-gray-50 border border-gray-200 text-gray-900 font-medium rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#013893]/20 focus:border-[#013893] transition-all"
                     />
                   </div>
                   <div>
@@ -452,12 +452,12 @@ export default function PackagePage({ params }) {
                       value={enquiry.message}
                       onChange={e => setEnquiry(q => ({ ...q, message: e.target.value }))}
                       placeholder="Any specific dates, group size, or questions?"
-                      className="w-full bg-gray-50 border border-gray-200 text-gray-900 font-medium rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#16294D]/20 focus:border-[#16294D] transition-all resize-none"
+                      className="w-full bg-gray-50 border border-gray-200 text-gray-900 font-medium rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#013893]/20 focus:border-[#013893] transition-all resize-none"
                     />
                   </div>
                   
                   {enquiryStatus === 'error' && (
-                    <p className="text-[#2F5490] text-sm font-medium">Something went wrong. Please try again.</p>
+                    <p className="text-[#0252D8] text-sm font-medium">Something went wrong. Please try again.</p>
                   )}
                   
                   <button
@@ -466,7 +466,7 @@ export default function PackagePage({ params }) {
                     className={`w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all shadow-md ${
                       enquiryStatus === 'sending' 
                         ? 'bg-gray-200 text-gray-500 cursor-not-allowed shadow-none' 
-                        : 'bg-[#16294D] hover:bg-[#0E1B33] text-white hover:shadow-lg hover:-translate-y-0.5 cursor-pointer'
+                        : 'bg-[#013893] hover:bg-[#012560] text-white hover:shadow-lg hover:-translate-y-0.5 cursor-pointer'
                     }`}
                   >
                     {enquiryStatus === 'sending' ? (
@@ -489,7 +489,7 @@ export default function PackagePage({ params }) {
           {!isMobile && (
             <div className="lg:col-span-4">
               <div className="sticky top-28 bg-white rounded-3xl border border-gray-100 shadow-2xl shadow-gray-200/50 overflow-hidden">
-                <div className="bg-gradient-to-br from-[#16294D] to-[#2F5490] p-8">
+                <div className="bg-gradient-to-br from-[#013893] to-[#0252D8] p-8">
                   <div className="flex items-center gap-2 mb-2">
                     {pkg.originalPrice && pkg.originalPrice > pkg.salePrice && (
                       <>
@@ -520,7 +520,7 @@ export default function PackagePage({ params }) {
                         { Icon: Users, n: pkg.adults, s: 'Adult', p: 'Adults' },
                         { Icon: Baby, n: pkg.children, s: 'Child', p: 'Children' },
                       ].filter(({ n }) => Number(n) > 0).map(({ Icon, n, s, p }) => (
-                        <span key={s} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#EEF2F8] text-[#16294D] text-xs font-bold">
+                        <span key={s} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#E6F0FF] text-[#013893] text-xs font-bold">
                           <Icon size={14} /> {n} {Number(n) !== 1 ? p : s}
                         </span>
                       ))}
@@ -573,7 +573,7 @@ export default function PackagePage({ params }) {
                   <div className="space-y-3">
                     <a
                       href={`tel:+${phone}`}
-                      className="flex items-center justify-center gap-2 w-full py-3.5 rounded-full bg-gradient-to-r from-[#16294D] to-[#2F5490] text-white font-bold text-sm shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all cursor-pointer"
+                      className="flex items-center justify-center gap-2 w-full py-3.5 rounded-full bg-gradient-to-r from-[#013893] to-[#0252D8] text-white font-bold text-sm shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all cursor-pointer"
                     >
                       <Phone size={18} /> Call to Book
                     </a>
@@ -601,9 +601,9 @@ export default function PackagePage({ params }) {
       {/* Mobile sticky bottom bar */}
       {isMobile && (
         <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-100 shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
-          <div className="flex items-start gap-2 px-4 py-2 bg-[#FBF6E7] border-b border-[#F5E9C6]">
-            <Info size={12} className="text-[#B08D1F] shrink-0 mt-0.5" />
-            <span className="text-[10px] text-[#8A6E1C] leading-tight font-medium">
+          <div className="flex items-start gap-2 px-4 py-2 bg-[#FFF0E5] border-b border-[#FFE4CC]">
+            <Info size={12} className="text-[#E05A00] shrink-0 mt-0.5" />
+            <span className="text-[10px] text-[#C14B00] leading-tight font-medium">
               {Number(pkg.childPrice) > 0 ? `${fmt(pkg.childPrice)}/child · ` : ''}Rate may change based on your customization.
             </span>
           </div>
@@ -612,14 +612,14 @@ export default function PackagePage({ params }) {
               {pkg.originalPrice && pkg.originalPrice > pkg.salePrice && (
                 <div className="text-[10px] text-gray-400 line-through font-medium">{fmt(pkg.originalPrice)}</div>
               )}
-              <div className="text-xl font-heading font-bold text-[#16294D] leading-none">
+              <div className="text-xl font-heading font-bold text-[#013893] leading-none">
                 {fmt(pkg.salePrice)}
                 <span className="text-[10px] text-gray-500 font-medium ml-1">/{Number(pkg.childPrice) > 0 ? 'adult' : 'person'}</span>
               </div>
             </div>
             <a
               href={`tel:+${phone}`}
-              className="px-5 py-2.5 rounded-full bg-gradient-to-r from-[#16294D] to-[#2F5490] text-white font-bold text-sm flex items-center gap-1.5 shadow-md cursor-pointer"
+              className="px-5 py-2.5 rounded-full bg-gradient-to-r from-[#013893] to-[#0252D8] text-white font-bold text-sm flex items-center gap-1.5 shadow-md cursor-pointer"
             >
               <Phone size={14} /> Call
             </a>

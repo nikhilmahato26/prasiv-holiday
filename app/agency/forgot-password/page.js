@@ -15,7 +15,7 @@ export default function ForgotPasswordPage() {
   const [resendCooldown, setResendCooldown] = useState(0)
 
   const S = {
-    page: { minHeight: '100vh', background: 'linear-gradient(135deg,#0f172a 0%,#16294D 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px 20px' },
+    page: { minHeight: '100vh', background: 'linear-gradient(135deg,#0f172a 0%,#013893 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px 20px' },
     card: { background: '#fff', borderRadius: 24, width: '100%', maxWidth: 420, boxShadow: '0 25px 60px rgba(0,0,0,0.3)', overflow: 'hidden' },
     input: { width: '100%', padding: '11px 14px 11px 40px', borderRadius: 10, border: '1.5px solid #e5e7eb', fontSize: 14, color: '#111', background: '#f9fafb', outline: 'none', boxSizing: 'border-box' },
     label: { fontSize: 11, fontWeight: 700, color: '#6b7280', letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: 6, display: 'block' },
@@ -84,7 +84,7 @@ export default function ForgotPasswordPage() {
           <p style={{ color: '#6b7280', lineHeight: 1.7, marginBottom: 28, fontSize: 15 }}>
             Your password has been updated successfully. You can now sign in with your new password.
           </p>
-          <Link href="/agency" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '12px 28px', borderRadius: 999, background: 'linear-gradient(135deg,#16294D,#0f172a)', color: '#fff', fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
+          <Link href="/agency" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '12px 28px', borderRadius: 999, background: 'linear-gradient(135deg,#013893,#0f172a)', color: '#fff', fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
             Go to Login
           </Link>
         </div>
@@ -97,7 +97,7 @@ export default function ForgotPasswordPage() {
       <style>{`@keyframes spin { to { transform: rotate(360deg) } }`}</style>
       <div style={S.card}>
         {/* Header */}
-        <div style={{ padding: '28px 32px', background: 'linear-gradient(135deg,#16294D,#0f172a)' }}>
+        <div style={{ padding: '28px 32px', background: 'linear-gradient(135deg,#013893,#0f172a)' }}>
           <Link href="/agency" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, color: 'rgba(255,255,255,0.6)', fontSize: 13, fontWeight: 600, textDecoration: 'none', marginBottom: 16 }}>
             <ArrowLeft size={14} /> Back to Login
           </Link>
@@ -118,12 +118,12 @@ export default function ForgotPasswordPage() {
             const active = (n === 1 && step === 'email') || (n === 2 && step === 'reset')
             const done = n === 1 && step === 'reset'
             return (
-              <div key={n} style={{ flex: 1, padding: '10px 0', textAlign: 'center', borderBottom: active ? '2px solid #8A6E1C' : '2px solid transparent' }}>
+              <div key={n} style={{ flex: 1, padding: '10px 0', textAlign: 'center', borderBottom: active ? '2px solid #C14B00' : '2px solid transparent' }}>
                 <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
-                  <div style={{ width: 20, height: 20, borderRadius: '50%', background: done ? '#22c55e' : active ? '#8A6E1C' : '#e5e7eb', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 700, color: done || active ? '#fff' : '#9ca3af' }}>
+                  <div style={{ width: 20, height: 20, borderRadius: '50%', background: done ? '#22c55e' : active ? '#C14B00' : '#e5e7eb', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 700, color: done || active ? '#fff' : '#9ca3af' }}>
                     {done ? <Check size={11} /> : n}
                   </div>
-                  <span style={{ fontSize: 12, fontWeight: 600, color: active ? '#8A6E1C' : done ? '#22c55e' : '#9ca3af' }}>{label}</span>
+                  <span style={{ fontSize: 12, fontWeight: 600, color: active ? '#C14B00' : done ? '#22c55e' : '#9ca3af' }}>{label}</span>
                 </div>
               </div>
             )
@@ -153,7 +153,7 @@ export default function ForgotPasswordPage() {
               />
             </div>
             <button onClick={sendOtp} disabled={loading || !email.trim()}
-              style={{ width: '100%', padding: '13px 0', borderRadius: 12, border: 'none', cursor: (loading || !email.trim()) ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#16294D,#0f172a)', color: '#fff', fontWeight: 700, fontSize: 15, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, opacity: (loading || !email.trim()) ? 0.65 : 1 }}>
+              style={{ width: '100%', padding: '13px 0', borderRadius: 12, border: 'none', cursor: (loading || !email.trim()) ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#013893,#0f172a)', color: '#fff', fontWeight: 700, fontSize: 15, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, opacity: (loading || !email.trim()) ? 0.65 : 1 }}>
               {loading
                 ? <><span style={{ width: 16, height: 16, border: '2px solid rgba(255,255,255,0.3)', borderTop: '2px solid #fff', borderRadius: '50%', animation: 'spin 1s linear infinite', display: 'inline-block' }} /> Sending...</>
                 : <><Mail size={16} /> Send Verification Code</>
@@ -215,7 +215,7 @@ export default function ForgotPasswordPage() {
             </div>
 
             <button type="submit" disabled={loading || otp.length !== 6 || !newPassword || newPassword !== confirm}
-              style={{ width: '100%', padding: '13px 0', borderRadius: 12, border: 'none', cursor: (loading || otp.length !== 6 || !newPassword || newPassword !== confirm) ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#16294D,#0f172a)', color: '#fff', fontWeight: 700, fontSize: 15, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, opacity: (loading || otp.length !== 6 || !newPassword || newPassword !== confirm) ? 0.65 : 1, marginBottom: 14 }}>
+              style={{ width: '100%', padding: '13px 0', borderRadius: 12, border: 'none', cursor: (loading || otp.length !== 6 || !newPassword || newPassword !== confirm) ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#013893,#0f172a)', color: '#fff', fontWeight: 700, fontSize: 15, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, opacity: (loading || otp.length !== 6 || !newPassword || newPassword !== confirm) ? 0.65 : 1, marginBottom: 14 }}>
               {loading
                 ? <><span style={{ width: 16, height: 16, border: '2px solid rgba(255,255,255,0.3)', borderTop: '2px solid #fff', borderRadius: '50%', animation: 'spin 1s linear infinite', display: 'inline-block' }} /> Resetting...</>
                 : <><KeyRound size={16} /> Reset Password</>
@@ -229,7 +229,7 @@ export default function ForgotPasswordPage() {
               </button>
               <span style={{ color: '#e5e7eb' }}>·</span>
               <button type="button" onClick={() => { setError(''); setOtp(''); sendOtp() }} disabled={resendCooldown > 0 || loading}
-                style={{ background: 'none', border: 'none', cursor: resendCooldown > 0 ? 'not-allowed' : 'pointer', fontSize: 13, color: resendCooldown > 0 ? '#9ca3af' : '#8A6E1C', fontWeight: 600 }}>
+                style={{ background: 'none', border: 'none', cursor: resendCooldown > 0 ? 'not-allowed' : 'pointer', fontSize: 13, color: resendCooldown > 0 ? '#9ca3af' : '#C14B00', fontWeight: 600 }}>
                 {resendCooldown > 0 ? `Resend in ${resendCooldown}s` : 'Resend Code'}
               </button>
             </div>

@@ -8,7 +8,7 @@ const FALLBACK_SLIDES = [
     tagline: 'God\'s Own Country Awaits',
     desc: 'From misty hill stations to tranquil backwaters — discover the magic of Kerala with handcrafted packages.',
     image: 'https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=1600&q=85',
-    accent: '#16294D',
+    accent: '#013893',
     tag: 'Kerala',
     badge: 'Discover',
   },
@@ -17,7 +17,7 @@ const FALLBACK_SLIDES = [
     tagline: 'Float Through Alleppey',
     desc: 'Glide through emerald backwaters on a traditional houseboat, surrounded by coconut palms and village life.',
     image: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1600&q=85',
-    accent: '#8A6E1C',
+    accent: '#C14B00',
     tag: 'Alleppey',
     badge: 'Homestays',
   },
@@ -26,7 +26,7 @@ const FALLBACK_SLIDES = [
     tagline: 'Misty Hills & Green Carpets',
     desc: 'Wake up to tea-scented mist, trek through shola forests, and sip freshly brewed estate chai.',
     image: 'https://images.unsplash.com/photo-1637066742971-726bee8d9f56?q=80',
-    accent: '#16294D',
+    accent: '#013893',
     tag: 'Munnar',
     badge: 'Group Tours',
   },
@@ -38,7 +38,7 @@ function pkgToSlide(pkg) {
     tagline: pkg.subtitle || pkg.badge || '',
     desc: pkg.overview ? pkg.overview.slice(0, 160) + (pkg.overview.length > 160 ? '…' : '') : '',
     image: pkg.heroImage || pkg.image || '',
-    accent: pkg.badgeColor || '#8A6E1C',
+    accent: pkg.badgeColor || '#C14B00',
     tag: pkg.destination || '',
     badge: pkg.badge || '',
     pkgId: pkg.id,
@@ -122,7 +122,7 @@ export default function HeroSlider() {
 
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
               <a href={slide.pkgId ? `/packages/${slide.pkgId}` : '#packages'}
-                style={{ padding: '12px 28px', borderRadius: 999, background: 'linear-gradient(135deg,#8A6E1C,#8A6E1C)', color: '#fff', fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>
+                style={{ padding: '12px 28px', borderRadius: 999, background: 'linear-gradient(135deg,#C14B00,#C14B00)', color: '#fff', fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>
                 {slide.pkgId ? 'View Package' : 'View Packages'}
               </a>
               <a href="#packages"
@@ -143,7 +143,7 @@ export default function HeroSlider() {
         <div style={{ display: 'flex', gap: 8 }}>
           {slides.map((_, i) => (
             <button key={i} onClick={() => go(i)}
-              style={{ height: 8, borderRadius: 999, width: i === current ? 28 : 8, background: i === current ? '#8A6E1C' : 'rgba(255,255,255,0.5)', border: 'none', cursor: 'pointer', transition: 'all 0.3s ease' }} />
+              style={{ height: 8, borderRadius: 999, width: i === current ? 28 : 8, background: i === current ? '#C14B00' : 'rgba(255,255,255,0.5)', border: 'none', cursor: 'pointer', transition: 'all 0.3s ease' }} />
           ))}
         </div>
         <button onClick={next}

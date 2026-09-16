@@ -207,7 +207,7 @@ export default function FleetAdmin() {
             </div>
             <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 12, marginTop: 24 }}>
               <button onClick={() => setModal(false)} style={S.btn('#f3f4f6', '#4b5563')}>Cancel</button>
-              <button onClick={handleSave} disabled={saving} style={{ ...S.btn('#8A6E1C', '#fff'), opacity: saving ? 0.7 : 1 }}>
+              <button onClick={handleSave} disabled={saving} style={{ ...S.btn('#C14B00', '#fff'), opacity: saving ? 0.7 : 1 }}>
                 {saving ? 'Saving...' : 'Save'}
               </button>
             </div>

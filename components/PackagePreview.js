@@ -20,7 +20,7 @@ export default function PackagePreview({ pkg }) {
   const sale = Number(pkg.salePrice) || 0
   const save = orig > sale ? orig - sale : 0
   const lists = [
-    { label: 'Highlights', items: pkg.highlights, icon: '★', color: '#16294D' },
+    { label: 'Highlights', items: pkg.highlights, icon: '★', color: '#013893' },
     { label: 'Inclusions', items: pkg.inclusions, icon: '✓', color: '#22c55e' },
     { label: 'Exclusions', items: pkg.exclusions, icon: '✕', color: '#ef4444' },
   ].filter(l => (l.items || []).filter(Boolean).length)
@@ -34,7 +34,7 @@ export default function PackagePreview({ pkg }) {
           : <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#9ca3af', fontSize: 13 }}>No image added</div>}
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.35), transparent)' }} />
         {pkg.destination && (
-          <span style={{ position: 'absolute', top: 12, left: 12, display: 'inline-flex', alignItems: 'center', gap: 4, padding: '4px 10px', borderRadius: 999, background: (pkg.badgeColor || '#16294D') + 'dd', color: '#fff', fontSize: 11, fontWeight: 600 }}>
+          <span style={{ position: 'absolute', top: 12, left: 12, display: 'inline-flex', alignItems: 'center', gap: 4, padding: '4px 10px', borderRadius: 999, background: (pkg.badgeColor || '#013893') + 'dd', color: '#fff', fontSize: 11, fontWeight: 600 }}>
             <MapPin size={10} /> {pkg.destination}
           </span>
         )}
@@ -56,9 +56,9 @@ export default function PackagePreview({ pkg }) {
         )}
         {(Number(pkg.adults) > 0 || Number(pkg.children) > 0 || Number(pkg.rooms) > 0) && (
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 10 }}>
-            {Number(pkg.adults) > 0 && <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5, padding: '5px 12px', background: '#f0f4f8', borderRadius: 999, fontSize: 12, fontWeight: 600, color: '#16294D' }}><Users size={12} /> {pkg.adults} Adult{Number(pkg.adults) !== 1 ? 's' : ''}</span>}
-            {Number(pkg.children) > 0 && <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5, padding: '5px 12px', background: '#f0f4f8', borderRadius: 999, fontSize: 12, fontWeight: 600, color: '#16294D' }}><Baby size={12} /> {pkg.children} Child{Number(pkg.children) !== 1 ? 'ren' : ''}</span>}
-            {Number(pkg.rooms) > 0 && <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5, padding: '5px 12px', background: '#f0f4f8', borderRadius: 999, fontSize: 12, fontWeight: 600, color: '#16294D' }}><BedDouble size={12} /> {pkg.rooms} Room{Number(pkg.rooms) !== 1 ? 's' : ''}</span>}
+            {Number(pkg.adults) > 0 && <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5, padding: '5px 12px', background: '#f0f4f8', borderRadius: 999, fontSize: 12, fontWeight: 600, color: '#013893' }}><Users size={12} /> {pkg.adults} Adult{Number(pkg.adults) !== 1 ? 's' : ''}</span>}
+            {Number(pkg.children) > 0 && <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5, padding: '5px 12px', background: '#f0f4f8', borderRadius: 999, fontSize: 12, fontWeight: 600, color: '#013893' }}><Baby size={12} /> {pkg.children} Child{Number(pkg.children) !== 1 ? 'ren' : ''}</span>}
+            {Number(pkg.rooms) > 0 && <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5, padding: '5px 12px', background: '#f0f4f8', borderRadius: 999, fontSize: 12, fontWeight: 600, color: '#013893' }}><BedDouble size={12} /> {pkg.rooms} Room{Number(pkg.rooms) !== 1 ? 's' : ''}</span>}
           </div>
         )}
       </div>
@@ -161,7 +161,7 @@ export default function PackagePreview({ pkg }) {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
             {(pkg.availableDates || []).map((g, gi) => (
               <div key={gi} style={{ border: '1px solid #f3f4f6', borderRadius: 10, padding: 10, background: '#fafafa' }}>
-                {g.month && <div style={{ fontSize: 12, fontWeight: 700, color: '#16294D', marginBottom: 4 }}>{g.month}</div>}
+                {g.month && <div style={{ fontSize: 12, fontWeight: 700, color: '#013893', marginBottom: 4 }}>{g.month}</div>}
                 {(g.dates || []).map((dr, di) => {
                   const d = getDR(dr)
                   return (d.start || d.end) ? (
@@ -184,7 +184,7 @@ export default function PackagePreview({ pkg }) {
             {(pkg.itinerary || []).map((day, di) => (
               <div key={di} style={{ border: '1px solid #f3f4f6', borderRadius: 12, padding: 14, background: '#fafafa' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: day.description ? 6 : 8 }}>
-                  <div style={{ width: 26, height: 26, borderRadius: '50%', background: 'linear-gradient(135deg,#16294D,#0f172a)', color: '#fff', fontSize: 12, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>{day.day}</div>
+                  <div style={{ width: 26, height: 26, borderRadius: '50%', background: 'linear-gradient(135deg,#013893,#0f172a)', color: '#fff', fontSize: 12, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>{day.day}</div>
                   <div style={{ fontWeight: 700, fontSize: 14, color: '#111' }}>{day.title || `Day ${day.day}`}</div>
                 </div>
                 {day.description && <p style={{ fontSize: 13, color: '#6b7280', lineHeight: 1.5, marginBottom: 8 }}>{day.description}</p>}

@@ -337,7 +337,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
           {/* Left Column: Info (5 cols) */}
           <div className="lg:col-span-5 space-y-8 lg:sticky lg:top-28">
             <div>
-              <p className="text-[#8A6E1C] font-semibold tracking-wider text-xs uppercase mb-3">
+              <p className="text-[#C14B00] font-semibold tracking-wider text-xs uppercase mb-3">
                 Get In Touch
               </p>
               <h2 className="text-4xl md:text-5xl font-heading font-bold text-gray-900 leading-[1.2] mb-6">
@@ -351,16 +351,16 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
             <div className="space-y-6">
               {/* Phone */}
               <div className="flex items-start gap-4">
-                <div className="bg-[#EEF2F8] p-3.5 rounded-xl text-[#16294D] flex-shrink-0">
+                <div className="bg-[#E6F0FF] p-3.5 rounded-xl text-[#013893] flex-shrink-0">
                   <Phone size={22} />
                 </div>
                 <div>
                   <span className="text-gray-400 text-xs font-semibold uppercase tracking-wider block mb-1">Phone Number</span>
-                  <a href={`tel:+${phone}`} className="text-gray-800 text-sm font-bold hover:text-[#16294D] transition-colors block">
+                  <a href={`tel:+${phone}`} className="text-gray-800 text-sm font-bold hover:text-[#013893] transition-colors block">
                     +{phone.substring(0,2)} {phone.substring(2,7)} {phone.substring(7)}
                   </a>
                   {phone2 && phone2 !== phone && (
-                    <a href={`tel:+${phone2}`} className="text-gray-800 text-sm font-bold hover:text-[#16294D] transition-colors block">
+                    <a href={`tel:+${phone2}`} className="text-gray-800 text-sm font-bold hover:text-[#013893] transition-colors block">
                       +{phone2.substring(0,2)} {phone2.substring(2,7)} {phone2.substring(7)}
                     </a>
                   )}
@@ -369,16 +369,16 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
 
               {/* Email */}
               <div className="flex items-start gap-4">
-                <div className="bg-[#EEF2F8] p-3.5 rounded-xl text-[#16294D] flex-shrink-0">
+                <div className="bg-[#E6F0FF] p-3.5 rounded-xl text-[#013893] flex-shrink-0">
                   <Mail size={22} />
                 </div>
                 <div>
                   <span className="text-gray-400 text-xs font-semibold uppercase tracking-wider block mb-1">Email Address</span>
-                  <a href={`mailto:${emailSettings}`} className="text-gray-800 text-sm font-bold hover:text-[#16294D] transition-colors block">
+                  <a href={`mailto:${emailSettings}`} className="text-gray-800 text-sm font-bold hover:text-[#013893] transition-colors block">
                     {emailSettings}
                   </a>
                   {emailSettings2 && emailSettings2 !== emailSettings && (
-                    <a href={`mailto:${emailSettings2}`} className="text-gray-800 text-sm font-bold hover:text-[#16294D] transition-colors block mt-1">
+                    <a href={`mailto:${emailSettings2}`} className="text-gray-800 text-sm font-bold hover:text-[#013893] transition-colors block mt-1">
                       {emailSettings2}
                     </a>
                   )}
@@ -408,7 +408,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                 id="package"
                 onClick={() => { setActiveTab('package'); setSubmitStatus(null); }}
                 className={`py-3 px-4 text-sm font-bold border-b-2 whitespace-nowrap transition-colors cursor-pointer ${
-                  activeTab === 'package' ? 'border-[#16294D] text-[#16294D]' : 'border-transparent text-gray-500 hover:text-gray-800'
+                  activeTab === 'package' ? 'border-[#013893] text-[#013893]' : 'border-transparent text-gray-500 hover:text-gray-800'
                 }`}
               >
                 Package Enquiry
@@ -417,7 +417,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                 id="flight"
                 onClick={() => { setActiveTab('flight'); setSubmitStatus(null); }}
                 className={`py-3 px-4 text-sm font-bold border-b-2 whitespace-nowrap transition-colors cursor-pointer ${
-                  activeTab === 'flight' ? 'border-[#16294D] text-[#16294D]' : 'border-transparent text-gray-500 hover:text-gray-800'
+                  activeTab === 'flight' ? 'border-[#013893] text-[#013893]' : 'border-transparent text-gray-500 hover:text-gray-800'
                 }`}
               >
                 Flight Booking
@@ -426,7 +426,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                 id="train"
                 onClick={() => { setActiveTab('train'); setSubmitStatus(null); }}
                 className={`py-3 px-4 text-sm font-bold border-b-2 whitespace-nowrap transition-colors cursor-pointer ${
-                  activeTab === 'train' ? 'border-[#16294D] text-[#16294D]' : 'border-transparent text-gray-500 hover:text-gray-800'
+                  activeTab === 'train' ? 'border-[#013893] text-[#013893]' : 'border-transparent text-gray-500 hover:text-gray-800'
                 }`}
               >
                 Train Booking
@@ -444,11 +444,11 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
               </div>
             )}
             {submitStatus === 'error' && (
-              <div className="bg-[#EEF2F8] border border-[#C3D0E4] text-[#0E1B33] rounded-2xl p-4 mb-6 flex items-start gap-3">
-                <AlertCircle size={20} className="text-[#2F5490] shrink-0 mt-0.5" />
+              <div className="bg-[#E6F0FF] border border-[#B3D4FF] text-[#012560] rounded-2xl p-4 mb-6 flex items-start gap-3">
+                <AlertCircle size={20} className="text-[#0252D8] shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-bold text-sm">Submission Failed</h4>
-                  <p className="text-xs text-[#0E1B33] mt-1">There was a problem submitting your request. Please try again or contact us directly.</p>
+                  <p className="text-xs text-[#012560] mt-1">There was a problem submitting your request. Please try again or contact us directly.</p>
                 </div>
               </div>
             )}
@@ -456,7 +456,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
             {/* 1. PACKAGE ENQUIRY FORM */}
             {activeTab === 'package' && (
               <form onSubmit={handlePackageSubmit} className="space-y-6">
-                <div className="text-xs font-bold text-[#16294D] uppercase tracking-wider border-b border-gray-200 pb-2 mb-4">
+                <div className="text-xs font-bold text-[#013893] uppercase tracking-wider border-b border-gray-200 pb-2 mb-4">
                   Contact Details
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -468,7 +468,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                       value={packageForm.name}
                       onChange={(e) => setPackageForm({ ...packageForm, name: e.target.value })}
                       placeholder="Contact Name" 
-                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#16294D] transition-colors"
+                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#013893] transition-colors"
                     />
                   </div>
                   <div>
@@ -479,7 +479,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                       value={packageForm.phone}
                       onChange={(e) => setPackageForm({ ...packageForm, phone: e.target.value })}
                       placeholder="+91 XXXXX XXXXX" 
-                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#16294D] transition-colors"
+                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#013893] transition-colors"
                     />
                   </div>
                 </div>
@@ -491,11 +491,11 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                     value={packageForm.email}
                     onChange={(e) => setPackageForm({ ...packageForm, email: e.target.value })}
                     placeholder="your@email.com" 
-                    className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#16294D] transition-colors"
+                    className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#013893] transition-colors"
                   />
                 </div>
 
-                <div className="text-xs font-bold text-[#16294D] uppercase tracking-wider border-b border-gray-200 pb-2 pt-4">
+                <div className="text-xs font-bold text-[#013893] uppercase tracking-wider border-b border-gray-200 pb-2 pt-4">
                   Destination & Tour Package
                 </div>
 
@@ -506,7 +506,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                       required
                       value={packageForm.destination}
                       onChange={(e) => handleDestinationChange(e.target.value)}
-                      className="w-full bg-white border border-gray-200 text-gray-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#16294D] transition-colors"
+                      className="w-full bg-white border border-gray-200 text-gray-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#013893] transition-colors"
                     >
                       <option value="">-- Select Destination State --</option>
                       {uniqueDestinations.map((dest) => (
@@ -521,7 +521,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                       disabled={!packageForm.destination}
                       value={packageForm.packageId}
                       onChange={(e) => setPackageForm({ ...packageForm, packageId: e.target.value })}
-                      className="w-full bg-white border border-gray-200 text-gray-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#16294D] transition-colors disabled:opacity-50"
+                      className="w-full bg-white border border-gray-200 text-gray-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#013893] transition-colors disabled:opacity-50"
                     >
                       <option value="">-- Select Package --</option>
                       {filteredPackagesForEnquiry.map((pkg) => (
@@ -534,7 +534,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                 </div>
 
                 {/* Package Travellers Details Section */}
-                <div className="text-xs font-bold text-[#16294D] uppercase tracking-wider border-b border-gray-200 pb-2 pt-4 flex items-center justify-between">
+                <div className="text-xs font-bold text-[#013893] uppercase tracking-wider border-b border-gray-200 pb-2 pt-4 flex items-center justify-between">
                   <span>Traveller Details</span>
                   <button 
                     type="button"
@@ -556,7 +556,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                           <button
                             type="button"
                             onClick={() => removePackageTraveller(idx)}
-                            className="text-[#2F5490] hover:text-[#0E1B33] cursor-pointer"
+                            className="text-[#0252D8] hover:text-[#012560] cursor-pointer"
                           >
                             <Trash2 size={15} />
                           </button>
@@ -571,7 +571,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                             value={traveller.name}
                             onChange={(e) => updatePackageTraveller(idx, 'name', e.target.value)}
                             placeholder="Full Name" 
-                            className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-[#16294D] transition-colors"
+                            className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-[#013893] transition-colors"
                           />
                         </div>
                         <div className="md:col-span-3">
@@ -583,14 +583,14 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                             value={traveller.age}
                             onChange={(e) => updatePackageTraveller(idx, 'age', e.target.value)}
                             placeholder="Age" 
-                            className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-[#16294D] transition-colors"
+                            className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-[#013893] transition-colors"
                           />
                         </div>
                         <div className="md:col-span-3">
                           <select
                             value={traveller.gender}
                             onChange={(e) => updatePackageTraveller(idx, 'gender', e.target.value)}
-                            className="w-full bg-white border border-gray-200 text-gray-800 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-[#16294D] transition-colors"
+                            className="w-full bg-white border border-gray-200 text-gray-800 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-[#013893] transition-colors"
                           >
                             <option>Male</option>
                             <option>Female</option>
@@ -609,14 +609,14 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                     value={packageForm.message}
                     onChange={(e) => setPackageForm({ ...packageForm, message: e.target.value })}
                     placeholder="Enter details like dates of travel, food preferences, hotel ratings..." 
-                    className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#16294D] transition-colors resize-none"
+                    className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#013893] transition-colors resize-none"
                   ></textarea>
                 </div>
 
                 <button 
                   type="submit" 
                   disabled={submitStatus === 'submitting'}
-                  className="w-full bg-[#16294D] hover:bg-[#0E1B33] text-white py-4 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2 shadow-md disabled:opacity-50 cursor-pointer"
+                  className="w-full bg-[#013893] hover:bg-[#012560] text-white py-4 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2 shadow-md disabled:opacity-50 cursor-pointer"
                 >
                   {submitStatus === 'submitting' ? 'Sending...' : 'Send Package Enquiry'}
                   <ArrowRight size={18} />
@@ -627,7 +627,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
             {/* 2. AIR TICKET BOOKING FORM */}
             {activeTab === 'flight' && (
               <form onSubmit={handleFlightSubmit} className="space-y-6">
-                <div className="text-xs font-bold text-[#16294D] uppercase tracking-wider border-b border-gray-200 pb-2 mb-4">
+                <div className="text-xs font-bold text-[#013893] uppercase tracking-wider border-b border-gray-200 pb-2 mb-4">
                   Flight Details
                 </div>
 
@@ -639,7 +639,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                       required
                       value={flightForm.journeyDate}
                       onChange={(e) => setFlightForm({ ...flightForm, journeyDate: e.target.value })}
-                      className="w-full bg-white border border-gray-200 text-gray-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#16294D] transition-colors"
+                      className="w-full bg-white border border-gray-200 text-gray-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#013893] transition-colors"
                     />
                   </div>
                   <div>
@@ -651,7 +651,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                           name="tripType"
                           checked={flightForm.tripType === 'One Way'}
                           onChange={() => setFlightForm({ ...flightForm, tripType: 'One Way' })}
-                          className="accent-[#16294D]"
+                          className="accent-[#013893]"
                         />
                         One Way
                       </label>
@@ -661,7 +661,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                           name="tripType"
                           checked={flightForm.tripType === 'Round Trip'}
                           onChange={() => setFlightForm({ ...flightForm, tripType: 'Round Trip' })}
-                          className="accent-[#16294D]"
+                          className="accent-[#013893]"
                         />
                         Round Trip
                       </label>
@@ -678,7 +678,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                       value={flightForm.fromCity}
                       onChange={(e) => setFlightForm({ ...flightForm, fromCity: e.target.value })}
                       placeholder="Origin City/Airport" 
-                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#16294D] transition-colors"
+                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#013893] transition-colors"
                     />
                   </div>
                   <div>
@@ -689,7 +689,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                       value={flightForm.toCity}
                       onChange={(e) => setFlightForm({ ...flightForm, toCity: e.target.value })}
                       placeholder="Destination City/Airport" 
-                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#16294D] transition-colors"
+                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#013893] transition-colors"
                     />
                   </div>
                 </div>
@@ -702,7 +702,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                       value={flightForm.flightNo}
                       onChange={(e) => setFlightForm({ ...flightForm, flightNo: e.target.value })}
                       placeholder="e.g. AI 101" 
-                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#16294D] transition-colors"
+                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#013893] transition-colors"
                     />
                   </div>
                   <div className="md:col-span-1">
@@ -712,7 +712,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                       value={flightForm.departureTime}
                       onChange={(e) => setFlightForm({ ...flightForm, departureTime: e.target.value })}
                       placeholder="e.g. 10:00 AM" 
-                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#16294D] transition-colors"
+                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#013893] transition-colors"
                     />
                   </div>
                   <div className="md:col-span-1">
@@ -720,7 +720,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                     <select
                       value={flightForm.class}
                       onChange={(e) => setFlightForm({ ...flightForm, class: e.target.value })}
-                      className="w-full bg-white border border-gray-200 text-gray-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#16294D] transition-colors"
+                      className="w-full bg-white border border-gray-200 text-gray-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#013893] transition-colors"
                     >
                       <option>Economy</option>
                       <option>Premium Economy</option>
@@ -730,7 +730,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                 </div>
 
                 {/* Flight Passengers Section */}
-                <div className="text-xs font-bold text-[#16294D] uppercase tracking-wider border-b border-gray-200 pb-2 pt-4 flex items-center justify-between">
+                <div className="text-xs font-bold text-[#013893] uppercase tracking-wider border-b border-gray-200 pb-2 pt-4 flex items-center justify-between">
                   <span>Passenger Details</span>
                   <button 
                     type="button"
@@ -752,7 +752,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                           <button
                             type="button"
                             onClick={() => removeFlightPassenger(idx)}
-                            className="text-[#2F5490] hover:text-[#0E1B33] cursor-pointer"
+                            className="text-[#0252D8] hover:text-[#012560] cursor-pointer"
                           >
                             <Trash2 size={15} />
                           </button>
@@ -767,7 +767,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                             value={passenger.name}
                             onChange={(e) => updateFlightPassenger(idx, 'name', e.target.value)}
                             placeholder="Full Name" 
-                            className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-[#16294D] transition-colors"
+                            className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-[#013893] transition-colors"
                           />
                         </div>
                         <div className="md:col-span-3">
@@ -779,14 +779,14 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                             value={passenger.age}
                             onChange={(e) => updateFlightPassenger(idx, 'age', e.target.value)}
                             placeholder="Age" 
-                            className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-[#16294D] transition-colors"
+                            className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-[#013893] transition-colors"
                           />
                         </div>
                         <div className="md:col-span-3">
                           <select
                             value={passenger.gender}
                             onChange={(e) => updateFlightPassenger(idx, 'gender', e.target.value)}
-                            className="w-full bg-white border border-gray-200 text-gray-800 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-[#16294D] transition-colors"
+                            className="w-full bg-white border border-gray-200 text-gray-800 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-[#013893] transition-colors"
                           >
                             <option>Male</option>
                             <option>Female</option>
@@ -799,7 +799,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                 </div>
 
                 {/* Contact Section */}
-                <div className="text-xs font-bold text-[#16294D] uppercase tracking-wider border-b border-gray-200 pb-2 pt-4">
+                <div className="text-xs font-bold text-[#013893] uppercase tracking-wider border-b border-gray-200 pb-2 pt-4">
                   Contact & Communication Details
                 </div>
 
@@ -812,7 +812,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                       value={flightForm.contactName}
                       onChange={(e) => setFlightForm({ ...flightForm, contactName: e.target.value })}
                       placeholder="Contact Name" 
-                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#16294D] transition-colors"
+                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#013893] transition-colors"
                     />
                   </div>
                   <div>
@@ -823,7 +823,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                       value={flightForm.contactPhone}
                       onChange={(e) => setFlightForm({ ...flightForm, contactPhone: e.target.value })}
                       placeholder="+91 XXXXX XXXXX" 
-                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#16294D] transition-colors"
+                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#013893] transition-colors"
                     />
                   </div>
                 </div>
@@ -836,7 +836,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                       value={flightForm.contactEmail}
                       onChange={(e) => setFlightForm({ ...flightForm, contactEmail: e.target.value })}
                       placeholder="your@email.com" 
-                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#16294D] transition-colors"
+                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#013893] transition-colors"
                     />
                   </div>
                   <div>
@@ -846,7 +846,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                       value={flightForm.contactAddress}
                       onChange={(e) => setFlightForm({ ...flightForm, contactAddress: e.target.value })}
                       placeholder="Full Address" 
-                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#16294D] transition-colors"
+                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#013893] transition-colors"
                     />
                   </div>
                 </div>
@@ -854,7 +854,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                 <button 
                   type="submit" 
                   disabled={submitStatus === 'submitting'}
-                  className="w-full bg-[#16294D] hover:bg-[#0E1B33] text-white py-4 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2 shadow-md disabled:opacity-50 cursor-pointer"
+                  className="w-full bg-[#013893] hover:bg-[#012560] text-white py-4 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2 shadow-md disabled:opacity-50 cursor-pointer"
                 >
                   {submitStatus === 'submitting' ? 'Sending...' : 'Request Flight Booking'}
                   <ArrowRight size={18} />
@@ -865,7 +865,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
             {/* 3. INDIAN RAILWAYS RESERVATION FORM */}
             {activeTab === 'train' && (
               <form onSubmit={handleTrainSubmit} className="space-y-6">
-                <div className="text-xs font-bold text-[#16294D] uppercase tracking-wider border-b border-gray-200 pb-2 mb-4">
+                <div className="text-xs font-bold text-[#013893] uppercase tracking-wider border-b border-gray-200 pb-2 mb-4">
                   Train Journey Details
                 </div>
 
@@ -878,7 +878,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                       value={trainForm.fromStation}
                       onChange={(e) => setTrainForm({ ...trainForm, fromStation: e.target.value })}
                       placeholder="Origin Station" 
-                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#16294D] transition-colors"
+                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#013893] transition-colors"
                     />
                   </div>
                   <div>
@@ -889,7 +889,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                       value={trainForm.toStation}
                       onChange={(e) => setTrainForm({ ...trainForm, toStation: e.target.value })}
                       placeholder="Destination Station" 
-                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#16294D] transition-colors"
+                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#013893] transition-colors"
                     />
                   </div>
                 </div>
@@ -902,7 +902,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                       required
                       value={trainForm.journeyDate}
                       onChange={(e) => setTrainForm({ ...trainForm, journeyDate: e.target.value })}
-                      className="w-full bg-white border border-gray-200 text-gray-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#16294D] transition-colors"
+                      className="w-full bg-white border border-gray-200 text-gray-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#013893] transition-colors"
                     />
                   </div>
                   <div>
@@ -912,7 +912,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                       value={trainForm.trainNo}
                       onChange={(e) => setTrainForm({ ...trainForm, trainNo: e.target.value })}
                       placeholder="e.g. 12952 Mumbai Rajdhani" 
-                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#16294D] transition-colors"
+                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#013893] transition-colors"
                     />
                   </div>
                 </div>
@@ -928,7 +928,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                           onClick={() => setTrainForm({ ...trainForm, class: cls })}
                           className={`px-3 py-1.5 rounded-lg text-xs font-bold border transition-colors cursor-pointer ${
                             trainForm.class === cls
-                              ? 'bg-[#16294D] border-[#16294D] text-white'
+                              ? 'bg-[#013893] border-[#013893] text-white'
                               : 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50'
                           }`}
                         >
@@ -947,7 +947,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                           onClick={() => setTrainForm({ ...trainForm, quota: qut })}
                           className={`px-3 py-1.5 rounded-lg text-xs font-bold border transition-colors cursor-pointer ${
                             trainForm.quota === qut
-                              ? 'bg-[#16294D] border-[#16294D] text-white'
+                              ? 'bg-[#013893] border-[#013893] text-white'
                               : 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50'
                           }`}
                         >
@@ -959,7 +959,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                 </div>
 
                 {/* Train Passengers Section */}
-                <div className="text-xs font-bold text-[#16294D] uppercase tracking-wider border-b border-gray-200 pb-2 pt-4 flex items-center justify-between">
+                <div className="text-xs font-bold text-[#013893] uppercase tracking-wider border-b border-gray-200 pb-2 pt-4 flex items-center justify-between">
                   <span>Passenger Details</span>
                   <button 
                     type="button"
@@ -981,7 +981,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                           <button
                             type="button"
                             onClick={() => removeTrainPassenger(idx)}
-                            className="text-[#2F5490] hover:text-[#0E1B33] cursor-pointer"
+                            className="text-[#0252D8] hover:text-[#012560] cursor-pointer"
                           >
                             <Trash2 size={15} />
                           </button>
@@ -996,7 +996,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                             value={passenger.name}
                             onChange={(e) => updateTrainPassenger(idx, 'name', e.target.value)}
                             placeholder="Name" 
-                            className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-[#16294D] transition-colors"
+                            className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-[#013893] transition-colors"
                           />
                         </div>
                         <div className="md:col-span-2">
@@ -1008,14 +1008,14 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                             value={passenger.age}
                             onChange={(e) => updateTrainPassenger(idx, 'age', e.target.value)}
                             placeholder="Age" 
-                            className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-[#16294D] transition-colors"
+                            className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-[#013893] transition-colors"
                           />
                         </div>
                         <div className="md:col-span-2">
                           <select
                             value={passenger.gender}
                             onChange={(e) => updateTrainPassenger(idx, 'gender', e.target.value)}
-                            className="w-full bg-white border border-gray-200 text-gray-800 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-[#16294D] transition-colors"
+                            className="w-full bg-white border border-gray-200 text-gray-800 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-[#013893] transition-colors"
                           >
                             <option>Male</option>
                             <option>Female</option>
@@ -1026,7 +1026,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                           <select
                             value={passenger.berth}
                             onChange={(e) => updateTrainPassenger(idx, 'berth', e.target.value)}
-                            className="w-full bg-white border border-gray-200 text-gray-800 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-[#16294D] transition-colors"
+                            className="w-full bg-white border border-gray-200 text-gray-800 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-[#013893] transition-colors"
                           >
                             <option>No Preference</option>
                             <option>Lower</option>
@@ -1048,7 +1048,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                             value={passenger.idCard}
                             onChange={(e) => updateTrainPassenger(idx, 'idCard', e.target.value)}
                             placeholder="Aadhaar / Voter ID / Passport Number" 
-                            className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-[#16294D] transition-colors"
+                            className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-[#013893] transition-colors"
                           />
                         </div>
                       )}
@@ -1057,7 +1057,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                 </div>
 
                 {/* Contact Section */}
-                <div className="text-xs font-bold text-[#16294D] uppercase tracking-wider border-b border-gray-200 pb-2 pt-4">
+                <div className="text-xs font-bold text-[#013893] uppercase tracking-wider border-b border-gray-200 pb-2 pt-4">
                   Contact & Address Details
                 </div>
 
@@ -1070,7 +1070,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                       value={trainForm.contactPhone}
                       onChange={(e) => setTrainForm({ ...trainForm, contactPhone: e.target.value })}
                       placeholder="+91 XXXXX XXXXX" 
-                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#16294D] transition-colors"
+                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#013893] transition-colors"
                     />
                   </div>
                   <div>
@@ -1080,7 +1080,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                       value={trainForm.contactAddress}
                       onChange={(e) => setTrainForm({ ...trainForm, contactAddress: e.target.value })}
                       placeholder="Full Address" 
-                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#16294D] transition-colors"
+                      className="w-full bg-white border border-gray-200 text-gray-800 placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#013893] transition-colors"
                     />
                   </div>
                 </div>
@@ -1088,7 +1088,7 @@ Address: ${trainForm.contactAddress || 'N/A'}`;
                 <button 
                   type="submit" 
                   disabled={submitStatus === 'submitting'}
-                  className="w-full bg-[#16294D] hover:bg-[#0E1B33] text-white py-4 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2 shadow-md disabled:opacity-50 cursor-pointer"
+                  className="w-full bg-[#013893] hover:bg-[#012560] text-white py-4 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2 shadow-md disabled:opacity-50 cursor-pointer"
                 >
                   {submitStatus === 'submitting' ? 'Sending...' : 'Request Train Reservation'}
                   <ArrowRight size={18} />

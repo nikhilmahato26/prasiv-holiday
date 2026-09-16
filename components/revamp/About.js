@@ -50,7 +50,7 @@ const About = () => {
           {/* Text Content */}
           <div className="space-y-8 pl-4 lg:pl-8">
             <div>
-              <p className="text-[#8A6E1C] font-semibold tracking-wider text-xs uppercase mb-3">
+              <p className="text-[#C14B00] font-semibold tracking-wider text-xs uppercase mb-3">
                 About PRASHIV HOLIDAY
               </p>
               <h2 className="text-4xl md:text-5xl font-heading font-bold text-gray-900 leading-[1.25] mb-6">
@@ -67,7 +67,7 @@ const About = () => {
             {/* Stats Callouts */}
             <div className="grid grid-cols-2 gap-6 pt-4">
               <div className="bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:shadow-md transition-shadow">
-                <div className="text-[#16294D] mb-2 flex items-center gap-2">
+                <div className="text-[#013893] mb-2 flex items-center gap-2">
                   <Award size={22} />
                   <span className="font-heading font-bold text-2xl">15+ Years</span>
                 </div>
@@ -75,7 +75,7 @@ const About = () => {
               </div>
 
               <div className="bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:shadow-md transition-shadow">
-                <div className="text-[#16294D] mb-2 flex items-center gap-2">
+                <div className="text-[#013893] mb-2 flex items-center gap-2">
                   <Users size={22} />
                   <span className="font-heading font-bold text-2xl">25,000+</span>
                 </div>
@@ -96,7 +96,7 @@ const About = () => {
           {/* Card 1: Our Expertise */}
           <div className="bg-white rounded-3xl p-8 border border-gray-100/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
             <div>
-              <div className="w-12 h-12 bg-[#EEF2F8] text-[#16294D] rounded-2xl flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-[#E6F0FF] text-[#013893] rounded-2xl flex items-center justify-center mb-6">
                 <Target size={24} />
               </div>
               <h3 className="font-heading font-bold text-gray-900 text-xl mb-4">Our Expertise</h3>
@@ -117,7 +117,7 @@ const About = () => {
           {/* Card 2: Our Vision */}
           <div className="bg-white rounded-3xl p-8 border border-gray-100/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
             <div>
-              <div className="w-12 h-12 bg-[#EEF2F8] text-[#16294D] rounded-2xl flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-[#E6F0FF] text-[#013893] rounded-2xl flex items-center justify-center mb-6">
                 <Target size={24} />
               </div>
               <h3 className="font-heading font-bold text-gray-900 text-xl mb-4">Our Vision</h3>
@@ -147,7 +147,7 @@ const About = () => {
 
             {/* Tagline Callout */}
             <div className="bg-white/10 border border-white/15 rounded-2xl p-5 mt-6 space-y-2">
-              <div className="text-xs tracking-widest text-[#C9A227] font-bold uppercase">PRASHIV HOLIDAY</div>
+              <div className="text-xs tracking-widest text-[#FB6D01] font-bold uppercase">PRASHIV HOLIDAY</div>
               <p className="font-heading font-bold text-sm text-white">
                 Plan Better. Travel Better. Travel With Confidence.
               </p>
@@ -159,7 +159,7 @@ const About = () => {
 
         {/* Action Button */}
         <div className="flex justify-center mt-16">
-          <a href="#contact" className="inline-flex items-center gap-2 bg-[#16294D] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#0E1B33] transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5">
+          <a href="#contact" className="inline-flex items-center gap-2 bg-[#013893] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#012560] transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5">
             Plan Your Journey With Us
             <ArrowRight size={18} />
           </a>

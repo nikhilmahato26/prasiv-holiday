@@ -17,11 +17,11 @@ export default function TeamSection() {
     <section style={{ padding: '80px 24px', background: '#fff' }}>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: 48 }}>
-          <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.3em', textTransform: 'uppercase', color: '#8A6E1C', marginBottom: 10 }}>
+          <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.3em', textTransform: 'uppercase', color: '#C14B00', marginBottom: 10 }}>
             Our People
           </p>
           <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(2rem, 5vw, 3rem)', color: '#111', marginBottom: 12 }}>
-            Meet <span style={{ color: '#8A6E1C' }}>Our Team</span>
+            Meet <span style={{ color: '#C14B00' }}>Our Team</span>
           </h2>
           <p style={{ color: '#6b7280', maxWidth: 600, margin: '0 auto', lineHeight: 1.6 }}>
             The passionate individuals who make your travel experiences unforgettable.
@@ -48,7 +48,7 @@ export default function TeamSection() {
               </div>
               <div style={{ padding: '24px', textAlign: 'center', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <h3 style={{ margin: 0, fontFamily: 'Poppins, sans-serif', fontSize: '1.25rem', fontWeight: 700, color: '#111' }}>{member.name}</h3>
-                <p style={{ margin: '8px 0 0', color: '#8A6E1C', fontSize: '0.9rem', fontWeight: 600 }}>{member.role}</p>
+                <p style={{ margin: '8px 0 0', color: '#C14B00', fontSize: '0.9rem', fontWeight: 600 }}>{member.role}</p>
               </div>
             </div>
           ))}

@@ -33,7 +33,7 @@ const Services = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-[#8A6E1C] font-semibold tracking-wider text-xs uppercase mb-3">
+          <p className="text-[#C14B00] font-semibold tracking-wider text-xs uppercase mb-3">
             What We Do
           </p>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-6">
@@ -54,12 +54,12 @@ const Services = () => {
                 className="bg-white rounded-3xl p-5 border border-gray-200/60 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center group cursor-default"
               >
                 {/* Icon Container */}
-                <div className="w-12 h-12 bg-[#EEF2F8] text-[#16294D] rounded-2xl flex items-center justify-center mb-4 group-hover:bg-[#16294D] group-hover:text-white transition-colors duration-300">
+                <div className="w-12 h-12 bg-[#E6F0FF] text-[#013893] rounded-2xl flex items-center justify-center mb-4 group-hover:bg-[#013893] group-hover:text-white transition-colors duration-300">
                   <Icon size={22} strokeWidth={1.75} />
                 </div>
                 
                 {/* Title */}
-                <h4 className="font-heading font-bold text-gray-900 text-sm md:text-base mb-1 tracking-tight leading-tight group-hover:text-[#16294D] transition-colors">
+                <h4 className="font-heading font-bold text-gray-900 text-sm md:text-base mb-1 tracking-tight leading-tight group-hover:text-[#013893] transition-colors">
                   {srv.name}
                 </h4>
                 

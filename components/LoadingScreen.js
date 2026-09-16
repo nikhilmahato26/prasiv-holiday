@@ -39,7 +39,7 @@ export default function LoadingScreen() {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
-      color: '#8A6E1C'
+      color: '#C14B00'
     }}>
       <Plane className="loader-plane" size={48} />
       <h2 style={{

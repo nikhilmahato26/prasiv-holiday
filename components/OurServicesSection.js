@@ -52,7 +52,7 @@ export default function OurServicesSection() {
             fontWeight: 700,
             letterSpacing: '0.2em',
             textTransform: 'uppercase',
-            color: '#C9A227',
+            color: '#FB6D01',
             marginBottom: 12
           }}>
             What We Do
@@ -64,7 +64,7 @@ export default function OurServicesSection() {
             color: '#111',
             lineHeight: 1.2
           }}>
-            Our <span style={{ color: '#8A6E1C' }}>Services</span>
+            Our <span style={{ color: '#C14B00' }}>Services</span>
           </h2>
         </div>
 
@@ -131,7 +131,7 @@ export default function OurServicesSection() {
                   width: 40,
                   height: 40,
                   borderRadius: '50%',
-                  background: '#C9A227',
+                  background: '#FB6D01',
                   color: '#fff',
                   display: 'flex',
                   alignItems: 'center',

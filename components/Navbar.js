@@ -42,7 +42,7 @@ export default function Navbar({ big = false }) {
           <Link href="/" className="flex items-center justify-center group">
             <div className="w-14 h-14 md:w-16 md:h-16 relative shrink-0">
               <Image
-                src="/logo.png"
+                src="/logo-new.jpeg"
                 alt="Prashiv Holiday"
                 fill
                 sizes="(max-width: 768px) 56px, 64px"
@@ -61,7 +61,7 @@ export default function Navbar({ big = false }) {
                 style={{ color: '#374151' }}
               >
                 {l.label}
-                <span className="absolute -bottom-0.5 left-0 h-0.5 w-0 group-hover:w-full transition-all duration-300 rounded-full" style={{ background: '#8A6E1C' }} />
+                <span className="absolute -bottom-0.5 left-0 h-0.5 w-0 group-hover:w-full transition-all duration-300 rounded-full" style={{ background: '#C14B00' }} />
               </Link>
             ))}
           </div>
@@ -71,7 +71,7 @@ export default function Navbar({ big = false }) {
             <a
               href={`tel:+${phone}`}
               className="flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full border transition-all duration-200"
-              style={{ borderColor: '#8A6E1C', color: '#8A6E1C' }}
+              style={{ borderColor: '#C14B00', color: '#C14B00' }}
             >
               <Phone size={14} /> Call Us
             </a>
@@ -105,7 +105,7 @@ export default function Navbar({ big = false }) {
               <a
                 href={`tel:+${phone}`}
                 className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-full text-sm font-semibold border"
-                style={{ borderColor: '#8A6E1C', color: '#8A6E1C' }}
+                style={{ borderColor: '#C14B00', color: '#C14B00' }}
               >
                 <Phone size={14} /> Call
               </a>

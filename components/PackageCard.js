@@ -75,7 +75,7 @@ export default function PackageCard({ pkg, phone = '917796950505' }) {
             </a>
           </div>
 
-          <button style={{ marginTop: 14, width: '100%', padding: '12px 0', borderRadius: 999, fontWeight: 600, fontSize: 14, color: '#fff', background: 'linear-gradient(135deg, #8A6E1C, #8A6E1C)', border: 'none', cursor: 'pointer' }}>
+          <button style={{ marginTop: 14, width: '100%', padding: '12px 0', borderRadius: 999, fontWeight: 600, fontSize: 14, color: '#fff', background: 'linear-gradient(135deg, #C14B00, #C14B00)', border: 'none', cursor: 'pointer' }}>
             View Details
           </button>
         </div>

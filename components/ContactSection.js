@@ -40,11 +40,11 @@ export default function ContactSection({ phone, email, whatsapp }) {
     <section id="contact" style={{ padding: '80px 24px', background: '#FAF7EC' }}>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: 48 }}>
-          <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.3em', textTransform: 'uppercase', color: '#8A6E1C', marginBottom: 10 }}>
+          <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.3em', textTransform: 'uppercase', color: '#C14B00', marginBottom: 10 }}>
             Get In Touch
           </p>
           <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(2rem, 5vw, 3rem)', color: '#111', marginBottom: 12 }}>
-            Contact <span style={{ color: '#8A6E1C' }}>Us</span>
+            Contact <span style={{ color: '#C14B00' }}>Us</span>
           </h2>
           <p style={{ color: '#6b7280', maxWidth: 500, margin: '0 auto', lineHeight: 1.6 }}>
             Ready to plan your trip? Fill out the form below or reach out to us directly.
@@ -97,7 +97,7 @@ export default function ContactSection({ phone, email, whatsapp }) {
                 
                 <button type="submit" disabled={status === 'sending'}
                   style={{ width: '100%', padding: '14px 0', borderRadius: 10, border: 'none', marginTop: 8,
-                    background: status === 'sending' ? '#e5e7eb' : 'linear-gradient(135deg,#8A6E1C,#8A6E1C)',
+                    background: status === 'sending' ? '#e5e7eb' : 'linear-gradient(135deg,#C14B00,#C14B00)',
                     color: status === 'sending' ? '#9ca3af' : '#fff', fontWeight: 700, fontSize: 15,
                     cursor: status === 'sending' ? 'not-allowed' : 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8 }}>
                   {status === 'sending'
@@ -114,8 +114,8 @@ export default function ContactSection({ phone, email, whatsapp }) {
               <h3 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 24, color: '#111', marginBottom: 24 }}>Contact Details</h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
                 <a href={`tel:+${phone}`} style={{ display: 'flex', alignItems: 'flex-start', gap: 16, textDecoration: 'none', color: 'inherit' }}>
-                  <div style={{ width: 44, height: 44, borderRadius: 12, background: '#FBF6E7', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                    <Phone size={20} style={{ color: '#8A6E1C' }} />
+                  <div style={{ width: 44, height: 44, borderRadius: 12, background: '#FFF0E5', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <Phone size={20} style={{ color: '#C14B00' }} />
                   </div>
                   <div>
                     <div style={{ fontSize: 12, fontWeight: 700, color: '#9ca3af', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Phone</div>
@@ -124,8 +124,8 @@ export default function ContactSection({ phone, email, whatsapp }) {
                 </a>
                 {email && (
                   <a href={`mailto:${email}`} style={{ display: 'flex', alignItems: 'flex-start', gap: 16, textDecoration: 'none', color: 'inherit' }}>
-                    <div style={{ width: 44, height: 44, borderRadius: 12, background: '#FBF6E7', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                      <Mail size={20} style={{ color: '#8A6E1C' }} />
+                    <div style={{ width: 44, height: 44, borderRadius: 12, background: '#FFF0E5', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                      <Mail size={20} style={{ color: '#C14B00' }} />
                     </div>
                     <div>
                       <div style={{ fontSize: 12, fontWeight: 700, color: '#9ca3af', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Email Address</div>
@@ -134,8 +134,8 @@ export default function ContactSection({ phone, email, whatsapp }) {
                   </a>
                 )}
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: 16 }}>
-                  <div style={{ width: 44, height: 44, borderRadius: 12, background: '#FBF6E7', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                    <MapPin size={20} style={{ color: '#8A6E1C' }} />
+                  <div style={{ width: 44, height: 44, borderRadius: 12, background: '#FFF0E5', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <MapPin size={20} style={{ color: '#C14B00' }} />
                   </div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                     <div>
@@ -145,7 +145,7 @@ export default function ContactSection({ phone, email, whatsapp }) {
                         239, Vivek vihar, Ranipur mor,<br/>
                         Haridwar-249401
                       </div>
-                      <a href="https://maps.app.goo.gl/cQp5bUePhXKk3tin6?g_st=awb" target="_blank" rel="noopener noreferrer" style={{ fontSize: 12, fontWeight: 700, color: '#8A6E1C', display: 'inline-flex', alignItems: 'center', gap: 4, marginTop: 6, textDecoration: 'none' }}>
+                      <a href="https://maps.app.goo.gl/cQp5bUePhXKk3tin6?g_st=awb" target="_blank" rel="noopener noreferrer" style={{ fontSize: 12, fontWeight: 700, color: '#C14B00', display: 'inline-flex', alignItems: 'center', gap: 4, marginTop: 6, textDecoration: 'none' }}>
                         View on Map
                       </a>
                     </div>
@@ -158,7 +158,7 @@ export default function ContactSection({ phone, email, whatsapp }) {
                         Flat number 03, Aravalli apartments,<br/>
                         Iris global mahipalpur bypass, Delhi
                       </div>
-                      <a href="https://maps.app.goo.gl/bCAXe6AwZZK3dsUK8?g_st=awb" target="_blank" rel="noopener noreferrer" style={{ fontSize: 12, fontWeight: 700, color: '#8A6E1C', display: 'inline-flex', alignItems: 'center', gap: 4, marginTop: 6, textDecoration: 'none' }}>
+                      <a href="https://maps.app.goo.gl/bCAXe6AwZZK3dsUK8?g_st=awb" target="_blank" rel="noopener noreferrer" style={{ fontSize: 12, fontWeight: 700, color: '#C14B00', display: 'inline-flex', alignItems: 'center', gap: 4, marginTop: 6, textDecoration: 'none' }}>
                         View on Map
                       </a>
                     </div>

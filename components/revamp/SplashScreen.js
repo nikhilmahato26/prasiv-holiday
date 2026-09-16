@@ -35,7 +35,7 @@ const SplashScreen = () => {
       <div className="relative w-full h-full max-w-4xl mx-auto flex items-center justify-center p-4">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/logo.png"
+          src="/logo-new.jpeg"
           alt="Prashiv Holiday"
           className="w-64 h-64 md:w-80 md:h-80 object-contain animate-fade-in"
         />

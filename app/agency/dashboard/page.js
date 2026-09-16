@@ -34,7 +34,7 @@ const CATEGORIES = [
 ]
 
 const EMPTY_PKG = {
-  id: '', destination: '', badge: '', badgeColor: '#16294D', region: 'domestic',
+  id: '', destination: '', badge: '', badgeColor: '#013893', region: 'domestic',
   duration: '3', title: '', subtitle: '', hotels: '',
   adults: '', children: '', rooms: '',
   originalPrice: '', salePrice: '', childPrice: '', childAgeMin: '', childAgeMax: '', priceNote: 'Per Person',
@@ -97,7 +97,7 @@ export default function AgencyDashboard() {
     topbarInner: { maxWidth: 1100, margin: '0 auto', padding: '0 20px', height: 60, display: 'flex', alignItems: 'center', justifyContent: 'space-between' },
     body:        { maxWidth: 1100, margin: '0 auto', padding: '28px 20px' },
     card:        { background: '#fff', borderRadius: 16, boxShadow: '0 2px 8px rgba(0,0,0,0.06)', border: '1px solid #f3f4f6', overflow: 'hidden' },
-    btn:         (bg = '#8A6E1C', col = '#fff') => ({ padding: '8px 16px', borderRadius: 10, background: bg, color: col, border: 'none', fontWeight: 600, fontSize: 13, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6 }),
+    btn:         (bg = '#C14B00', col = '#fff') => ({ padding: '8px 16px', borderRadius: 10, background: bg, color: col, border: 'none', fontWeight: 600, fontSize: 13, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6 }),
     input:       { width: '100%', padding: '10px 12px', borderRadius: 10, border: '1.5px solid #e5e7eb', fontSize: 13, color: '#111', background: '#f9fafb', outline: 'none', boxSizing: 'border-box' },
     label:       { fontSize: 11, fontWeight: 700, color: '#6b7280', letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: 5, display: 'block' },
     overlay:     { position: 'fixed', inset: 0, zIndex: 50, background: 'rgba(0,0,0,0.45)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: '32px 16px', overflowY: 'auto' },
@@ -162,7 +162,7 @@ export default function AgencyDashboard() {
   const openAdd = () => {
     const first = destinations[0]
     const pkgId = 'GKT-' + Math.random().toString(36).slice(2, 8).toUpperCase()
-    setForm({ ...EMPTY_PKG, id: pkgId, destination: first?.name ?? '', badgeColor: first?.color ?? '#16294D', region: first?.region ?? 'domestic' })
+    setForm({ ...EMPTY_PKG, id: pkgId, destination: first?.name ?? '', badgeColor: first?.color ?? '#013893', region: first?.region ?? 'domestic' })
     setEditId(null)
     setShowPreview(false)
     setTab('basic')
@@ -263,7 +263,7 @@ export default function AgencyDashboard() {
     return (
       <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f0ece4' }}>
         <div style={{ textAlign: 'center' }}>
-          <div style={{ width: 40, height: 40, border: '3px solid #FAF7EC', borderTop: '3px solid #16294D', borderRadius: '50%', animation: 'spin 1s linear infinite', margin: '0 auto 12px' }} />
+          <div style={{ width: 40, height: 40, border: '3px solid #FAF7EC', borderTop: '3px solid #013893', borderRadius: '50%', animation: 'spin 1s linear infinite', margin: '0 auto 12px' }} />
           <p style={{ color: '#9ca3af', fontSize: 14 }}>Loading...</p>
         </div>
       </div>
@@ -296,7 +296,7 @@ export default function AgencyDashboard() {
         {/* Stats */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 12, marginBottom: 24 }}>
           {[
-            { label: 'Total', value: stats.total, color: '#16294D' },
+            { label: 'Total', value: stats.total, color: '#013893' },
             { label: 'Under Review', value: stats.pending, color: '#f59e0b' },
             { label: 'Live', value: stats.approved, color: '#22c55e' },
             { label: 'Rejected', value: stats.rejected, color: '#ef4444' },
@@ -316,7 +316,7 @@ export default function AgencyDashboard() {
 
         {/* Toolbar */}
         <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 16 }}>
-          <button onClick={openAdd} style={{ padding: '10px 20px', borderRadius: 10, border: 'none', cursor: 'pointer', background: 'linear-gradient(135deg,#16294D,#0f172a)', color: '#fff', fontWeight: 700, fontSize: 14, display: 'flex', alignItems: 'center', gap: 6 }}>
+          <button onClick={openAdd} style={{ padding: '10px 20px', borderRadius: 10, border: 'none', cursor: 'pointer', background: 'linear-gradient(135deg,#013893,#0f172a)', color: '#fff', fontWeight: 700, fontSize: 14, display: 'flex', alignItems: 'center', gap: 6 }}>
             <Plus size={16} /> Add Package
           </button>
         </div>
@@ -393,13 +393,13 @@ export default function AgencyDashboard() {
                             <button
                               onClick={() => openEdit(pkg)}
                               title="Edit package"
-                              style={{ display: 'inline-flex', alignItems: 'center', gap: 5, padding: '5px 12px', borderRadius: 999, border: '1.5px solid #e5e7eb', background: '#fff', cursor: 'pointer', fontWeight: 600, fontSize: 11, color: '#16294D' }}>
+                              style={{ display: 'inline-flex', alignItems: 'center', gap: 5, padding: '5px 12px', borderRadius: 999, border: '1.5px solid #e5e7eb', background: '#fff', cursor: 'pointer', fontWeight: 600, fontSize: 11, color: '#013893' }}>
                               <Pencil size={11} /> Edit
                             </button>
                             <button
                               onClick={() => openDuplicate(pkg)}
                               title="Duplicate package"
-                              style={{ display: 'inline-flex', alignItems: 'center', gap: 5, padding: '5px 12px', borderRadius: 999, border: '1.5px solid #e5e7eb', background: '#fff', cursor: 'pointer', fontWeight: 600, fontSize: 11, color: '#16294D' }}>
+                              style={{ display: 'inline-flex', alignItems: 'center', gap: 5, padding: '5px 12px', borderRadius: 999, border: '1.5px solid #e5e7eb', background: '#fff', cursor: 'pointer', fontWeight: 600, fontSize: 11, color: '#013893' }}>
                               <Copy size={11} /> Duplicate
                             </button>
                           </div>
@@ -441,7 +441,7 @@ export default function AgencyDashboard() {
       {modal === 'form' && (
         <div style={S.overlay}>
           <div style={S.modal}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 20px', background: 'linear-gradient(135deg,#16294D,#0f172a)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 20px', background: 'linear-gradient(135deg,#013893,#0f172a)' }}>
               <h2 style={{ fontWeight: 700, fontSize: 16, color: '#fff' }}>{showPreview ? 'Package Preview' : editId ? 'Edit Package' : 'Submit New Package'}</h2>
               <button onClick={() => setModal(null)} style={{ width: 30, height: 30, borderRadius: '50%', background: 'rgba(255,255,255,0.2)', border: 'none', cursor: 'pointer', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <X size={15} />
@@ -455,7 +455,7 @@ export default function AgencyDashboard() {
             <div style={{ display: 'flex', borderBottom: '1px solid #f3f4f6', padding: '0 20px' }}>
               {[['basic', 'Basic'], ...(['homestay','houseboat'].includes(form.category) ? [['stay', 'Stay Details']] : []), ['itinerary', 'Itinerary'], ['media', 'Media & Lists']].map(([k, l]) => (
                 <button key={k} onClick={() => setTab(k)}
-                  style={{ padding: '12px 14px', fontSize: 13, fontWeight: 600, border: 'none', background: 'none', cursor: 'pointer', borderBottom: `2px solid ${tab === k ? '#16294D' : 'transparent'}`, color: tab === k ? '#16294D' : '#9ca3af' }}>
+                  style={{ padding: '12px 14px', fontSize: 13, fontWeight: 600, border: 'none', background: 'none', cursor: 'pointer', borderBottom: `2px solid ${tab === k ? '#013893' : 'transparent'}`, color: tab === k ? '#013893' : '#9ca3af' }}>
                   {l}
                 </button>
               ))}
@@ -549,7 +549,7 @@ export default function AgencyDashboard() {
                     <div style={{ gridColumn: '1/-1' }}>
                       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10, marginTop: 4 }}>
                         <label style={S.label}>Available Dates</label>
-                        <button onClick={addDateGroup} style={{ fontSize: 12, fontWeight: 600, color: '#16294D', background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
+                        <button onClick={addDateGroup} style={{ fontSize: 12, fontWeight: 600, color: '#013893', background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
                           <Plus size={12} /> Add Batch
                         </button>
                       </div>
@@ -587,7 +587,7 @@ export default function AgencyDashboard() {
                                 </div>
                               )
                             })}
-                            <button onClick={() => addDateRange(gi)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#16294D', fontSize: 12, fontWeight: 600, padding: '2px 0' }}>+ Add date range</button>
+                            <button onClick={() => addDateRange(gi)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#013893', fontSize: 12, fontWeight: 600, padding: '2px 0' }}>+ Add date range</button>
                           </div>
                         )
                       })}
@@ -602,7 +602,7 @@ export default function AgencyDashboard() {
                     <div key={di} style={{ border: '1px solid #f3f4f6', borderRadius: 12, padding: 14, marginBottom: 10, background: '#fafafa' }}>
                       {/* Day header */}
                       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
-                        <div style={{ width: 28, height: 28, borderRadius: '50%', background: 'linear-gradient(135deg,#16294D,#0f172a)', color: '#fff', fontSize: 12, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{day.day}</div>
+                        <div style={{ width: 28, height: 28, borderRadius: '50%', background: 'linear-gradient(135deg,#013893,#0f172a)', color: '#fff', fontSize: 12, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{day.day}</div>
                         {(form.itinerary || []).length > 1 && <button onClick={() => removeDay(di)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#f87171', display: 'flex' }}><Trash2 size={14} /></button>}
                       </div>
                       <input value={day.title} onChange={e => itinChange(di, 'title', e.target.value)} style={{ ...S.input, marginBottom: 8 }} placeholder={`Day ${day.day} title (e.g. Arrival & Sightseeing)`} />
@@ -662,7 +662,7 @@ export default function AgencyDashboard() {
                       <button onClick={() => addActivity(di)} style={{ width: '100%', padding: '8px 0', borderRadius: 8, border: '1.5px dashed #e5e7eb', background: 'none', cursor: 'pointer', color: '#6b7280', fontSize: 12, fontWeight: 600 }}>+ Add Activity</button>
                     </div>
                   ))}
-                  <button onClick={addDay} style={{ width: '100%', padding: '10px 0', borderRadius: 12, border: '2px dashed #c7d2e0', background: 'none', cursor: 'pointer', color: '#16294D', fontSize: 13, fontWeight: 600 }}>+ Add Day</button>
+                  <button onClick={addDay} style={{ width: '100%', padding: '10px 0', borderRadius: 12, border: '2px dashed #c7d2e0', background: 'none', cursor: 'pointer', color: '#013893', fontSize: 13, fontWeight: 600 }}>+ Add Day</button>
                 </div>
               )}
 
@@ -680,7 +680,7 @@ export default function AgencyDashboard() {
                   ))}
 
                   {[
-                    { l: 'Highlights', f: 'highlights', type: 'highlight', color: '#16294D' },
+                    { l: 'Highlights', f: 'highlights', type: 'highlight', color: '#013893' },
                     { l: 'Inclusions', f: 'inclusions', type: 'inclusion', color: '#22c55e' },
                     { l: 'Exclusions', f: 'exclusions', type: 'exclusion', color: '#ef4444' },
                   ].map(({ l, f, type, color }) => (
@@ -708,12 +708,12 @@ export default function AgencyDashboard() {
               )}
               {!showPreview && (
                 <button onClick={() => setShowPreview(true)}
-                  style={{ padding: '9px 18px', borderRadius: 10, border: '1.5px solid #16294D', background: '#fff', color: '#16294D', fontWeight: 700, fontSize: 13, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6 }}>
+                  style={{ padding: '9px 18px', borderRadius: 10, border: '1.5px solid #013893', background: '#fff', color: '#013893', fontWeight: 700, fontSize: 13, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6 }}>
                   <Eye size={14} /> Preview
                 </button>
               )}
               <button onClick={handleSave} disabled={saving}
-                style={{ padding: '9px 20px', borderRadius: 10, border: 'none', cursor: saving ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#16294D,#0f172a)', color: '#fff', fontWeight: 700, fontSize: 13, display: 'flex', alignItems: 'center', gap: 6, opacity: saving ? 0.7 : 1 }}>
+                style={{ padding: '9px 20px', borderRadius: 10, border: 'none', cursor: saving ? 'not-allowed' : 'pointer', background: 'linear-gradient(135deg,#013893,#0f172a)', color: '#fff', fontWeight: 700, fontSize: 13, display: 'flex', alignItems: 'center', gap: 6, opacity: saving ? 0.7 : 1 }}>
                 {saving
                   ? <><span style={{ width: 13, height: 13, border: '2px solid rgba(255,255,255,0.3)', borderTop: '2px solid #fff', borderRadius: '50%', animation: 'spin 1s linear infinite', display: 'inline-block' }} /> Submitting...</>
                   : <><Check size={14} /> {editId ? 'Update & Resubmit' : 'Submit for Approval'}</>

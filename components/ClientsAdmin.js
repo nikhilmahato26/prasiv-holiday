@@ -106,7 +106,7 @@ export default function ClientsAdmin() {
                     onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
                   >
                     <td style={{ padding: '12px 16px' }}>
-                      <span style={{ fontSize: 11, fontWeight: 700, color: '#8A6E1C', background: '#FBF6E7', padding: '3px 8px', borderRadius: 6, fontFamily: 'monospace', letterSpacing: '0.03em', whiteSpace: 'nowrap' }}>{client.id}</span>
+                      <span style={{ fontSize: 11, fontWeight: 700, color: '#C14B00', background: '#FFF0E5', padding: '3px 8px', borderRadius: 6, fontFamily: 'monospace', letterSpacing: '0.03em', whiteSpace: 'nowrap' }}>{client.id}</span>
                     </td>
                     <td style={{ padding: '12px 16px' }}>
                       <div style={{ fontWeight: 600, color: '#111', fontSize: 13 }}>{client.name}</div>
@@ -150,7 +150,7 @@ export default function ClientsAdmin() {
             </div>
             <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 12, marginTop: 24 }}>
               <button onClick={() => setModal(false)} style={S.btn('#f3f4f6', '#4b5563')}>Cancel</button>
-              <button onClick={handleSave} disabled={saving} style={{ ...S.btn('#8A6E1C', '#fff'), opacity: saving ? 0.7 : 1 }}>
+              <button onClick={handleSave} disabled={saving} style={{ ...S.btn('#C14B00', '#fff'), opacity: saving ? 0.7 : 1 }}>
                 {saving ? 'Saving...' : 'Save'}
               </button>
             </div>
