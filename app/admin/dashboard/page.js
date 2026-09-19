@@ -8,10 +8,11 @@ import PackagePreview from '@/components/PackagePreview'
 import HomestayFields from '@/components/HomestayFields'
 import ImageUploader from '@/components/ImageUploader'
 import TeamAdmin from '@/components/TeamAdmin'
+import CampaignsAdmin from '@/components/CampaignsAdmin'
 import {
   Plus, Pencil, Copy, Trash2, LogOut, Eye, X, Check, ExternalLink, AlertTriangle,
   Package, MapPin, Inbox, Settings, Phone, MessageCircle, Mail, Calendar,
-  Building2, CheckCircle, XCircle, Star, Home, Ship, ImageIcon, Trash, Users, Download
+  Building2, CheckCircle, XCircle, Star, Home, Ship, ImageIcon, Trash, Users, Download, Flag
 } from 'lucide-react'
 import Link from 'next/link'
 import { toast } from 'sonner'
@@ -826,6 +827,7 @@ export default function Dashboard() {
           <div style={{ flex: 1, padding: '20px 0', overflowY: 'auto' }}>
             {[
               { key: 'packages',      label: 'Packages',     icon: Package,   badge: pendingCount > 0 ? pendingCount : null },
+              { key: 'campaigns',     label: 'Campaigns',    icon: Flag },
               { key: 'destinations',  label: 'Categories',   icon: MapPin },
               { key: 'enquiries',     label: 'Enquiries',    icon: Inbox,     badge: enquiries.length > 0 && section !== 'enquiries' ? enquiries.length : null },
               { key: 'testimonials',  label: 'Testimonials', icon: MessageCircle },
@@ -1094,6 +1096,11 @@ export default function Dashboard() {
               )}
             </div>
           </>
+        )}
+
+        {/* ── Campaigns ── */}
+        {section === 'campaigns' && (
+          <CampaignsAdmin isDemo={demoMode} />
         )}
 
         {/* ── Destinations ── */}
