@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import EnquiryForm from '@/components/EnquiryForm'
+import CampaignSlider from '@/components/CampaignSlider'
 import { getCampaignBySlug } from '@/lib/db'
 
 export async function generateMetadata({ params }) {
@@ -42,17 +43,15 @@ export default async function CampaignPage({ params }) {
         padding: '0 20px',
         overflow: 'hidden'
       }}>
-        {/* Background Image & Gradient overlay */}
-        {campaign.image_url && (
-          <img 
-            src={campaign.image_url} 
-            alt={campaign.title || campaign.name}
-            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }}
-          />
-        )}
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%)', zIndex: 0 }} />
+        {/* Background Image Slider & Gradient overlay */}
+        <CampaignSlider 
+          images={campaign.images && campaign.images.length > 0 ? campaign.images : (campaign.image_url ? [campaign.image_url] : [])} 
+          title={campaign.title} 
+          name={campaign.name} 
+        />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%)', zIndex: 1 }} />
 
-        <div style={{ position: 'relative', zIndex: 1, maxWidth: 900, width: '100%' }}>
+        <div style={{ position: 'relative', zIndex: 2, maxWidth: 900, width: '100%' }}>
           {campaign.destination && (
             <div style={{ backgroundColor: 'rgba(255,255,255,0.15)', padding: '6px 16px', borderRadius: 20, display: 'inline-block', fontSize: 13, fontWeight: 700, letterSpacing: 1.5, textTransform: 'uppercase', marginBottom: 20, backdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,0.3)' }}>
               {campaign.destination}

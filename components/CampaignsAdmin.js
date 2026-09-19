@@ -51,13 +51,18 @@ export default function CampaignsAdmin({ isDemo }) {
   const handleOpenModal = (campaign = null) => {
     if (campaign) {
       setEditingId(campaign.id)
-      setForm(campaign)
-    } else {
-      setEditingId(null)
       setForm({
-        slug: '', name: '', title: '', description: '', image_url: '', offer_price: '',
-        destination: '', package_details: '', other_information: ''
+        ...campaign,
+        images: campaign.images || []
       })
+    } else {
+      if (editingId !== null) {
+        setEditingId(null)
+        setForm({
+          slug: '', name: '', title: '', description: '', image_url: '', images: [], offer_price: '',
+          destination: '', package_details: '', other_information: ''
+        })
+      }
     }
     setModalOpen(true)
   }
@@ -70,15 +75,24 @@ export default function CampaignsAdmin({ isDemo }) {
     }
     setSaving(true)
     try {
+      const payload = {
+        ...form,
+        image_url: (form.images && form.images.length > 0) ? form.images[0] : ''
+      }
       const url = editingId ? `/api/campaigns/${editingId}` : '/api/campaigns'
       const method = editingId ? 'PUT' : 'POST'
       const res = await fetch(url, {
         method,
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form)
+        body: JSON.stringify(payload)
       })
       if (res.ok) {
         setModalOpen(false)
+        setEditingId(null)
+        setForm({
+          slug: '', name: '', title: '', description: '', image_url: '', images: [], offer_price: '',
+          destination: '', package_details: '', other_information: ''
+        })
         fetchCampaigns()
       } else {
         const data = await res.json()
@@ -156,13 +170,13 @@ export default function CampaignsAdmin({ isDemo }) {
       </div>
 
       {modalOpen && (
-        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 999 }}>
-          <div style={{ background: '#fff', width: '100%', maxWidth: 700, borderRadius: 12, maxHeight: '90vh', display: 'flex', flexDirection: 'column' }}>
+        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 999, padding: '16px' }}>
+          <div style={{ background: '#fff', width: '100%', maxWidth: 700, borderRadius: 12, display: 'flex', flexDirection: 'column', maxHeight: '100%' }}>
             <div style={{ padding: '20px', borderBottom: '1px solid #f3f4f6', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#fff', flexShrink: 0, borderTopLeftRadius: 12, borderTopRightRadius: 12 }}>
               <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700 }}>{editingId ? 'Edit Campaign' : 'New Campaign'}</h3>
               <button onClick={() => setModalOpen(false)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#6b7280' }}><X size={20} /></button>
             </div>
-            <div style={{ overflowY: 'auto', flex: 1 }}>
+            <div style={{ flex: 1, overflowY: 'auto', WebkitOverflowScrolling: 'touch' }}>
               <form onSubmit={handleSave} style={{ padding: '20px', display: 'flex', flexDirection: 'column', gap: 16 }}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
                 <div>
@@ -206,12 +220,36 @@ export default function CampaignsAdmin({ isDemo }) {
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: 13, fontWeight: 600, color: '#4b5563', marginBottom: 6 }}>Campaign Hero Image</label>
-                <ImageUploader 
-                  url={form.image_url} 
-                  onUrlChange={url => setForm({...form, image_url: url})} 
-                  height={150} 
-                />
+                <label style={{ display: 'block', fontSize: 13, fontWeight: 600, color: '#4b5563', marginBottom: 6 }}>Campaign Hero Images (Slider)</label>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: 12 }}>
+                  {(form.images || []).map((imgUrl, i) => (
+                    <div key={i} style={{ position: 'relative' }}>
+                      <ImageUploader 
+                        url={imgUrl} 
+                        onUrlChange={url => {
+                          const newImages = [...(form.images || [])]
+                          newImages[i] = url
+                          setForm({...form, images: newImages})
+                        }} 
+                        height={120} 
+                      />
+                      <button type="button" onClick={() => {
+                        const newImages = [...(form.images || [])]
+                        newImages.splice(i, 1)
+                        setForm({...form, images: newImages})
+                      }} style={{ position: 'absolute', top: 4, right: 4, background: 'rgba(255,0,0,0.8)', color: '#fff', border: 'none', borderRadius: '50%', width: 22, height: 22, display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', zIndex: 10 }}>
+                        <X size={12} />
+                      </button>
+                    </div>
+                  ))}
+                  <div 
+                    onClick={() => setForm({...form, images: [...(form.images || []), '']})}
+                    style={{ height: 120, borderRadius: 10, border: '1.5px dashed #d1d5db', background: '#f9fafb', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', color: '#6b7280', gap: 6 }}
+                  >
+                    <Plus size={20} />
+                    <span style={{ fontSize: 12, fontWeight: 600 }}>Add Image</span>
+                  </div>
+                </div>
               </div>
 
               <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 12, marginTop: 10, borderTop: '1px solid #f3f4f6', paddingTop: 20 }}>

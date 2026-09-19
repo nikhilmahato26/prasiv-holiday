@@ -360,10 +360,13 @@ export default function Dashboard() {
   // ─── Package handlers ──────────────────────────────────────────────────────
 
   const openAdd = () => {
-    const first = destinations[0]
-    const pkgId = generatePkgId('package', allPackages)
-    setForm({ ...EMPTY_PKG, id: pkgId, destination: first?.name ?? '', badgeColor: first?.color ?? '#013893', region: first?.region ?? 'domestic' })
-    setEditId(null); setTab('basic'); setShowPreview(false); setModal('form')
+    if (editId !== null) {
+      const first = destinations[0]
+      const pkgId = generatePkgId('package', allPackages)
+      setForm({ ...EMPTY_PKG, id: pkgId, destination: first?.name ?? '', badgeColor: first?.color ?? '#013893', region: first?.region ?? 'domestic' })
+      setEditId(null)
+    }
+    setTab('basic'); setShowPreview(false); setModal('form')
   }
 
   const openEdit = (pkg) => {
@@ -426,6 +429,8 @@ export default function Dashboard() {
       }
       await fetchPackages()
       setModal(null)
+      setForm(EMPTY_PKG)
+      setEditId(null)
       toast.success(editId ? 'Package updated!' : 'Package added!')
     } catch {
       toast.error('Failed to save package.')
@@ -717,8 +722,8 @@ export default function Dashboard() {
                    background: active ? color : '#fff', color: active ? '#fff' : '#555',
                    boxShadow: active ? 'none' : '0 1px 4px rgba(0,0,0,0.07)',
                  }),
-    overlay:     { position: 'fixed', inset: 0, zIndex: 50, background: 'rgba(0,0,0,0.45)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: '32px 16px', overflowY: 'auto' },
-    modal:       { background: '#fff', borderRadius: 20, width: '100%', maxWidth: 860, boxShadow: '0 20px 60px rgba(0,0,0,0.2)', overflow: 'hidden', marginBottom: 32 },
+    overlay:     { position: 'fixed', inset: 0, zIndex: 50, background: 'rgba(0,0,0,0.45)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '16px' },
+    modal:       { background: '#fff', borderRadius: 20, width: '100%', maxWidth: 860, boxShadow: '0 20px 60px rgba(0,0,0,0.2)', overflow: 'hidden', display: 'flex', flexDirection: 'column', maxHeight: '100%' },
   }
 
   const LISTING_META = {
@@ -727,8 +732,10 @@ export default function Dashboard() {
   }
 
   const openListingModal = (type) => {
-    setNewListing({ name: '', color: '#C14B00', image_url: '', description: '', location: '', price: '', emoji: LISTING_META[type].emoji, image_pos: '' })
-    setEditListingId(null)
+    if (listingModalType !== type) {
+      setNewListing({ name: '', color: '#C14B00', image_url: '', description: '', location: '', price: '', emoji: LISTING_META[type].emoji, image_pos: '' })
+      setEditListingId(null)
+    }
     setListingModalType(type)
     setModal('listing')
   }
@@ -1111,7 +1118,7 @@ export default function Dashboard() {
                 <h2 style={{ fontWeight: 700, fontSize: 18, color: '#111', margin: 0 }}>Categories</h2>
                 <p style={{ fontSize: 13, color: '#9ca3af', margin: '4px 0 0' }}>{destinations.length} total · {destinations.filter(d => d.featured !== false).length} shown on website</p>
               </div>
-              <button onClick={() => { setNewDest({ name: '', color: '#C14B00', image_url: '', description: '', emoji: '📍', image_pos: '' }); setEditDestId(null); setModal('destination') }} style={S.btn()}>
+              <button onClick={() => { setModal('destination') }} style={S.btn()}>
                 <Plus size={13} /> Add Destination
               </button>
             </div>
@@ -1612,7 +1619,7 @@ export default function Dashboard() {
               ))}
             </div>
             )}
-            <div style={{ padding: 20, maxHeight: '70vh', overflowY: 'auto' }}>
+            <div style={{ padding: 20, flex: 1, overflowY: 'auto', WebkitOverflowScrolling: 'touch' }}>
               {showPreview && <PackagePreview pkg={form} />}
               {!showPreview && tab === 'basic' && (
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
@@ -1893,12 +1900,12 @@ export default function Dashboard() {
       {/* ── Destinations Modal ── */}
       {modal === 'destination' && (
         <div style={{ ...S.overlay, alignItems: 'center' }} onClick={e => e.target === e.currentTarget && setModal(null)}>
-          <div style={{ background: '#fff', borderRadius: 20, width: '100%', maxWidth: 500, boxShadow: '0 20px 60px rgba(0,0,0,0.2)', overflow: 'hidden', maxHeight: '90vh', display: 'flex', flexDirection: 'column' }}>
+          <div style={{ background: '#fff', borderRadius: 20, width: '100%', maxWidth: 500, boxShadow: '0 20px 60px rgba(0,0,0,0.2)', overflow: 'hidden', maxHeight: '100%', display: 'flex', flexDirection: 'column' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 20px', background: 'linear-gradient(135deg,#013893,#013893)', flexShrink: 0 }}>
               <h2 style={{ fontWeight: 700, fontSize: 16, color: '#fff', display: 'flex', alignItems: 'center', gap: 8 }}><MapPin size={16} /> Manage Categories</h2>
               <button onClick={() => setModal(null)} style={{ width: 30, height: 30, borderRadius: '50%', background: 'rgba(255,255,255,0.2)', border: 'none', cursor: 'pointer', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><X size={15} /></button>
             </div>
-            <div style={{ padding: 20, overflowY: 'auto', flex: 1 }}>
+            <div style={{ padding: 20, overflowY: 'auto', WebkitOverflowScrolling: 'touch', flex: 1 }}>
               {destinations.length > 0 && (
                 <div style={{ marginBottom: 24 }}>
                   <label style={S.label}>Existing Categories</label>
@@ -1972,12 +1979,12 @@ export default function Dashboard() {
         const items = listingModalType === 'houseboat' ? houseboats : homestays
         return (
           <div style={{ ...S.overlay, alignItems: 'center' }} onClick={e => e.target === e.currentTarget && setModal(null)}>
-            <div style={{ background: '#fff', borderRadius: 20, width: '100%', maxWidth: 500, boxShadow: '0 20px 60px rgba(0,0,0,0.2)', overflow: 'hidden', maxHeight: '90vh', display: 'flex', flexDirection: 'column' }}>
+            <div style={{ background: '#fff', borderRadius: 20, width: '100%', maxWidth: 500, boxShadow: '0 20px 60px rgba(0,0,0,0.2)', overflow: 'hidden', maxHeight: '100%', display: 'flex', flexDirection: 'column' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 20px', background: 'linear-gradient(135deg,#013893,#013893)', flexShrink: 0 }}>
                 <h2 style={{ fontWeight: 700, fontSize: 16, color: '#fff', display: 'flex', alignItems: 'center', gap: 8 }}><Icon size={16} /> Manage {meta.plural}</h2>
                 <button onClick={() => setModal(null)} style={{ width: 30, height: 30, borderRadius: '50%', background: 'rgba(255,255,255,0.2)', border: 'none', cursor: 'pointer', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><X size={15} /></button>
               </div>
-              <div style={{ padding: 20, overflowY: 'auto', flex: 1 }}>
+              <div style={{ padding: 20, overflowY: 'auto', WebkitOverflowScrolling: 'touch', flex: 1 }}>
                 {items.length > 0 && (
                   <div style={{ marginBottom: 24 }}>
                     <label style={S.label}>Existing {meta.plural}</label>
