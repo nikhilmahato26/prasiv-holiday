@@ -170,8 +170,8 @@ export default function CampaignsAdmin({ isDemo }) {
       </div>
 
       {modalOpen && (
-        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 999, padding: '16px' }}>
-          <div style={{ background: '#fff', width: '100%', maxWidth: 700, borderRadius: 12, display: 'flex', flexDirection: 'column', maxHeight: '100%' }}>
+        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 999, padding: '20px' }}>
+          <div style={{ background: '#fff', width: '100%', maxWidth: 700, borderRadius: 12, display: 'flex', flexDirection: 'column', maxHeight: 'calc(100vh - 40px)' }}>
             <div style={{ padding: '20px', borderBottom: '1px solid #f3f4f6', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#fff', flexShrink: 0, borderTopLeftRadius: 12, borderTopRightRadius: 12 }}>
               <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700 }}>{editingId ? 'Edit Campaign' : 'New Campaign'}</h3>
               <button onClick={() => setModalOpen(false)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#6b7280' }}><X size={20} /></button>
