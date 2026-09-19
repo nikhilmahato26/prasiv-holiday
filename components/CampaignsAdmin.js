@@ -25,6 +25,15 @@ export default function CampaignsAdmin({ isDemo }) {
     fetchCampaigns()
   }, [])
 
+  useEffect(() => {
+    if (modalOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => { document.body.style.overflow = '' }
+  }, [modalOpen])
+
   const fetchCampaigns = async () => {
     try {
       const res = await fetch('/api/campaigns')
@@ -148,12 +157,13 @@ export default function CampaignsAdmin({ isDemo }) {
 
       {modalOpen && (
         <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 999 }}>
-          <div style={{ background: '#fff', width: '100%', maxWidth: 700, borderRadius: 12, maxHeight: '90vh', overflowY: 'auto' }}>
-            <div style={{ padding: '20px', borderBottom: '1px solid #f3f4f6', display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'sticky', top: 0, background: '#fff', zIndex: 10 }}>
+          <div style={{ background: '#fff', width: '100%', maxWidth: 700, borderRadius: 12, maxHeight: '90vh', display: 'flex', flexDirection: 'column' }}>
+            <div style={{ padding: '20px', borderBottom: '1px solid #f3f4f6', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#fff', flexShrink: 0, borderTopLeftRadius: 12, borderTopRightRadius: 12 }}>
               <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700 }}>{editingId ? 'Edit Campaign' : 'New Campaign'}</h3>
               <button onClick={() => setModalOpen(false)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#6b7280' }}><X size={20} /></button>
             </div>
-            <form onSubmit={handleSave} style={{ padding: '20px', display: 'flex', flexDirection: 'column', gap: 16 }}>
+            <div style={{ overflowY: 'auto', flex: 1 }}>
+              <form onSubmit={handleSave} style={{ padding: '20px', display: 'flex', flexDirection: 'column', gap: 16 }}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
                 <div>
                   <label style={{ display: 'block', fontSize: 13, fontWeight: 600, color: '#4b5563', marginBottom: 6 }}>Internal Name *</label>
@@ -210,7 +220,8 @@ export default function CampaignsAdmin({ isDemo }) {
                   {saving ? 'Saving...' : <><Save size={16} /> Save Campaign</>}
                 </button>
               </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       )}

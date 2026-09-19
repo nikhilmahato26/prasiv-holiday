@@ -31,8 +31,8 @@ export default async function CampaignPage({ params }) {
       {/* Hero Section */}
       <section style={{ 
         position: 'relative', 
-        height: '60vh', 
-        minHeight: 400,
+        height: '75vh', 
+        minHeight: 500,
         backgroundColor: '#111',
         display: 'flex',
         alignItems: 'center',
@@ -42,26 +42,38 @@ export default async function CampaignPage({ params }) {
         padding: '0 20px',
         overflow: 'hidden'
       }}>
+        {/* Background Image & Gradient overlay */}
         {campaign.image_url && (
           <img 
             src={campaign.image_url} 
             alt={campaign.title || campaign.name}
-            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5 }}
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }}
           />
         )}
-        <div style={{ position: 'relative', zIndex: 1, maxWidth: 800 }}>
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%)', zIndex: 0 }} />
+
+        <div style={{ position: 'relative', zIndex: 1, maxWidth: 900, width: '100%' }}>
           {campaign.destination && (
-            <div style={{ backgroundColor: 'rgba(255,255,255,0.2)', padding: '6px 12px', borderRadius: 20, display: 'inline-block', fontSize: 14, fontWeight: 600, letterSpacing: 1, textTransform: 'uppercase', marginBottom: 16, backdropFilter: 'blur(4px)' }}>
+            <div style={{ backgroundColor: 'rgba(255,255,255,0.15)', padding: '6px 16px', borderRadius: 20, display: 'inline-block', fontSize: 13, fontWeight: 700, letterSpacing: 1.5, textTransform: 'uppercase', marginBottom: 20, backdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,0.3)' }}>
               {campaign.destination}
             </div>
           )}
-          <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 800, margin: '0 0 16px', lineHeight: 1.1 }}>
+          
+          <h1 style={{ fontSize: 'clamp(3rem, 6vw, 5.5rem)', fontWeight: 800, margin: '0 0 16px', lineHeight: 1.1, textShadow: '0 4px 20px rgba(0,0,0,0.3)' }}>
             {campaign.title || campaign.name}
           </h1>
+          
           {campaign.description && (
-            <p style={{ fontSize: '1.125rem', maxWidth: 600, margin: '0 auto', opacity: 0.9 }}>
+            <p style={{ fontSize: '1.25rem', maxWidth: 700, margin: '0 auto 32px', opacity: 0.9, lineHeight: 1.5, textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
               {campaign.description}
             </p>
+          )}
+
+          {campaign.offer_price && (
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 12, backgroundColor: '#C14B00', color: '#fff', padding: '12px 32px', borderRadius: 99, fontSize: '1.75rem', fontWeight: 800, boxShadow: '0 10px 30px rgba(193,75,0,0.4)', border: '2px solid rgba(255,255,255,0.2)' }}>
+              <span style={{ fontSize: '0.875rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: 1.5, opacity: 0.9 }}>Special Price</span>
+              {campaign.offer_price}
+            </div>
           )}
         </div>
         
@@ -79,26 +91,26 @@ export default async function CampaignPage({ params }) {
           
           {/* Main Details */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 40, flex: '1 1 600px' }}>
-            <div style={{ backgroundColor: '#fff', borderRadius: 24, padding: '30px', boxShadow: '0 4px 20px rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.05)' }}>
-              {campaign.offer_price && (
-                <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, backgroundColor: '#FEF2F2', color: '#DC2626', padding: '10px 20px', borderRadius: 99, fontSize: '1.25rem', fontWeight: 800, marginBottom: 20 }}>
-                  <span style={{ fontSize: '0.875rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: 1 }}>Special Price</span>
-                  {campaign.offer_price}
-                </div>
-              )}
+            <div style={{ backgroundColor: '#fff', borderRadius: 24, padding: '40px', boxShadow: '0 4px 20px rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.05)' }}>
               
-              <h2 style={{ fontSize: '1.75rem', fontWeight: 700, margin: '0 0 20px', color: '#111' }}>Package Details</h2>
+              <h2 style={{ fontSize: '1.75rem', fontWeight: 700, margin: '0 0 24px', color: '#111', display: 'flex', alignItems: 'center', gap: 12 }}>
+                <span style={{ display: 'inline-block', width: 4, height: 24, backgroundColor: '#C14B00', borderRadius: 4 }}></span>
+                Package Details
+              </h2>
               <div 
-                style={{ lineHeight: 1.7, color: '#4b5563', fontSize: '1.05rem', whiteSpace: 'pre-wrap' }}
+                style={{ lineHeight: 1.8, color: '#4b5563', fontSize: '1.1rem', whiteSpace: 'pre-wrap' }}
                 dangerouslySetInnerHTML={{ __html: campaign.package_details || '<p>Details coming soon...</p>' }}
               />
             </div>
 
             {campaign.other_information && (
-              <div style={{ backgroundColor: '#fff', borderRadius: 24, padding: '30px', boxShadow: '0 4px 20px rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.05)' }}>
-                <h3 style={{ fontSize: '1.5rem', fontWeight: 700, margin: '0 0 16px', color: '#111' }}>Additional Information</h3>
+              <div style={{ backgroundColor: '#fff', borderRadius: 24, padding: '40px', boxShadow: '0 4px 20px rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.05)' }}>
+                <h3 style={{ fontSize: '1.5rem', fontWeight: 700, margin: '0 0 20px', color: '#111', display: 'flex', alignItems: 'center', gap: 12 }}>
+                  <span style={{ display: 'inline-block', width: 4, height: 20, backgroundColor: '#6b7280', borderRadius: 4 }}></span>
+                  Additional Information
+                </h3>
                 <div 
-                  style={{ lineHeight: 1.7, color: '#6b7280', fontSize: '0.95rem', whiteSpace: 'pre-wrap' }}
+                  style={{ lineHeight: 1.8, color: '#6b7280', fontSize: '1.05rem', whiteSpace: 'pre-wrap' }}
                   dangerouslySetInnerHTML={{ __html: campaign.other_information }}
                 />
               </div>
